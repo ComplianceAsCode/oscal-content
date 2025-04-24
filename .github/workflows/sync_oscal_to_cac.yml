@@ -136,12 +136,12 @@ jobs:
               policy_id=$(echo $line | cut -f2 -d"/" | cut -f2 -d"-")
               product=$(echo "$line" | cut -f2 -d"/" | cut -f1 -d"-")
               echo "sync oscal profiles according to update of $line"
-              #poetry run trestlebot sync-oscal-content profile --repo-path oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --cac-policy-id $policy_id --product product 
+              poetry run trestlebot sync-oscal-content profile --repo-path oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --cac-policy-id $policy_id --product $product 
             elif [[ "$line" == "component-definitions"* ]]; then
               product=$(echo "$line" | cut -f2 -d"/")
               profile=$(echo "$line" | cut -f3 -d"/" | cut -f2 -d"-")
               echo "sync oscal component-definitions according to update of $line"
-              #poetry run trestlebot sync-oscal-content component-definition --repo-path oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product --oscal-profile $profile
+              poetry run trestlebot sync-oscal-content component-definition --repo-path oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product --oscal-profile $profile
             fi
           done < ../filenames.txt
       # Step 9: Create PR to CAC content
