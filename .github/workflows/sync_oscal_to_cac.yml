@@ -3,12 +3,12 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
   #workflow_dispatch:
-  # The final version should execute the test whenever a PR is merged to master.
+  # The final version should execute the test whenever a PR is merged to main.
   #pull_request:
   #  types:
   #    - closed
   #  branches:
-  #    - master
+  #    - main
 
 jobs:
   check-pr-message:
@@ -42,7 +42,7 @@ jobs:
       # Step 2: Install Git and Ruby
       - name: Install Git and Ruby
         run: sudo apt-get update && sudo apt-get install -y git ruby
-      # Step 3: Get the access token for access token to detect changes
+      # Step 3: Get the access token
       - name: Generate JWT Token
         id: generate-jwt
         run: |
@@ -161,11 +161,10 @@ jobs:
               poetry run trestlebot sync-oscal-content profile --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --cac-policy-id $policy_id --product $product 
             elif [[ "$line" == "component-definitions"* ]]; then
               product=$(echo "$line" | cut -f2 -d"/")
-              profile=$(echo "$line" | cut -f3 -d"/" | cut -f2 -d"-")
+              oscal_profile=$(echo "$line" | cut -f3 -d"/")
               echo "sync oscal component-definitions according to the updated $line"
-              echo "poetry run trestlebot sync-oscal-content component-definition --repo-path $$GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product"
-              # TODO: after the merge of CPLYTM-732
-              #poetry run trestlebot sync-oscal-content component-definition --repo-path $$GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product ----oscal-profile $profile
+              echo "poetry run trestlebot sync-oscal-content component-definition --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product --oscal-profile $oscal_profile"
+              poetry run trestlebot sync-oscal-content component-definition --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product --oscal-profile $oscal_profile
             fi
           done < ../filenames.txt
       # Step 10: Create PR to CAC content
