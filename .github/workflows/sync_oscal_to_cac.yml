@@ -79,7 +79,7 @@ jobs:
       - name: Set the PR number as env
         run: |
           echo "PR_NO=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
-      # Step 6: Dectect the updates of OSCAL content
+      # Step 6: Detect the updates of OSCAL content
       - name: Detect the changed files of the PR
         id: changed-files
         run: |
@@ -95,7 +95,7 @@ jobs:
           done
         env:
           GH_TOKEN: ${{ env.INSTALLATION_TOKEN }}
-      # Step 7: Setup the trestle-bot CLI run envrionment
+      # Step 7: Setup the trestle-bot CLI run environment
       - name: Checkout OSCAL repo
         if: ${{ env.CHANGE_FOUND == 'true' }}
         uses: actions/checkout@v4
