@@ -1,0 +1,194 @@
+name: Sync OSCAL content to CAC
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  #workflow_dispatch:
+  # The final version should execute the test whenever a PR is merged to main.
+  #pull_request:
+  #  types:
+  #    - closed
+  #  branches:
+  #    - main
+
+jobs:
+  check-pr-message:
+    runs-on: ubuntu-latest
+    outputs:
+      run_job_check_update: ${{ steps.check_pr.outputs.run_job_check_update }}
+    steps:
+    - name: Check if the PR comes from the sync of CAC content
+      id: check_pr
+      run: |
+        PR_TITLE="${{ github.event.pull_request.title }}"
+        echo "PR Title: $PR_TITLE"
+        if [[ "$PR_TITLE" == *"Auto-generated PR from CAC"* ]]; then
+          echo "The PR comes from CAC content. The task of Sync OSCAL content to CAC will exit."
+          echo "Skipping further checks."
+          exit 0
+        else
+          echo "::set-output name=run_job_check_update::true"
+        fi
+  
+  check-oscal-content-update-sync-to_cac:
+    runs-on: ubuntu-latest
+    needs: check-pr-message
+    if: ${{ needs.check-pr-message.outputs.run_job_check_update == 'true' }}
+    steps:
+      # Step 1: Set up Python 3
+      - name: Set up Python 3
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      # Step 2: Install Git and Ruby
+      - name: Install Git and Ruby
+        run: sudo apt-get update && sudo apt-get install -y git ruby
+      # Step 3: Get the access token
+      - name: Generate JWT Token
+        id: generate-jwt
+        run: |
+          # Generate JWT using Ruby
+          JWT=$(ruby -r jwt -e '
+            payload = {
+              iat: Time.now.to_i,
+              exp: Time.now.to_i + (10 * 60), # Expires in 10 mins
+              iss: ENV["APP_ID"]
+            }
+            private_key = OpenSSL::PKey::RSA.new(ENV["PRIVATE_KEY"])
+            token = JWT.encode(payload, private_key, "RS256")
+            puts token
+          ')
+          echo "JWT_TOKEN=$JWT" >> $GITHUB_ENV
+          echo "::add-mask::$JWT" # Mask the token in logs
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      #Step 4: Generate the GitHub app installation access token which expires in 1 hour
+      - name: Get Installation Access Token
+        id: get-installation-token
+        run: |
+          INSTALLATION_TOKEN=$(curl -s -X POST \
+            -H "Authorization: Bearer ${{ env.JWT_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/app/installations/${{ secrets.INSTALLATION_ID }}/access_tokens \
+            | jq -r '.token')
+          echo "INSTALLATION_TOKEN=$INSTALLATION_TOKEN" >> $GITHUB_ENV
+          echo "::add-mask::$INSTALLATION_TOKEN" # Mask the token in logs
+        env:
+          GH_TOKEN: ${{ env.JWT_TOKEN }} 
+      # Step 5: Save PR number
+      - name: Set the PR number as env
+        run: |
+          echo "PR_NO=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+      # Step 6: Detect the updates of OSCAL content
+      - name: Detect the changed files of the PR
+        id: changed-files
+        run: |
+          changes=("catalogs" "profiles" "component-definitions")
+          response=$(gh api repos/${{ github.repository }}/pulls/${{ env.PR_NO }}/files)
+          echo "$response" | jq -r '.[].filename' > filenames.txt
+          echo "CHANGE_FOUND=false" >> $GITHUB_ENV
+          for change in "${changes[@]}"; do
+            if grep -q "$change" filenames.txt ; then
+              echo "CHANGE_FOUND=true" >> $GITHUB_ENV
+              break
+            fi
+          done
+        env:
+          GH_TOKEN: ${{ env.INSTALLATION_TOKEN }}
+      # Step 7: Setup the trestle-bot CLI run environment
+      - name: Checkout OSCAL repo
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          path: oscal-content
+      - name: Checkout CAC repo
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          repository: complytime/cac-content
+          path: cac-content
+          fetch-depth: 0
+          token: ${{ env.INSTALLATION_TOKEN }}
+      - name: Checkout trestle-bot repo
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        uses: actions/checkout@v4
+        with:
+          repository: complytime/trestle-bot
+          path: trestle-bot
+      - name: Setup trestlebot
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        run: |
+          cd trestle-bot && python3 -m venv venv && source venv/bin/activate
+          python3 -m pip install --no-cache-dir "poetry==1.7.1"
+          poetry install
+      # Step 8: Check if the CAC content branch exists
+      - name: Check if the CAC content branch exists
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        run: |
+          BRANCH_NAME="sync_oscal_pr${{ env.PR_NO }}"
+          cd cac-content
+          branches=$(git branch -r | grep 'origin/sync_oscal' | sed 's/origin\///')
+          exist="false"
+          for branch in $branches; do
+            if [[ "$branch" == "$BRANCH_NAME" ]]; then
+              echo "CAC content branch $BRANCH_NAME exists"
+              git fetch --all
+              git checkout -b sync_oscal_pr${{ env.PR_NO }} origin/sync_oscal_pr${{ env.PR_NO }}
+              exist="true"
+              break
+            fi
+          done
+          if [[ "$exist" == "false" ]]; then
+            echo "CAC content branch $BRANCH_NAME doesn't exist"
+          fi
+      # Step 9: Sync OSCAL content to CAC content
+      - name: Sync OSCAL content to CAC content
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        run: |
+          cat filenames.txt
+          cd trestle-bot && source venv/bin/activate
+          while IFS= read -r line; do
+            if [[ "$line" == *catalogs* ]]; then
+              policy_id=$(echo "$line" | cut -f2 -d"/")
+              echo "sync oscal catalogs according to the updated $line"
+              # TODO: sync catalog will be added
+            elif [[ "$line" == "profiles"* ]]; then
+              policy_id=$(echo $line | cut -f2 -d"/" | cut -f2 -d"-")
+              product=$(echo "$line" | cut -f2 -d"/" | cut -f1 -d"-")
+              echo "sync oscal profiles according to the updated $line"
+              echo "poetry run trestlebot sync-oscal-content profile --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --cac-policy-id $policy_id --product $product"
+              sed -i '/href/s|\(trestle://\)[^ ]*\(catalogs\)|\1\2|g' ../oscal-content/$line
+              poetry run trestlebot sync-oscal-content profile --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --cac-policy-id $policy_id --product $product 
+            elif [[ "$line" == "component-definitions"* ]]; then
+              product=$(echo "$line" | cut -f2 -d"/")
+              oscal_profile=$(echo "$line" | cut -f3 -d"/")
+              echo "sync oscal component-definitions according to the updated $line"
+              echo "poetry run trestlebot sync-oscal-content component-definition --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product --oscal-profile $oscal_profile"
+              poetry run trestlebot sync-oscal-content component-definition --repo-path $GITHUB_WORKSPACE/oscal-content --committer-email test@redhat.com --committer-name test --branch sync_oscal_pr${{ env.PR_NO }} --cac-content-root ../cac-content --product $product --oscal-profile $oscal_profile
+            fi
+          done < ../filenames.txt
+      # Step 10: Create PR to CAC content
+      - name: Create a Pull Request to CAC content
+        if: ${{ env.CHANGE_FOUND == 'true' }}
+        run: |
+          BRANCH_NAME="sync_oscal_pr${{ env.PR_NO }}"
+          OWNER="complytime"
+          REPO="cac-content"
+          cd cac-content
+          # Check if the PR exists
+          PR_EXISTS=$(gh pr list --repo $OWNER/$REPO \
+            --head $BRANCH_NAME --state open --json id \
+            | jq length)
+          # If the PR doesn't exist, create PR
+          if [ "$PR_EXISTS" -gt 0 ]; then
+            echo "PR $BRANCH_NAME already exists. Skipping PR creation."
+          else
+            echo "Creating PR for new branch: $BRANCH_NAME"
+            gh pr create --repo $OWNER/$REPO \
+              --title "Auto-generated PR from OSCAL content ${{ env.PR_NO }}" \
+              --head "$BRANCH_NAME" \
+              --base "master" \
+              --body "This is an auto-generated PR from OSCAL ${{ env.PR_NO }} updates"
+          fi
+        env:
+          GH_TOKEN: ${{ env.INSTALLATION_TOKEN }}
