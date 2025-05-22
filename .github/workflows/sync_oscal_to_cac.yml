@@ -1,14 +1,10 @@
 name: Sync OSCAL content to CAC
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-  #workflow_dispatch:
-  # The final version should execute the test whenever a PR is merged to main.
-  #pull_request:
-  #  types:
-  #    - closed
-  #  branches:
-  #    - main
+    types:
+      - closed
+    branches:
+      - main
 
 jobs:
   check-pr-message:
@@ -84,7 +80,7 @@ jobs:
         id: changed-files
         run: |
           changes=("catalogs" "profiles" "component-definitions")
-          response=$(gh api repos/${{ github.repository }}/pulls/${{ env.PR_NO }}/files)
+          response=$(gh api repos/${{ github.repository }}/pulls/${{ env.PR_NO }}/files?per_page=50)
           echo "$response" | jq -r '.[].filename' > filenames.txt
           echo "CHANGE_FOUND=false" >> $GITHUB_ENV
           for change in "${changes[@]}"; do
@@ -105,7 +101,7 @@ jobs:
         if: ${{ env.CHANGE_FOUND == 'true' }}
         uses: actions/checkout@v4
         with:
-          repository: complytime/cac-content
+          repository: ComplianceAsCode/content
           path: cac-content
           fetch-depth: 0
           token: ${{ env.INSTALLATION_TOKEN }}
@@ -172,8 +168,8 @@ jobs:
         if: ${{ env.CHANGE_FOUND == 'true' }}
         run: |
           BRANCH_NAME="sync_oscal_pr${{ env.PR_NO }}"
-          OWNER="complytime"
-          REPO="cac-content"
+          OWNER="ComplianceAsCode"
+          REPO="content"
           cd cac-content
           # Check if the PR exists
           PR_EXISTS=$(gh pr list --repo $OWNER/$REPO \
