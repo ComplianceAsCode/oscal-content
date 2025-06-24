@@ -120,9 +120,9 @@ jobs:
             elif [[ "$line" == "component-definitions"* ]]; then
               echo "sync oscal component-definitions according to update of $line ..."
               product=$(echo "$line" | cut -f2 -d"/")
-              profile=$(echo "$line" | cut -f3 -d"/" | cut -f2 -d"-")
+              profile=$(echo "$line" | cut -f3 -d"/")
               echo "The product is $product, the profile is $profile"
-              echo "poetry run complyscribe sync-oscal-content component-definition --repo-path ../oscal-content --committer-email "openscap-ci@gmail.com" --committer-name "openscap-ci" --branch "sync_oscal_pr$pr_number" --cac-content-root "$GITHUB_WORKSPACE/cac-content" --cac-policy-id "$policy_id" --product "$product"  --oscal-profile "$profile""
+              echo "poetry run complyscribe sync-oscal-content component-definition --repo-path ../oscal-content --committer-email "openscap-ci@gmail.com" --committer-name "openscap-ci" --branch "sync_oscal_pr$pr_number" --cac-content-root "$GITHUB_WORKSPACE/cac-content" --product "$product"  --oscal-profile "$profile""
             fi
           done < ../filenames.txt
       # Step 9: Create PR to CAC content
