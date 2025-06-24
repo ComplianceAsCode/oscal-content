@@ -71,11 +71,15 @@ jobs:
           url="repos/$repo/pulls/${{ env.PR_NUMBER }}/files"
           response=$(gh api "$url" --paginate)
           echo "$response" | jq -r '.[].filename' > filenames.txt
-          echo "OUTPUT_SIZE=$(stat --printf="%s" filenames.txt)" >> $GITHUB_OUTPUT
+          echo "CHANGE_FOUND=false" >> $GITHUB_ENV
+          if grep -E "catalogs/|profiles/|component-definitions/" filenames.txt ; then
+            echo "CHANGE_FOUND=true" >> $GITHUB_ENV
+          fi
+          cat filenames.txt
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
       - name: Checkout CAC repo
-        if: ${{ steps.changed-files.outputs.OUTPUT_SIZE != '0' }}
+        if: ${{ env.CHANGE_FOUND == 'true' }}
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: ComplianceAsCode/content
@@ -83,44 +87,47 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           fetch-depth: 0
       - name: Checkout complyscribe repo
-        if: ${{ steps.changed-files.outputs.OUTPUT_SIZE != '0' }}
+        if: ${{ env.CHANGE_FOUND == 'true' }}
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: complytime/complyscribe
           path: complyscribe
       - name: Setup trestlebot
-        if: ${{ steps.changed-files.outputs.OUTPUT_SIZE != '0' }}
+        if: ${{ env.CHANGE_FOUND == 'true' }}
         run: |
           cd complyscribe && python3 -m venv venv && source venv/bin/activate
           python3 -m pip install --no-cache-dir "poetry==1.7.1"
           poetry install
       # Step 8: Sync OSCAL content to CAC content
       - name: Sync OSCAL content to CAC content
-        if: ${{ steps.changed-files.outputs.OUTPUT_SIZE != '0' }}
+        if: ${{ env.CHANGE_FOUND == 'true' }}
         run: |
           pr_number="${{ github.event.pull_request.number }}"
           cat filenames.txt
           cd complyscribe && source venv/bin/activate
           while IFS= read -r line; do
             if [[ "$line" == *catalogs* ]]; then
+              echo "sync oscal catalogs according to update of $line ..."
               policy_id=$(echo "$line" | cut -f2 -d"/")
-              echo "sync oscal catalogs according to update of $line"
+              echo "The policy_id is $policy_id"
               echo "poetry run complyscribe sync-oscal-content catalog --repo-path ../oscal-content --committer-email "openscap-ci@gmail.com" --committer-name "openscap-ci" --branch "sync_oscal_pr$pr_number" --cac-content-root "$GITHUB_WORKSPACE/cac-content" --cac-policy-id "$policy_id""
             elif [[ "$line" == "profiles"* ]]; then
+              echo "sync oscal profiles according to update of $line ..."
               policy_id=$(echo $line | cut -f2 -d"/" | cut -f2 -d"-")
               product=$(echo "$line" | cut -f2 -d"/" | cut -f1 -d"-")
-              echo "sync oscal profiles according to update of $line"
+              echo "The policy_id is $policy_id, the product is $product"
               echo "poetry run complyscribe sync-oscal-content profile --repo-path ../oscal-content --committer-email "openscap-ci@gmail.com" --committer-name "openscap-ci" --branch "sync_oscal_pr$pr_number" --cac-content-root "$GITHUB_WORKSPACE/cac-content" --cac-policy-id "$policy_id" --product "$product""
             elif [[ "$line" == "component-definitions"* ]]; then
+              echo "sync oscal component-definitions according to update of $line ..."
               product=$(echo "$line" | cut -f2 -d"/")
               profile=$(echo "$line" | cut -f3 -d"/" | cut -f2 -d"-")
-              echo "sync oscal component-definitions according to update of $line"
+              echo "The product is $product, the profile is $profile"
               echo "poetry run complyscribe sync-oscal-content component-definition --repo-path ../oscal-content --committer-email "openscap-ci@gmail.com" --committer-name "openscap-ci" --branch "sync_oscal_pr$pr_number" --cac-content-root "$GITHUB_WORKSPACE/cac-content" --cac-policy-id "$policy_id" --product "$product"  --oscal-profile "$profile""
             fi
           done < ../filenames.txt
       # Step 9: Create PR to CAC content
       - name: Create a Pull Request to OSCAL content
-        if: ${{ steps.ctf.outputs.CTF_OUTPUT_SIZE != '0' }}
+        if: ${{ env.CHANGE_FOUND == 'true' }}
         run: |
           cd cac-content
           BRANCH_NAME="sync_oscal_pr${{ env.PR_NUMBER }}"
