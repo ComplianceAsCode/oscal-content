@@ -1,4 +1,4 @@
-name: Sync OSCAL content to CAC content
+name: Test Sync OSCAL content to CAC content
 permissions:
   contents: write
   pull-requests: read
@@ -35,25 +35,27 @@ jobs:
       # Step 4: Get the commit message and PR number
       - name: Get the commit message and PR number
         run: |
-          cd oscal-content
-          # Get the latest commit message
-          COMMIT_MSG=$(git log -1 --pretty=%B)
-          # Extract the PR number from the commit message (if it's a merge commit)
-          PR_NUMBER=$(echo "$COMMIT_MSG" | grep -oP '#\K\d+')
-          if [ -n "$PR_NUMBER" ]; then
-            echo "Found PR number: $PR_NUMBER"
-            echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
-            echo "SKIP=false" >> $GITHUB_ENV
-            PR_INFO=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}")
-            # Extract PR title from the response
-            PR_TITLE=$(echo "$PR_INFO" | jq -r .title)
-            echo "PR Title: $PR_TITLE"
-            if [[ "$PR_TITLE" == *"Auto-generated PR from CAC"* ]]; then
-              echo "The PR comes from CAC content. The workflow of Sync OSCAL content to CAC will exit."
-              echo "Skipping further checks."
-              echo "SKIP=true" >> $GITHUB_ENV
-            fi
-          fi
+          # cd oscal-content
+          # # Get the latest commit message
+          # COMMIT_MSG=$(git log -1 --pretty=%B)
+          # # Extract the PR number from the commit message (if it's a merge commit)
+          # PR_NUMBER=$(echo "$COMMIT_MSG" | grep -oP '#\K\d+')
+          # if [ -n "$PR_NUMBER" ]; then
+          #   echo "Found PR number: $PR_NUMBER"
+          #   echo "PR_NUMBER=$PR_NUMBER" >> $GITHUB_ENV
+          #   echo "SKIP=false" >> $GITHUB_ENV
+          #   PR_INFO=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls/${PR_NUMBER}")
+          #   # Extract PR title from the response
+          #   PR_TITLE=$(echo "$PR_INFO" | jq -r .title)
+          #   echo "PR Title: $PR_TITLE"
+          #   if [[ "$PR_TITLE" == *"Auto-generated PR from CAC"* ]]; then
+          #     echo "The PR comes from CAC content. The workflow of Sync OSCAL content to CAC will exit."
+          #     echo "Skipping further checks."
+          #     echo "SKIP=true" >> $GITHUB_ENV
+          #   fi
+          # fi
+          echo "PR_NUMBER=49" >> $GITHUB_ENV
+          echo "SKIP=false" >> $GITHUB_ENV
        # Step 5: Get the access token for content write permission to CAC content
       - name: Get GitHub app token
         if: ${{ env.SKIP == 'false' }}
