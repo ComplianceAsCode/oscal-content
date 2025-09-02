@@ -1,0 +1,101 @@
+name: quality-test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality-test:
+    runs-on: ubuntu-latest
+    container:
+      image: fedora:latest
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Install complyctl and testing environment packages
+        run: dnf install -y complyctl complyctl-openscap-plugin scap-security-guide git jq
+
+      - name: Get all changed files
+        id: changed-files
+        uses: tj-actions/changed-files@ed68ef82c095e0d48ec87eccea555d944a631a4c # v46.0.5
+        with:
+          # Only get catalogs, profiles, component-definitions files
+          files: |
+            catalogs/**
+            profiles/**
+            component-definitions/**
+
+      # group changed files into catalogs, profiles, component-definitions
+      - name: Group changed files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        id: group-files
+        env:
+          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          catalogs=()
+          profiles=()
+          component_definitions=()
+                    
+          for file in $ALL_CHANGED_FILES; do
+            case "$file" in
+              *profiles*)
+                profiles+=("$file")
+                ;;
+              *component-definitions*)
+                component_definitions+=("$file")
+                ;;
+              *catalogs*)
+                catalogs+=("$file")
+                ;;
+            esac
+          done
+          
+          # Join elements into a space-delimited string
+          catalogs_string=$(printf "%s " "${catalogs[@]}")
+          profiles_string=$(printf "%s " "${profiles[@]}")
+          component_definitions_string=$(printf "%s " "${component_definitions[@]}")
+          
+          echo "catalogs=$catalogs_string" >> $GITHUB_OUTPUT 
+          echo "profiles=$profiles_string" >> $GITHUB_OUTPUT 
+          echo "component_definitions=$component_definitions_string" >> $GITHUB_OUTPUT 
+
+      # first cd , then profile, last catalog
+      - name: Test changed files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        env:
+          TRESTLE_PREFIX: "trestle://"
+        run: |
+          verified_files=()
+          # Test component definitions
+          for cd in ${{ steps.group-files.outputs.component_definitions }}; do
+            echo "Testing $cd"
+            # get profile path
+            profile_path=$(jq -r '.["component-definition"].components[0]."control-implementations"[0].source' $cd)
+            # remove trestle:// prefix
+            profile_path=${profile_path#$TRESTLE_PREFIX}
+            catalog_path=$(jq -r '.["profile"].imports[0].href' $profile_path)
+            catalog_path=${catalog_path#$TRESTLE_PREFIX}
+            echo $profile_path
+            echo $catalog_path
+            # TODO add test case
+          done
+          # Test profiles
+          for profile in ${{ steps.group-files.outputs.profiles }}; do
+            echo "Testing $profile"
+            catalog_path=$(jq -r '.["profile"].imports[0].href' $profile)
+            catalog_path=${catalog_path#$TRESTLE_PREFIX}
+            echo $catalog_path
+            # TODO add test case
+          done
+          # Test catalogs
+          for catalog in ${{ steps.group-files.outputs.catalogs }}; do
+            echo "Testing $catalog"
+            # TODO add test case
+          done
