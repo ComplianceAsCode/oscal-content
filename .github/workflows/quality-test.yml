@@ -1,9 +1,6 @@
 name: quality-test
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 permissions:
@@ -69,33 +66,8 @@ jobs:
       # first cd , then profile, last catalog
       - name: Test changed files
         if: steps.changed-files.outputs.any_changed == 'true'
-        env:
-          TRESTLE_PREFIX: "trestle://"
         run: |
-          verified_files=()
-          # Test component definitions
-          for cd in ${{ steps.group-files.outputs.component_definitions }}; do
-            echo "Testing $cd"
-            # get profile path
-            profile_path=$(jq -r '.["component-definition"].components[0]."control-implementations"[0].source' $cd)
-            # remove trestle:// prefix
-            profile_path=${profile_path#$TRESTLE_PREFIX}
-            catalog_path=$(jq -r '.["profile"].imports[0].href' $profile_path)
-            catalog_path=${catalog_path#$TRESTLE_PREFIX}
-            echo $profile_path
-            echo $catalog_path
-            # TODO add test case
-          done
-          # Test profiles
-          for profile in ${{ steps.group-files.outputs.profiles }}; do
-            echo "Testing $profile"
-            catalog_path=$(jq -r '.["profile"].imports[0].href' $profile)
-            catalog_path=${catalog_path#$TRESTLE_PREFIX}
-            echo $catalog_path
-            # TODO add test case
-          done
-          # Test catalogs
-          for catalog in ${{ steps.group-files.outputs.catalogs }}; do
-            echo "Testing $catalog"
-            # TODO add test case
-          done
+          ./scripts/verify-OSCAL-contents.sh \
+          ${{ steps.group-files.outputs.component_definitions }} \
+          ${{ steps.group-files.outputs.profiles }} \
+          ${{ steps.group-files.outputs.catalogs }}
