@@ -3,8 +3,8 @@
     "uuid": "a3d5b14d-253f-4987-ac8f-ec42ec80dea8",
     "metadata": {
       "title": "Component definition for rhel8",
-      "last-modified": "2025-09-16T19:25:41.412476+00:00",
-      "version": "1.9",
+      "last-modified": "2025-09-26T15:38:09.763851+00:00",
+      "version": "2.0",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -125,7 +125,7 @@
           {
             "name": "Parameter_Description_5",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "List the user accounts that are authorized locally on the operating system. This list includes both users requried by the operating system and by the installed applications. Depending on the Operating System distribution, version, software groups and applications, the user list is different and can be customized with scap-workbench. OVAL regular expression is used for the user list. The list starts with '^' and ends with '$' so that it matches exactly the username, not any string that includes the username. Users are separated with '|'. For example, three users: bin, oracle and sapadm are allowed, then the list is <tt>^(bin|oracle|sapadm)$</tt>. The user <tt>root</tt> is the only user that is hard coded in OVAL that is always allowed on the operating system.",
+            "value": "List the user accounts that are authorized locally on the operating system. This list includes both users required by the operating system and by the installed applications. Depending on the Operating System distribution, version, software groups and applications, the user list is different and can be customized with scap-workbench. OVAL regular expression is used for the user list. The list starts with '^' and ends with '$' so that it matches exactly the username, not any string that includes the username. Users are separated with '|'. For example, three users: bin, oracle and sapadm are allowed, then the list is <tt>^(bin|oracle|sapadm)$</tt>. The user <tt>root</tt> is the only user that is hard coded in OVAL that is always allowed on the operating system.",
             "remarks": "rule_set_000"
           },
           {
@@ -311,7 +311,7 @@
           {
             "name": "Parameter_Value_Alternatives_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
@@ -329,7 +329,7 @@
           {
             "name": "Parameter_Value_Alternatives_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
             "remarks": "rule_set_000"
           },
           {
@@ -683,7 +683,7 @@
           {
             "name": "Parameter_Description_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent password re-use using password history lookup",
+            "value": "Prevent password reuse using password history lookup",
             "remarks": "rule_set_000"
           },
           {
@@ -863,7 +863,7 @@
           {
             "name": "Parameter_Description_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transfered data.",
+            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transferred data.",
             "remarks": "rule_set_000"
           },
           {
@@ -5819,9 +5819,9 @@
         ],
         "control-implementations": [
           {
-            "uuid": "08f2496b-1f97-49fa-8ce3-22e86890d52a",
+            "uuid": "da9d6579-e014-4b8d-8121-23d2e8d080bd",
             "source": "trestle://profiles/rhel8-stig_rhel8-high/profile.json",
-            "description": "REPLACE_ME",
+            "description": "Control implementation for stig",
             "props": [
               {
                 "name": "Framework_Short_Name",
@@ -6151,15 +6151,15 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "c4ff4302-8efb-4cbd-9e14-e585d5878695",
+                "uuid": "c5f8b23e-43f6-4ad2-b0be-ef508d649074",
                 "control-id": "needed_rules",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id needed_rules.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id needed_rules."
                   },
                   {
                     "name": "Rule_Id",
@@ -6199,9 +6199,9 @@
                 ]
               },
               {
-                "uuid": "64cf3ebf-46fb-45b8-8bef-33bda8c93ac5",
+                "uuid": "10c02544-f25f-4579-9963-57cd09989ec5",
                 "control-id": "rhel-08.010000",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010000.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6216,9 +6216,9 @@
                 ]
               },
               {
-                "uuid": "b5ed0800-52ab-4e25-9031-f99e74250e07",
+                "uuid": "bc6e292d-f650-4118-99ee-0a1ae5024b04",
                 "control-id": "rhel-08.010020",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010020.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6278,9 +6278,9 @@
                 ]
               },
               {
-                "uuid": "d0e33720-5cec-4333-b2f6-106a625a377e",
+                "uuid": "5f45555a-4a3f-4dcc-860c-aff2e591eaf7",
                 "control-id": "rhel-08.010030",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010030.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6295,9 +6295,9 @@
                 ]
               },
               {
-                "uuid": "bcd5dd9d-eeb0-4f18-880b-e1fd025b61b5",
+                "uuid": "a725f944-e2aa-4827-963e-de8a3b3ac656",
                 "control-id": "rhel-08.010140",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010140.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6312,9 +6312,9 @@
                 ]
               },
               {
-                "uuid": "951e6216-f6c5-4fde-8525-c9274efd22e1",
+                "uuid": "02744b1f-c5fb-4210-bf05-b8087c822edd",
                 "control-id": "rhel-08.010150",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010150.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6329,9 +6329,9 @@
                 ]
               },
               {
-                "uuid": "a0ede1f5-7162-4b71-a579-0b1b8aba9431",
+                "uuid": "8e881f00-1847-4cd2-a9f8-52e89c99f748",
                 "control-id": "rhel-08.010370",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010370.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6346,9 +6346,9 @@
                 ]
               },
               {
-                "uuid": "fbb32702-b601-43f6-b139-4290f9ccf4a4",
+                "uuid": "fa9c97eb-e9ca-4692-b07d-218daf8ca93f",
                 "control-id": "rhel-08.010371",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010371.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6363,9 +6363,9 @@
                 ]
               },
               {
-                "uuid": "4ab8793a-f152-40b5-b3c5-c480a118e12d",
+                "uuid": "affe5fa0-0481-4ef1-8abc-5a163411dcce",
                 "control-id": "rhel-08.010460",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010460.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6380,9 +6380,9 @@
                 ]
               },
               {
-                "uuid": "63438bec-4ae7-40e7-ad10-3a4dd76d9d03",
+                "uuid": "f86484e5-9000-4251-a7fe-84963489d1c2",
                 "control-id": "rhel-08.010470",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010470.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6397,9 +6397,9 @@
                 ]
               },
               {
-                "uuid": "f6edd323-ec96-4e6f-9581-79000ca15dc4",
+                "uuid": "331d2003-7781-49a3-bfa0-3069bcb8d099",
                 "control-id": "rhel-08.010820",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010820.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6414,9 +6414,9 @@
                 ]
               },
               {
-                "uuid": "f6773f37-74b9-4dd9-8fb9-f0639db6cce1",
+                "uuid": "4252e9a2-a5f3-428c-9f67-be308bdbcf3e",
                 "control-id": "rhel-08.020330",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-020330.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6431,9 +6431,9 @@
                 ]
               },
               {
-                "uuid": "0e13ad8f-d4ba-438d-a7b0-73bc5d10d47e",
+                "uuid": "3d92f07f-6785-4a4a-b991-9b702c99e94a",
                 "control-id": "rhel-08.040000",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040000.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6448,22 +6448,22 @@
                 ]
               },
               {
-                "uuid": "c0b10258-176b-40f2-90d6-169073e2b69d",
+                "uuid": "d88bf209-fff1-4c72-a900-afec130447ac",
                 "control-id": "rhel-08.040010",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id rhel-08.040010.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "not-applicable",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id RHEL-08-040010."
                   }
                 ]
               },
               {
-                "uuid": "602c8427-7abd-4573-a59c-1c70f09f7c52",
+                "uuid": "e0e59328-b4ad-402f-bdc1-6ea05f2a55f0",
                 "control-id": "rhel-08.040170",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040170.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6478,9 +6478,9 @@
                 ]
               },
               {
-                "uuid": "0b76e62c-6713-49ab-8347-f22288accad6",
+                "uuid": "d9a41e34-5164-4114-a02f-e93787b88532",
                 "control-id": "rhel-08.040171",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040171.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6495,9 +6495,9 @@
                 ]
               },
               {
-                "uuid": "4f32ac21-b3ad-473e-a05a-cc6c43410be3",
+                "uuid": "fedc7bb1-7118-42ef-95f2-754394210970",
                 "control-id": "rhel-08.040172",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040172.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6512,9 +6512,9 @@
                 ]
               },
               {
-                "uuid": "2d283de8-558f-4619-bf1d-dec219720926",
+                "uuid": "5456650a-4b17-4929-b09c-63b9e4b54401",
                 "control-id": "rhel-08.040190",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040190.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6529,9 +6529,9 @@
                 ]
               },
               {
-                "uuid": "2236463a-7fc8-4904-8348-bf47de7d854e",
+                "uuid": "fa3feac5-11a9-4b58-bac6-cbbdafbe90d1",
                 "control-id": "rhel-08.040200",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040200.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6546,9 +6546,9 @@
                 ]
               },
               {
-                "uuid": "69ddaf03-0e49-4299-b216-a0497c83ae77",
+                "uuid": "e152bea0-7b4f-4de4-a76a-db25e1f64f60",
                 "control-id": "rhel-08.040360",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040360.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6563,9 +6563,9 @@
                 ]
               },
               {
-                "uuid": "cb6cbdbb-1943-4a61-9a19-b90604f34d84",
+                "uuid": "93da738d-eddc-4d8a-8e7c-dd36b280a6bc",
                 "control-id": "rhel-08.020332",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-020332.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6580,9 +6580,9 @@
                 ]
               },
               {
-                "uuid": "d7d0e351-8555-4412-bde1-231a041c7773",
+                "uuid": "f813b9cd-ac1a-43ca-82a5-32826d183b6a",
                 "control-id": "rhel-08.010121",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010121.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6597,9 +6597,9 @@
                 ]
               },
               {
-                "uuid": "77eddd93-7051-405f-a55d-3a3b7b212944",
+                "uuid": "c3271a07-80ea-42c8-8647-89ede633bb24",
                 "control-id": "rhel-08.020331",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-020331.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6614,15 +6614,15 @@
                 ]
               },
               {
-                "uuid": "8bbf3908-45d3-4caf-b47c-02353866ff36",
+                "uuid": "09abf902-25aa-4f4e-849e-af15712ec440",
                 "control-id": "needed_rules",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id needed_rules.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id needed_rules."
                   },
                   {
                     "name": "Rule_Id",
@@ -6662,15 +6662,15 @@
                 ]
               },
               {
-                "uuid": "fb2d36c6-772f-4a16-b930-00da2cbad733",
+                "uuid": "604d6191-2ad3-4a8b-b28c-06343674a652",
                 "control-id": "needed_rules",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id needed_rules.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id needed_rules."
                   },
                   {
                     "name": "Rule_Id",
@@ -6842,7 +6842,7 @@
           {
             "name": "Parameter_Description_5",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "List the user accounts that are authorized locally on the operating system. This list includes both users requried by the operating system and by the installed applications. Depending on the Operating System distribution, version, software groups and applications, the user list is different and can be customized with scap-workbench. OVAL regular expression is used for the user list. The list starts with '^' and ends with '$' so that it matches exactly the username, not any string that includes the username. Users are separated with '|'. For example, three users: bin, oracle and sapadm are allowed, then the list is <tt>^(bin|oracle|sapadm)$</tt>. The user <tt>root</tt> is the only user that is hard coded in OVAL that is always allowed on the operating system.",
+            "value": "List the user accounts that are authorized locally on the operating system. This list includes both users required by the operating system and by the installed applications. Depending on the Operating System distribution, version, software groups and applications, the user list is different and can be customized with scap-workbench. OVAL regular expression is used for the user list. The list starts with '^' and ends with '$' so that it matches exactly the username, not any string that includes the username. Users are separated with '|'. For example, three users: bin, oracle and sapadm are allowed, then the list is <tt>^(bin|oracle|sapadm)$</tt>. The user <tt>root</tt> is the only user that is hard coded in OVAL that is always allowed on the operating system.",
             "remarks": "rule_set_000"
           },
           {
@@ -7028,7 +7028,7 @@
           {
             "name": "Parameter_Value_Alternatives_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
@@ -7046,7 +7046,7 @@
           {
             "name": "Parameter_Value_Alternatives_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
             "remarks": "rule_set_000"
           },
           {
@@ -7400,7 +7400,7 @@
           {
             "name": "Parameter_Description_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent password re-use using password history lookup",
+            "value": "Prevent password reuse using password history lookup",
             "remarks": "rule_set_000"
           },
           {
@@ -7580,7 +7580,7 @@
           {
             "name": "Parameter_Description_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transfered data.",
+            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transferred data.",
             "remarks": "rule_set_000"
           },
           {
@@ -17372,9 +17372,9 @@
         ],
         "control-implementations": [
           {
-            "uuid": "6b97e8c2-851e-4c00-8480-740ce68b58c5",
+            "uuid": "46ef7f72-a11e-43b8-b077-6d3b124c4571",
             "source": "trestle://profiles/rhel8-stig_rhel8-high/profile.json",
-            "description": "REPLACE_ME",
+            "description": "Control implementation for stig",
             "props": [
               {
                 "name": "Framework_Short_Name",
@@ -17704,15 +17704,15 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "d2fed384-4682-4fed-9df3-0d22b0cfdd58",
+                "uuid": "06010f04-d9ba-45a9-a184-cda3533660bc",
                 "control-id": "needed_rules",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id needed_rules.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id needed_rules."
                   },
                   {
                     "name": "Rule_Id",
@@ -17752,9 +17752,9 @@
                 ]
               },
               {
-                "uuid": "2c16c671-ba60-4cb7-8d89-10a2273952bd",
+                "uuid": "f6e6bfd3-7ac3-4fb7-a07f-d7ce7875ec42",
                 "control-id": "rhel-08.010000",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010000.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17769,9 +17769,9 @@
                 ]
               },
               {
-                "uuid": "88aaadbf-31fd-41bb-aad5-7e72a5437164",
+                "uuid": "084768d4-466e-4447-957b-89caf3da8dad",
                 "control-id": "rhel-08.010020",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010020.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17831,9 +17831,9 @@
                 ]
               },
               {
-                "uuid": "340f6f39-577f-4ff6-8c96-a2979615744b",
+                "uuid": "73d23764-82ef-47b5-9e24-e1bf799b38d7",
                 "control-id": "rhel-08.010030",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010030.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17848,9 +17848,9 @@
                 ]
               },
               {
-                "uuid": "05d9bdbd-fd7c-42b4-ae88-2c7114e70497",
+                "uuid": "4cb3cfb5-3f49-40bd-b4d9-2e2da7140439",
                 "control-id": "rhel-08.010140",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010140.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17865,9 +17865,9 @@
                 ]
               },
               {
-                "uuid": "b7fe5935-90e0-4f4f-b7e1-6a3d9a46545c",
+                "uuid": "58488202-2a68-4a4f-8335-85473e87f122",
                 "control-id": "rhel-08.010150",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010150.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17882,9 +17882,9 @@
                 ]
               },
               {
-                "uuid": "39a6be17-2b2a-4b6d-a796-74a3e2367e00",
+                "uuid": "2ad40954-90b3-4487-b184-97988aeb38fd",
                 "control-id": "rhel-08.010370",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010370.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17899,9 +17899,9 @@
                 ]
               },
               {
-                "uuid": "62c7ccb4-b45a-4e7b-a5ea-4e40bec1f675",
+                "uuid": "5aac41d7-edf2-4d14-b686-3eb39076dd01",
                 "control-id": "rhel-08.010371",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010371.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17916,9 +17916,9 @@
                 ]
               },
               {
-                "uuid": "15dcf85a-76b4-4641-8888-893261c81b41",
+                "uuid": "0b08b28a-5802-4c05-bc48-60b54755cc44",
                 "control-id": "rhel-08.010460",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010460.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17933,9 +17933,9 @@
                 ]
               },
               {
-                "uuid": "93709742-cce0-4fd2-91fa-bdd7feca54f5",
+                "uuid": "7e6d1942-b68a-4103-afee-f8613bc3fca9",
                 "control-id": "rhel-08.010470",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010470.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17950,9 +17950,9 @@
                 ]
               },
               {
-                "uuid": "721cbb3e-d1b8-43c7-994c-c338a92f6b41",
+                "uuid": "564bace0-7c45-4a6a-aa33-33559d15d8c6",
                 "control-id": "rhel-08.010820",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010820.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17967,9 +17967,9 @@
                 ]
               },
               {
-                "uuid": "80109241-08d4-40c3-b06d-578eb57fa9bf",
+                "uuid": "af954673-bb9b-4551-8bb4-2ef6b9d0f4dd",
                 "control-id": "rhel-08.020330",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-020330.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17984,9 +17984,9 @@
                 ]
               },
               {
-                "uuid": "3d5fa1f1-e5d4-44ef-8fbb-e42ea76341ec",
+                "uuid": "02bfea68-de50-4145-b47a-27ed85f07afd",
                 "control-id": "rhel-08.040000",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040000.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18001,22 +18001,22 @@
                 ]
               },
               {
-                "uuid": "539c9f34-26b4-43c1-af68-56446d540268",
+                "uuid": "7ffaa17c-99c9-4293-85b0-b2ae09265a8f",
                 "control-id": "rhel-08.040010",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id rhel-08.040010.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "not-applicable",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id RHEL-08-040010."
                   }
                 ]
               },
               {
-                "uuid": "5bef3077-ff90-4390-9c63-1e3a2a0f91e7",
+                "uuid": "77e64d69-03f6-499a-b5b4-4692c066ff00",
                 "control-id": "rhel-08.040170",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040170.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18031,9 +18031,9 @@
                 ]
               },
               {
-                "uuid": "ca3867ed-7c7a-491f-8698-9ea4e92b6223",
+                "uuid": "cd5fed38-292c-4be2-bc1b-6a355dc5c2a0",
                 "control-id": "rhel-08.040171",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040171.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18048,9 +18048,9 @@
                 ]
               },
               {
-                "uuid": "34e9e1df-23a9-4546-80f6-06d519f4a113",
+                "uuid": "627cd320-314f-490e-8af8-a7e24e4028b2",
                 "control-id": "rhel-08.040172",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040172.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18065,9 +18065,9 @@
                 ]
               },
               {
-                "uuid": "a88aa742-e908-4447-b958-dd316a292b2e",
+                "uuid": "146afdf2-415b-405b-a059-0d7da364bbae",
                 "control-id": "rhel-08.040190",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040190.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18082,9 +18082,9 @@
                 ]
               },
               {
-                "uuid": "d8f2a8dd-4254-4f9a-b1f6-9324698526d7",
+                "uuid": "fdba5fd1-d279-40c0-88c8-0ae260cf5803",
                 "control-id": "rhel-08.040200",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040200.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18099,9 +18099,9 @@
                 ]
               },
               {
-                "uuid": "024452b0-2d5f-40e7-9d24-56b76e044655",
+                "uuid": "946ab04c-e7ba-463f-8567-f72c53c27cd4",
                 "control-id": "rhel-08.040360",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-040360.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18116,9 +18116,9 @@
                 ]
               },
               {
-                "uuid": "e45e58fa-99bf-420e-a719-2236a985168b",
+                "uuid": "4a6c045d-1eed-4488-829e-e9aa8efd3944",
                 "control-id": "rhel-08.020332",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-020332.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18133,9 +18133,9 @@
                 ]
               },
               {
-                "uuid": "c5fd651e-7515-40f9-8a98-2e2dd24bd79c",
+                "uuid": "fe40e5e7-33ed-46c7-ac4e-c2f5f5346410",
                 "control-id": "rhel-08.010121",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-010121.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18150,9 +18150,9 @@
                 ]
               },
               {
-                "uuid": "3de8804a-3d7b-4bff-bc88-6fb9d78a3300",
+                "uuid": "5d334a45-1dd8-4af9-93aa-d881bdc215f6",
                 "control-id": "rhel-08.020331",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id RHEL-08-020331.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -18167,15 +18167,15 @@
                 ]
               },
               {
-                "uuid": "6faae453-1d5b-488a-a398-3c217a6b8b28",
+                "uuid": "ec445be5-416c-4693-96e4-475cd2748ef1",
                 "control-id": "needed_rules",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id needed_rules.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id needed_rules."
                   },
                   {
                     "name": "Rule_Id",
@@ -18215,15 +18215,15 @@
                 ]
               },
               {
-                "uuid": "c0da6b43-264c-48f8-9301-14df664b8c82",
+                "uuid": "890cc9f6-28f8-4294-8a2f-e2d9207bb9eb",
                 "control-id": "needed_rules",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id needed_rules.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id needed_rules."
                   },
                   {
                     "name": "Rule_Id",
