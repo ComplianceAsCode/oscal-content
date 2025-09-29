@@ -3,8 +3,8 @@
     "uuid": "fb4d7f88-deb5-45ad-a88a-f90300331665",
     "metadata": {
       "title": "Component definition for rhel9",
-      "last-modified": "2025-09-12T13:10:00.117237+08:00",
-      "version": "1.1",
+      "last-modified": "2025-09-26T15:28:18.494052+08:00",
+      "version": "1.2",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -1625,7 +1625,7 @@
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Drop Gratuitious ARP frames on All IPv4 Interfaces",
+            "value": "Drop Gratuitous ARP frames on All IPv4 Interfaces",
             "remarks": "rule_set_078"
           },
           {
@@ -4391,9 +4391,9 @@
         ],
         "control-implementations": [
           {
-            "uuid": "4fb3b083-085b-4578-ac79-e6acc1f47f5e",
+            "uuid": "6d6c4321-f76d-42c0-aefa-f7668572971d",
             "source": "trestle://profiles/rhel9-anssi-enhanced/profile.json",
-            "description": "REPLACE_ME",
+            "description": "Control implementation for anssi_bp28_enhanced",
             "props": [
               {
                 "name": "Framework_Short_Name",
@@ -4627,7 +4627,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "2cf68727-7d5d-4afc-a4e6-421b3e60d3d7",
+                "uuid": "eb53f482-dc05-4773-b982-9fb67eb65c07",
                 "control-id": "r1",
                 "description": "This requirement can be checked, but remediation requires manual reinstall of the OS. The content automation cannot really configure the BIOS, but can in some cases, check settings that are visible to the OS. Like for example the NX/DX setting.",
                 "props": [
@@ -4654,9 +4654,9 @@
                 ]
               },
               {
-                "uuid": "052debf7-9486-4f88-9d31-619922caa4cf",
+                "uuid": "169f1dd5-6a93-411f-8427-2b995dfacbde",
                 "control-id": "r7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4671,9 +4671,9 @@
                 ]
               },
               {
-                "uuid": "acb24272-8a80-499e-a60d-cdbaf3c83343",
+                "uuid": "99a8cd7d-2afe-4ce8-ae40-23d94232c47f",
                 "control-id": "r10",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R10.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4688,7 +4688,7 @@
                 ]
               },
               {
-                "uuid": "f721ce04-a746-4a16-95d6-758b983681ab",
+                "uuid": "e9d52783-795f-4e8b-b6ac-d1d2191755f7",
                 "control-id": "r29",
                 "description": "The /boot partition mounted is essential to perform certain administrative actions, for example updating the kernel. Therefore, for better stability, in this requirement only rules to restrict the access to /boot are selected. It is not changed how the /boot is mounted.",
                 "props": [
@@ -4745,7 +4745,7 @@
                 ]
               },
               {
-                "uuid": "f38b799b-e4a8-404f-961a-77cf4439cf7d",
+                "uuid": "a7c1ff98-cba7-4ca4-a56b-1b1021d890a1",
                 "control-id": "r36",
                 "description": "There are cases of Systemd services which would stop working in case umask would be configured to 0027 for all services. One such example is the Cups service which needs to create sockets which need to be available for all users. Therefore, this part of the requirement can't be automated.",
                 "props": [
@@ -4772,7 +4772,7 @@
                 ]
               },
               {
-                "uuid": "642384a6-9cdb-47a7-881e-346ceae01151",
+                "uuid": "dd49fbe7-7a21-4d97-a882-22321323e9c4",
                 "control-id": "r37",
                 "description": "Other partitioning mechanisms can include chroot and containers and are not contemplated in this requirement.",
                 "props": [
@@ -4789,9 +4789,9 @@
                 ]
               },
               {
-                "uuid": "6374849f-c048-404d-95d2-3ecf5c598937",
+                "uuid": "115d0ad0-b189-42be-9c4d-b720a4fc80cc",
                 "control-id": "r38",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R38.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4811,9 +4811,9 @@
                 ]
               },
               {
-                "uuid": "b59a3633-7d2d-4438-9518-7454266987e5",
+                "uuid": "9ecb2702-0b44-49c7-94d9-fdfdabb16b30",
                 "control-id": "r41",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r41.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4824,9 +4824,9 @@
                 ]
               },
               {
-                "uuid": "6c0aa7a4-4154-4a14-a44c-43c4cd288feb",
+                "uuid": "6c7b892c-cb0d-4f66-9f6a-d81084d80b10",
                 "control-id": "r45",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R45.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4836,7 +4836,7 @@
                 ]
               },
               {
-                "uuid": "3999e4d8-fa65-4dc9-bd97-2ae7653b5c43",
+                "uuid": "2469d403-1410-4ea2-8ffa-8a1523b6907e",
                 "control-id": "r51",
                 "description": "This concerns two aspects, the first is administrative, and involves prompt installation of secrets or trusted elements by the sysadmin. The second involves removal of any default secret or trusted element configured by the operating system during install process, e.g. default known passwords.",
                 "props": [
@@ -4848,9 +4848,9 @@
                 ]
               },
               {
-                "uuid": "9c7022a4-0abd-47d5-92d7-e09adc58de9a",
+                "uuid": "fd7fc137-8fd1-46e1-a5c7-442520ae7ff4",
                 "control-id": "r57",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r57.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4861,20 +4861,20 @@
                 ]
               },
               {
-                "uuid": "ef9b013c-e0f5-48cc-a9ab-9a9f94bd3b88",
+                "uuid": "66145bc5-b35a-40ef-aab2-2b5abcc14d8d",
                 "control-id": "r60",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r60.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "not-applicable",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id R60."
                   }
                 ]
               },
               {
-                "uuid": "36ee99aa-2626-40cb-a228-1a50680eda09",
+                "uuid": "30cce43e-02a6-4658-a3c6-30c6be3bf50e",
                 "control-id": "r64",
                 "description": "SELinux policies limit the privileges of services and daemons just to those which are required. The policies should be enough to restrict the services' privileges to its essentials, but the automated content cannot assess whether they are the minimum required for the deployment.",
                 "props": [
@@ -4891,9 +4891,9 @@
                 ]
               },
               {
-                "uuid": "f25736ca-3374-421f-9540-72554d73b23d",
+                "uuid": "fa3504c2-721d-44f7-8c52-d5c1cd9ca8b9",
                 "control-id": "r65",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r65.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4904,7 +4904,7 @@
                 ]
               },
               {
-                "uuid": "467c322c-8af1-4399-9528-e6275e447e9a",
+                "uuid": "73c6b88c-bd71-4c73-83d9-267b83cea391",
                 "control-id": "r71",
                 "description": "A lot of recommendations and requirements from the DAT-PA-012 document are administrative and hard to automate. The rules selected below address a few of the aspects that can be covered, keep in mind that these configurations should be customized for the systems deployment requirements.",
                 "props": [
@@ -4981,9 +4981,9 @@
                 ]
               },
               {
-                "uuid": "148c4ced-7a08-4a2c-af7a-a1db5036bd40",
+                "uuid": "1b3fe7e5-8457-4357-9781-46cb76409a9e",
                 "control-id": "r72",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R72.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -4993,9 +4993,9 @@
                 ]
               },
               {
-                "uuid": "7687603b-4387-474a-b954-845c9664a15d",
+                "uuid": "245e0d19-123d-48af-b902-2420d04e163f",
                 "control-id": "r73",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R73.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5260,9 +5260,9 @@
                 ]
               },
               {
-                "uuid": "365c3e26-84da-4b64-87c8-b9bfa8fa0b41",
+                "uuid": "ea85c65d-d20f-4029-8ce8-c780f74cee29",
                 "control-id": "r78",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r78.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5273,9 +5273,9 @@
                 ]
               },
               {
-                "uuid": "6264fa4a-a991-41f6-9135-d0fb59521970",
+                "uuid": "4384d83d-1c3c-4379-bc03-540548b13913",
                 "control-id": "r2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5286,9 +5286,9 @@
                 ]
               },
               {
-                "uuid": "bafefcec-7adc-4630-94df-73a04aef1348",
+                "uuid": "1c976350-43e7-4462-93ff-33f6a5902ddd",
                 "control-id": "r3",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5299,9 +5299,9 @@
                 ]
               },
               {
-                "uuid": "30b089aa-a0fc-4e56-a109-332a26edee2b",
+                "uuid": "31436e66-c2d5-4d08-831d-260be3c63e96",
                 "control-id": "r5",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R5.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5316,9 +5316,9 @@
                 ]
               },
               {
-                "uuid": "eab6abc5-2c80-49f4-bf96-029d21cd894e",
+                "uuid": "d2dd9823-c8da-4206-b506-9ef05276721c",
                 "control-id": "r8",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R8.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5388,9 +5388,9 @@
                 ]
               },
               {
-                "uuid": "ad183a1c-347a-423e-9a98-abcbde92aaa0",
+                "uuid": "2b13c933-d29f-48dd-a200-6e4b7ecc6d81",
                 "control-id": "r9",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R9.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5450,9 +5450,9 @@
                 ]
               },
               {
-                "uuid": "c1682162-9283-4f08-b8f9-b3f3d19a7a15",
+                "uuid": "5003d8cf-0aea-4e82-990c-6ce355491242",
                 "control-id": "r11",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R11.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5467,9 +5467,9 @@
                 ]
               },
               {
-                "uuid": "1a87334d-73b3-4315-9079-71bef3e147fd",
+                "uuid": "7b478623-2036-4419-bcc5-11b7642eb3cc",
                 "control-id": "r12",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R12.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5594,7 +5594,7 @@
                 ]
               },
               {
-                "uuid": "6089546a-895b-4f80-96a5-df626d9d2674",
+                "uuid": "732b4809-6a9a-4c19-a857-bbef68433cc5",
                 "control-id": "r13",
                 "description": "When IPv6 is not in use, disable it, otherwise secure the IPv6 stack. This control hardens the IPv6 stack, to disable it use the related rules instead.",
                 "props": [
@@ -5686,7 +5686,7 @@
                 ]
               },
               {
-                "uuid": "76a611a9-7270-443a-a75f-67cf0fd240e9",
+                "uuid": "9707f486-1d7e-4c39-89f5-473aad597484",
                 "control-id": "r14",
                 "description": "The rule for the /proc file system is not implemented",
                 "props": [
@@ -5723,9 +5723,9 @@
                 ]
               },
               {
-                "uuid": "f3886a9a-6d6b-41e3-8e8a-fe0199d7b6e4",
+                "uuid": "17e6853b-01f3-4124-85e7-1a43b1e153e8",
                 "control-id": "r28",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R28.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5840,7 +5840,7 @@
                 ]
               },
               {
-                "uuid": "3b7eba5c-662d-48e2-92ee-e89d74090d70",
+                "uuid": "72bb7b50-e3d4-45af-97ad-109a648d2360",
                 "control-id": "r32",
                 "description": "ANSSI doesn't specify the length of the inactivity period, we are choosing 10 minutes as reasonable number.",
                 "props": [
@@ -5862,7 +5862,7 @@
                 ]
               },
               {
-                "uuid": "66fbde75-e1db-4121-85ca-d253f8e293d5",
+                "uuid": "a42d4ca3-4755-4593-9bf7-265a3e874777",
                 "control-id": "r33",
                 "description": "By disabling direct root logins proper accountability is ensured. Users will login first, then escalate to privileged (root) access. Change of privilege operations must be based on executables to monitor the activities performed (for example sudo). Nonetheless, the content automation cannot ensure that each administrator was given a nominative administration account separate from his normal user account.",
                 "props": [
@@ -5904,9 +5904,9 @@
                 ]
               },
               {
-                "uuid": "b5713a0d-8731-4bfc-ad6c-48ab82ffc69d",
+                "uuid": "c04dc77b-6240-4ab9-a005-68b787eadabf",
                 "control-id": "r34",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r34.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5917,9 +5917,9 @@
                 ]
               },
               {
-                "uuid": "ff617b9b-0b2e-4b11-9848-5868e8111a11",
+                "uuid": "013e7534-e6a9-4bdf-b12f-a394836bbbda",
                 "control-id": "r35",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r35.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5930,9 +5930,9 @@
                 ]
               },
               {
-                "uuid": "bfe2ea3f-6e55-4092-958d-b569cd29bd60",
+                "uuid": "34290a5c-38ae-43b0-8f16-02ed2d262f53",
                 "control-id": "r39",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R39.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5957,9 +5957,9 @@
                 ]
               },
               {
-                "uuid": "97340ab1-37ad-4167-951b-4b487e45c744",
+                "uuid": "8c0e3340-6019-4750-bb29-91dba608c5c4",
                 "control-id": "r40",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R40.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5974,9 +5974,9 @@
                 ]
               },
               {
-                "uuid": "e037b890-1c3f-4caa-886a-da0a1fea7c9d",
+                "uuid": "cb58c230-1508-433e-94e4-64618b0ea59c",
                 "control-id": "r42",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R42.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5991,9 +5991,9 @@
                 ]
               },
               {
-                "uuid": "a8f63a13-23b2-4205-8855-927c46858c04",
+                "uuid": "0a691a26-2638-42ad-b697-50eb6fc6eea6",
                 "control-id": "r43",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R43.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6008,9 +6008,9 @@
                 ]
               },
               {
-                "uuid": "0e4fc7ac-4385-4217-9bf9-9d9d75cb6008",
+                "uuid": "93386c0e-94b4-466b-970f-081e0fd051ec",
                 "control-id": "r44",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r44.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6021,9 +6021,9 @@
                 ]
               },
               {
-                "uuid": "5fe49167-e9a7-487d-906f-22ace23e20fb",
+                "uuid": "32072e1f-ecbb-4609-88d1-060f68ee8f4f",
                 "control-id": "r50",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R50.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6388,9 +6388,9 @@
                 ]
               },
               {
-                "uuid": "f52f9106-9862-4043-9794-1412574c77a3",
+                "uuid": "ee373b34-8f85-445e-bb64-be37b44c8311",
                 "control-id": "r52",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r52.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6401,7 +6401,7 @@
                 ]
               },
               {
-                "uuid": "d018f53a-541e-450e-bf5b-155397090a4e",
+                "uuid": "b016f218-5057-413d-9427-76e4a973afd5",
                 "control-id": "r55",
                 "description": "The approach of the selected rules is to use and configure pam_namespace module.",
                 "props": [
@@ -6428,9 +6428,9 @@
                 ]
               },
               {
-                "uuid": "fc3512d5-6e2d-4f04-b22c-adda06355c7e",
+                "uuid": "3aea4e0a-6982-4e6e-bb3e-7785f863a042",
                 "control-id": "r63",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r63.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6441,7 +6441,7 @@
                 ]
               },
               {
-                "uuid": "f24114b4-af9c-4c08-9e86-7a61696f99f6",
+                "uuid": "0bf42970-aa10-453f-8f63-66bad95d574f",
                 "control-id": "r67",
                 "description": "In systems where remote authentication is handled through sssd service, PAM delegates\nrequests for remote authentication to sssd service through a local Unix socket. The sssd\nservice can use IPA, AD or LDAP as a remote database containing information required for authentication.\nIn case LDAP is configured manually, there are several configuration options which should be chedked.",
                 "props": [
@@ -6478,9 +6478,9 @@
                 ]
               },
               {
-                "uuid": "83dafa65-aba4-4d0f-8ab2-29e956d0e353",
+                "uuid": "3696f942-a2e7-43a3-a445-068d5bc0c904",
                 "control-id": "r69",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r69.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6491,22 +6491,22 @@
                 ]
               },
               {
-                "uuid": "e90b8236-d110-4a08-a5e0-81f78b9b3fa6",
+                "uuid": "ff42f702-f934-443e-ac47-29dc493ea3f0",
                 "control-id": "r70",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r70.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id R70."
                   }
                 ]
               },
               {
-                "uuid": "beb88d2d-7dd6-4157-80c3-e4e93bb1cb5e",
+                "uuid": "02540a4d-2481-495b-a7eb-4b07c9ff17c1",
                 "control-id": "r74",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R74.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6521,7 +6521,7 @@
                 ]
               },
               {
-                "uuid": "4bae004e-2318-4ce3-8dc8-4d21105f56c7",
+                "uuid": "6aeca7b0-25d4-4103-acc4-ad31c1e74c98",
                 "control-id": "r75",
                 "description": "Only the alias for root user is covered by the rule. The other services cannot be reliably covered, as there is no simple way of determining what is a service account.",
                 "props": [
@@ -6538,7 +6538,7 @@
                 ]
               },
               {
-                "uuid": "6569f6f5-1634-4fdd-b456-331ed0e3cd9e",
+                "uuid": "28d8a794-13f7-4141-a658-490167782b0e",
                 "control-id": "r79",
                 "description": "SELinux can provide confinement and monitoring of services, and AIDE provides basic integrity checking. System logs are configured as part of R43. Hardening of particular services should be done on a case by case basis and is not automated by this content.",
                 "props": [
@@ -6565,9 +6565,9 @@
                 ]
               },
               {
-                "uuid": "10eeea60-78fa-4927-b297-9f830b85f732",
+                "uuid": "0debcc0d-7013-4c78-bfe0-a1befcb2c4cb",
                 "control-id": "r30",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r30.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6578,7 +6578,7 @@
                 ]
               },
               {
-                "uuid": "4ffa2af4-f4b2-4c02-aa37-b0e41cdbf732",
+                "uuid": "1bd94674-5602-4f48-910a-c7b883113dbb",
                 "control-id": "r31",
                 "description": "The rules selected below establish a general password strength baseline of 100 bits, based on the recommendations of the technical note \"Recommandations relatives à l'authentification multifacteur et aux mots de passe\" (https://cyber.gouv.fr/publications/recommandations-relatives-lauthentification-multifacteur-et-aux-mots-de-passe)\nThe baseline should be reviewed and tailored to the system's use case and needs.",
                 "props": [
@@ -6655,9 +6655,9 @@
                 ]
               },
               {
-                "uuid": "58517b63-689b-456b-b77b-80aa8f00d78a",
+                "uuid": "5b6cc3b6-8f14-4f36-b128-59c6498a01fd",
                 "control-id": "r53",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R53.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6677,9 +6677,9 @@
                 ]
               },
               {
-                "uuid": "681ecad7-3a23-40e3-9fcd-bf0f54514651",
+                "uuid": "19d3a5a4-d8a0-4220-8192-6a7e4bbf2084",
                 "control-id": "r54",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R54.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6704,7 +6704,7 @@
                 ]
               },
               {
-                "uuid": "542adc0a-8ee1-474f-a603-9ff1c0125f6d",
+                "uuid": "3a5e4a74-f1c0-4b01-bfc2-2d2d93bc7fa8",
                 "control-id": "r56",
                 "description": "Only programs specifically designed to be used with setuid or setgid bits can have these privilege bits set. This requirement considers apropriate for setuid and setgid bits the binaries that are installed from recognized and authorized repositories (covered in R15). The remediation resets the sticky bit to intended value by vendor/developer, any finding after remediation should be reviewed.",
                 "props": [
@@ -6726,9 +6726,9 @@
                 ]
               },
               {
-                "uuid": "30939b2e-dc18-4b52-ba96-b31bf305c97d",
+                "uuid": "8a232313-d230-42ab-bac1-34ed27ef828e",
                 "control-id": "r58",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r58.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6739,7 +6739,7 @@
                 ]
               },
               {
-                "uuid": "3833e737-3acd-48f9-bd74-71f4dd074041",
+                "uuid": "508e1a93-e074-4d80-9526-aafb6f4f026e",
                 "control-id": "r59",
                 "description": "It is not trivial to distinguish an official repository from an unofficial one. We cannot draw conclusions from the repo name or URL of the repo (as they can be arbitrary or behind a proxy). One approach to check the origin of installed packages is to check the signature of the packages. If the public key of a repository is not installed, the repo is not trusted.",
                 "props": [
@@ -6771,7 +6771,7 @@
                 ]
               },
               {
-                "uuid": "aebce202-dc6c-4122-b8d8-75ecf97e5c40",
+                "uuid": "2796d369-0aaa-4ce9-ab93-8892dad24675",
                 "control-id": "r61",
                 "description": "Check the vendor CVE feed and configure automatic install of security related updates.",
                 "props": [
@@ -6808,9 +6808,9 @@
                 ]
               },
               {
-                "uuid": "f63c910f-01ee-40d3-8612-a7b45bfcfacc",
+                "uuid": "b3fae0a8-a118-4261-8336-222b5703c330",
                 "control-id": "r62",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r62.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -6851,7 +6851,7 @@
                 ]
               },
               {
-                "uuid": "aa7f1166-9d9e-474f-903b-63b97730df76",
+                "uuid": "9b1d04a9-f410-43a9-8baa-2e97eb930e6d",
                 "control-id": "r68",
                 "description": "The selection of rules doesn't cover the use of hardware devices to protect the passwords.",
                 "props": [
@@ -6893,9 +6893,9 @@
                 ]
               },
               {
-                "uuid": "4590e55b-f39e-4053-b18c-d5985d14b205",
+                "uuid": "502508f9-f207-4fc8-9b8d-95b992f66f88",
                 "control-id": "r80",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r80.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -9462,7 +9462,7 @@
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Drop Gratuitious ARP frames on All IPv4 Interfaces",
+            "value": "Drop Gratuitous ARP frames on All IPv4 Interfaces",
             "remarks": "rule_set_078"
           },
           {
@@ -9474,7 +9474,7 @@
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Drop Gratuitious ARP frames on All IPv4 Interfaces",
+            "value": "Drop Gratuitous ARP frames on All IPv4 Interfaces",
             "remarks": "rule_set_078"
           },
           {
@@ -15000,9 +15000,9 @@
         ],
         "control-implementations": [
           {
-            "uuid": "004ebfe6-fd08-430a-bead-33e6541b6391",
+            "uuid": "826a262b-e6f4-40bf-ad88-8bdbaeca6082",
             "source": "trestle://profiles/rhel9-anssi-enhanced/profile.json",
-            "description": "REPLACE_ME",
+            "description": "Control implementation for anssi_bp28_enhanced",
             "props": [
               {
                 "name": "Framework_Short_Name",
@@ -15236,7 +15236,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "c47495da-1de9-4990-a93d-6bbc59859137",
+                "uuid": "ea0d869d-9201-46c1-bef7-9ec92caa91ac",
                 "control-id": "r1",
                 "description": "This requirement can be checked, but remediation requires manual reinstall of the OS. The content automation cannot really configure the BIOS, but can in some cases, check settings that are visible to the OS. Like for example the NX/DX setting.",
                 "props": [
@@ -15263,9 +15263,9 @@
                 ]
               },
               {
-                "uuid": "1d9243a2-b3c9-4403-80eb-1528a05bf7f2",
+                "uuid": "885b0a7a-51d1-4b89-b895-7cc280886fa2",
                 "control-id": "r7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15280,9 +15280,9 @@
                 ]
               },
               {
-                "uuid": "916546b3-bfab-4b8b-a5fa-4989f030b203",
+                "uuid": "27c18354-17fc-48dc-ad49-7187de45db8f",
                 "control-id": "r10",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R10.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15297,7 +15297,7 @@
                 ]
               },
               {
-                "uuid": "cc1197d7-758b-4636-a5ab-ed40def30ce8",
+                "uuid": "b65c5f2b-a6da-4906-825f-254b2e907af5",
                 "control-id": "r29",
                 "description": "The /boot partition mounted is essential to perform certain administrative actions, for example updating the kernel. Therefore, for better stability, in this requirement only rules to restrict the access to /boot are selected. It is not changed how the /boot is mounted.",
                 "props": [
@@ -15354,7 +15354,7 @@
                 ]
               },
               {
-                "uuid": "219016d4-16c2-4cda-a224-c5c8d0383773",
+                "uuid": "457e1b0e-bd54-4c59-9305-1df35176b53d",
                 "control-id": "r36",
                 "description": "There are cases of Systemd services which would stop working in case umask would be configured to 0027 for all services. One such example is the Cups service which needs to create sockets which need to be available for all users. Therefore, this part of the requirement can't be automated.",
                 "props": [
@@ -15381,7 +15381,7 @@
                 ]
               },
               {
-                "uuid": "0e33e49d-5f65-45e1-8aa2-c51c02693d76",
+                "uuid": "acb86fb0-c2db-4cf8-bb30-10f93baa76cd",
                 "control-id": "r37",
                 "description": "Other partitioning mechanisms can include chroot and containers and are not contemplated in this requirement.",
                 "props": [
@@ -15398,9 +15398,9 @@
                 ]
               },
               {
-                "uuid": "b21ed898-9ac2-44ad-adcb-e56eb8964c98",
+                "uuid": "7ccd6601-ecab-478c-89bb-cd9091c37195",
                 "control-id": "r38",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R38.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15420,9 +15420,9 @@
                 ]
               },
               {
-                "uuid": "e77c5ef9-ac59-41ec-8f54-e5ed8cbe9f8a",
+                "uuid": "e75a9d11-f148-49ed-9596-160cf613b456",
                 "control-id": "r41",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r41.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15433,9 +15433,9 @@
                 ]
               },
               {
-                "uuid": "bececf2e-0549-40c8-85be-9dc3eb487de7",
+                "uuid": "fb060839-360f-423b-baea-2e2f261a9368",
                 "control-id": "r45",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R45.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15445,7 +15445,7 @@
                 ]
               },
               {
-                "uuid": "a49357e3-6d4d-4c02-87a1-f1b704359cf7",
+                "uuid": "c09c698a-61be-4521-8e82-87808ac9d265",
                 "control-id": "r51",
                 "description": "This concerns two aspects, the first is administrative, and involves prompt installation of secrets or trusted elements by the sysadmin. The second involves removal of any default secret or trusted element configured by the operating system during install process, e.g. default known passwords.",
                 "props": [
@@ -15457,9 +15457,9 @@
                 ]
               },
               {
-                "uuid": "5593f18f-0ded-46e3-bee7-7b27d7ac65a0",
+                "uuid": "3079c536-888e-4fca-9f0a-cd81d5dffbc7",
                 "control-id": "r57",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r57.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15470,20 +15470,20 @@
                 ]
               },
               {
-                "uuid": "32c55d30-49f0-4c22-8a6c-2ac5ab0ff92c",
+                "uuid": "46e6fc22-a018-4e2d-96c0-b3b14c88911e",
                 "control-id": "r60",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r60.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "not-applicable",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id R60."
                   }
                 ]
               },
               {
-                "uuid": "0758f466-3861-413c-b492-067d87e9a9e5",
+                "uuid": "149fba75-8bf7-4a0f-ba6a-862dbf0766df",
                 "control-id": "r64",
                 "description": "SELinux policies limit the privileges of services and daemons just to those which are required. The policies should be enough to restrict the services' privileges to its essentials, but the automated content cannot assess whether they are the minimum required for the deployment.",
                 "props": [
@@ -15500,9 +15500,9 @@
                 ]
               },
               {
-                "uuid": "53b4d2c3-4e96-4474-afc1-e109512b6187",
+                "uuid": "0212c06c-3076-4f28-b5cb-ffd362101b77",
                 "control-id": "r65",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r65.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15513,7 +15513,7 @@
                 ]
               },
               {
-                "uuid": "4ed7489d-0f0a-46ec-b186-5f7ab2da3c14",
+                "uuid": "013ae79c-3556-4410-9e24-fe682a332f65",
                 "control-id": "r71",
                 "description": "A lot of recommendations and requirements from the DAT-PA-012 document are administrative and hard to automate. The rules selected below address a few of the aspects that can be covered, keep in mind that these configurations should be customized for the systems deployment requirements.",
                 "props": [
@@ -15590,9 +15590,9 @@
                 ]
               },
               {
-                "uuid": "029f08eb-21d6-4267-afcc-55f0c69b61fd",
+                "uuid": "b4e07d4b-5c70-444f-b1bb-0a343c6ce90e",
                 "control-id": "r72",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R72.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15602,9 +15602,9 @@
                 ]
               },
               {
-                "uuid": "c9979805-2381-41ba-8031-4a809f4ebeb1",
+                "uuid": "55aaa202-143a-455f-9968-fb42550f293c",
                 "control-id": "r73",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R73.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15869,9 +15869,9 @@
                 ]
               },
               {
-                "uuid": "46f4007b-c4a1-43c3-9f66-d017131c933f",
+                "uuid": "ad6fc92f-b266-4f50-b749-52e2c79e0ca6",
                 "control-id": "r78",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r78.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15882,9 +15882,9 @@
                 ]
               },
               {
-                "uuid": "32d31835-db8a-4126-a679-dfa058a6f948",
+                "uuid": "09fc87fe-2ad8-4425-a5a3-6ac9e9f4ff0c",
                 "control-id": "r2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15895,9 +15895,9 @@
                 ]
               },
               {
-                "uuid": "71847cb3-c275-494a-86dd-953c0d2b3670",
+                "uuid": "dc0266fb-9608-4576-85ea-47e21ea6555a",
                 "control-id": "r3",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15908,9 +15908,9 @@
                 ]
               },
               {
-                "uuid": "64987809-e13d-4e6e-b446-56a4da56f03a",
+                "uuid": "3342ed2f-a214-4532-846b-bd6f6641be4f",
                 "control-id": "r5",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R5.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15925,9 +15925,9 @@
                 ]
               },
               {
-                "uuid": "00c6ddd6-06a8-4f3d-8a37-488109f13384",
+                "uuid": "70d90537-8bb7-4c40-ae22-583dbe7109d7",
                 "control-id": "r8",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R8.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -15997,9 +15997,9 @@
                 ]
               },
               {
-                "uuid": "2d5c5037-dbd6-4c79-bdbd-1d921659ff80",
+                "uuid": "a3ea6d1e-ec4b-47fb-a17c-ef8064877be7",
                 "control-id": "r9",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R9.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16059,9 +16059,9 @@
                 ]
               },
               {
-                "uuid": "e2d7bbe7-8cce-428c-aac1-ae0526e16449",
+                "uuid": "2d7bb017-0aee-4157-842c-a38a17ae494f",
                 "control-id": "r11",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R11.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16076,9 +16076,9 @@
                 ]
               },
               {
-                "uuid": "944b86d8-2bad-4293-9cf7-669e7b49693d",
+                "uuid": "86be6ce3-2236-4f4e-be10-c9300ffd8ff3",
                 "control-id": "r12",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R12.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16203,7 +16203,7 @@
                 ]
               },
               {
-                "uuid": "e5b1883d-a80a-48b9-a441-2af838847317",
+                "uuid": "10ca4c09-3174-4d80-a03b-21d0e15afbe8",
                 "control-id": "r13",
                 "description": "When IPv6 is not in use, disable it, otherwise secure the IPv6 stack. This control hardens the IPv6 stack, to disable it use the related rules instead.",
                 "props": [
@@ -16295,7 +16295,7 @@
                 ]
               },
               {
-                "uuid": "3f651958-4ca9-4eab-84b6-a56ec477ec35",
+                "uuid": "2376950b-7b60-4290-a0ce-dc006bce3c2a",
                 "control-id": "r14",
                 "description": "The rule for the /proc file system is not implemented",
                 "props": [
@@ -16332,9 +16332,9 @@
                 ]
               },
               {
-                "uuid": "9d578166-f056-46e3-ba62-6995b229eb7a",
+                "uuid": "b0b40b4a-324d-491c-b39a-59eb6a56e408",
                 "control-id": "r28",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R28.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16449,7 +16449,7 @@
                 ]
               },
               {
-                "uuid": "359acbd8-6bfd-40ae-9c4e-19206c79c340",
+                "uuid": "41dda852-3d81-404a-aa14-e31b27a60109",
                 "control-id": "r32",
                 "description": "ANSSI doesn't specify the length of the inactivity period, we are choosing 10 minutes as reasonable number.",
                 "props": [
@@ -16471,7 +16471,7 @@
                 ]
               },
               {
-                "uuid": "0a56bc81-31fa-479a-b41e-b854e73d9a2d",
+                "uuid": "e38f73d7-c777-45eb-ba93-a71de25f0e1b",
                 "control-id": "r33",
                 "description": "By disabling direct root logins proper accountability is ensured. Users will login first, then escalate to privileged (root) access. Change of privilege operations must be based on executables to monitor the activities performed (for example sudo). Nonetheless, the content automation cannot ensure that each administrator was given a nominative administration account separate from his normal user account.",
                 "props": [
@@ -16513,9 +16513,9 @@
                 ]
               },
               {
-                "uuid": "ad85df83-4f04-4f2c-8b6b-ccc9b3f925b5",
+                "uuid": "62e5e53e-12dc-4d08-880c-41842b62e1b1",
                 "control-id": "r34",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r34.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16526,9 +16526,9 @@
                 ]
               },
               {
-                "uuid": "e8dfbbcd-1e01-4886-8b77-4c595120b014",
+                "uuid": "d3a28bc8-7673-4ca7-9a96-6d5f3ecf0d38",
                 "control-id": "r35",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r35.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16539,9 +16539,9 @@
                 ]
               },
               {
-                "uuid": "7e12ed27-95d2-4f6c-8b71-366a9e6bac69",
+                "uuid": "bde8cf50-34da-4cc3-a403-74f3e731f44e",
                 "control-id": "r39",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R39.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16566,9 +16566,9 @@
                 ]
               },
               {
-                "uuid": "ccc4eaf9-9e99-447f-bb33-d36a3e521801",
+                "uuid": "bacdc2c2-02c8-442e-88f3-5364376122db",
                 "control-id": "r40",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R40.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16583,9 +16583,9 @@
                 ]
               },
               {
-                "uuid": "f5f31af4-d810-48c4-9098-a61857a9de3d",
+                "uuid": "0f7f5254-79d8-486a-ac0c-cbf93bd2de09",
                 "control-id": "r42",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R42.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16600,9 +16600,9 @@
                 ]
               },
               {
-                "uuid": "2f4bec71-f3b2-4d57-bcbf-ae925c4280df",
+                "uuid": "0d347c76-16f3-4f1c-a64c-543b5cd4e9d3",
                 "control-id": "r43",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R43.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16617,9 +16617,9 @@
                 ]
               },
               {
-                "uuid": "e0b44dd5-752a-4ef2-8fc8-b2e58200d3f8",
+                "uuid": "94aac7e4-d9e3-404e-8cd1-f0786150fb62",
                 "control-id": "r44",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r44.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16630,9 +16630,9 @@
                 ]
               },
               {
-                "uuid": "9c2abfb5-fcc1-43ab-9639-9ba12802469e",
+                "uuid": "848231fa-0904-46a4-bea0-3d0d86685ee7",
                 "control-id": "r50",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R50.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -16997,9 +16997,9 @@
                 ]
               },
               {
-                "uuid": "6c74c0e8-6208-460f-a74a-1074b5919d34",
+                "uuid": "6b61cc64-e0b0-4119-94f7-a02f0297659d",
                 "control-id": "r52",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r52.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17010,7 +17010,7 @@
                 ]
               },
               {
-                "uuid": "8aa7ce72-3f55-4dc5-bbdf-3e08ae3d064a",
+                "uuid": "7bf94446-0702-4d21-919a-d431d41d110e",
                 "control-id": "r55",
                 "description": "The approach of the selected rules is to use and configure pam_namespace module.",
                 "props": [
@@ -17037,9 +17037,9 @@
                 ]
               },
               {
-                "uuid": "91243c4b-7ac6-43c3-95ac-2fc58f9bd34c",
+                "uuid": "8e4d8317-6144-4994-96f4-0482b962c48c",
                 "control-id": "r63",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r63.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17050,7 +17050,7 @@
                 ]
               },
               {
-                "uuid": "1cb0e4be-aead-44cf-89bc-836936766ab9",
+                "uuid": "0b36d251-158b-4702-9bc0-452d275bac1d",
                 "control-id": "r67",
                 "description": "In systems where remote authentication is handled through sssd service, PAM delegates\nrequests for remote authentication to sssd service through a local Unix socket. The sssd\nservice can use IPA, AD or LDAP as a remote database containing information required for authentication.\nIn case LDAP is configured manually, there are several configuration options which should be chedked.",
                 "props": [
@@ -17087,9 +17087,9 @@
                 ]
               },
               {
-                "uuid": "5539b293-50bf-48b9-afa7-cf9d96670ff2",
+                "uuid": "50a2a823-0117-4ac3-a90b-b74d186b2bcb",
                 "control-id": "r69",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r69.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17100,22 +17100,22 @@
                 ]
               },
               {
-                "uuid": "754c77a4-fecf-43ba-b425-e079bc9414e7",
+                "uuid": "323b1b1b-2cdb-4534-a67e-1a8f84bbc4ff",
                 "control-id": "r70",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r70.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id R70."
                   }
                 ]
               },
               {
-                "uuid": "c6c7d234-fec1-41c2-9b21-afb40ce90379",
+                "uuid": "830025ee-e828-4e53-8425-46a235f70bfa",
                 "control-id": "r74",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R74.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17130,7 +17130,7 @@
                 ]
               },
               {
-                "uuid": "2672d6d7-6653-41a6-be07-99475f8af74f",
+                "uuid": "b55ac72b-8d2c-4a55-b0d4-d0645271af86",
                 "control-id": "r75",
                 "description": "Only the alias for root user is covered by the rule. The other services cannot be reliably covered, as there is no simple way of determining what is a service account.",
                 "props": [
@@ -17147,7 +17147,7 @@
                 ]
               },
               {
-                "uuid": "f9913b21-a4ec-46e9-8507-a58bd4aafbf2",
+                "uuid": "79aa5c2a-ad70-45e4-b3f9-e66dddda25ba",
                 "control-id": "r79",
                 "description": "SELinux can provide confinement and monitoring of services, and AIDE provides basic integrity checking. System logs are configured as part of R43. Hardening of particular services should be done on a case by case basis and is not automated by this content.",
                 "props": [
@@ -17174,9 +17174,9 @@
                 ]
               },
               {
-                "uuid": "0e6db56b-4dcd-418a-be20-124732266d47",
+                "uuid": "5c99d447-7085-486b-8816-432aa056e9ec",
                 "control-id": "r30",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r30.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17187,7 +17187,7 @@
                 ]
               },
               {
-                "uuid": "5cc80d2b-b283-4270-af3f-16790a075ceb",
+                "uuid": "60b515dc-1b6c-4389-9cd8-b39671e84b43",
                 "control-id": "r31",
                 "description": "The rules selected below establish a general password strength baseline of 100 bits, based on the recommendations of the technical note \"Recommandations relatives à l'authentification multifacteur et aux mots de passe\" (https://cyber.gouv.fr/publications/recommandations-relatives-lauthentification-multifacteur-et-aux-mots-de-passe)\nThe baseline should be reviewed and tailored to the system's use case and needs.",
                 "props": [
@@ -17264,9 +17264,9 @@
                 ]
               },
               {
-                "uuid": "82f872c5-15ff-4953-98be-7b4a43d10424",
+                "uuid": "2b530979-a5cc-4a4b-9b25-b792231fdcc6",
                 "control-id": "r53",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R53.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17286,9 +17286,9 @@
                 ]
               },
               {
-                "uuid": "2652cf40-0679-4ec2-81fe-e00bd47a23b7",
+                "uuid": "669c0eba-314c-4691-9743-5bd31ea5c0a3",
                 "control-id": "r54",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id R54.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17313,7 +17313,7 @@
                 ]
               },
               {
-                "uuid": "13ffaf26-941f-4b60-869c-c83716ae0494",
+                "uuid": "1a47382c-63a2-4298-9f7d-e3c49028e9cb",
                 "control-id": "r56",
                 "description": "Only programs specifically designed to be used with setuid or setgid bits can have these privilege bits set. This requirement considers apropriate for setuid and setgid bits the binaries that are installed from recognized and authorized repositories (covered in R15). The remediation resets the sticky bit to intended value by vendor/developer, any finding after remediation should be reviewed.",
                 "props": [
@@ -17335,9 +17335,9 @@
                 ]
               },
               {
-                "uuid": "65793c0e-0e7f-429e-a144-e79a35c6d86d",
+                "uuid": "af46ef70-93fb-49f8-885e-fd130193b881",
                 "control-id": "r58",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r58.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17348,7 +17348,7 @@
                 ]
               },
               {
-                "uuid": "a3b67868-9d53-4ba7-a93d-bda0fb607fb2",
+                "uuid": "bfcb0eea-4df5-4971-8d6b-3251e0ad28a3",
                 "control-id": "r59",
                 "description": "It is not trivial to distinguish an official repository from an unofficial one. We cannot draw conclusions from the repo name or URL of the repo (as they can be arbitrary or behind a proxy). One approach to check the origin of installed packages is to check the signature of the packages. If the public key of a repository is not installed, the repo is not trusted.",
                 "props": [
@@ -17380,7 +17380,7 @@
                 ]
               },
               {
-                "uuid": "1692ec7f-050d-48fd-95f6-03f225824251",
+                "uuid": "9f7363ad-3bfa-43bc-b2d5-9fca3e5efa22",
                 "control-id": "r61",
                 "description": "Check the vendor CVE feed and configure automatic install of security related updates.",
                 "props": [
@@ -17417,9 +17417,9 @@
                 ]
               },
               {
-                "uuid": "608a87be-487c-4cc1-aed8-637eefef4fad",
+                "uuid": "2f65d75b-b0b8-44d3-9edb-6ea0591cff5d",
                 "control-id": "r62",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r62.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -17460,7 +17460,7 @@
                 ]
               },
               {
-                "uuid": "6ab4ef32-c94c-46c2-b414-25584aa0f9c3",
+                "uuid": "912bbc96-c6dd-41bf-8f25-7a3d985014eb",
                 "control-id": "r68",
                 "description": "The selection of rules doesn't cover the use of hardware devices to protect the passwords.",
                 "props": [
@@ -17502,9 +17502,9 @@
                 ]
               },
               {
-                "uuid": "22de7b82-a1d9-4e9c-85f3-86b014e04a48",
+                "uuid": "8f6a19fa-0e4d-4638-8b50-fd93f1402703",
                 "control-id": "r80",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id r80.",
                 "props": [
                   {
                     "name": "implementation-status",

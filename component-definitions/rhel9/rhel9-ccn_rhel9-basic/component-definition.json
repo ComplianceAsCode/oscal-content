@@ -3,8 +3,8 @@
     "uuid": "d364cef7-eb68-46c8-a504-4e7cede66d95",
     "metadata": {
       "title": "Component definition for rhel9",
-      "last-modified": "2025-09-12T13:23:11.511626+08:00",
-      "version": "1.1",
+      "last-modified": "2025-09-26T16:17:11.944960+08:00",
+      "version": "1.2",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -293,7 +293,7 @@
           {
             "name": "Parameter_Value_Alternatives_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
+            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
             "remarks": "rule_set_00"
           },
           {
@@ -1025,7 +1025,7 @@
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Enable Kernel Paremeter to Log Martian Packets on all IPv4 Interfaces by Default",
+            "value": "Enable Kernel Parameter to Log Martian Packets on all IPv4 Interfaces by Default",
             "remarks": "rule_set_061"
           },
           {
@@ -1391,9 +1391,9 @@
         ],
         "control-implementations": [
           {
-            "uuid": "690a4ff7-d4bb-46c4-a630-5e0dfebf2d21",
+            "uuid": "34b09040-5528-4156-b838-09bb1a237dee",
             "source": "trestle://profiles/rhel9-ccn_rhel9-basic/profile.json",
-            "description": "REPLACE_ME",
+            "description": "Control implementation for ccn_basic",
             "props": [
               {
                 "name": "Framework_Short_Name",
@@ -1495,7 +1495,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "48396ccf-5483-4aed-a5f7-acee2005e905",
+                "uuid": "bfafe7cd-bcb1-4811-a97f-16523a512153",
                 "control-id": "reload_dconf_db",
                 "description": "This is a helper rule to reload Dconf database correctly.",
                 "props": [
@@ -1512,7 +1512,7 @@
                 ]
               },
               {
-                "uuid": "b12852c2-d81a-4a0f-82c9-8e2990e814eb",
+                "uuid": "43dbf10f-583e-4dc3-acd0-99a7863323f4",
                 "control-id": "enable_authselect",
                 "description": "The policy doesn't have any section where this would fit better.",
                 "props": [
@@ -1529,9 +1529,9 @@
                 ]
               },
               {
-                "uuid": "d1664591-97a1-4c02-b1e6-14ce2fce8d4c",
+                "uuid": "54caf17b-fde5-465c-b57a-bbf28a320191",
                 "control-id": "a-3.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.3.SEC-RHEL1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1566,9 +1566,9 @@
                 ]
               },
               {
-                "uuid": "7127d9d6-ece5-4c78-8e79-17281473fca1",
+                "uuid": "2d3b3c3e-c7fd-45ff-ae33-ccfecfc67804",
                 "control-id": "a-3.sec.rhel6",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.3.SEC-RHEL6.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1583,9 +1583,9 @@
                 ]
               },
               {
-                "uuid": "3f574b9c-6fee-47c0-8203-e297d7b2227d",
+                "uuid": "772815b4-21f7-461e-a64a-94c9709862c3",
                 "control-id": "a-3.sec.rhel7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.3.SEC-RHEL7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1695,9 +1695,9 @@
                 ]
               },
               {
-                "uuid": "b7829398-0001-46a2-a881-894fedfd616c",
+                "uuid": "e9234034-e639-436d-a4ff-ea6612062b13",
                 "control-id": "a-4.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-4.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1708,9 +1708,9 @@
                 ]
               },
               {
-                "uuid": "83f57b1c-446f-4bb1-ac88-3541b54acad6",
+                "uuid": "2d94a481-b8eb-470b-a766-e9e51d3615c7",
                 "control-id": "a-4.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-4.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1721,9 +1721,9 @@
                 ]
               },
               {
-                "uuid": "ae6afd9f-9605-4ccf-afe7-5d726eb655f9",
+                "uuid": "f4ee3c17-7171-4af0-9dea-54c461758ec7",
                 "control-id": "a-4.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-4.sec.rhel3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1734,9 +1734,9 @@
                 ]
               },
               {
-                "uuid": "3fcbb14b-3c5f-495c-9a3c-444f82698383",
+                "uuid": "1b7634cf-73a3-4b04-a23a-b76ac2e2e3f0",
                 "control-id": "a-5.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1756,9 +1756,9 @@
                 ]
               },
               {
-                "uuid": "9d609b01-e963-4e45-806d-ffad2745e698",
+                "uuid": "94066b34-9451-47a9-95f3-21f568fd9ea3",
                 "control-id": "a-5.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-5.sec.rhel3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1769,9 +1769,9 @@
                 ]
               },
               {
-                "uuid": "f170c2ae-611b-4b1b-8d27-a2637891a885",
+                "uuid": "a0749b9b-f9bf-4ac5-8379-d5f740654725",
                 "control-id": "a-5.sec.rhel4",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL4.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1786,9 +1786,9 @@
                 ]
               },
               {
-                "uuid": "3a059062-bc71-4fc3-b4e6-7e86773395b9",
+                "uuid": "14e2ed52-9652-49bf-a483-81659084c643",
                 "control-id": "a-5.sec.rhel5",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL5.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1828,9 +1828,9 @@
                 ]
               },
               {
-                "uuid": "5553bd6f-cd71-4e05-ae0c-93926a89a114",
+                "uuid": "4652a923-7795-425e-b9e0-854eb4837c58",
                 "control-id": "a-5.sec.rhel6",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL6.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1845,9 +1845,9 @@
                 ]
               },
               {
-                "uuid": "af8a8ce5-3e33-49ea-924d-cd3f6f38cb5a",
+                "uuid": "55e299e4-bb85-4bc3-a617-c48afc4efec4",
                 "control-id": "a-5.sec.rhel7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1867,9 +1867,9 @@
                 ]
               },
               {
-                "uuid": "81d04dff-f9c4-4a9d-a629-20f39fb82a6d",
+                "uuid": "9e224911-d748-4086-9aba-5459cc0c5b38",
                 "control-id": "a-6.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.6.SEC-RHEL2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1909,48 +1909,48 @@
                 ]
               },
               {
-                "uuid": "3cc4bbe1-fd52-4ebd-8660-e3b08cc519e8",
+                "uuid": "b89e2baa-6302-422a-b556-a0ba0bdcea93",
                 "control-id": "a-6.sec.rhel6",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-6.sec.rhel6.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.6.SEC-RHEL6."
                   }
                 ]
               },
               {
-                "uuid": "2296e315-caea-4f62-9a89-15ccdfc0ff8f",
+                "uuid": "9dca82e3-adaa-4544-ad28-0b893268f189",
                 "control-id": "a-8.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.8.SEC-RHEL1."
                   }
                 ]
               },
               {
-                "uuid": "7e21749b-f233-49cb-96a5-e1412d37c1c2",
+                "uuid": "f452d280-352f-45d5-b41e-df30b14f5925",
                 "control-id": "a-8.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.8.SEC-RHEL2."
                   }
                 ]
               },
               {
-                "uuid": "b734d2a2-0704-40b8-b81c-09132b30990b",
+                "uuid": "b42321a3-729f-409c-9c85-87cd64ed5425",
                 "control-id": "a-8.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.8.SEC-RHEL3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -1990,7 +1990,7 @@
                 ]
               },
               {
-                "uuid": "902da013-e524-4989-9872-59b7bc09c82e",
+                "uuid": "1ffe969f-6756-48eb-9bc4-93c55af5f809",
                 "control-id": "a-8.sec.rhel6",
                 "description": "These are mentioned to be reviewed but not enforced:\n# net.ipv4.icmp_echo_ignore_all = 1\n# net.ipv4.tcp_timestamps = 0\n# net.ipv4.tcp_max_syn_backlog = 1280\n# sysctl_net_ipv6_conf_all_disable_ipv6\n# sysctl_net_ipv6_conf_default_disable_ipv6",
                 "props": [
@@ -2117,9 +2117,9 @@
                 ]
               },
               {
-                "uuid": "a6d1cf00-cb3e-445d-bb1a-236e8e62ce67",
+                "uuid": "664a3b08-f776-418a-bd7b-66c67e567581",
                 "control-id": "a-8.sec.rhel7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.8.SEC-RHEL7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2134,9 +2134,9 @@
                 ]
               },
               {
-                "uuid": "c2562394-1f6b-4022-8ac1-6db988091f11",
+                "uuid": "89f6157e-098d-481d-a66e-64aab16c0ccb",
                 "control-id": "a-8.sec.rhel8",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel8.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2147,9 +2147,9 @@
                 ]
               },
               {
-                "uuid": "76a7f236-b03c-40a7-9aaa-1ff102e04239",
+                "uuid": "b3997baa-6da1-4256-a7e5-b9780d025e71",
                 "control-id": "a-8.sec.rhel9",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel9.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2160,9 +2160,9 @@
                 ]
               },
               {
-                "uuid": "40588a4a-c782-4ab2-b0b7-b777a62e26e7",
+                "uuid": "20c4da41-bd88-49f6-b53e-6daaf8a0ac33",
                 "control-id": "a-11.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-11.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2173,9 +2173,9 @@
                 ]
               },
               {
-                "uuid": "43d17bd7-fbbe-471b-9295-ec589de7d9e0",
+                "uuid": "763a54b1-f436-431e-bceb-b058d808bec6",
                 "control-id": "a-11.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.11.SEC-RHEL2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2190,9 +2190,9 @@
                 ]
               },
               {
-                "uuid": "72dd6d18-e688-4edf-90e2-ccc2c2814d77",
+                "uuid": "a47f4368-c6ef-4578-b032-eee532b5393a",
                 "control-id": "a-11.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.11.SEC-RHEL3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2217,9 +2217,9 @@
                 ]
               },
               {
-                "uuid": "cf07fd17-c7a3-4632-b6b9-e9ac69c6d2df",
+                "uuid": "444dd43d-89d2-4c2a-8b0a-941275f7f43e",
                 "control-id": "a-11.sec.rhel4",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.11.SEC-RHEL4.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2259,20 +2259,20 @@
                 ]
               },
               {
-                "uuid": "4991d386-c23d-4733-8d76-4918d0bc5c6a",
+                "uuid": "9e22976f-f376-4988-853e-645d5c18b869",
                 "control-id": "a-11.sec.rhel5",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-11.sec.rhel5.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.11.SEC-RHEL5."
                   }
                 ]
               },
               {
-                "uuid": "b0009473-2e3e-486b-9a07-834392ed8c7e",
+                "uuid": "69ec65ee-b3f5-4d48-8bef-23188e1dd3dd",
                 "control-id": "a-11.sec.rhel6",
                 "description": "It overlaps the rule in A.5.SEC-RHEL6 requirement",
                 "props": [
@@ -2284,9 +2284,9 @@
                 ]
               },
               {
-                "uuid": "0661d627-cc4b-4ba0-b761-511b819d1312",
+                "uuid": "0854629e-26eb-4da9-9c48-7074bf134d08",
                 "control-id": "a-19.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-19.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2297,9 +2297,9 @@
                 ]
               },
               {
-                "uuid": "fdd1875d-e460-435f-9708-82d11019e59b",
+                "uuid": "8ef27117-cd4b-4da4-88aa-7db4d1a7e722",
                 "control-id": "a-19.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-19.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2310,9 +2310,9 @@
                 ]
               },
               {
-                "uuid": "28340b60-079f-4019-9ab0-99c06872edc0",
+                "uuid": "49b337c3-fa5c-4108-8b87-156668a9e123",
                 "control-id": "a-19.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.19.SEC-RHEL3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2337,9 +2337,9 @@
                 ]
               },
               {
-                "uuid": "29dc4c96-8b26-4359-abc0-fa49923e4945",
+                "uuid": "1e33bffa-003e-4bd1-bc18-b046c7955968",
                 "control-id": "a-23.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.23.SEC-RHEL1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2364,9 +2364,9 @@
                 ]
               },
               {
-                "uuid": "252379e8-863b-4b75-b2d5-cbc886267036",
+                "uuid": "619ff8bd-6cd8-4152-911b-902ea4da83ee",
                 "control-id": "a-23.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-23.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -2677,7 +2677,7 @@
           {
             "name": "Parameter_Value_Alternatives_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
+            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
             "remarks": "rule_set_00"
           },
           {
@@ -4129,7 +4129,7 @@
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Enable Kernel Paremeter to Log Martian Packets on all IPv4 Interfaces by Default",
+            "value": "Enable Kernel Parameter to Log Martian Packets on all IPv4 Interfaces by Default",
             "remarks": "rule_set_061"
           },
           {
@@ -4141,7 +4141,7 @@
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Enable Kernel Paremeter to Log Martian Packets on all IPv4 Interfaces by Default",
+            "value": "Enable Kernel Parameter to Log Martian Packets on all IPv4 Interfaces by Default",
             "remarks": "rule_set_061"
           },
           {
@@ -4867,9 +4867,9 @@
         ],
         "control-implementations": [
           {
-            "uuid": "ca7572cb-b500-4053-9e4c-f180ff295bb7",
+            "uuid": "2b0a2b29-64bc-401f-aade-42b74ae0e33b",
             "source": "trestle://profiles/rhel9-ccn_rhel9-basic/profile.json",
-            "description": "REPLACE_ME",
+            "description": "Control implementation for ccn_basic",
             "props": [
               {
                 "name": "Framework_Short_Name",
@@ -4971,7 +4971,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "126cf959-6ad8-4875-8b87-dc2ae22dda2e",
+                "uuid": "731e5dd7-4fd8-4095-b6f0-4587e5d967dc",
                 "control-id": "reload_dconf_db",
                 "description": "This is a helper rule to reload Dconf database correctly.",
                 "props": [
@@ -4988,7 +4988,7 @@
                 ]
               },
               {
-                "uuid": "230aa42e-2078-4205-9bc1-e09764b82912",
+                "uuid": "f1669d23-1868-4d6d-861f-7c5f408bbb5b",
                 "control-id": "enable_authselect",
                 "description": "The policy doesn't have any section where this would fit better.",
                 "props": [
@@ -5005,9 +5005,9 @@
                 ]
               },
               {
-                "uuid": "822f4c0d-e362-44cc-8542-625e979aa4f0",
+                "uuid": "bccaa12b-1498-414f-8715-a97d816568e6",
                 "control-id": "a-3.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.3.SEC-RHEL1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5042,9 +5042,9 @@
                 ]
               },
               {
-                "uuid": "02e42d0f-373f-4667-933a-09715f2d4698",
+                "uuid": "770c0fc0-c2c2-4fe1-8781-cfe90f296adc",
                 "control-id": "a-3.sec.rhel6",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.3.SEC-RHEL6.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5059,9 +5059,9 @@
                 ]
               },
               {
-                "uuid": "a11dd336-13bb-49e7-b10f-7be6b5c7f245",
+                "uuid": "7ca59084-d4ff-4a74-aae3-b6e1b75498bc",
                 "control-id": "a-3.sec.rhel7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.3.SEC-RHEL7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5171,9 +5171,9 @@
                 ]
               },
               {
-                "uuid": "95bd534d-1cde-46a3-a095-17614e146520",
+                "uuid": "bb8e1b52-b6d7-4749-b832-94be3d93e236",
                 "control-id": "a-4.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-4.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5184,9 +5184,9 @@
                 ]
               },
               {
-                "uuid": "18214aed-56f2-48a7-8cf4-7cf0999e101c",
+                "uuid": "0d9c76e6-d8c4-419e-9a7d-c5da089b75cc",
                 "control-id": "a-4.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-4.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5197,9 +5197,9 @@
                 ]
               },
               {
-                "uuid": "e6de3255-70eb-4da2-9c81-75b3ed311da0",
+                "uuid": "873c2be5-3536-4c21-8eb1-74079e84db40",
                 "control-id": "a-4.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-4.sec.rhel3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5210,9 +5210,9 @@
                 ]
               },
               {
-                "uuid": "d26d41ab-dfee-478f-83ae-54d8442f0c62",
+                "uuid": "bed32e99-edb1-4b09-b28d-6f389578000b",
                 "control-id": "a-5.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5232,9 +5232,9 @@
                 ]
               },
               {
-                "uuid": "c169ae78-b3f9-44a1-954e-873543141cc2",
+                "uuid": "6888fed1-3110-49ea-999c-a785bb5c06a6",
                 "control-id": "a-5.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-5.sec.rhel3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5245,9 +5245,9 @@
                 ]
               },
               {
-                "uuid": "f9dfef6e-7ab9-4285-a8d6-80336b2d1a7b",
+                "uuid": "07413b8f-86bf-42a5-b7bb-7308cadc7e15",
                 "control-id": "a-5.sec.rhel4",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL4.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5262,9 +5262,9 @@
                 ]
               },
               {
-                "uuid": "b2c38506-247f-4a42-a3c6-c15dfec256b0",
+                "uuid": "fa42c659-a080-431a-8163-3aa18b18ed8d",
                 "control-id": "a-5.sec.rhel5",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL5.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5304,9 +5304,9 @@
                 ]
               },
               {
-                "uuid": "5b0a75dc-7937-42e6-9801-2c8b61461386",
+                "uuid": "9fcaa59b-8a6b-4a46-86e9-51ad94d54033",
                 "control-id": "a-5.sec.rhel6",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL6.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5321,9 +5321,9 @@
                 ]
               },
               {
-                "uuid": "0dd994dd-7892-42bc-ad1f-04c72df00b5f",
+                "uuid": "166e4a61-89af-4982-9d3c-9e7359820eb2",
                 "control-id": "a-5.sec.rhel7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.5.SEC-RHEL7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5343,9 +5343,9 @@
                 ]
               },
               {
-                "uuid": "f00242a1-8299-4645-ab79-ff868e370c77",
+                "uuid": "dc8fc21d-cc75-47e1-b436-8bd5c62aa244",
                 "control-id": "a-6.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.6.SEC-RHEL2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5385,48 +5385,48 @@
                 ]
               },
               {
-                "uuid": "7a99c5db-3b74-4f5e-8637-f89348ca57f5",
+                "uuid": "d5457502-1744-4e25-985a-e7e04aa78721",
                 "control-id": "a-6.sec.rhel6",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-6.sec.rhel6.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.6.SEC-RHEL6."
                   }
                 ]
               },
               {
-                "uuid": "1b2bf729-1cfd-4e79-9ca9-ac3ad08eeb6a",
+                "uuid": "b6b18900-6066-4a05-8433-6d3704abb4b2",
                 "control-id": "a-8.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.8.SEC-RHEL1."
                   }
                 ]
               },
               {
-                "uuid": "02548a2a-d118-41db-8ae2-37e0b8767a1c",
+                "uuid": "3425e0a7-b0eb-482b-ba9e-c05db68d414d",
                 "control-id": "a-8.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.8.SEC-RHEL2."
                   }
                 ]
               },
               {
-                "uuid": "326ace06-5fc5-4373-b3cb-4b7dc60dceac",
+                "uuid": "7a06e72a-25f9-439c-821d-caa66efc1302",
                 "control-id": "a-8.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.8.SEC-RHEL3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5466,7 +5466,7 @@
                 ]
               },
               {
-                "uuid": "90a52088-77a4-4b05-b08e-a151bd207862",
+                "uuid": "6fc18de4-d6f5-41af-a47c-6885f7e01b11",
                 "control-id": "a-8.sec.rhel6",
                 "description": "These are mentioned to be reviewed but not enforced:\n# net.ipv4.icmp_echo_ignore_all = 1\n# net.ipv4.tcp_timestamps = 0\n# net.ipv4.tcp_max_syn_backlog = 1280\n# sysctl_net_ipv6_conf_all_disable_ipv6\n# sysctl_net_ipv6_conf_default_disable_ipv6",
                 "props": [
@@ -5593,9 +5593,9 @@
                 ]
               },
               {
-                "uuid": "418a5681-535d-42d6-a63e-9b62385183b7",
+                "uuid": "348ff68a-c6e5-4589-a424-fa24fd306f3d",
                 "control-id": "a-8.sec.rhel7",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.8.SEC-RHEL7.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5610,9 +5610,9 @@
                 ]
               },
               {
-                "uuid": "497d73a9-e07a-4d62-b3b8-d54976134c67",
+                "uuid": "d21f4477-a48e-4189-8a5e-e1f7d3b34046",
                 "control-id": "a-8.sec.rhel8",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel8.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5623,9 +5623,9 @@
                 ]
               },
               {
-                "uuid": "4f1c7097-b0c5-404d-b3e6-ab73e3f415bc",
+                "uuid": "8d5f7a08-c828-476c-accf-06c353da5d5e",
                 "control-id": "a-8.sec.rhel9",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-8.sec.rhel9.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5636,9 +5636,9 @@
                 ]
               },
               {
-                "uuid": "7bdb4fc4-b1b3-4ada-993f-ef79bb040def",
+                "uuid": "9edf2790-e646-4882-8579-3fc1197a048d",
                 "control-id": "a-11.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-11.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5649,9 +5649,9 @@
                 ]
               },
               {
-                "uuid": "151b0bf7-9e20-4130-85b9-ef46428fbb25",
+                "uuid": "8cb8797b-c517-47e4-b992-862d2be50149",
                 "control-id": "a-11.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.11.SEC-RHEL2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5666,9 +5666,9 @@
                 ]
               },
               {
-                "uuid": "23a35a24-1226-4e70-826a-8df7aa90acad",
+                "uuid": "79fd587f-87e6-4b5b-b3f2-8a47caa4b244",
                 "control-id": "a-11.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.11.SEC-RHEL3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5693,9 +5693,9 @@
                 ]
               },
               {
-                "uuid": "bcd6db01-bfec-4e8f-9f8b-a2da90369a2b",
+                "uuid": "5f437bc3-a4cc-46fd-a450-c13ed006bed5",
                 "control-id": "a-11.sec.rhel4",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.11.SEC-RHEL4.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5735,20 +5735,20 @@
                 ]
               },
               {
-                "uuid": "0aa90477-e3bb-4c69-aa77-f0b887b35800",
+                "uuid": "6c251701-5baf-48cd-a111-c0eb337727ea",
                 "control-id": "a-11.sec.rhel5",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-11.sec.rhel5.",
                 "props": [
                   {
                     "name": "implementation-status",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "alternative",
-                    "remarks": "REPLACE_ME"
+                    "remarks": "No notes for control-id A.11.SEC-RHEL5."
                   }
                 ]
               },
               {
-                "uuid": "2b47008e-8fe1-426d-993a-126de7db619a",
+                "uuid": "24a7e56b-9906-402d-a04c-ff56ead713c6",
                 "control-id": "a-11.sec.rhel6",
                 "description": "It overlaps the rule in A.5.SEC-RHEL6 requirement",
                 "props": [
@@ -5760,9 +5760,9 @@
                 ]
               },
               {
-                "uuid": "8095d9ca-ea9e-4444-8556-42529d46c1b3",
+                "uuid": "91f281f5-77c1-4170-a91f-0d4db6d52ce6",
                 "control-id": "a-19.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-19.sec.rhel1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5773,9 +5773,9 @@
                 ]
               },
               {
-                "uuid": "869dc2c0-01d4-4787-849d-74e9ebe89a65",
+                "uuid": "98cc0c19-756e-4b12-b8c0-1b11e4e1a61a",
                 "control-id": "a-19.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-19.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5786,9 +5786,9 @@
                 ]
               },
               {
-                "uuid": "ff11a4b4-319f-4ebe-b26a-faa589bf7b2f",
+                "uuid": "db123f6b-9a1b-4da7-9714-0b96f9f77edb",
                 "control-id": "a-19.sec.rhel3",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.19.SEC-RHEL3.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5813,9 +5813,9 @@
                 ]
               },
               {
-                "uuid": "1e8e3142-d1de-481a-b6d9-1893cb63e595",
+                "uuid": "4bd4484e-db56-4a60-be65-06e82e01c5f6",
                 "control-id": "a-23.sec.rhel1",
-                "description": "REPLACE_ME",
+                "description": "No notes for control-id A.23.SEC-RHEL1.",
                 "props": [
                   {
                     "name": "implementation-status",
@@ -5840,9 +5840,9 @@
                 ]
               },
               {
-                "uuid": "158a9a51-4cf3-4419-853d-e0be484467c8",
+                "uuid": "bbf1774b-e62b-49a3-85fa-f1f4f9f82e67",
                 "control-id": "a-23.sec.rhel2",
-                "description": "REPLACE_ME",
+                "description": "The description for control-id a-23.sec.rhel2.",
                 "props": [
                   {
                     "name": "implementation-status",
