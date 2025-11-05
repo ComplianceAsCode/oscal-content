@@ -3,8 +3,8 @@
     "uuid": "d6bf05ff-8086-4127-a221-4429b77ab593",
     "metadata": {
       "title": "Component definition for rhel8",
-      "last-modified": "2025-10-31T16:33:43.476056+00:00",
-      "version": "2.4",
+      "last-modified": "2025-11-05T15:21:43.893133+00:00",
+      "version": "2.5",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -281,493 +281,493 @@
           {
             "name": "Parameter_Id_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_action_mail_acct",
+            "value": "var_audit_backlog_limit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for action_mail_acct in /etc/audit/auditd.conf",
+            "value": "Value of the audit_backlog_limit argument in GRUB 2 configuration. The audit_backlog_limit parameter determines how auditd records can be held in the auditd backlog.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'admin': 'admin', 'default': 'root', 'root': 'root'}",
+            "value": "{'default': 8192, 8192: 8192}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_disk_error_action",
+            "value": "var_auditd_action_mail_acct",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'The setting for disk_error_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
+            "value": "The setting for action_mail_acct in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
+            "value": "{'admin': 'admin', 'default': 'root', 'root': 'root'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_disk_full_action",
+            "value": "var_auditd_disk_error_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'The setting for disk_full_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
+            "value": "'The setting for disk_error_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_17",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_max_log_file_action",
+            "value": "var_auditd_disk_full_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_17",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for max_log_file_action in /etc/audit/auditd.conf. The following options are available: <br />ignore - audit daemon does nothing. <br />syslog - audit daemon will issue a warning to syslog. <br />suspend - audit daemon will stop writing records to the disk. <br />rotate - audit daemon will rotate logs in the same convention used by logrotate. <br />keep_logs - similar to rotate but prevents audit logs to be overwritten. May trigger space_left_action if volume is full.",
+            "value": "'The setting for disk_full_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_17",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'rotate', 'keep_logs': 'keep_logs', 'rotate': 'rotate', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_18",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_name_format",
+            "value": "var_auditd_max_log_file_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_18",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of hostname to record the audit event",
+            "value": "The setting for max_log_file_action in /etc/audit/auditd.conf. The following options are available: <br />ignore - audit daemon does nothing. <br />syslog - audit daemon will issue a warning to syslog. <br />suspend - audit daemon will stop writing records to the disk. <br />rotate - audit daemon will rotate logs in the same convention used by logrotate. <br />keep_logs - similar to rotate but prevents audit logs to be overwritten. May trigger space_left_action if volume is full.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_18",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'hostname', 'hostname': 'hostname', 'fqd': 'fqd', 'numeric': 'numeric', 'user': 'user', 'none': 'none', 'stig': 'hostname|fqd|numeric'}",
+            "value": "{'default': 'rotate', 'keep_logs': 'keep_logs', 'rotate': 'rotate', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_19",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_space_left_action",
+            "value": "var_auditd_name_format",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_19",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for space_left_action in /etc/audit/auditd.conf",
+            "value": "Type of hostname to record the audit event",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_19",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'email', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'email|exec|single|halt', 'cis_rhel9': 'email|exec|single|halt', 'cis_rhel10': 'email|exec|single|halt'}",
+            "value": "{'default': 'hostname', 'hostname': 'hostname', 'fqd': 'fqd', 'numeric': 'numeric', 'user': 'user', 'none': 'none', 'stig': 'hostname|fqd|numeric'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_20",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_space_left_percentage",
+            "value": "var_auditd_space_left_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_20",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for space_left as a percentage in /etc/audit/auditd.conf",
+            "value": "The setting for space_left_action in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_20",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'25pc': 25, '50pc': 50, '75pc': 75, 'default': 25}",
+            "value": "{'default': 'email', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'email|exec|single|halt', 'cis_rhel9': 'email|exec|single|halt', 'cis_rhel10': 'email|exec|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_21",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_authselect_profile",
+            "value": "var_auditd_space_left_percentage",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_21",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the authselect profile to select",
+            "value": "The setting for space_left as a percentage in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_21",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
+            "value": "{'25pc': 25, '50pc': 50, '75pc': 75, 'default': 25}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_22",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_logind_session_timeout",
+            "value": "var_authselect_profile",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_22",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify duration of allowed idle time.",
+            "value": "Specify the authselect profile to select",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_22",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'10_minutes': 600, '120_minutes': 7200, '14_minutes': 840, '15_minutes': 900, '30_minutes': 1800, '5_minutes': 300, '60_minutes': 3600, 'default': 300}",
+            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_23",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_multiple_time_servers",
+            "value": "var_logind_session_timeout",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_23",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The list of vendor-approved time servers",
+            "value": "Specify duration of allowed idle time.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_23",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'generic': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'stig': '0.us.pool.ntp.mil', 'fedora': '0.fedora.pool.ntp.org,1.fedora.pool.ntp.org,2.fedora.pool.ntp.org,3.fedora.pool.ntp.org', 'rhel': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ol': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'suse': '0.suse.pool.ntp.org,1.suse.pool.ntp.org,2.suse.pool.ntp.org,3.suse.pool.ntp.org', 'alinux': '0.ntp.cloud.aliyuncs.com,1.ntp.aliyun.com,2.ntp1.aliyun.com,3.ntp1.cloud.aliyuncs.com', 'amazon': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ubuntu': '0.ubuntu.pool.ntp.org,1.ubuntu.pool.ntp.org,2.ubuntu.pool.ntp.org,3.ubuntu.pool.ntp.org', 'almalinux': '0.almalinux.pool.ntp.org,1.almalinux.pool.ntp.org,2.almalinux.pool.ntp.org,3.almalinux.pool.ntp.org', 'debian': '0.debian.pool.ntp.org,1.debian.pool.ntp.org,2.debian.pool.ntp.org,3.debian.pool.ntp.org', 'nist': 'time.nist.gov,time-a-g.nist.gov,time-b-g.nist.gov,time-c-g.nist.gov'}",
+            "value": "{'10_minutes': 600, '120_minutes': 7200, '14_minutes': 840, '15_minutes': 900, '30_minutes': 1800, '5_minutes': 300, '60_minutes': 3600, 'default': 300}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_24",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_algorithm",
+            "value": "var_multiple_time_servers",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_24",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the value set as ENCRYPT_METHOD in /etc/login.defs.",
+            "value": "The list of vendor-approved time servers",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_24",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
+            "value": "{'default': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'generic': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'stig': '0.us.pool.ntp.mil', 'fedora': '0.fedora.pool.ntp.org,1.fedora.pool.ntp.org,2.fedora.pool.ntp.org,3.fedora.pool.ntp.org', 'rhel': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ol': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'suse': '0.suse.pool.ntp.org,1.suse.pool.ntp.org,2.suse.pool.ntp.org,3.suse.pool.ntp.org', 'alinux': '0.ntp.cloud.aliyuncs.com,1.ntp.aliyun.com,2.ntp1.aliyun.com,3.ntp1.cloud.aliyuncs.com', 'amazon': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ubuntu': '0.ubuntu.pool.ntp.org,1.ubuntu.pool.ntp.org,2.ubuntu.pool.ntp.org,3.ubuntu.pool.ntp.org', 'almalinux': '0.almalinux.pool.ntp.org,1.almalinux.pool.ntp.org,2.almalinux.pool.ntp.org,3.almalinux.pool.ntp.org', 'debian': '0.debian.pool.ntp.org,1.debian.pool.ntp.org,2.debian.pool.ntp.org,3.debian.pool.ntp.org', 'nist': 'time.nist.gov,time-a-g.nist.gov,time-b-g.nist.gov,time-c-g.nist.gov'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_25",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_algorithm_pam",
+            "value": "var_password_hashing_algorithm",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_25",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the hashing algorithm to be used in pam_unix.so.",
+            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the value set as ENCRYPT_METHOD in /etc/login.defs.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_25",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
+            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_26",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_min_rounds_login_defs",
+            "value": "var_password_hashing_algorithm_pam",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_26",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of password hashing rounds configured through /etc/login.defs",
+            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the hashing algorithm to be used in pam_unix.so.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_26",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 5000, '5000': 5000, '100000': 100000}",
+            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_27",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_dcredit",
+            "value": "var_password_hashing_min_rounds_login_defs",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_27",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of digits in password",
+            "value": "Minimum number of password hashing rounds configured through /etc/login.defs",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_27",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{'default': 5000, '5000': 5000, '100000': 100000}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_28",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_dictcheck",
+            "value": "var_password_pam_dcredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_28",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent the use of dictionary words for passwords.",
+            "value": "Minimum number of digits in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_28",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 'default': 1}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_29",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_difok",
+            "value": "var_password_pam_dictcheck",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_29",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of characters not present in old password",
+            "value": "Prevent the use of dictionary words for passwords.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_29",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{15: 15, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 'default': 8}",
+            "value": "{1: 1, 'default': 1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_30",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_lcredit",
+            "value": "var_password_pam_difok",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_30",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of lower case in password",
+            "value": "Minimum number of characters not present in old password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_30",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{15: 15, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 'default': 8}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_31",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_maxclassrepeat",
+            "value": "var_password_pam_lcredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_31",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Maximum Number of Consecutive Repeating Characters in a Password From the Same Character Class",
+            "value": "Minimum number of lower case in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_31",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 4}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_32",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_maxrepeat",
+            "value": "var_password_pam_maxclassrepeat",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_32",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Maximum Number of Consecutive Repeating Characters in a Password",
+            "value": "Maximum Number of Consecutive Repeating Characters in a Password From the Same Character Class",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_32",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 'default': 3}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 4}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_33",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_minclass",
+            "value": "var_password_pam_maxrepeat",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_33",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of categories of characters that must exist in a password",
+            "value": "Maximum Number of Consecutive Repeating Characters in a Password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_33",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 3}",
+            "value": "{1: 1, 2: 2, 3: 3, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_34",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_minlen",
+            "value": "var_password_pam_minclass",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_34",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of characters in password",
+            "value": "Minimum number of categories of characters that must exist in a password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_34",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 12: 12, 14: 14, 15: 15, 17: 17, 18: 18, 20: 20, 6: 6, 7: 7, 8: 8, 'default': 15}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_35",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_ocredit",
+            "value": "var_password_pam_minlen",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_35",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of other (special characters) in password",
+            "value": "Minimum number of characters in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_35",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{10: 10, 12: 12, 14: 14, 15: 15, 17: 17, 18: 18, 20: 20, 6: 6, 7: 7, 8: 8, 'default': 15}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_remember",
+            "value": "var_password_pam_ocredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent password reuse using password history lookup",
+            "value": "Minimum number of other (special characters) in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 24: 24, 'default': 5}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_remember_control_flag",
+            "value": "var_password_pam_remember",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'Specify the control flag required for password remember requirement. If multiple values are allowed write them separated by commas as in \"required,requisite\", for remediations the first value will be taken'",
+            "value": "Prevent password reuse using password history lookup",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'required': 'required', 'optional': 'optional', 'requisite': 'requisite', 'sufficient': 'sufficient', 'binding': 'binding', 'ol8': 'required,requisite', 'requisite_or_required': 'requisite,required', 'default': 'requisite'}",
+            "value": "{'0': '0', 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 24: 24, 'default': 5}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_retry",
+            "value": "var_password_pam_remember_control_flag",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Number of retry attempts before erroring out",
+            "value": "'Specify the control flag required for password remember requirement. If multiple values are allowed write them separated by commas as in \"required,requisite\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 'default': 3}",
+            "value": "{'required': 'required', 'optional': 'optional', 'requisite': 'requisite', 'sufficient': 'sufficient', 'binding': 'binding', 'ol8': 'required,requisite', 'requisite_or_required': 'requisite,required', 'default': 'requisite'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_ucredit",
+            "value": "var_password_pam_retry",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of upper case in password",
+            "value": "Number of retry attempts before erroring out",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_rekey_limit_size",
+            "value": "var_password_pam_ucredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the size component of the rekey limit.",
+            "value": "Minimum number of upper case in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'sshd_default': 'default', 'default': '512M', '512M': '512M', '1G': '1G'}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_rekey_limit_time",
+            "value": "var_rekey_limit_size",
             "remarks": "rule_set_000"
           },
           {
@@ -779,203 +779,221 @@
           {
             "name": "Parameter_Value_Alternatives_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'sshd_default': 'none', 'default': '1h', '1hour': '1h'}",
+            "value": "{'sshd_default': 'default', 'default': '512M', '512M': '512M', '1G': '1G'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_screensaver_lock_delay",
+            "value": "var_rekey_limit_time",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Choose allowed duration (in seconds) after a screensaver becomes active before displaying an authentication prompt",
+            "value": "Specify the size component of the rekey limit.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'10_seconds': 10, '5_seconds': 5, 'default': '0', 'immediate': '0'}",
+            "value": "{'sshd_default': 'none', 'default': '1h', '1hour': '1h'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_policy_name",
+            "value": "var_screensaver_lock_delay",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
+            "value": "Choose allowed duration (in seconds) after a screensaver becomes active before displaying an authentication prompt",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "value": "{'10_seconds': 10, '5_seconds': 5, 'default': '0', 'immediate': '0'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_state",
+            "value": "var_selinux_policy_name",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
+            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_ssh_client_rekey_limit_size",
+            "value": "var_selinux_state",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the size component of the rekey limit. This limit signifies amount of data. After this amount of data is transferred through the connection, the session key is renegotiated. The number is followed by K, M or G for kilobytes, megabytes or gigabytes. Note that the RekeyLimit can be also configured according to elapsed time.",
+            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '512M', '512M': '512M', '1G': '1G'}",
+            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_ssh_client_rekey_limit_time",
+            "value": "var_ssh_client_rekey_limit_size",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transferred data.",
+            "value": "Specify the size component of the rekey limit. This limit signifies amount of data. After this amount of data is transferred through the connection, the session key is renegotiated. The number is followed by K, M or G for kilobytes, megabytes or gigabytes. Note that the RekeyLimit can be also configured according to elapsed time.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '1h', '1hour': '1h'}",
+            "value": "{'default': '512M', '512M': '512M', '1G': '1G'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_keepalive",
+            "value": "var_ssh_client_rekey_limit_time",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the maximum number of idle message counts before session is terminated.",
+            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transferred data.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "value": "{'default': '1h', '1hour': '1h'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sssd_certificate_verification_digest_function",
+            "value": "var_sshd_set_keepalive",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Value of the certificate_verification option in the SSSD config.",
+            "value": "Specify the maximum number of idle message counts before session is terminated.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'sha1': 'sha1', 'sha256': 'sha256', 'sha384': 'sha384', 'sha512': 'sha512', 'default': 'sha1'}",
+            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sudo_timestamp_timeout",
+            "value": "var_sssd_certificate_verification_digest_function",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Defines the number of minutes that can elapse before <tt>sudo</tt> will ask for a passwd again. If set to a value less than 0 the user's time stamp will never expire. Defining 0 means always prompt for a  password. The default timeout value is 5 minutes.",
+            "value": "Value of the certificate_verification option in the SSSD config.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '5', 'always_prompt': '0', '1_minute': '1', '2_minutes': '2', '3_minutes': '3', '5_minutes': '5', '15_minutes': '15'}",
+            "value": "{'sha1': 'sha1', 'sha256': 'sha256', 'sha384': 'sha384', 'sha512': 'sha512', 'default': 'sha1'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_system_crypto_policy",
+            "value": "var_sudo_timestamp_timeout",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the crypto policy for the system.",
+            "value": "Defines the number of minutes that can elapse before <tt>sudo</tt> will ask for a passwd again. If set to a value less than 0 the user's time stamp will never expire. Defining 0 means always prompt for a  password. The default timeout value is 5 minutes.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
+            "value": "{'default': '5', 'always_prompt': '0', '1_minute': '1', '2_minutes': '2', '3_minutes': '3', '5_minutes': '5', '15_minutes': '15'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_time_service_set_maxpoll",
+            "value": "var_system_crypto_policy",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The maximum NTP or Chrony poll interval number in seconds specified as a power of two.",
+            "value": "Specify the crypto policy for the system.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'36_hours': 17, '18_hours': 16, 'default': 10, 'system_default': 10}",
+            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_user_initialization_files_regex",
+            "value": "var_time_service_set_maxpoll",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'A regular expression describing a list of file names for files that are sourced at login time for interactive users'",
+            "value": "The maximum NTP or Chrony poll interval number in seconds specified as a power of two.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_52",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "{'36_hours': 17, '18_hours': 16, 'default': 10, 'system_default': 10}",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Id_53",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_user_initialization_files_regex",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Description_53",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "'A regular expression describing a list of file names for files that are sourced at login time for interactive users'",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Value_Alternatives_53",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "{'default': '^(\\\\.bashrc|\\\\.zshrc|\\\\.cshrc|\\\\.profile|\\\\.bash_login|\\\\.bash_profile)$', 'all_dotfiles': '^\\\\.[\\\\w\\\\- ]+$'}",
             "remarks": "rule_set_000"
@@ -5819,7 +5837,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "c8f6b389-9ab0-4468-84cd-4a6a797bcee3",
+            "uuid": "05257020-8fc5-4492-b9d7-71d363bc22a6",
             "source": "trestle://profiles/rhel8-stig_rhel8-medium/profile.json",
             "description": "Control implementation for stig",
             "props": [
@@ -5912,6 +5930,12 @@
                 "param-id": "var_accounts_user_umask",
                 "values": [
                   "077"
+                ]
+              },
+              {
+                "param-id": "var_audit_backlog_limit",
+                "values": [
+                  "8192"
                 ]
               },
               {
@@ -6151,7 +6175,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "7752d22f-5655-4ecb-ad03-2539f4b9058c",
+                "uuid": "17bbbf0f-f0fa-4fb8-8693-5420c3fac8e9",
                 "control-id": "needed_rules",
                 "description": "The description for control-id needed_rules.",
                 "props": [
@@ -6199,7 +6223,7 @@
                 ]
               },
               {
-                "uuid": "b0254569-62ca-4395-8811-0695626c7481",
+                "uuid": "567c66be-d0c5-43d9-86d4-8b86084c5546",
                 "control-id": "needed_rules",
                 "description": "The description for control-id needed_rules.",
                 "props": [
@@ -6247,7 +6271,7 @@
                 ]
               },
               {
-                "uuid": "d5bb08d5-8625-458c-89e7-71afc05a4a12",
+                "uuid": "ecc325e8-6f74-4b6b-98b6-2015da211985",
                 "control-id": "rhel-08.010010",
                 "description": "No notes for control-id RHEL-08-010010.",
                 "props": [
@@ -6264,7 +6288,7 @@
                 ]
               },
               {
-                "uuid": "99ef0d6f-1811-4f6f-b182-516b6791147e",
+                "uuid": "9973ef12-e679-4589-b211-53e5ce73abad",
                 "control-id": "rhel-08.010040",
                 "description": "No notes for control-id RHEL-08-010040.",
                 "props": [
@@ -6281,7 +6305,7 @@
                 ]
               },
               {
-                "uuid": "b1640e22-2db5-4151-9725-20025aa30c3b",
+                "uuid": "4e43b957-ac60-473a-83a0-2b326a0b9804",
                 "control-id": "rhel-08.010050",
                 "description": "No notes for control-id RHEL-08-010050.",
                 "props": [
@@ -6298,7 +6322,7 @@
                 ]
               },
               {
-                "uuid": "1e41044c-0f04-4f40-822b-8c468f27e0b4",
+                "uuid": "0172cb69-3aed-48e2-8204-7cba48bbe46d",
                 "control-id": "rhel-08.010060",
                 "description": "No notes for control-id RHEL-08-010060.",
                 "props": [
@@ -6315,7 +6339,7 @@
                 ]
               },
               {
-                "uuid": "50f3322e-1562-4f00-8754-fe9d5414f5e4",
+                "uuid": "0eaadf9b-236c-4317-9a59-0411d2c9d553",
                 "control-id": "rhel-08.010070",
                 "description": "No notes for control-id RHEL-08-010070.",
                 "props": [
@@ -6332,7 +6356,7 @@
                 ]
               },
               {
-                "uuid": "08f92a3e-de77-4398-9ba8-2a7e1d47ec22",
+                "uuid": "db1842d1-906b-4329-b290-52b8ec724dc8",
                 "control-id": "rhel-08.010090",
                 "description": "No notes for control-id RHEL-08-010090.",
                 "props": [
@@ -6349,7 +6373,7 @@
                 ]
               },
               {
-                "uuid": "db29a088-877a-4f16-9379-727c91918b0c",
+                "uuid": "f7a0a5f1-ff59-4e25-b8f9-beedc233de65",
                 "control-id": "rhel-08.010100",
                 "description": "No notes for control-id RHEL-08-010100.",
                 "props": [
@@ -6366,7 +6390,7 @@
                 ]
               },
               {
-                "uuid": "1a767ab1-17c4-4631-ae1a-fd27006a2c3c",
+                "uuid": "681d50c3-ed8d-4182-aa52-59894e0e2e19",
                 "control-id": "rhel-08.010110",
                 "description": "No notes for control-id RHEL-08-010110.",
                 "props": [
@@ -6383,7 +6407,7 @@
                 ]
               },
               {
-                "uuid": "59b52bb8-d770-49b6-8870-de7bdc7d40b9",
+                "uuid": "e94a1890-9de2-4ea3-9e8d-897723e24c29",
                 "control-id": "rhel-08.010120",
                 "description": "No notes for control-id RHEL-08-010120.",
                 "props": [
@@ -6400,7 +6424,7 @@
                 ]
               },
               {
-                "uuid": "aea8b960-f2bd-418a-9e98-5c1a8225bf9e",
+                "uuid": "51599707-383b-49c9-8150-8db51595e5c5",
                 "control-id": "rhel-08.010130",
                 "description": "No notes for control-id RHEL-08-010130.",
                 "props": [
@@ -6417,7 +6441,7 @@
                 ]
               },
               {
-                "uuid": "213a3bfd-052f-4fc2-9e52-1eb495d76c2b",
+                "uuid": "549e0c8b-7f21-408d-b1c9-16c908e3232f",
                 "control-id": "rhel-08.010151",
                 "description": "No notes for control-id RHEL-08-010151.",
                 "props": [
@@ -6434,7 +6458,7 @@
                 ]
               },
               {
-                "uuid": "6e44bbe3-d290-4d3a-999c-9045d47c009a",
+                "uuid": "a43b28bc-2fb4-4cc2-920a-7697b3dff362",
                 "control-id": "rhel-08.010160",
                 "description": "No notes for control-id RHEL-08-010160.",
                 "props": [
@@ -6451,7 +6475,7 @@
                 ]
               },
               {
-                "uuid": "7b35ebc3-7c1b-4132-913e-805379f907e5",
+                "uuid": "a0b3b7ed-2852-40dd-ae38-f4d0a3d8370e",
                 "control-id": "rhel-08.010161",
                 "description": "No notes for control-id RHEL-08-010161.",
                 "props": [
@@ -6468,7 +6492,7 @@
                 ]
               },
               {
-                "uuid": "76515697-2831-44d4-b209-ad900caffbb5",
+                "uuid": "cc3bbb7b-3d0b-477b-ba9a-d2f873913d7f",
                 "control-id": "rhel-08.010162",
                 "description": "No notes for control-id RHEL-08-010162.",
                 "props": [
@@ -6485,7 +6509,7 @@
                 ]
               },
               {
-                "uuid": "6e818ec9-e9d5-4124-9f1f-c2d56ea537c1",
+                "uuid": "fab6b19f-cbd1-47aa-87fa-c964d1d58ed8",
                 "control-id": "rhel-08.010170",
                 "description": "No notes for control-id RHEL-08-010170.",
                 "props": [
@@ -6502,7 +6526,7 @@
                 ]
               },
               {
-                "uuid": "6ee9439d-ea11-443a-a55a-29333052225e",
+                "uuid": "09fceb4f-b8b4-41d2-9836-bf349dce062c",
                 "control-id": "rhel-08.010190",
                 "description": "No notes for control-id RHEL-08-010190.",
                 "props": [
@@ -6519,7 +6543,7 @@
                 ]
               },
               {
-                "uuid": "b8c231b3-e2f9-44ea-bea6-becaa164cae1",
+                "uuid": "014fc863-b4d7-487d-9384-3c0cb239fd67",
                 "control-id": "rhel-08.010200",
                 "description": "No notes for control-id RHEL-08-010200.",
                 "props": [
@@ -6536,7 +6560,7 @@
                 ]
               },
               {
-                "uuid": "8b3e5bc0-2e3f-49d1-992e-c47315b7b9fc",
+                "uuid": "d6f4474f-4273-4996-ba12-be7555e75a91",
                 "control-id": "rhel-08.010210",
                 "description": "No notes for control-id RHEL-08-010210.",
                 "props": [
@@ -6553,7 +6577,7 @@
                 ]
               },
               {
-                "uuid": "ab7ab286-4898-4869-84ae-707ff1824f6c",
+                "uuid": "bb0598ca-e7a0-4246-93f0-224e04e3a3d6",
                 "control-id": "rhel-08.010220",
                 "description": "No notes for control-id RHEL-08-010220.",
                 "props": [
@@ -6570,7 +6594,7 @@
                 ]
               },
               {
-                "uuid": "f8d71ab6-87e2-4d55-9114-635e306c3b46",
+                "uuid": "64961d19-c750-448a-8d38-5146b5d94acc",
                 "control-id": "rhel-08.010230",
                 "description": "No notes for control-id RHEL-08-010230.",
                 "props": [
@@ -6587,7 +6611,7 @@
                 ]
               },
               {
-                "uuid": "3d366e14-03e8-48c3-a820-c25b2cfc0f29",
+                "uuid": "1e3180f1-bd0c-4966-9848-1b2824a50670",
                 "control-id": "rhel-08.010240",
                 "description": "No notes for control-id RHEL-08-010240.",
                 "props": [
@@ -6604,7 +6628,7 @@
                 ]
               },
               {
-                "uuid": "9023f8ce-9576-42a0-96a5-26ef850ed2a5",
+                "uuid": "ee7ce7af-89d1-4fdf-9edb-de5dfddd8924",
                 "control-id": "rhel-08.010250",
                 "description": "No notes for control-id RHEL-08-010250.",
                 "props": [
@@ -6621,7 +6645,7 @@
                 ]
               },
               {
-                "uuid": "b9a1648c-c721-461a-9fd1-eeba0e3d8b1a",
+                "uuid": "73be51be-60ec-44d5-8795-c7c4413a7ef2",
                 "control-id": "rhel-08.010260",
                 "description": "No notes for control-id RHEL-08-010260.",
                 "props": [
@@ -6638,7 +6662,7 @@
                 ]
               },
               {
-                "uuid": "f76a8c9f-c888-4f7b-a0fa-306649e7339c",
+                "uuid": "b4c200ed-f6fc-40b1-b52b-894d54360c52",
                 "control-id": "rhel-08.010290",
                 "description": "No notes for control-id RHEL-08-010290.",
                 "props": [
@@ -6655,7 +6679,7 @@
                 ]
               },
               {
-                "uuid": "5fbc044b-4107-4f41-9689-ee7526100194",
+                "uuid": "e07f3d5b-9a0a-43ec-98b8-3f5b0cdff959",
                 "control-id": "rhel-08.010291",
                 "description": "No notes for control-id RHEL-08-010291.",
                 "props": [
@@ -6672,7 +6696,7 @@
                 ]
               },
               {
-                "uuid": "5751342a-18c7-4e19-a5dc-5457f2342127",
+                "uuid": "6db6ccf2-3cc5-4516-b4a9-50642c7714ce",
                 "control-id": "rhel-08.010293",
                 "description": "No notes for control-id RHEL-08-010293.",
                 "props": [
@@ -6689,7 +6713,7 @@
                 ]
               },
               {
-                "uuid": "b57864db-5466-4ad6-b804-ae72ac9e68e2",
+                "uuid": "fd853078-7307-426d-9b95-d14a27401576",
                 "control-id": "rhel-08.010294",
                 "description": "No notes for control-id RHEL-08-010294.",
                 "props": [
@@ -6706,7 +6730,7 @@
                 ]
               },
               {
-                "uuid": "6c0f07b1-8383-497a-9ba0-079fd621b673",
+                "uuid": "4b81c440-eb84-4183-bb9e-85eb9d9503c1",
                 "control-id": "rhel-08.010295",
                 "description": "No notes for control-id RHEL-08-010295.",
                 "props": [
@@ -6723,7 +6747,7 @@
                 ]
               },
               {
-                "uuid": "ef9ee9c2-6c3a-43c7-9474-3044a72f6123",
+                "uuid": "b826114a-687e-4506-a599-be6e093e403e",
                 "control-id": "rhel-08.010300",
                 "description": "No notes for control-id RHEL-08-010300.",
                 "props": [
@@ -6740,7 +6764,7 @@
                 ]
               },
               {
-                "uuid": "a1cf26f3-5e5f-4290-8b80-945599b1fd16",
+                "uuid": "b7784dd5-c24d-4f9b-97d2-81aeae07e366",
                 "control-id": "rhel-08.010310",
                 "description": "No notes for control-id RHEL-08-010310.",
                 "props": [
@@ -6757,7 +6781,7 @@
                 ]
               },
               {
-                "uuid": "ba56c2c1-c7b2-47e3-84fa-d56d0e04b16c",
+                "uuid": "073b589b-5e6d-4f7c-b3fc-c916790fa2c3",
                 "control-id": "rhel-08.010320",
                 "description": "No notes for control-id RHEL-08-010320.",
                 "props": [
@@ -6774,7 +6798,7 @@
                 ]
               },
               {
-                "uuid": "3cc674b9-0d69-41cd-bf78-790ab317876d",
+                "uuid": "003cd609-a5df-4dff-b1bd-1c5ca67bdf1b",
                 "control-id": "rhel-08.010330",
                 "description": "No notes for control-id RHEL-08-010330.",
                 "props": [
@@ -6791,7 +6815,7 @@
                 ]
               },
               {
-                "uuid": "68b6878d-ab45-4d1f-994c-4024746a9499",
+                "uuid": "9560ddd5-053f-4c5a-8215-4137b4c99cca",
                 "control-id": "rhel-08.010340",
                 "description": "No notes for control-id RHEL-08-010340.",
                 "props": [
@@ -6808,7 +6832,7 @@
                 ]
               },
               {
-                "uuid": "a5d4d4f4-b84f-4dd3-bfef-c79b8dda0926",
+                "uuid": "73ad37ce-aa8e-4b0e-b81f-e300d5949c7e",
                 "control-id": "rhel-08.010350",
                 "description": "No notes for control-id RHEL-08-010350.",
                 "props": [
@@ -6825,7 +6849,7 @@
                 ]
               },
               {
-                "uuid": "e0df287a-a7aa-4596-b307-94bd926d7127",
+                "uuid": "652db798-2b87-4b90-8126-3bd329fc6793",
                 "control-id": "rhel-08.010360",
                 "description": "No notes for control-id RHEL-08-010360.",
                 "props": [
@@ -6842,7 +6866,7 @@
                 ]
               },
               {
-                "uuid": "4d272136-9057-4d6e-9fcd-6e7bc6fe5177",
+                "uuid": "de656d91-4fab-461d-9579-bd81dde6c74c",
                 "control-id": "rhel-08.010372",
                 "description": "No notes for control-id RHEL-08-010372.",
                 "props": [
@@ -6859,7 +6883,7 @@
                 ]
               },
               {
-                "uuid": "74ddce30-a4bd-4c50-9a42-f73b7f8212f8",
+                "uuid": "1076f493-50a4-4362-b6ee-d9b45fd5a7d4",
                 "control-id": "rhel-08.010373",
                 "description": "No notes for control-id RHEL-08-010373.",
                 "props": [
@@ -6876,7 +6900,7 @@
                 ]
               },
               {
-                "uuid": "a50ec35c-51be-4bdd-9559-08a26a8667d9",
+                "uuid": "f89ea7b1-4fb6-4bb1-88f1-c31652e2381e",
                 "control-id": "rhel-08.010374",
                 "description": "No notes for control-id RHEL-08-010374.",
                 "props": [
@@ -6893,7 +6917,7 @@
                 ]
               },
               {
-                "uuid": "2a876a86-cee4-4808-b0a7-d1322cf1ef6a",
+                "uuid": "6a61b8de-8935-4d7e-a6ed-92cf7e7952c6",
                 "control-id": "rhel-08.010380",
                 "description": "No notes for control-id RHEL-08-010380.",
                 "props": [
@@ -6910,7 +6934,7 @@
                 ]
               },
               {
-                "uuid": "88e69132-767f-4c11-8cdf-57fad6463661",
+                "uuid": "d53aaf7e-f4f3-457d-8175-c605e9626d44",
                 "control-id": "rhel-08.010381",
                 "description": "No notes for control-id RHEL-08-010381.",
                 "props": [
@@ -6927,7 +6951,7 @@
                 ]
               },
               {
-                "uuid": "37df6b88-af4c-4b90-8b13-e693c18612c2",
+                "uuid": "a4d55363-ba46-460d-bbbc-114485da91ab",
                 "control-id": "rhel-08.010390",
                 "description": "No notes for control-id RHEL-08-010390.",
                 "props": [
@@ -6944,7 +6968,7 @@
                 ]
               },
               {
-                "uuid": "60d62590-dfd7-46e5-b322-193a338d741d",
+                "uuid": "fda11354-70ad-45bc-a726-5c07243cad41",
                 "control-id": "rhel-08.010400",
                 "description": "No notes for control-id RHEL-08-010400.",
                 "props": [
@@ -6961,7 +6985,7 @@
                 ]
               },
               {
-                "uuid": "c7353e75-cc08-4b37-81f3-3c12cdbbb77e",
+                "uuid": "f9592b2f-974d-4682-811e-b05885849c4d",
                 "control-id": "rhel-08.010410",
                 "description": "No notes for control-id RHEL-08-010410.",
                 "props": [
@@ -6978,7 +7002,7 @@
                 ]
               },
               {
-                "uuid": "3d62e96f-b3e1-4ce2-bb72-f33874fb4b04",
+                "uuid": "e6be7631-877f-42a4-b030-4e21307a5d2e",
                 "control-id": "rhel-08.010420",
                 "description": "No notes for control-id RHEL-08-010420.",
                 "props": [
@@ -6995,7 +7019,7 @@
                 ]
               },
               {
-                "uuid": "b6474d0a-c0cb-4758-8326-436de7a828fa",
+                "uuid": "36d0299a-bd31-4237-8156-a3c2b80403b1",
                 "control-id": "rhel-08.010421",
                 "description": "No notes for control-id RHEL-08-010421.",
                 "props": [
@@ -7012,7 +7036,7 @@
                 ]
               },
               {
-                "uuid": "0c5e927f-a9fb-442f-adf1-cfeaadda4f3c",
+                "uuid": "4c98809d-be47-4a9a-ba22-4deb53379161",
                 "control-id": "rhel-08.010422",
                 "description": "No notes for control-id RHEL-08-010422.",
                 "props": [
@@ -7029,7 +7053,7 @@
                 ]
               },
               {
-                "uuid": "29b52609-04cc-4d2c-aa11-72c589baf8af",
+                "uuid": "6ee5b02f-c40b-456a-9b7b-ecd5e72e7a4e",
                 "control-id": "rhel-08.010423",
                 "description": "No notes for control-id RHEL-08-010423.",
                 "props": [
@@ -7046,7 +7070,7 @@
                 ]
               },
               {
-                "uuid": "eb50393e-69e7-4a0a-bc22-225c6cc45b4f",
+                "uuid": "094bf9b8-f92d-45a2-b627-7102431f15f3",
                 "control-id": "rhel-08.010430",
                 "description": "No notes for control-id RHEL-08-010430.",
                 "props": [
@@ -7063,7 +7087,7 @@
                 ]
               },
               {
-                "uuid": "75bc1c82-3adc-4822-99c3-ddababeb943f",
+                "uuid": "de957004-cb1b-4c54-bf91-94972e1ee1a5",
                 "control-id": "rhel-08.010450",
                 "description": "No notes for control-id RHEL-08-010450.",
                 "props": [
@@ -7080,7 +7104,7 @@
                 ]
               },
               {
-                "uuid": "2f54190f-d8b5-4c1a-aba8-ae78b2a61f19",
+                "uuid": "9a328735-2f6b-46a5-a764-93119507c894",
                 "control-id": "rhel-08.010480",
                 "description": "No notes for control-id RHEL-08-010480.",
                 "props": [
@@ -7097,7 +7121,7 @@
                 ]
               },
               {
-                "uuid": "fe276b52-e253-4cb2-b583-b3dc8ba18b53",
+                "uuid": "d8c250ff-93a0-4f2e-b3cd-32606876c660",
                 "control-id": "rhel-08.010490",
                 "description": "No notes for control-id RHEL-08-010490.",
                 "props": [
@@ -7114,7 +7138,7 @@
                 ]
               },
               {
-                "uuid": "a0d34610-9c6a-45e8-b85d-76aee2a868f4",
+                "uuid": "1a6c465c-c0bd-44c8-b7cd-83b8293a7539",
                 "control-id": "rhel-08.010500",
                 "description": "No notes for control-id RHEL-08-010500.",
                 "props": [
@@ -7131,7 +7155,7 @@
                 ]
               },
               {
-                "uuid": "dcb44ffe-1373-464d-a2ff-5e16a37be8d0",
+                "uuid": "83483585-600c-45e5-bd02-5cc0463388f2",
                 "control-id": "rhel-08.010520",
                 "description": "No notes for control-id RHEL-08-010520.",
                 "props": [
@@ -7148,7 +7172,7 @@
                 ]
               },
               {
-                "uuid": "7465dcc8-7c22-405a-9a9a-d8e3f12f3ed6",
+                "uuid": "254e6e6c-25ac-4e47-9006-2e5f6cfb2b3d",
                 "control-id": "rhel-08.010521",
                 "description": "No notes for control-id RHEL-08-010521.",
                 "props": [
@@ -7165,7 +7189,7 @@
                 ]
               },
               {
-                "uuid": "08b2f5bc-c49d-4e24-b30e-b5fb1fa74584",
+                "uuid": "af14278b-9743-4c0b-8d9f-ac1c1b1a3691",
                 "control-id": "rhel-08.010543",
                 "description": "No notes for control-id RHEL-08-010543.",
                 "props": [
@@ -7182,7 +7206,7 @@
                 ]
               },
               {
-                "uuid": "2a516905-e9a7-4c6c-956c-9b8556a87cee",
+                "uuid": "7e8d2ce2-823c-41ce-8013-789be31abba5",
                 "control-id": "rhel-08.010550",
                 "description": "No notes for control-id RHEL-08-010550.",
                 "props": [
@@ -7199,7 +7223,7 @@
                 ]
               },
               {
-                "uuid": "11eced78-254e-4e48-b2fa-bbcaa624322e",
+                "uuid": "3606135e-cc89-4f90-97c3-5c3afb3e5453",
                 "control-id": "rhel-08.010561",
                 "description": "No notes for control-id RHEL-08-010561.",
                 "props": [
@@ -7216,7 +7240,7 @@
                 ]
               },
               {
-                "uuid": "602f6072-4728-45e4-ba3c-52922899c225",
+                "uuid": "c56da4dd-6710-44c1-a7bc-c42d4068b4e7",
                 "control-id": "rhel-08.010570",
                 "description": "No notes for control-id RHEL-08-010570.",
                 "props": [
@@ -7233,7 +7257,7 @@
                 ]
               },
               {
-                "uuid": "3707f03c-cfe8-4fea-bda2-501d9fbe0ff1",
+                "uuid": "e1b25955-a741-4ae6-be12-aceb9aa602df",
                 "control-id": "rhel-08.010571",
                 "description": "No notes for control-id RHEL-08-010571.",
                 "props": [
@@ -7250,7 +7274,7 @@
                 ]
               },
               {
-                "uuid": "8ba6d772-601e-41c6-aa8f-360ca256e56f",
+                "uuid": "7657c1ef-1d27-472e-b023-2d4c3dbbc8b9",
                 "control-id": "rhel-08.010580",
                 "description": "No notes for control-id RHEL-08-010580.",
                 "props": [
@@ -7267,7 +7291,7 @@
                 ]
               },
               {
-                "uuid": "9ef70502-8e1b-4164-adbb-6655309252e0",
+                "uuid": "b0d6b198-de9c-45be-baf5-e9c3d5b9d539",
                 "control-id": "rhel-08.010590",
                 "description": "No notes for control-id RHEL-08-010590.",
                 "props": [
@@ -7284,7 +7308,7 @@
                 ]
               },
               {
-                "uuid": "cc49cd09-ebef-4f43-829d-9d7f73a413a7",
+                "uuid": "5a818464-be86-4f10-8801-2e0eea58a297",
                 "control-id": "rhel-08.010600",
                 "description": "No notes for control-id RHEL-08-010600.",
                 "props": [
@@ -7301,7 +7325,7 @@
                 ]
               },
               {
-                "uuid": "67e74367-698b-4650-b257-f4c1a43a14ad",
+                "uuid": "346d912d-f4b0-426a-994e-a7936b58e6b9",
                 "control-id": "rhel-08.010610",
                 "description": "No notes for control-id RHEL-08-010610.",
                 "props": [
@@ -7318,7 +7342,7 @@
                 ]
               },
               {
-                "uuid": "4597ed5e-01e0-48e8-ad30-e7c7856b57e4",
+                "uuid": "1f64c8cc-bbe5-4e9c-8c4e-ac2e21a5015b",
                 "control-id": "rhel-08.010620",
                 "description": "No notes for control-id RHEL-08-010620.",
                 "props": [
@@ -7335,7 +7359,7 @@
                 ]
               },
               {
-                "uuid": "0814123e-7632-4e6b-85d2-18475fca9e42",
+                "uuid": "8deca303-acb8-4e0d-9c55-f919d55e0999",
                 "control-id": "rhel-08.010630",
                 "description": "No notes for control-id RHEL-08-010630.",
                 "props": [
@@ -7352,7 +7376,7 @@
                 ]
               },
               {
-                "uuid": "1d30d23e-ab71-4d3a-a111-e7bad051fa96",
+                "uuid": "638557b7-8756-4cc0-bc5e-ba988c2469c8",
                 "control-id": "rhel-08.010640",
                 "description": "No notes for control-id RHEL-08-010640.",
                 "props": [
@@ -7369,7 +7393,7 @@
                 ]
               },
               {
-                "uuid": "41110007-3164-4947-b7ea-59aa1d25a285",
+                "uuid": "004a66b1-fca5-4da3-bd0c-2af53a99f818",
                 "control-id": "rhel-08.010650",
                 "description": "No notes for control-id RHEL-08-010650.",
                 "props": [
@@ -7386,7 +7410,7 @@
                 ]
               },
               {
-                "uuid": "184051c7-dc7d-4f83-976b-8af8d9a34bb3",
+                "uuid": "56f13978-faed-426a-8f1d-b323e2bef1a2",
                 "control-id": "rhel-08.010660",
                 "description": "No notes for control-id RHEL-08-010660.",
                 "props": [
@@ -7403,7 +7427,7 @@
                 ]
               },
               {
-                "uuid": "427fa47b-ee2a-4cc7-b2f9-918d5f8670dd",
+                "uuid": "1409fe7d-6a45-41d5-ba26-8670dc88c94f",
                 "control-id": "rhel-08.010670",
                 "description": "No notes for control-id RHEL-08-010670.",
                 "props": [
@@ -7420,7 +7444,7 @@
                 ]
               },
               {
-                "uuid": "04142f1a-6e0a-49ca-bbdc-f8e239712d8b",
+                "uuid": "28c99585-d343-45e6-89f0-50e9e7a75e01",
                 "control-id": "rhel-08.010671",
                 "description": "No notes for control-id RHEL-08-010671.",
                 "props": [
@@ -7437,7 +7461,7 @@
                 ]
               },
               {
-                "uuid": "1e9c86eb-26ca-448a-88fb-fccb36bda211",
+                "uuid": "ac8281a9-f674-4936-a212-cad4ed19a0e7",
                 "control-id": "rhel-08.010672",
                 "description": "No notes for control-id RHEL-08-010672.",
                 "props": [
@@ -7454,7 +7478,7 @@
                 ]
               },
               {
-                "uuid": "d0708e15-802b-4578-ab1d-23dc763a5c7c",
+                "uuid": "5c4c3b3e-2ceb-4241-98c3-b35dcc579a40",
                 "control-id": "rhel-08.010673",
                 "description": "No notes for control-id RHEL-08-010673.",
                 "props": [
@@ -7471,7 +7495,7 @@
                 ]
               },
               {
-                "uuid": "3ac2e972-a4fb-468c-bd58-382e03f1a532",
+                "uuid": "ce132a1b-e56d-4897-a2a0-7978ba975a28",
                 "control-id": "rhel-08.010674",
                 "description": "No notes for control-id RHEL-08-010674.",
                 "props": [
@@ -7488,7 +7512,7 @@
                 ]
               },
               {
-                "uuid": "4b9f109a-abad-4b13-9bcc-4fdc04854c21",
+                "uuid": "1f29aa75-d862-402b-9944-03e12a1c3166",
                 "control-id": "rhel-08.010675",
                 "description": "No notes for control-id RHEL-08-010675.",
                 "props": [
@@ -7505,7 +7529,7 @@
                 ]
               },
               {
-                "uuid": "3ea81bd2-a50c-4123-a45a-2ef2a973bd9e",
+                "uuid": "b8276d98-bb9c-4424-91ac-654e0b66cc32",
                 "control-id": "rhel-08.010680",
                 "description": "No notes for control-id RHEL-08-010680.",
                 "props": [
@@ -7522,7 +7546,7 @@
                 ]
               },
               {
-                "uuid": "3d8ea771-eca4-41c2-bf4a-28535ac31f98",
+                "uuid": "5f35b4c3-bc16-4ef4-a4ce-8e9e392a816e",
                 "control-id": "rhel-08.010690",
                 "description": "No notes for control-id RHEL-08-010690.",
                 "props": [
@@ -7539,7 +7563,7 @@
                 ]
               },
               {
-                "uuid": "a50a127f-1c20-46d0-a181-083d088cefd8",
+                "uuid": "388b9d84-ae24-4bc3-9682-2d37a54ec823",
                 "control-id": "rhel-08.010700",
                 "description": "No notes for control-id RHEL-08-010700.",
                 "props": [
@@ -7556,7 +7580,7 @@
                 ]
               },
               {
-                "uuid": "74e9d53e-4ebf-4e27-820e-b3a484862652",
+                "uuid": "e4874fad-afcd-42ca-b5aa-2d277f5d777b",
                 "control-id": "rhel-08.010710",
                 "description": "No notes for control-id RHEL-08-010710.",
                 "props": [
@@ -7573,7 +7597,7 @@
                 ]
               },
               {
-                "uuid": "101b1406-e396-49e2-9a82-b0761c98dbd6",
+                "uuid": "d611e93a-a32b-473c-8400-b7d6d5c3802f",
                 "control-id": "rhel-08.010720",
                 "description": "No notes for control-id RHEL-08-010720.",
                 "props": [
@@ -7590,7 +7614,7 @@
                 ]
               },
               {
-                "uuid": "ffa80b80-c77a-419e-8404-714558f823cc",
+                "uuid": "bd9e9fda-e278-4b0c-9f92-77bc9debc705",
                 "control-id": "rhel-08.010730",
                 "description": "No notes for control-id RHEL-08-010730.",
                 "props": [
@@ -7607,7 +7631,7 @@
                 ]
               },
               {
-                "uuid": "685f7de3-f9ad-4e95-826c-bb742e3e7759",
+                "uuid": "9bedaa47-2294-42b2-92b3-5ed9acf7f273",
                 "control-id": "rhel-08.010740",
                 "description": "No notes for control-id RHEL-08-010740.",
                 "props": [
@@ -7624,7 +7648,7 @@
                 ]
               },
               {
-                "uuid": "34e27e9b-625e-4cd8-bbae-876676babc3c",
+                "uuid": "cf1dc473-6cd9-40c9-8a28-8ca28549547e",
                 "control-id": "rhel-08.010750",
                 "description": "No notes for control-id RHEL-08-010750.",
                 "props": [
@@ -7641,7 +7665,7 @@
                 ]
               },
               {
-                "uuid": "22828f3d-31e6-485f-bad6-b820fede79de",
+                "uuid": "9f96f5fb-8d9d-44e9-aa4f-1c0b7c533e2c",
                 "control-id": "rhel-08.010760",
                 "description": "No notes for control-id RHEL-08-010760.",
                 "props": [
@@ -7658,7 +7682,7 @@
                 ]
               },
               {
-                "uuid": "97745e6c-8d9f-4764-8cac-d04c046c56c6",
+                "uuid": "62855509-1866-4d59-90f4-17adfb9fd2cd",
                 "control-id": "rhel-08.010770",
                 "description": "No notes for control-id RHEL-08-010770.",
                 "props": [
@@ -7680,7 +7704,7 @@
                 ]
               },
               {
-                "uuid": "28f10907-e27c-43e2-aa38-0c57e5626eea",
+                "uuid": "86d70861-a255-45ab-b62a-060f60ea33b3",
                 "control-id": "rhel-08.010780",
                 "description": "No notes for control-id RHEL-08-010780.",
                 "props": [
@@ -7697,7 +7721,7 @@
                 ]
               },
               {
-                "uuid": "d8ed1b6f-7f32-4b35-b61c-b7a1f29c39ff",
+                "uuid": "5f3e932b-badc-4157-bbd1-90cd379761e5",
                 "control-id": "rhel-08.010790",
                 "description": "No notes for control-id RHEL-08-010790.",
                 "props": [
@@ -7714,7 +7738,7 @@
                 ]
               },
               {
-                "uuid": "a7a9c981-db4a-4b13-bd7c-35fa423ef97f",
+                "uuid": "7fd45a48-9b95-497b-b339-154ddd112ae7",
                 "control-id": "rhel-08.010800",
                 "description": "No notes for control-id RHEL-08-010800.",
                 "props": [
@@ -7731,7 +7755,7 @@
                 ]
               },
               {
-                "uuid": "263db545-c986-4248-b4e2-0496baefb337",
+                "uuid": "31652a11-96c7-4835-b1e3-37c0fe3e6d7d",
                 "control-id": "rhel-08.010830",
                 "description": "No notes for control-id RHEL-08-010830.",
                 "props": [
@@ -7748,7 +7772,7 @@
                 ]
               },
               {
-                "uuid": "9cc0a5e1-b992-4a9f-98bc-a064d2423d1a",
+                "uuid": "9167e310-d9a6-4aef-8b72-65c4a00cbe73",
                 "control-id": "rhel-08.020000",
                 "description": "No notes for control-id RHEL-08-020000.",
                 "props": [
@@ -7765,7 +7789,7 @@
                 ]
               },
               {
-                "uuid": "f94d0c51-fade-42c4-9298-2fba467bc21a",
+                "uuid": "c72e6fa6-5916-4f71-82d1-686da05e413b",
                 "control-id": "rhel-08.020010",
                 "description": "The description for control-id rhel-08.020010.",
                 "props": [
@@ -7778,7 +7802,7 @@
                 ]
               },
               {
-                "uuid": "d902109e-346b-4629-8dc6-cf2bb4313963",
+                "uuid": "e303df80-6ad7-417a-85d7-5b991d987ca8",
                 "control-id": "rhel-08.020011",
                 "description": "No notes for control-id RHEL-08-020011.",
                 "props": [
@@ -7795,7 +7819,7 @@
                 ]
               },
               {
-                "uuid": "615f63fe-52c6-4c98-9233-a9a65a0ba509",
+                "uuid": "2ef11db4-ccb2-44d6-aa80-5f4c715a0a40",
                 "control-id": "rhel-08.020012",
                 "description": "No notes for control-id RHEL-08-020012.",
                 "props": [
@@ -7812,7 +7836,7 @@
                 ]
               },
               {
-                "uuid": "030590be-c1c9-4ba7-81f9-ff2450e7cd5e",
+                "uuid": "a03b8672-9ba8-41c9-a80c-9aa141483c9c",
                 "control-id": "rhel-08.020013",
                 "description": "No notes for control-id RHEL-08-020013.",
                 "props": [
@@ -7829,7 +7853,7 @@
                 ]
               },
               {
-                "uuid": "06627303-5230-4380-9713-87f1e180e68f",
+                "uuid": "476f2e0a-41ea-4eef-b49b-8a34765261e8",
                 "control-id": "rhel-08.020014",
                 "description": "No notes for control-id RHEL-08-020014.",
                 "props": [
@@ -7846,7 +7870,7 @@
                 ]
               },
               {
-                "uuid": "332e6652-54f5-407b-b7bc-d61a2bd9ba25",
+                "uuid": "9a0d39be-a6ff-45a2-877d-b092d65a828c",
                 "control-id": "rhel-08.020015",
                 "description": "No notes for control-id RHEL-08-020015.",
                 "props": [
@@ -7863,7 +7887,7 @@
                 ]
               },
               {
-                "uuid": "4f0a9556-d6e0-44f0-b8a6-91dda2213086",
+                "uuid": "72e41916-cefd-4d91-b225-c9092330750d",
                 "control-id": "rhel-08.020016",
                 "description": "No notes for control-id RHEL-08-020016.",
                 "props": [
@@ -7880,7 +7904,7 @@
                 ]
               },
               {
-                "uuid": "f19dc02b-d2dc-4ee0-a018-206b12a4285d",
+                "uuid": "26748cb4-b2cc-4e82-a492-8e0dc527c492",
                 "control-id": "rhel-08.020017",
                 "description": "No notes for control-id RHEL-08-020017.",
                 "props": [
@@ -7897,7 +7921,7 @@
                 ]
               },
               {
-                "uuid": "ab7c51cb-6b98-4ce7-b0ac-f39750dc54d0",
+                "uuid": "bfcd5f9f-9025-4870-a276-4cdcdd8100dd",
                 "control-id": "rhel-08.020018",
                 "description": "No notes for control-id RHEL-08-020018.",
                 "props": [
@@ -7914,7 +7938,7 @@
                 ]
               },
               {
-                "uuid": "bdc01917-cbae-42a5-a545-acc520f45647",
+                "uuid": "b0f17cc7-1598-4683-a032-66211bd2ac36",
                 "control-id": "rhel-08.020019",
                 "description": "No notes for control-id RHEL-08-020019.",
                 "props": [
@@ -7931,7 +7955,7 @@
                 ]
               },
               {
-                "uuid": "4683c199-f3bb-42ba-90b0-13c30015d761",
+                "uuid": "fdf77642-b30d-4614-85ee-4cb080499f2c",
                 "control-id": "rhel-08.020020",
                 "description": "The description for control-id rhel-08.020020.",
                 "props": [
@@ -7944,7 +7968,7 @@
                 ]
               },
               {
-                "uuid": "2cab3a60-6f04-431c-b2c7-4fcc8b24d061",
+                "uuid": "0dbf205f-02b7-4e21-bd04-d8ae037380d1",
                 "control-id": "rhel-08.020021",
                 "description": "No notes for control-id RHEL-08-020021.",
                 "props": [
@@ -7961,7 +7985,7 @@
                 ]
               },
               {
-                "uuid": "4cda0439-f5c2-4a53-be9d-7316bcae3c6b",
+                "uuid": "ec9fea3b-3887-412c-aad7-98e6a07958d6",
                 "control-id": "rhel-08.020022",
                 "description": "The description for control-id rhel-08.020022.",
                 "props": [
@@ -7974,7 +7998,7 @@
                 ]
               },
               {
-                "uuid": "8874472c-6b7d-4325-89c9-2df316bbe764",
+                "uuid": "8c9f3d91-74b6-47fb-88be-846bd48ae0b1",
                 "control-id": "rhel-08.020023",
                 "description": "No notes for control-id RHEL-08-020023.",
                 "props": [
@@ -7991,7 +8015,7 @@
                 ]
               },
               {
-                "uuid": "76d1def7-239b-4139-abc9-ec4ebe28e53a",
+                "uuid": "09fb50c1-9c42-45ff-92f7-4fc9f4e596ed",
                 "control-id": "rhel-08.020030",
                 "description": "No notes for control-id RHEL-08-020030.",
                 "props": [
@@ -8008,7 +8032,7 @@
                 ]
               },
               {
-                "uuid": "d5450ba3-756a-48e3-923b-07bc37d2abfe",
+                "uuid": "a028961d-e50a-452b-8cac-877827aa9d52",
                 "control-id": "rhel-08.020050",
                 "description": "No notes for control-id RHEL-08-020050.",
                 "props": [
@@ -8025,7 +8049,7 @@
                 ]
               },
               {
-                "uuid": "25b9d6f5-bb28-4b11-8487-9c3e7d528a02",
+                "uuid": "fa790fb6-3e92-41c6-acdc-ed9c90c1921c",
                 "control-id": "rhel-08.020060",
                 "description": "No notes for control-id RHEL-08-020060.",
                 "props": [
@@ -8042,7 +8066,7 @@
                 ]
               },
               {
-                "uuid": "18333897-8628-4806-a338-02965e8cb72a",
+                "uuid": "7601e182-941f-44c6-9e5f-4e48f9bda09b",
                 "control-id": "rhel-08.020080",
                 "description": "No notes for control-id RHEL-08-020080.",
                 "props": [
@@ -8059,7 +8083,7 @@
                 ]
               },
               {
-                "uuid": "027fc153-dcb5-496a-8fd2-c5a34cc52a8d",
+                "uuid": "0f03c7fa-e5f5-4e6c-8231-f103a9287977",
                 "control-id": "rhel-08.020090",
                 "description": "No notes for control-id RHEL-08-020090.",
                 "props": [
@@ -8076,7 +8100,7 @@
                 ]
               },
               {
-                "uuid": "d2d07b01-f553-485f-b983-4babf37d466e",
+                "uuid": "6ae0028e-fddc-4f33-8208-e8361cef0680",
                 "control-id": "rhel-08.020100",
                 "description": "No notes for control-id RHEL-08-020100.",
                 "props": [
@@ -8093,7 +8117,7 @@
                 ]
               },
               {
-                "uuid": "602e83d6-a50e-4950-852b-38d5015a7aad",
+                "uuid": "6edc52b3-a384-4285-ae92-4739844f987f",
                 "control-id": "rhel-08.020110",
                 "description": "No notes for control-id RHEL-08-020110.",
                 "props": [
@@ -8110,7 +8134,7 @@
                 ]
               },
               {
-                "uuid": "73a7d1c2-aaf4-4510-9797-1c68aa0f00fe",
+                "uuid": "0f2a7cbf-7c99-4e93-89b2-febc0f9da669",
                 "control-id": "rhel-08.020120",
                 "description": "No notes for control-id RHEL-08-020120.",
                 "props": [
@@ -8127,7 +8151,7 @@
                 ]
               },
               {
-                "uuid": "1d4f47bc-3097-4090-97cc-3a1a464a90b6",
+                "uuid": "201368a8-ab64-41e1-99df-bd6afa5fbe91",
                 "control-id": "rhel-08.020130",
                 "description": "No notes for control-id RHEL-08-020130.",
                 "props": [
@@ -8144,7 +8168,7 @@
                 ]
               },
               {
-                "uuid": "96f6532f-71e2-4b1b-a513-d3af544fc6f1",
+                "uuid": "e818822e-0433-4882-8c7b-796de99e616e",
                 "control-id": "rhel-08.020140",
                 "description": "No notes for control-id RHEL-08-020140.",
                 "props": [
@@ -8161,7 +8185,7 @@
                 ]
               },
               {
-                "uuid": "fe4ce3c0-7aaa-40cb-a51a-8d0b85769062",
+                "uuid": "494f1969-4ba0-4ea8-8925-e86d375b2517",
                 "control-id": "rhel-08.020150",
                 "description": "No notes for control-id RHEL-08-020150.",
                 "props": [
@@ -8178,7 +8202,7 @@
                 ]
               },
               {
-                "uuid": "6ca097f1-9c36-4521-a139-8d55eccc52b3",
+                "uuid": "9db05108-a758-46ce-9dbf-27bb796c19db",
                 "control-id": "rhel-08.020160",
                 "description": "No notes for control-id RHEL-08-020160.",
                 "props": [
@@ -8195,7 +8219,7 @@
                 ]
               },
               {
-                "uuid": "c6c32c70-91fc-479a-bb19-1190e2dd476a",
+                "uuid": "15889e02-94dd-474c-afcd-dc161585a6da",
                 "control-id": "rhel-08.020170",
                 "description": "No notes for control-id RHEL-08-020170.",
                 "props": [
@@ -8212,7 +8236,7 @@
                 ]
               },
               {
-                "uuid": "0abc797e-3b98-4a20-a518-4aad1d0fb65f",
+                "uuid": "b594f8c5-e789-42b1-aab0-227ebc400c0c",
                 "control-id": "rhel-08.020180",
                 "description": "No notes for control-id RHEL-08-020180.",
                 "props": [
@@ -8229,7 +8253,7 @@
                 ]
               },
               {
-                "uuid": "d1645a05-4a40-419e-b97c-bc8a40b8ed59",
+                "uuid": "212c56c1-1f1e-4632-b285-28643897f181",
                 "control-id": "rhel-08.020190",
                 "description": "No notes for control-id RHEL-08-020190.",
                 "props": [
@@ -8246,7 +8270,7 @@
                 ]
               },
               {
-                "uuid": "b6dec4d4-b256-46a1-a383-aa8b8e7dd9b1",
+                "uuid": "7e37847c-96b8-48cc-b28b-3a5610e5da76",
                 "control-id": "rhel-08.020200",
                 "description": "No notes for control-id RHEL-08-020200.",
                 "props": [
@@ -8263,7 +8287,7 @@
                 ]
               },
               {
-                "uuid": "965ee9e3-b93a-47b0-8960-3ec9820beac9",
+                "uuid": "71f61626-5f6e-4463-8ea3-c729ca4b47f3",
                 "control-id": "rhel-08.020210",
                 "description": "No notes for control-id RHEL-08-020210.",
                 "props": [
@@ -8280,7 +8304,7 @@
                 ]
               },
               {
-                "uuid": "e149bd99-0806-4fc7-9e46-11e5da851bcb",
+                "uuid": "db8ec7cc-c2bb-4d13-99a1-54878b9801bc",
                 "control-id": "rhel-08.020230",
                 "description": "No notes for control-id RHEL-08-020230.",
                 "props": [
@@ -8297,7 +8321,7 @@
                 ]
               },
               {
-                "uuid": "065816ee-4fc9-4d7f-a541-2818ae3694dc",
+                "uuid": "a2daad1d-ae82-4cd6-81f6-d07165b856e6",
                 "control-id": "rhel-08.020231",
                 "description": "No notes for control-id RHEL-08-020231.",
                 "props": [
@@ -8314,7 +8338,7 @@
                 ]
               },
               {
-                "uuid": "71f1ae18-4591-4af6-afb1-7956192939c9",
+                "uuid": "28678b4e-2067-418d-9667-283c0c692fb5",
                 "control-id": "rhel-08.020240",
                 "description": "No notes for control-id RHEL-08-020240.",
                 "props": [
@@ -8331,7 +8355,7 @@
                 ]
               },
               {
-                "uuid": "256c42ba-9307-4e06-a4bc-54288bc751a6",
+                "uuid": "8e152d19-2775-47a9-b366-7233831a6a45",
                 "control-id": "rhel-08.020250",
                 "description": "No notes for control-id RHEL-08-020250.",
                 "props": [
@@ -8348,7 +8372,7 @@
                 ]
               },
               {
-                "uuid": "3085ae14-5c25-4024-b6a1-12f1c5aec0da",
+                "uuid": "1a6ac8e8-8f6d-4b23-892f-a9505b6b7e13",
                 "control-id": "rhel-08.020260",
                 "description": "No notes for control-id RHEL-08-020260.",
                 "props": [
@@ -8365,7 +8389,7 @@
                 ]
               },
               {
-                "uuid": "486c2228-010b-47a3-b514-4bdfdf3c7a4a",
+                "uuid": "844c61ac-5430-4f51-9d7f-3ae15592ca6e",
                 "control-id": "rhel-08.020270",
                 "description": "No notes for control-id RHEL-08-020270.",
                 "props": [
@@ -8382,7 +8406,7 @@
                 ]
               },
               {
-                "uuid": "2aa035be-ef7e-46f8-b2c3-4bdd0c455a31",
+                "uuid": "6fb622b3-2e63-4aa5-a8fe-9e93ffb22624",
                 "control-id": "rhel-08.020280",
                 "description": "No notes for control-id RHEL-08-020280.",
                 "props": [
@@ -8399,7 +8423,7 @@
                 ]
               },
               {
-                "uuid": "333f3e85-43a6-40f7-a9bf-2ad203a68c20",
+                "uuid": "937d32c4-f98f-4196-9aa7-eefc57387b67",
                 "control-id": "rhel-08.020290",
                 "description": "No notes for control-id RHEL-08-020290.",
                 "props": [
@@ -8416,7 +8440,7 @@
                 ]
               },
               {
-                "uuid": "44bcfdef-e41f-42f8-80ec-3a86eeac846e",
+                "uuid": "3795b2ca-39ef-4380-ad20-1b094c3969b6",
                 "control-id": "rhel-08.020300",
                 "description": "No notes for control-id RHEL-08-020300.",
                 "props": [
@@ -8433,7 +8457,7 @@
                 ]
               },
               {
-                "uuid": "340128e4-820e-4102-81d0-452d29a46018",
+                "uuid": "1978a8cb-b09b-44a1-bbf8-8a7c7aa1d49a",
                 "control-id": "rhel-08.020310",
                 "description": "No notes for control-id RHEL-08-020310.",
                 "props": [
@@ -8450,7 +8474,7 @@
                 ]
               },
               {
-                "uuid": "f284c03f-efb0-40ad-b3eb-2ef9bd90a9ff",
+                "uuid": "0abb704d-6333-4544-b9e0-e270544e17c4",
                 "control-id": "rhel-08.020320",
                 "description": "No notes for control-id RHEL-08-020320.",
                 "props": [
@@ -8467,7 +8491,7 @@
                 ]
               },
               {
-                "uuid": "b84b5095-a5f4-402a-8230-64ca771c3822",
+                "uuid": "e8f96329-f623-4425-87b6-5a6566bfc1db",
                 "control-id": "rhel-08.020350",
                 "description": "No notes for control-id RHEL-08-020350.",
                 "props": [
@@ -8484,7 +8508,7 @@
                 ]
               },
               {
-                "uuid": "53bfcd6c-c091-4e94-82d4-41ed25a13813",
+                "uuid": "992a1a52-0948-4433-8f1c-bb97013aa419",
                 "control-id": "rhel-08.020351",
                 "description": "No notes for control-id RHEL-08-020351.",
                 "props": [
@@ -8501,7 +8525,7 @@
                 ]
               },
               {
-                "uuid": "2458cb7d-1ce1-474a-8aca-0f17b34ba9f3",
+                "uuid": "18e77e2d-785b-43e5-b085-8f7010c26b43",
                 "control-id": "rhel-08.020352",
                 "description": "No notes for control-id RHEL-08-020352.",
                 "props": [
@@ -8518,7 +8542,7 @@
                 ]
               },
               {
-                "uuid": "6612dde9-8b7f-4bd2-b4d8-515c788c8c23",
+                "uuid": "451ccda1-5cc9-45e8-a24d-593a484a75ea",
                 "control-id": "rhel-08.020353",
                 "description": "No notes for control-id RHEL-08-020353.",
                 "props": [
@@ -8545,7 +8569,7 @@
                 ]
               },
               {
-                "uuid": "65b09708-148c-4b2e-a34a-00bad531005c",
+                "uuid": "f71b0a97-1691-4798-90db-c8e5dd98052e",
                 "control-id": "rhel-08.030000",
                 "description": "No notes for control-id RHEL-08-030000.",
                 "props": [
@@ -8562,7 +8586,7 @@
                 ]
               },
               {
-                "uuid": "5687cd02-c0dc-4190-929a-569f4d04680e",
+                "uuid": "15c09462-7995-4e14-92a1-039c2c6e4b58",
                 "control-id": "rhel-08.030010",
                 "description": "No notes for control-id RHEL-08-030010.",
                 "props": [
@@ -8579,7 +8603,7 @@
                 ]
               },
               {
-                "uuid": "3dc0ae43-3e91-44f5-a7ba-1beac5683c03",
+                "uuid": "9b9f9a35-7049-4d16-a420-41c1bc6672ad",
                 "control-id": "rhel-08.030020",
                 "description": "No notes for control-id RHEL-08-030020.",
                 "props": [
@@ -8596,7 +8620,7 @@
                 ]
               },
               {
-                "uuid": "5927f3c3-50c7-4f83-b055-9fda180db6a1",
+                "uuid": "df8a7f60-85cd-4e25-8b96-9be556d4f227",
                 "control-id": "rhel-08.030030",
                 "description": "No notes for control-id RHEL-08-030030.",
                 "props": [
@@ -8618,7 +8642,7 @@
                 ]
               },
               {
-                "uuid": "f1bc2a14-9125-48fa-86f7-62aff783732b",
+                "uuid": "9487f060-9554-438c-a450-a545252e366a",
                 "control-id": "rhel-08.030040",
                 "description": "No notes for control-id RHEL-08-030040.",
                 "props": [
@@ -8635,7 +8659,7 @@
                 ]
               },
               {
-                "uuid": "1b22c2e2-0751-4867-952a-7319fbde01f2",
+                "uuid": "6b3b2f27-4cae-4980-bb2d-e3a3c454ad44",
                 "control-id": "rhel-08.030060",
                 "description": "No notes for control-id RHEL-08-030060.",
                 "props": [
@@ -8652,7 +8676,7 @@
                 ]
               },
               {
-                "uuid": "0c24b322-9b60-406d-bda0-d0ec9c0c2ddc",
+                "uuid": "d8073dd6-d627-4651-8c9d-cda89d7e62a0",
                 "control-id": "rhel-08.030061",
                 "description": "No notes for control-id RHEL-08-030061.",
                 "props": [
@@ -8669,7 +8693,7 @@
                 ]
               },
               {
-                "uuid": "d25806ec-7d52-4208-8dbf-e676d630331d",
+                "uuid": "5527e430-394c-44f2-a8e1-eb3fc5aefe24",
                 "control-id": "rhel-08.030062",
                 "description": "No notes for control-id RHEL-08-030062.",
                 "props": [
@@ -8686,7 +8710,7 @@
                 ]
               },
               {
-                "uuid": "f1986f09-c54f-48b8-a355-6ef0d975114c",
+                "uuid": "fd4daf29-b28e-4f98-8281-96dea4d27a5c",
                 "control-id": "rhel-08.030070",
                 "description": "No notes for control-id RHEL-08-030070.",
                 "props": [
@@ -8703,7 +8727,7 @@
                 ]
               },
               {
-                "uuid": "d6683da5-d58d-4eff-999e-3777084c88d5",
+                "uuid": "7127dcdd-acdd-417e-b532-25c8031c94d5",
                 "control-id": "rhel-08.030080",
                 "description": "No notes for control-id RHEL-08-030080.",
                 "props": [
@@ -8720,7 +8744,7 @@
                 ]
               },
               {
-                "uuid": "8ce34b7d-2963-4889-aa16-f71522ce08d1",
+                "uuid": "2ddd28f2-59b4-4f6a-9e9e-6823b5a83bb3",
                 "control-id": "rhel-08.030090",
                 "description": "No notes for control-id RHEL-08-030090.",
                 "props": [
@@ -8737,7 +8761,7 @@
                 ]
               },
               {
-                "uuid": "37d56b1b-6791-4d47-9495-9362c05e4787",
+                "uuid": "14b67b28-2af3-47e6-bf13-e7ef4cbb185a",
                 "control-id": "rhel-08.030100",
                 "description": "No notes for control-id RHEL-08-030100.",
                 "props": [
@@ -8754,7 +8778,7 @@
                 ]
               },
               {
-                "uuid": "04662635-63a0-4984-a2f5-610f0653db68",
+                "uuid": "9c9482ae-8ba2-43b0-91af-ee19091dd490",
                 "control-id": "rhel-08.030110",
                 "description": "No notes for control-id RHEL-08-030110.",
                 "props": [
@@ -8771,7 +8795,7 @@
                 ]
               },
               {
-                "uuid": "8e09e3ae-3468-43fb-b4cf-b9d79bff8208",
+                "uuid": "3c009491-7bb3-4712-a047-7dd7f7d5f693",
                 "control-id": "rhel-08.030120",
                 "description": "No notes for control-id RHEL-08-030120.",
                 "props": [
@@ -8788,7 +8812,7 @@
                 ]
               },
               {
-                "uuid": "4555f8c9-b597-4529-be4c-b473b5955da4",
+                "uuid": "6d149e1b-7862-4898-b51e-00b73b42274c",
                 "control-id": "rhel-08.030121",
                 "description": "No notes for control-id RHEL-08-030121.",
                 "props": [
@@ -8805,7 +8829,7 @@
                 ]
               },
               {
-                "uuid": "854e3fee-cd08-4966-b864-183f1c64d6be",
+                "uuid": "39cbc1e4-4017-4915-95ed-2e7ecddeb566",
                 "control-id": "rhel-08.030122",
                 "description": "No notes for control-id RHEL-08-030122.",
                 "props": [
@@ -8822,7 +8846,7 @@
                 ]
               },
               {
-                "uuid": "9ae6bb10-e293-42c5-8d73-02c7b54f3d39",
+                "uuid": "01c6fe31-750a-44f1-931e-877e8b8c51fe",
                 "control-id": "rhel-08.030130",
                 "description": "No notes for control-id RHEL-08-030130.",
                 "props": [
@@ -8839,7 +8863,7 @@
                 ]
               },
               {
-                "uuid": "4891721e-c853-44dd-9cc9-863276844842",
+                "uuid": "bd1f9d5e-c69d-4339-abfe-79868eb26356",
                 "control-id": "rhel-08.030140",
                 "description": "No notes for control-id RHEL-08-030140.",
                 "props": [
@@ -8856,7 +8880,7 @@
                 ]
               },
               {
-                "uuid": "4b84a34d-d3ff-4a46-86cf-529cb1c603ed",
+                "uuid": "1a23d7fa-7808-44a6-85d6-275e6dfc23bc",
                 "control-id": "rhel-08.030150",
                 "description": "No notes for control-id RHEL-08-030150.",
                 "props": [
@@ -8873,7 +8897,7 @@
                 ]
               },
               {
-                "uuid": "885b7548-8a83-4ea6-9ad4-2a73551151d4",
+                "uuid": "104f9c76-7b08-46d6-8597-11ebdb1d2cf8",
                 "control-id": "rhel-08.030160",
                 "description": "No notes for control-id RHEL-08-030160.",
                 "props": [
@@ -8890,7 +8914,7 @@
                 ]
               },
               {
-                "uuid": "383a9e6e-f931-4ec5-aa09-9011356fd992",
+                "uuid": "6bb4b3ba-672d-4663-b818-d1ac18c85ecb",
                 "control-id": "rhel-08.030170",
                 "description": "No notes for control-id RHEL-08-030170.",
                 "props": [
@@ -8907,7 +8931,7 @@
                 ]
               },
               {
-                "uuid": "d933a751-3cae-4138-ab84-9853b6777d25",
+                "uuid": "b41f378b-a9d8-4538-98d1-4ddcb5c0550d",
                 "control-id": "rhel-08.030171",
                 "description": "No notes for control-id RHEL-08-030171.",
                 "props": [
@@ -8924,7 +8948,7 @@
                 ]
               },
               {
-                "uuid": "33a8a458-f4ee-44a0-b5d1-1c005f6afd58",
+                "uuid": "c3742ca9-4f39-464e-b0e9-d469755e70e3",
                 "control-id": "rhel-08.030172",
                 "description": "No notes for control-id RHEL-08-030172.",
                 "props": [
@@ -8941,7 +8965,7 @@
                 ]
               },
               {
-                "uuid": "7a1f3258-b2c6-49a9-8775-cde63ff4826d",
+                "uuid": "3e2c0cac-db1e-40fd-9c59-e288f361897f",
                 "control-id": "rhel-08.030180",
                 "description": "No notes for control-id RHEL-08-030180.",
                 "props": [
@@ -8958,7 +8982,7 @@
                 ]
               },
               {
-                "uuid": "d0c179d9-eaf8-4bd9-ba3f-c88ae9392758",
+                "uuid": "020b5ea0-42d5-4436-98a7-326e1d60824e",
                 "control-id": "rhel-08.030190",
                 "description": "No notes for control-id RHEL-08-030190.",
                 "props": [
@@ -8975,7 +8999,7 @@
                 ]
               },
               {
-                "uuid": "3a118706-8249-458a-82e0-9747a3103c44",
+                "uuid": "74cb8f11-7d04-4dfa-9673-d0dc092852e2",
                 "control-id": "rhel-08.030200",
                 "description": "No notes for control-id RHEL-08-030200.",
                 "props": [
@@ -9017,7 +9041,7 @@
                 ]
               },
               {
-                "uuid": "7482fe6a-74d3-4a6d-815e-f1da89dc0a74",
+                "uuid": "96f757c2-16c8-4ce6-9621-858f5e20d44a",
                 "control-id": "rhel-08.030250",
                 "description": "No notes for control-id RHEL-08-030250.",
                 "props": [
@@ -9034,7 +9058,7 @@
                 ]
               },
               {
-                "uuid": "8c9f1d7a-1ac1-49c1-a73a-af6870277570",
+                "uuid": "a86ebe0d-7c02-4c9c-8628-42241c55011f",
                 "control-id": "rhel-08.030260",
                 "description": "No notes for control-id RHEL-08-030260.",
                 "props": [
@@ -9051,7 +9075,7 @@
                 ]
               },
               {
-                "uuid": "c61bfac2-99b5-4fb8-9712-1bee6f104f44",
+                "uuid": "dd0a0d30-e35b-4082-a794-83bad919fc41",
                 "control-id": "rhel-08.030280",
                 "description": "No notes for control-id RHEL-08-030280.",
                 "props": [
@@ -9068,7 +9092,7 @@
                 ]
               },
               {
-                "uuid": "b0c123b0-1bb4-4d15-98e9-0b1487cf3dcc",
+                "uuid": "c0a031f6-3c56-45b4-8c6c-e16b53394e15",
                 "control-id": "rhel-08.030290",
                 "description": "No notes for control-id RHEL-08-030290.",
                 "props": [
@@ -9085,7 +9109,7 @@
                 ]
               },
               {
-                "uuid": "4dfcfb6a-2a51-4769-940d-e06010e5eb4b",
+                "uuid": "5c0b3a0f-958a-4c6b-ba5b-5c350ae83d96",
                 "control-id": "rhel-08.030300",
                 "description": "No notes for control-id RHEL-08-030300.",
                 "props": [
@@ -9102,7 +9126,7 @@
                 ]
               },
               {
-                "uuid": "5ec85906-e75c-4b46-81a0-fd56a21843f8",
+                "uuid": "8b3ad632-18e2-411d-80af-cadbda3c5625",
                 "control-id": "rhel-08.030301",
                 "description": "No notes for control-id RHEL-08-030301.",
                 "props": [
@@ -9119,7 +9143,7 @@
                 ]
               },
               {
-                "uuid": "c6763ff1-9c14-447c-8aa6-03792f4e7422",
+                "uuid": "a2379239-77db-45e4-8942-9d29e939cf78",
                 "control-id": "rhel-08.030302",
                 "description": "No notes for control-id RHEL-08-030302.",
                 "props": [
@@ -9136,7 +9160,7 @@
                 ]
               },
               {
-                "uuid": "582872bb-3de3-43c1-bcaf-7178f250f97b",
+                "uuid": "d74aeca0-9e0e-40f3-827a-4afd3cb79840",
                 "control-id": "rhel-08.030310",
                 "description": "No notes for control-id RHEL-08-030310.",
                 "props": [
@@ -9153,7 +9177,7 @@
                 ]
               },
               {
-                "uuid": "6884a2e9-b8a2-4569-88f8-add8eb768163",
+                "uuid": "a3e0813f-c9dd-4693-8622-fdd293cb3785",
                 "control-id": "rhel-08.030311",
                 "description": "No notes for control-id RHEL-08-030311.",
                 "props": [
@@ -9170,7 +9194,7 @@
                 ]
               },
               {
-                "uuid": "0cd64ef6-2198-49c3-a285-366886a04809",
+                "uuid": "e534e36b-18e8-4e99-82e5-4946816daaf2",
                 "control-id": "rhel-08.030312",
                 "description": "No notes for control-id RHEL-08-030312.",
                 "props": [
@@ -9187,7 +9211,7 @@
                 ]
               },
               {
-                "uuid": "5d2ba005-4079-4d54-83bc-ff17ee62a173",
+                "uuid": "72691897-e69f-4b6b-9664-7a017ad506bd",
                 "control-id": "rhel-08.030313",
                 "description": "No notes for control-id RHEL-08-030313.",
                 "props": [
@@ -9204,7 +9228,7 @@
                 ]
               },
               {
-                "uuid": "a6a1dd1a-744d-4c3d-8a55-0b99a0a9503d",
+                "uuid": "a4a9ddf9-6448-43ab-8472-a96e26be8c68",
                 "control-id": "rhel-08.030314",
                 "description": "No notes for control-id RHEL-08-030314.",
                 "props": [
@@ -9221,7 +9245,7 @@
                 ]
               },
               {
-                "uuid": "ac71a257-bace-4b46-8961-ddfebb24cc94",
+                "uuid": "3dae9d4a-ef7f-4a9e-95d5-bd0b57cf6285",
                 "control-id": "rhel-08.030315",
                 "description": "No notes for control-id RHEL-08-030315.",
                 "props": [
@@ -9238,7 +9262,7 @@
                 ]
               },
               {
-                "uuid": "8a940048-f51a-48fa-bd03-35cb5acc897e",
+                "uuid": "433267a7-b03c-4bbb-95a2-e209b570dc06",
                 "control-id": "rhel-08.030316",
                 "description": "No notes for control-id RHEL-08-030316.",
                 "props": [
@@ -9255,7 +9279,7 @@
                 ]
               },
               {
-                "uuid": "08f068c4-1a38-4f08-be24-c7dc1f29e513",
+                "uuid": "6bae096c-ddbb-490d-a13c-aa6fe36598be",
                 "control-id": "rhel-08.030317",
                 "description": "No notes for control-id RHEL-08-030317.",
                 "props": [
@@ -9272,7 +9296,7 @@
                 ]
               },
               {
-                "uuid": "e1406239-bb23-4674-8030-7c8af53dd39f",
+                "uuid": "722a7afc-284a-41b9-aa62-929fdfd78017",
                 "control-id": "rhel-08.030320",
                 "description": "No notes for control-id RHEL-08-030320.",
                 "props": [
@@ -9289,7 +9313,7 @@
                 ]
               },
               {
-                "uuid": "cdbfce23-223c-4f2b-82ff-c4b350833402",
+                "uuid": "236f4ffc-b7c1-46fc-84b9-0f9c961ab367",
                 "control-id": "rhel-08.030330",
                 "description": "No notes for control-id RHEL-08-030330.",
                 "props": [
@@ -9306,7 +9330,7 @@
                 ]
               },
               {
-                "uuid": "f186e2fa-41a3-47c2-8e33-7f4965376061",
+                "uuid": "59b954da-dc6d-40c9-924c-d18c4731952d",
                 "control-id": "rhel-08.030340",
                 "description": "No notes for control-id RHEL-08-030340.",
                 "props": [
@@ -9323,7 +9347,7 @@
                 ]
               },
               {
-                "uuid": "5cb9f9d9-db8c-4744-ac5f-f0995b75a240",
+                "uuid": "11e8b7ef-775b-42cd-8050-4340138bbe11",
                 "control-id": "rhel-08.030350",
                 "description": "No notes for control-id RHEL-08-030350.",
                 "props": [
@@ -9340,7 +9364,7 @@
                 ]
               },
               {
-                "uuid": "a74e2256-fb46-42e1-b416-5ac1372b1a5c",
+                "uuid": "6be55f17-7919-4948-a4b2-2ffdad60336f",
                 "control-id": "rhel-08.030360",
                 "description": "No notes for control-id RHEL-08-030360.",
                 "props": [
@@ -9362,7 +9386,7 @@
                 ]
               },
               {
-                "uuid": "b4bd0745-70d6-4566-b33e-bd4d3cd01c83",
+                "uuid": "1f7712dd-7a95-4c92-8610-ec93443ba51b",
                 "control-id": "rhel-08.030361",
                 "description": "No notes for control-id RHEL-08-030361.",
                 "props": [
@@ -9399,7 +9423,7 @@
                 ]
               },
               {
-                "uuid": "4e222526-5ab5-4667-8ef8-ca6f32a44708",
+                "uuid": "bd0925bb-da7b-4b69-8e70-d473d2353bf5",
                 "control-id": "rhel-08.030370",
                 "description": "No notes for control-id RHEL-08-030370.",
                 "props": [
@@ -9416,7 +9440,7 @@
                 ]
               },
               {
-                "uuid": "39d99081-1bb6-47a5-8620-ec75a2f39f5a",
+                "uuid": "7e9cfff4-bf8c-44a5-859c-e23d16e48f0f",
                 "control-id": "rhel-08.030390",
                 "description": "No notes for control-id RHEL-08-030390.",
                 "props": [
@@ -9433,7 +9457,7 @@
                 ]
               },
               {
-                "uuid": "318987f0-dad8-4c2c-84a6-1a2aa045325d",
+                "uuid": "b3b4fdc2-68fe-49ed-8fc3-4db42c86f9c4",
                 "control-id": "rhel-08.030400",
                 "description": "No notes for control-id RHEL-08-030400.",
                 "props": [
@@ -9450,7 +9474,7 @@
                 ]
               },
               {
-                "uuid": "fd2075cb-8bf5-4acd-b54e-52501a2a9123",
+                "uuid": "f4f0927b-1c2a-4416-9653-72940c024062",
                 "control-id": "rhel-08.030410",
                 "description": "No notes for control-id RHEL-08-030410.",
                 "props": [
@@ -9467,7 +9491,7 @@
                 ]
               },
               {
-                "uuid": "281bbc96-44c8-4139-83ad-5e42723995e8",
+                "uuid": "d1378f52-bba6-4153-89ae-92d6db32086c",
                 "control-id": "rhel-08.030420",
                 "description": "No notes for control-id RHEL-08-030420.",
                 "props": [
@@ -9509,7 +9533,7 @@
                 ]
               },
               {
-                "uuid": "e42bbda6-f701-4ebf-b338-719e61b989e6",
+                "uuid": "4758e7e3-6e96-425b-9512-816a6003987d",
                 "control-id": "rhel-08.030480",
                 "description": "No notes for control-id RHEL-08-030480.",
                 "props": [
@@ -9541,7 +9565,7 @@
                 ]
               },
               {
-                "uuid": "37c3393c-22f2-4109-bb40-8da2f2000b4c",
+                "uuid": "52fff8a8-3b6b-434f-86dc-bee19659326e",
                 "control-id": "rhel-08.030490",
                 "description": "No notes for control-id RHEL-08-030490.",
                 "props": [
@@ -9568,7 +9592,7 @@
                 ]
               },
               {
-                "uuid": "b6e64e57-f069-49a6-aa7b-844e19ccb695",
+                "uuid": "d4d5c9c8-c36b-4f4b-854b-3c78faccc4db",
                 "control-id": "rhel-08.030550",
                 "description": "No notes for control-id RHEL-08-030550.",
                 "props": [
@@ -9585,7 +9609,7 @@
                 ]
               },
               {
-                "uuid": "ee6f8240-20c2-4eba-947d-3a17e5d57b6a",
+                "uuid": "9063e2b2-ff13-4f73-8955-60b4f121663e",
                 "control-id": "rhel-08.030560",
                 "description": "No notes for control-id RHEL-08-030560.",
                 "props": [
@@ -9602,7 +9626,7 @@
                 ]
               },
               {
-                "uuid": "b60a7b62-f6d5-492f-96e7-4a6c3550b272",
+                "uuid": "e8fcd8f3-4155-4b8e-911f-b047ea585a13",
                 "control-id": "rhel-08.030570",
                 "description": "No notes for control-id RHEL-08-030570.",
                 "props": [
@@ -9619,7 +9643,7 @@
                 ]
               },
               {
-                "uuid": "43c3debc-1252-4d45-9a6b-9c9e790cc8ad",
+                "uuid": "6fdc510f-37bb-4b4d-bdef-27f21daab827",
                 "control-id": "rhel-08.030580",
                 "description": "No notes for control-id RHEL-08-030580.",
                 "props": [
@@ -9636,7 +9660,7 @@
                 ]
               },
               {
-                "uuid": "82c85d8b-649c-4fa6-88f1-c6d17c4d5b8e",
+                "uuid": "8edf1385-b4f3-4059-9682-b2fc6de155e4",
                 "control-id": "rhel-08.030590",
                 "description": "No notes for control-id RHEL-08-030590.",
                 "props": [
@@ -9653,7 +9677,7 @@
                 ]
               },
               {
-                "uuid": "700c5862-9746-495e-bbac-581c2634f4aa",
+                "uuid": "120566c3-9d98-4f8e-9ec9-1a6973626b15",
                 "control-id": "rhel-08.030600",
                 "description": "No notes for control-id RHEL-08-030600.",
                 "props": [
@@ -9670,7 +9694,7 @@
                 ]
               },
               {
-                "uuid": "cd50092f-f88d-45c7-aed0-f6c3d05e0d57",
+                "uuid": "e9796be8-d387-4c34-b89a-2985388b92f5",
                 "control-id": "rhel-08.030610",
                 "description": "No notes for control-id RHEL-08-030610.",
                 "props": [
@@ -9692,7 +9716,7 @@
                 ]
               },
               {
-                "uuid": "e756d0c2-2a6d-4d2a-8efc-e63312ca6df1",
+                "uuid": "3d35c69e-e5fd-4b7f-9321-6aacf677e7de",
                 "control-id": "rhel-08.030620",
                 "description": "No notes for control-id RHEL-08-030620.",
                 "props": [
@@ -9709,7 +9733,7 @@
                 ]
               },
               {
-                "uuid": "ed64b9bc-263c-44e3-866a-4b20c6fda03c",
+                "uuid": "374ae094-9c9c-45d1-929b-64e2fb1fffdb",
                 "control-id": "rhel-08.030630",
                 "description": "No notes for control-id RHEL-08-030630.",
                 "props": [
@@ -9726,7 +9750,7 @@
                 ]
               },
               {
-                "uuid": "816944af-da31-49e4-92b7-3fe8a85e54af",
+                "uuid": "1971be81-c447-4a41-af8e-103e806082c8",
                 "control-id": "rhel-08.030640",
                 "description": "No notes for control-id RHEL-08-030640.",
                 "props": [
@@ -9743,7 +9767,7 @@
                 ]
               },
               {
-                "uuid": "32d07603-8b3f-4397-aa33-d4b13942cc21",
+                "uuid": "25ec58ea-ae66-41c3-bf1d-03f79a2798bd",
                 "control-id": "rhel-08.030650",
                 "description": "No notes for control-id RHEL-08-030650.",
                 "props": [
@@ -9760,7 +9784,7 @@
                 ]
               },
               {
-                "uuid": "c96fc131-56cf-48c6-a3b3-034fd2c15977",
+                "uuid": "b2666d99-a028-433c-8bc7-9f4904f4541f",
                 "control-id": "rhel-08.030655",
                 "description": "The description for control-id rhel-08.030655.",
                 "props": [
@@ -9783,7 +9807,7 @@
                 ]
               },
               {
-                "uuid": "f0521dbd-b59a-4552-a9bf-6a212912f616",
+                "uuid": "85f8fdf3-0029-4ee7-a549-ab5c58c5d9c7",
                 "control-id": "rhel-08.030660",
                 "description": "No notes for control-id RHEL-08-030660.",
                 "props": [
@@ -9800,7 +9824,7 @@
                 ]
               },
               {
-                "uuid": "0dde5fdf-9c1b-4fe7-860e-8c0f03e13d11",
+                "uuid": "bab15194-93cc-4f1b-bb54-1d6df1341f18",
                 "control-id": "rhel-08.030670",
                 "description": "No notes for control-id RHEL-08-030670.",
                 "props": [
@@ -9817,7 +9841,7 @@
                 ]
               },
               {
-                "uuid": "3e84e0f9-dfa3-45cd-90a7-b5b1b61f8ebe",
+                "uuid": "ae84b428-6f5d-4f7f-bea2-0314ea4a3c42",
                 "control-id": "rhel-08.030680",
                 "description": "No notes for control-id RHEL-08-030680.",
                 "props": [
@@ -9834,7 +9858,7 @@
                 ]
               },
               {
-                "uuid": "abc86d40-3530-4be3-abda-9f5c2c55d3c3",
+                "uuid": "733718c1-263f-470b-bcdd-b35f5842b0fc",
                 "control-id": "rhel-08.030690",
                 "description": "No notes for control-id RHEL-08-030690.",
                 "props": [
@@ -9851,7 +9875,7 @@
                 ]
               },
               {
-                "uuid": "5ea4ba6f-59ad-487b-b967-10d1ca77e64b",
+                "uuid": "9ae484d4-22d8-417f-ae81-cb837b2dd791",
                 "control-id": "rhel-08.030700",
                 "description": "No notes for control-id RHEL-08-030700.",
                 "props": [
@@ -9868,7 +9892,7 @@
                 ]
               },
               {
-                "uuid": "c5ec872c-c4f4-4322-8e7b-13d92d71f9ad",
+                "uuid": "5a402fbe-3434-497a-9d2c-9f5714fe02bb",
                 "control-id": "rhel-08.030710",
                 "description": "No notes for control-id RHEL-08-030710.",
                 "props": [
@@ -9890,7 +9914,7 @@
                 ]
               },
               {
-                "uuid": "718ab7ea-da7d-4cae-945c-0b93cedf00b5",
+                "uuid": "81129706-58eb-49d3-aa6d-be0bf2907c05",
                 "control-id": "rhel-08.030720",
                 "description": "No notes for control-id RHEL-08-030720.",
                 "props": [
@@ -9907,7 +9931,7 @@
                 ]
               },
               {
-                "uuid": "b9808ce6-db5e-4894-a169-faf9d7336647",
+                "uuid": "5a6d840f-1158-4c0c-932d-a6470188746e",
                 "control-id": "rhel-08.030730",
                 "description": "No notes for control-id RHEL-08-030730.",
                 "props": [
@@ -9924,7 +9948,7 @@
                 ]
               },
               {
-                "uuid": "e276bd01-f79d-4208-877d-67a72dd3208e",
+                "uuid": "10af70b0-9401-4d90-8f1e-850414786ee1",
                 "control-id": "rhel-08.030740",
                 "description": "No notes for control-id RHEL-08-030740.",
                 "props": [
@@ -9951,7 +9975,7 @@
                 ]
               },
               {
-                "uuid": "88d114aa-b236-4e4e-b94f-0a1043a294be",
+                "uuid": "e8f81791-a4a0-4317-b7e4-65e323dbdbd8",
                 "control-id": "rhel-08.040001",
                 "description": "No notes for control-id RHEL-08-040001.",
                 "props": [
@@ -10003,7 +10027,7 @@
                 ]
               },
               {
-                "uuid": "c4775cf2-72eb-438a-9dd3-8ee5e0826ac9",
+                "uuid": "4947f6ca-007f-4a81-bf98-9b5ce4ff5d1a",
                 "control-id": "rhel-08.040002",
                 "description": "No notes for control-id RHEL-08-040002.",
                 "props": [
@@ -10020,7 +10044,7 @@
                 ]
               },
               {
-                "uuid": "aa758e95-eae3-4a2c-93e6-a2d80a48d7bb",
+                "uuid": "e417b832-9870-411a-b307-4505f4b89eea",
                 "control-id": "rhel-08.040020",
                 "description": "No notes for control-id RHEL-08-040020.",
                 "props": [
@@ -10037,7 +10061,7 @@
                 ]
               },
               {
-                "uuid": "032e6ef5-0442-40be-b7f8-c53dc2d9a3cb",
+                "uuid": "a1e8e27c-7b52-4c6d-bb87-1e0d43f1cfe3",
                 "control-id": "rhel-08.040030",
                 "description": "No notes for control-id RHEL-08-040030.",
                 "props": [
@@ -10054,7 +10078,7 @@
                 ]
               },
               {
-                "uuid": "381051f3-f192-493b-a0e9-31cf553b5070",
+                "uuid": "eafe602c-e866-43aa-8bfd-e44ed1b60680",
                 "control-id": "rhel-08.040070",
                 "description": "No notes for control-id RHEL-08-040070.",
                 "props": [
@@ -10071,7 +10095,7 @@
                 ]
               },
               {
-                "uuid": "0fa47e49-bc9f-430e-a45f-8cf75033c39d",
+                "uuid": "69b5cbae-5af2-400c-adfc-121dd8b519be",
                 "control-id": "rhel-08.040080",
                 "description": "No notes for control-id RHEL-08-040080.",
                 "props": [
@@ -10088,7 +10112,7 @@
                 ]
               },
               {
-                "uuid": "e9a00f3c-9f60-4fcb-be3f-d0545f622df4",
+                "uuid": "21a73b51-5e97-42a0-9bfd-e3ec873d0d56",
                 "control-id": "rhel-08.040090",
                 "description": "No notes for control-id RHEL-08-040090.",
                 "props": [
@@ -10110,7 +10134,7 @@
                 ]
               },
               {
-                "uuid": "a15a5a90-f988-437f-8e4d-d1f14e54d890",
+                "uuid": "e8517373-a073-48a8-b4ef-638eed1ebd30",
                 "control-id": "rhel-08.040100",
                 "description": "No notes for control-id RHEL-08-040100.",
                 "props": [
@@ -10127,7 +10151,7 @@
                 ]
               },
               {
-                "uuid": "5daed5e4-dea5-43a5-ac86-236192c26e8a",
+                "uuid": "86ff943d-cbc3-4e0a-bfc3-9b00ec53c1dd",
                 "control-id": "rhel-08.040110",
                 "description": "No notes for control-id RHEL-08-040110.",
                 "props": [
@@ -10144,7 +10168,7 @@
                 ]
               },
               {
-                "uuid": "c40ea811-449d-4765-9182-b30057c3ec48",
+                "uuid": "c37474c1-18d3-44ed-b195-b378dd688082",
                 "control-id": "rhel-08.040111",
                 "description": "No notes for control-id RHEL-08-040111.",
                 "props": [
@@ -10161,7 +10185,7 @@
                 ]
               },
               {
-                "uuid": "81634f30-78aa-4d8c-be7d-7e39ca65e8df",
+                "uuid": "107f8cf2-4614-43f6-88f7-451631f50f23",
                 "control-id": "rhel-08.040120",
                 "description": "No notes for control-id RHEL-08-040120.",
                 "props": [
@@ -10178,7 +10202,7 @@
                 ]
               },
               {
-                "uuid": "8b7767db-38f4-4931-84c8-7d767b2fe222",
+                "uuid": "3ce45f04-f88b-491b-9969-0108ffe4ea8a",
                 "control-id": "rhel-08.040121",
                 "description": "No notes for control-id RHEL-08-040121.",
                 "props": [
@@ -10195,7 +10219,7 @@
                 ]
               },
               {
-                "uuid": "4ab6c48a-9570-4de7-aeda-807f3942ffc9",
+                "uuid": "836260be-1d66-4e57-994b-2ca0f0a0be0a",
                 "control-id": "rhel-08.040122",
                 "description": "No notes for control-id RHEL-08-040122.",
                 "props": [
@@ -10212,7 +10236,7 @@
                 ]
               },
               {
-                "uuid": "0c9d78d2-fa33-41b6-bc99-9cd34783d29a",
+                "uuid": "632681e7-aee8-4762-9af3-a676655d2018",
                 "control-id": "rhel-08.040123",
                 "description": "No notes for control-id RHEL-08-040123.",
                 "props": [
@@ -10229,7 +10253,7 @@
                 ]
               },
               {
-                "uuid": "fdb893e9-aab0-4e50-9154-7a66e78bdc2b",
+                "uuid": "be6cd68e-9386-4e50-9528-46a66fedcf84",
                 "control-id": "rhel-08.040124",
                 "description": "No notes for control-id RHEL-08-040124.",
                 "props": [
@@ -10246,7 +10270,7 @@
                 ]
               },
               {
-                "uuid": "d5eac78c-e61a-4d52-9284-b3d035b2e2b8",
+                "uuid": "c7fa2eb4-a8e9-4323-9161-3934652ba38c",
                 "control-id": "rhel-08.040125",
                 "description": "No notes for control-id RHEL-08-040125.",
                 "props": [
@@ -10263,7 +10287,7 @@
                 ]
               },
               {
-                "uuid": "cbc25901-adac-47e5-b65c-e2e606b967db",
+                "uuid": "7c8dada4-9c43-40b5-85d5-7b35d1cb4aea",
                 "control-id": "rhel-08.040126",
                 "description": "No notes for control-id RHEL-08-040126.",
                 "props": [
@@ -10280,7 +10304,7 @@
                 ]
               },
               {
-                "uuid": "0398c142-6e35-4073-8275-57ff77d10e9b",
+                "uuid": "3ddc15ee-31fd-4e60-a447-6e9e99b7acd0",
                 "control-id": "rhel-08.040127",
                 "description": "No notes for control-id RHEL-08-040127.",
                 "props": [
@@ -10297,7 +10321,7 @@
                 ]
               },
               {
-                "uuid": "3d83b733-65e9-413c-8163-71bc0a78ed42",
+                "uuid": "b6496d77-6527-4815-a4c6-73df318daaf7",
                 "control-id": "rhel-08.040128",
                 "description": "No notes for control-id RHEL-08-040128.",
                 "props": [
@@ -10314,7 +10338,7 @@
                 ]
               },
               {
-                "uuid": "e153f597-644b-4af0-a91b-885314c73a9e",
+                "uuid": "8cb79380-689b-42d1-afc0-0f0c9bdbc22c",
                 "control-id": "rhel-08.040129",
                 "description": "No notes for control-id RHEL-08-040129.",
                 "props": [
@@ -10331,7 +10355,7 @@
                 ]
               },
               {
-                "uuid": "bd839c5d-0146-429a-9fd4-184bb0f74014",
+                "uuid": "02469127-11fc-4385-bb73-c88bf056f0b5",
                 "control-id": "rhel-08.040130",
                 "description": "No notes for control-id RHEL-08-040130.",
                 "props": [
@@ -10348,7 +10372,7 @@
                 ]
               },
               {
-                "uuid": "b7e720ba-01d8-492d-980e-636fa97c56c7",
+                "uuid": "523da841-6606-44c6-87bd-42f06416ba14",
                 "control-id": "rhel-08.040131",
                 "description": "No notes for control-id RHEL-08-040131.",
                 "props": [
@@ -10365,7 +10389,7 @@
                 ]
               },
               {
-                "uuid": "c117e662-b76f-480c-b144-367fc9983bda",
+                "uuid": "31376324-5142-42dd-a84f-d03fd04884e3",
                 "control-id": "rhel-08.040132",
                 "description": "No notes for control-id RHEL-08-040132.",
                 "props": [
@@ -10382,7 +10406,7 @@
                 ]
               },
               {
-                "uuid": "8fb51121-9c90-4167-8fea-e0e76c7d6058",
+                "uuid": "04468c9c-03a2-4f32-a3ac-67678e789e65",
                 "control-id": "rhel-08.040133",
                 "description": "No notes for control-id RHEL-08-040133.",
                 "props": [
@@ -10399,7 +10423,7 @@
                 ]
               },
               {
-                "uuid": "0076af33-45af-44a8-9225-8c285e38c67b",
+                "uuid": "f3513e2f-44f0-4400-abc5-7d8c0a2359cb",
                 "control-id": "rhel-08.040134",
                 "description": "No notes for control-id RHEL-08-040134.",
                 "props": [
@@ -10416,7 +10440,7 @@
                 ]
               },
               {
-                "uuid": "32552c44-a634-41b4-a163-2a6c7fbc2f9b",
+                "uuid": "a53a90d1-0ca6-49d1-89e3-3e0a1aa526b5",
                 "control-id": "rhel-08.040135",
                 "description": "No notes for control-id RHEL-08-040135.",
                 "props": [
@@ -10433,7 +10457,7 @@
                 ]
               },
               {
-                "uuid": "f6605083-b38b-458a-b9c9-ed88c996efd4",
+                "uuid": "5d96a558-0fe0-40b4-9d57-eca7ff7baeaf",
                 "control-id": "rhel-08.040140",
                 "description": "No notes for control-id RHEL-08-040140.",
                 "props": [
@@ -10450,7 +10474,7 @@
                 ]
               },
               {
-                "uuid": "0696a443-fb56-4cea-865f-56541c5d3973",
+                "uuid": "e3b07536-ed4a-418c-a410-56f126dfee35",
                 "control-id": "rhel-08.040150",
                 "description": "No notes for control-id RHEL-08-040150.",
                 "props": [
@@ -10467,7 +10491,7 @@
                 ]
               },
               {
-                "uuid": "03957120-ee00-46e0-9cda-f772043fefe3",
+                "uuid": "c91ddb26-a210-4985-a0ef-dc621c568929",
                 "control-id": "rhel-08.040160",
                 "description": "No notes for control-id RHEL-08-040160.",
                 "props": [
@@ -10484,7 +10508,7 @@
                 ]
               },
               {
-                "uuid": "d3a7414e-b41f-4e57-8ac5-c969648cb289",
+                "uuid": "f23d2184-2971-456d-b115-844c094d8858",
                 "control-id": "rhel-08.040161",
                 "description": "No notes for control-id RHEL-08-040161.",
                 "props": [
@@ -10501,7 +10525,7 @@
                 ]
               },
               {
-                "uuid": "a7d6788b-efe3-479f-bad7-0effa7887cf5",
+                "uuid": "91e31c56-3436-4969-9e46-1b5436334994",
                 "control-id": "rhel-08.040180",
                 "description": "No notes for control-id RHEL-08-040180.",
                 "props": [
@@ -10518,7 +10542,7 @@
                 ]
               },
               {
-                "uuid": "f90279b0-6485-4de4-9902-a771925ab56a",
+                "uuid": "73992448-a226-4120-9906-f01883f8b56f",
                 "control-id": "rhel-08.040210",
                 "description": "No notes for control-id RHEL-08-040210.",
                 "props": [
@@ -10535,7 +10559,7 @@
                 ]
               },
               {
-                "uuid": "cc327863-94b5-4e31-8b89-d123be665992",
+                "uuid": "3816fd3b-9eed-4abb-b6db-d2486d6efea3",
                 "control-id": "rhel-08.040220",
                 "description": "No notes for control-id RHEL-08-040220.",
                 "props": [
@@ -10552,7 +10576,7 @@
                 ]
               },
               {
-                "uuid": "9e67d561-38b5-467d-8d7f-6551fb8168cd",
+                "uuid": "3b836a8e-7d5b-4784-9024-af0dedfd6f63",
                 "control-id": "rhel-08.040230",
                 "description": "No notes for control-id RHEL-08-040230.",
                 "props": [
@@ -10569,7 +10593,7 @@
                 ]
               },
               {
-                "uuid": "111e30c4-2ca4-4790-9897-29cd01fb056b",
+                "uuid": "54f38e98-0c99-4f24-8830-6262b88d3975",
                 "control-id": "rhel-08.040240",
                 "description": "No notes for control-id RHEL-08-040240.",
                 "props": [
@@ -10586,7 +10610,7 @@
                 ]
               },
               {
-                "uuid": "794c304d-14b3-45c3-a5e0-c673799c6b03",
+                "uuid": "5590befe-fa50-40f8-8b9a-f8021e145fda",
                 "control-id": "rhel-08.040250",
                 "description": "No notes for control-id RHEL-08-040250.",
                 "props": [
@@ -10603,7 +10627,7 @@
                 ]
               },
               {
-                "uuid": "0d6f5c83-ba07-4274-96da-7ee4ecfe7a85",
+                "uuid": "ee8b2fbe-4651-4a41-b449-7cbca97dd9bb",
                 "control-id": "rhel-08.040260",
                 "description": "No notes for control-id RHEL-08-040260.",
                 "props": [
@@ -10620,7 +10644,7 @@
                 ]
               },
               {
-                "uuid": "b19b3223-62aa-4e50-adaf-2e4e4f04ca37",
+                "uuid": "56256e82-d286-44e2-a750-d8b72c2f7fc2",
                 "control-id": "rhel-08.040261",
                 "description": "No notes for control-id RHEL-08-040261.",
                 "props": [
@@ -10637,7 +10661,7 @@
                 ]
               },
               {
-                "uuid": "566bf74e-b8d0-4cc9-aea1-508925c22789",
+                "uuid": "82eb0352-3006-45ed-8ddb-07a872d6172e",
                 "control-id": "rhel-08.040262",
                 "description": "No notes for control-id RHEL-08-040262.",
                 "props": [
@@ -10654,7 +10678,7 @@
                 ]
               },
               {
-                "uuid": "300473ec-8b7d-4c38-8c52-148f61824d8c",
+                "uuid": "b02eaf21-fc0f-4eb5-a14f-b0c1eb270b84",
                 "control-id": "rhel-08.040270",
                 "description": "No notes for control-id RHEL-08-040270.",
                 "props": [
@@ -10671,7 +10695,7 @@
                 ]
               },
               {
-                "uuid": "b45b5753-47b6-4072-b448-ff1e6c553f7f",
+                "uuid": "7dba9b58-fb97-49ff-b7f9-45dc03b1df6b",
                 "control-id": "rhel-08.040280",
                 "description": "No notes for control-id RHEL-08-040280.",
                 "props": [
@@ -10688,7 +10712,7 @@
                 ]
               },
               {
-                "uuid": "b4d0793c-32fd-4a8a-a3ba-e2563c0f7390",
+                "uuid": "c74df681-8a34-4de3-a06f-9966470b714e",
                 "control-id": "rhel-08.040281",
                 "description": "No notes for control-id RHEL-08-040281.",
                 "props": [
@@ -10705,7 +10729,7 @@
                 ]
               },
               {
-                "uuid": "8e3d6828-57f1-4e51-be0a-e63a7b15610d",
+                "uuid": "3c810aff-034c-4862-a822-67ac1be622ed",
                 "control-id": "rhel-08.040282",
                 "description": "No notes for control-id RHEL-08-040282.",
                 "props": [
@@ -10722,7 +10746,7 @@
                 ]
               },
               {
-                "uuid": "c5a98a8c-1c3b-4906-aa3a-b2a6dedda276",
+                "uuid": "528b7d1d-d78e-427d-9db6-db6d4b4df03e",
                 "control-id": "rhel-08.040283",
                 "description": "No notes for control-id RHEL-08-040283.",
                 "props": [
@@ -10739,7 +10763,7 @@
                 ]
               },
               {
-                "uuid": "a1e483f0-248c-4b15-819a-e789ec7db8a5",
+                "uuid": "053abf0a-3e3b-479a-b196-731489cfaf6c",
                 "control-id": "rhel-08.040284",
                 "description": "No notes for control-id RHEL-08-040284.",
                 "props": [
@@ -10756,7 +10780,7 @@
                 ]
               },
               {
-                "uuid": "e94480fc-6991-4b7b-a352-79bd1100e38f",
+                "uuid": "ff6794dd-bd1d-4afc-8428-8eb7f9f4ca26",
                 "control-id": "rhel-08.040285",
                 "description": "No notes for control-id RHEL-08-040285.",
                 "props": [
@@ -10773,7 +10797,7 @@
                 ]
               },
               {
-                "uuid": "6e2911ab-f39f-427d-978c-7d0fbec61089",
+                "uuid": "ecec9a01-f8b8-44e7-9ff2-d8e8dfcbbf3c",
                 "control-id": "rhel-08.040290",
                 "description": "No notes for control-id RHEL-08-040290.",
                 "props": [
@@ -10790,7 +10814,7 @@
                 ]
               },
               {
-                "uuid": "a9f03452-fb4e-472c-b795-bd62eab0ab62",
+                "uuid": "951150e6-b97a-4774-85a0-c66718958003",
                 "control-id": "rhel-08.040320",
                 "description": "No notes for control-id RHEL-08-040320.",
                 "props": [
@@ -10807,7 +10831,7 @@
                 ]
               },
               {
-                "uuid": "cfc10d81-f858-448b-8227-7f2061c8bef5",
+                "uuid": "9165ae6a-362a-4fde-b689-aeed2a24feea",
                 "control-id": "rhel-08.040330",
                 "description": "No notes for control-id RHEL-08-040330.",
                 "props": [
@@ -10824,7 +10848,7 @@
                 ]
               },
               {
-                "uuid": "0eb107e4-9861-4e1c-8a38-e198c8954b09",
+                "uuid": "30099caf-b618-4e80-96c1-a8b1d03e0efd",
                 "control-id": "rhel-08.040340",
                 "description": "No notes for control-id RHEL-08-040340.",
                 "props": [
@@ -10841,7 +10865,7 @@
                 ]
               },
               {
-                "uuid": "cdce9044-f766-43b3-8ec8-19ad44af07d2",
+                "uuid": "6d4185b3-643d-4fd7-86e3-fc1a7f3f2122",
                 "control-id": "rhel-08.040341",
                 "description": "No notes for control-id RHEL-08-040341.",
                 "props": [
@@ -10858,7 +10882,7 @@
                 ]
               },
               {
-                "uuid": "555f9aa2-d83e-4f24-b396-c4290ab303e5",
+                "uuid": "1cc5631b-1274-4576-8802-48a2bb595997",
                 "control-id": "rhel-08.040350",
                 "description": "No notes for control-id RHEL-08-040350.",
                 "props": [
@@ -10875,7 +10899,7 @@
                 ]
               },
               {
-                "uuid": "b30655f2-88f1-4e42-8121-a7aff073b478",
+                "uuid": "6d2b27f8-3284-4996-bd6e-e11a3401fe0e",
                 "control-id": "rhel-08.040370",
                 "description": "No notes for control-id RHEL-08-040370.",
                 "props": [
@@ -10892,7 +10916,7 @@
                 ]
               },
               {
-                "uuid": "239a3608-7bfa-4d51-b18b-5b8513b461c8",
+                "uuid": "c8fdea20-52b8-4062-b559-ea15f02d803b",
                 "control-id": "rhel-08.040380",
                 "description": "No notes for control-id RHEL-08-040380.",
                 "props": [
@@ -10909,7 +10933,7 @@
                 ]
               },
               {
-                "uuid": "9b13163f-00ea-4e93-8663-5ab1e1e44578",
+                "uuid": "1b769271-8e18-4307-9611-0c342260c67f",
                 "control-id": "rhel-08.040390",
                 "description": "No notes for control-id RHEL-08-040390.",
                 "props": [
@@ -10926,7 +10950,7 @@
                 ]
               },
               {
-                "uuid": "b6f75dca-9947-4fae-a1dc-34928508ef18",
+                "uuid": "ad97d6f1-4e2d-4812-85aa-df9ecab2dff2",
                 "control-id": "rhel-08.010163",
                 "description": "No notes for control-id RHEL-08-010163.",
                 "props": [
@@ -10943,7 +10967,7 @@
                 ]
               },
               {
-                "uuid": "d06a941b-fbc5-40d9-bb93-43a495dfda6d",
+                "uuid": "97102f7a-b154-42c9-913a-6b170e5d8f05",
                 "control-id": "rhel-08.010382",
                 "description": "No notes for control-id RHEL-08-010382.",
                 "props": [
@@ -10960,7 +10984,7 @@
                 ]
               },
               {
-                "uuid": "84306b2a-99fe-4980-8e7d-cde32c479be2",
+                "uuid": "e5b5eae9-045e-4791-81ad-d4121a132b87",
                 "control-id": "rhel-08.010383",
                 "description": "No notes for control-id RHEL-08-010383.",
                 "props": [
@@ -10977,7 +11001,7 @@
                 ]
               },
               {
-                "uuid": "77e24273-9a4a-45bf-8404-661f449c705d",
+                "uuid": "4ffc8a38-ae00-4576-a0ca-7758aa9fbb86",
                 "control-id": "rhel-08.010384",
                 "description": "No notes for control-id RHEL-08-010384.",
                 "props": [
@@ -10994,7 +11018,7 @@
                 ]
               },
               {
-                "uuid": "7cb7b718-c966-4be0-8ca6-5e523e3ee8e3",
+                "uuid": "78d05201-79c6-4a60-8243-0851c5d67e30",
                 "control-id": "rhel-08.010049",
                 "description": "No notes for control-id RHEL-08-010049.",
                 "props": [
@@ -11011,7 +11035,7 @@
                 ]
               },
               {
-                "uuid": "af4d30da-ffc9-480c-ab05-f5bf6572ffac",
+                "uuid": "94217ddf-a0be-4a26-921c-f3a4495c2820",
                 "control-id": "rhel-08.010141",
                 "description": "No notes for control-id RHEL-08-010141.",
                 "props": [
@@ -11028,7 +11052,7 @@
                 ]
               },
               {
-                "uuid": "07eba2ac-9b0f-4a2b-889d-d4fb43083f55",
+                "uuid": "15a13c57-975c-4c44-be9f-4cf487753f9c",
                 "control-id": "rhel-08.010149",
                 "description": "No notes for control-id RHEL-08-010149.",
                 "props": [
@@ -11045,7 +11069,7 @@
                 ]
               },
               {
-                "uuid": "4c7fc44a-742f-4f12-94ca-c7ca1c618f2e",
+                "uuid": "460809fb-a27d-4ccc-9572-533a53926e1e",
                 "control-id": "rhel-08.010152",
                 "description": "No notes for control-id RHEL-08-010152.",
                 "props": [
@@ -11062,7 +11086,7 @@
                 ]
               },
               {
-                "uuid": "db431cfd-a6dd-45dc-b17a-f50a52584a26",
+                "uuid": "fb7653f0-5c3c-4232-9cf3-3641492a5626",
                 "control-id": "rhel-08.010159",
                 "description": "No notes for control-id RHEL-08-010159.",
                 "props": [
@@ -11079,7 +11103,7 @@
                 ]
               },
               {
-                "uuid": "ac9988d4-3d46-4fcc-91a4-5419816c4bbd",
+                "uuid": "0233388e-fcd3-48ef-9191-8fe233de630b",
                 "control-id": "rhel-08.010201",
                 "description": "No notes for control-id RHEL-08-010201.",
                 "props": [
@@ -11096,7 +11120,7 @@
                 ]
               },
               {
-                "uuid": "2f388e24-6790-44f8-9b72-ab03556f422c",
+                "uuid": "ece91c66-6b92-48a7-8642-01480c274def",
                 "control-id": "rhel-08.010287",
                 "description": "No notes for control-id RHEL-08-010287.",
                 "props": [
@@ -11113,7 +11137,7 @@
                 ]
               },
               {
-                "uuid": "5d545103-c80e-426a-892a-7f3f412b10d0",
+                "uuid": "abfa9505-04d9-4ee6-b1f4-bf33c67e0c5c",
                 "control-id": "rhel-08.010522",
                 "description": "No notes for control-id RHEL-08-010522.",
                 "props": [
@@ -11130,7 +11154,7 @@
                 ]
               },
               {
-                "uuid": "dc00c3ac-95da-4ff8-809e-7b5fda07e629",
+                "uuid": "1feca321-d72b-4b7f-ae0e-746d8b08b04b",
                 "control-id": "rhel-08.010544",
                 "description": "No notes for control-id RHEL-08-010544.",
                 "props": [
@@ -11147,7 +11171,7 @@
                 ]
               },
               {
-                "uuid": "b9f3d57a-eb3c-4d3c-9ab3-778dbd30a0a4",
+                "uuid": "6320d94b-aad8-4719-80d8-d0eafd5dadf6",
                 "control-id": "rhel-08.010572",
                 "description": "No notes for control-id RHEL-08-010572.",
                 "props": [
@@ -11164,7 +11188,7 @@
                 ]
               },
               {
-                "uuid": "d03a5cae-a89e-4262-b66f-fe324017e6b2",
+                "uuid": "c1350dca-e31a-4dad-8206-f5d55a76f152",
                 "control-id": "rhel-08.010731",
                 "description": "No notes for control-id RHEL-08-010731.",
                 "props": [
@@ -11181,7 +11205,7 @@
                 ]
               },
               {
-                "uuid": "894ba939-8e0a-469a-9796-ef9b47d3669b",
+                "uuid": "36e2e991-5c34-4148-8ac9-d8e98c7c3d7c",
                 "control-id": "rhel-08.010741",
                 "description": "No notes for control-id RHEL-08-010741.",
                 "props": [
@@ -11198,7 +11222,7 @@
                 ]
               },
               {
-                "uuid": "43fa53ae-3307-4a9f-a5b7-c18d219e4a01",
+                "uuid": "97f45b5b-28cc-4a2b-90fb-480e80f7ee6a",
                 "control-id": "rhel-08.020025",
                 "description": "No notes for control-id RHEL-08-020025.",
                 "props": [
@@ -11215,7 +11239,7 @@
                 ]
               },
               {
-                "uuid": "42aa61bc-709e-4b41-bc4c-12460f0526b3",
+                "uuid": "3de78c36-7586-4a0e-aa70-6df3e2844463",
                 "control-id": "rhel-08.020026",
                 "description": "No notes for control-id RHEL-08-020026.",
                 "props": [
@@ -11232,7 +11256,7 @@
                 ]
               },
               {
-                "uuid": "bc025b0c-038c-46ea-9218-64c0fadba276",
+                "uuid": "4d68c5b0-aedf-4d32-add0-907818cfbebb",
                 "control-id": "rhel-08.020031",
                 "description": "No notes for control-id RHEL-08-020031.",
                 "props": [
@@ -11249,7 +11273,7 @@
                 ]
               },
               {
-                "uuid": "badd3535-8839-41de-b6ef-03f9a083e719",
+                "uuid": "5e4b7f38-a816-45e4-b41f-46706f0bab45",
                 "control-id": "rhel-08.020032",
                 "description": "No notes for control-id RHEL-08-020032.",
                 "props": [
@@ -11266,7 +11290,7 @@
                 ]
               },
               {
-                "uuid": "bb401859-cd31-4d90-be40-545916b9d233",
+                "uuid": "3c5cca2c-58ab-4585-b772-c9e58cd45777",
                 "control-id": "rhel-08.020081",
                 "description": "No notes for control-id RHEL-08-020081.",
                 "props": [
@@ -11283,7 +11307,7 @@
                 ]
               },
               {
-                "uuid": "9035373a-bef2-4279-83ff-ed16d7757424",
+                "uuid": "cfaa2942-a1d6-4947-a0b9-705dcb18a8b8",
                 "control-id": "rhel-08.020082",
                 "description": "No notes for control-id RHEL-08-020082.",
                 "props": [
@@ -11300,7 +11324,7 @@
                 ]
               },
               {
-                "uuid": "658d009b-1c46-49ac-85f2-ee95c358a454",
+                "uuid": "ec952b81-7e88-41a2-a1c6-a38f038e7428",
                 "control-id": "rhel-08.030181",
                 "description": "No notes for control-id RHEL-08-030181.",
                 "props": [
@@ -11317,7 +11341,7 @@
                 ]
               },
               {
-                "uuid": "56bce507-c454-4cb1-a0a4-9172f23508f1",
+                "uuid": "93ea8523-9149-4f93-917a-7cb9e35a45d1",
                 "control-id": "rhel-08.030731",
                 "description": "No notes for control-id RHEL-08-030731.",
                 "props": [
@@ -11334,7 +11358,7 @@
                 ]
               },
               {
-                "uuid": "c2c37a95-0b9e-4430-a558-22f93bac4450",
+                "uuid": "666beadf-1204-4d29-b358-ca52af4f268b",
                 "control-id": "rhel-08.040101",
                 "description": "No notes for control-id RHEL-08-040101.",
                 "props": [
@@ -11351,7 +11375,7 @@
                 ]
               },
               {
-                "uuid": "bd0ccdb9-d45a-412d-8d8d-d9ddf472342c",
+                "uuid": "33309ba1-1337-43bb-b902-7e63525b2df5",
                 "control-id": "rhel-08.040136",
                 "description": "No notes for control-id RHEL-08-040136.",
                 "props": [
@@ -11368,7 +11392,7 @@
                 ]
               },
               {
-                "uuid": "6a037a32-ff91-4d32-a292-06ce3f0f66e0",
+                "uuid": "9bb6d185-241a-4064-8aee-5db8e7b76214",
                 "control-id": "rhel-08.040137",
                 "description": "No notes for control-id RHEL-08-040137.",
                 "props": [
@@ -11385,7 +11409,7 @@
                 ]
               },
               {
-                "uuid": "ef489aec-6421-4d8c-b765-8395a3332af0",
+                "uuid": "96a3ee6b-6cf2-4fa3-87f9-d54e267ba77b",
                 "control-id": "rhel-08.040139",
                 "description": "No notes for control-id RHEL-08-040139.",
                 "props": [
@@ -11402,7 +11426,7 @@
                 ]
               },
               {
-                "uuid": "93ff3da7-10c0-4f10-8eea-164cc8a109a8",
+                "uuid": "55e05fdf-225a-48f5-ac63-df2d5b8415d3",
                 "control-id": "rhel-08.040141",
                 "description": "No notes for control-id RHEL-08-040141.",
                 "props": [
@@ -11419,7 +11443,7 @@
                 ]
               },
               {
-                "uuid": "f31984fc-aeb7-491b-b46b-496ad6e2511c",
+                "uuid": "c61121c4-7690-4b8e-9f51-8df6a15c5143",
                 "control-id": "rhel-08.040159",
                 "description": "No notes for control-id RHEL-08-040159.",
                 "props": [
@@ -11436,7 +11460,7 @@
                 ]
               },
               {
-                "uuid": "0afdd35d-3685-4f8f-b1f4-d1f569ff7a69",
+                "uuid": "8e934bd4-b45e-460a-a659-90452dcf2054",
                 "control-id": "rhel-08.040209",
                 "description": "No notes for control-id RHEL-08-040209.",
                 "props": [
@@ -11453,7 +11477,7 @@
                 ]
               },
               {
-                "uuid": "935f81c4-e426-428e-af21-1ffe0a76d3ec",
+                "uuid": "1ea27d29-7ce5-4b81-9cc6-8df0a1f95065",
                 "control-id": "rhel-08.040239",
                 "description": "No notes for control-id RHEL-08-040239.",
                 "props": [
@@ -11470,7 +11494,7 @@
                 ]
               },
               {
-                "uuid": "8b7624d3-ed01-4e6d-9397-d4bc3a808574",
+                "uuid": "516b3eab-6d18-47e6-a76e-e190945e0974",
                 "control-id": "rhel-08.040249",
                 "description": "No notes for control-id RHEL-08-040249.",
                 "props": [
@@ -11487,7 +11511,7 @@
                 ]
               },
               {
-                "uuid": "6f99d937-057b-46cf-8ec5-32b72f236acf",
+                "uuid": "320eff2a-7e60-4d81-b319-8786f8deb89b",
                 "control-id": "rhel-08.040279",
                 "description": "No notes for control-id RHEL-08-040279.",
                 "props": [
@@ -11504,7 +11528,7 @@
                 ]
               },
               {
-                "uuid": "3d859d53-2ba7-48e1-85a4-0bbd6a076697",
+                "uuid": "9cc05023-0e8d-4525-b502-134f3e12ea3c",
                 "control-id": "rhel-08.040286",
                 "description": "No notes for control-id RHEL-08-040286.",
                 "props": [
@@ -11521,7 +11545,7 @@
                 ]
               },
               {
-                "uuid": "575a439a-0677-4dbb-8eb9-d52744c83dbe",
+                "uuid": "e35bfc19-6157-4842-b3e6-137817b3b910",
                 "control-id": "rhel-08.020027",
                 "description": "No notes for control-id RHEL-08-020027.",
                 "props": [
@@ -11538,7 +11562,7 @@
                 ]
               },
               {
-                "uuid": "b442f6b9-a83a-4fba-9b48-74dc8abf264e",
+                "uuid": "44d4e311-ae69-42fc-9724-cd2167b62685",
                 "control-id": "rhel-08.020028",
                 "description": "No notes for control-id RHEL-08-020028.",
                 "props": [
@@ -11555,7 +11579,7 @@
                 ]
               },
               {
-                "uuid": "b35cf5b0-4ef7-4775-93b5-2e1f45ecf2fa",
+                "uuid": "712c4077-5231-4711-b6a5-014cab773c04",
                 "control-id": "rhel-08.040259",
                 "description": "No notes for control-id RHEL-08-040259.",
                 "props": [
@@ -11572,7 +11596,7 @@
                 ]
               },
               {
-                "uuid": "f45aae16-5bef-47b4-9137-54955a1ef1cd",
+                "uuid": "98a8cea5-719d-47d8-899d-66406abf445d",
                 "control-id": "rhel-08.010331",
                 "description": "No notes for control-id RHEL-08-010331.",
                 "props": [
@@ -11589,7 +11613,7 @@
                 ]
               },
               {
-                "uuid": "2beefc8f-740d-4f28-b7d2-b6ee9ca2c599",
+                "uuid": "d4bd857d-2249-44e2-83a5-7b1651808e65",
                 "control-id": "rhel-08.010341",
                 "description": "No notes for control-id RHEL-08-010341.",
                 "props": [
@@ -11606,7 +11630,7 @@
                 ]
               },
               {
-                "uuid": "176cd134-f221-4fee-b248-75d5dbeb58c6",
+                "uuid": "84e163a5-0bce-4cfd-a138-9ae11b1396d0",
                 "control-id": "rhel-08.010351",
                 "description": "No notes for control-id RHEL-08-010351.",
                 "props": [
@@ -11623,7 +11647,7 @@
                 ]
               },
               {
-                "uuid": "8dc0c4c5-42a6-4575-882e-9b844bf791f2",
+                "uuid": "2cef36b0-9053-4901-86f4-dc5fff3e171b",
                 "control-id": "rhel-08.010359",
                 "description": "No notes for control-id RHEL-08-010359.",
                 "props": [
@@ -11645,7 +11669,7 @@
                 ]
               },
               {
-                "uuid": "c5bd27e9-1728-4322-b722-d41236285452",
+                "uuid": "510347f5-efe5-4e7c-a2e2-7a920c573217",
                 "control-id": "rhel-08.010379",
                 "description": "No notes for control-id RHEL-08-010379.",
                 "props": [
@@ -11662,7 +11686,7 @@
                 ]
               },
               {
-                "uuid": "2397783d-2b24-4463-bc78-0d940cb551ea",
+                "uuid": "d2b30e15-161f-4e66-8471-a10bd0aa89e0",
                 "control-id": "rhel-08.010385",
                 "description": "No notes for control-id RHEL-08-010385.",
                 "props": [
@@ -11679,7 +11703,7 @@
                 ]
               },
               {
-                "uuid": "fc1c6717-138e-4692-b0ec-8c98d61215b1",
+                "uuid": "dcdef09a-13ee-4926-a882-fbd073e351cd",
                 "control-id": "rhel-08.020101",
                 "description": "No notes for control-id RHEL-08-020101.",
                 "props": [
@@ -11696,7 +11720,7 @@
                 ]
               },
               {
-                "uuid": "591e2e70-805a-4ce0-bc9c-4372c2e50f3b",
+                "uuid": "791a2340-5e10-45b7-8feb-32fb7babcc4b",
                 "control-id": "rhel-08.020104",
                 "description": "No notes for control-id RHEL-08-020104.",
                 "props": [
@@ -11713,7 +11737,7 @@
                 ]
               },
               {
-                "uuid": "ed78ba8d-bd6c-484a-b5bd-6f1b996a4faf",
+                "uuid": "e4d1d9ab-5ea0-4e35-a280-c9a5afe3509b",
                 "control-id": "rhel-08.040321",
                 "description": "No notes for control-id RHEL-08-040321.",
                 "props": [
@@ -11730,7 +11754,7 @@
                 ]
               },
               {
-                "uuid": "4a11ff30-4b4a-4826-ab12-a5d11392a7ff",
+                "uuid": "511aa0d8-b827-429b-ac10-c7de838d1c17",
                 "control-id": "rhel-08.040400",
                 "description": "No notes for control-id RHEL-08-040400.",
                 "props": [
@@ -11747,7 +11771,7 @@
                 ]
               },
               {
-                "uuid": "0b163dec-4960-43c3-b051-11bc06927445",
+                "uuid": "313d1d4d-f87a-45f1-8f2d-004c7f7d1389",
                 "control-id": "rhel-08.040342",
                 "description": "No notes for control-id RHEL-08-040342.",
                 "props": [
@@ -11764,7 +11788,7 @@
                 ]
               },
               {
-                "uuid": "966d4977-76cc-4dc3-aca9-0caee99163e0",
+                "uuid": "7b649ffc-e6d9-4558-bb9e-098aa1da32ec",
                 "control-id": "rhel-08.010019",
                 "description": "No notes for control-id RHEL-08-010019.",
                 "props": [
@@ -11781,7 +11805,7 @@
                 ]
               },
               {
-                "uuid": "93e9cbde-99f9-4208-a326-ead8c253f296",
+                "uuid": "6d8bc4da-d088-451f-9aba-e37ba73f4f2a",
                 "control-id": "rhel-08.010358",
                 "description": "No notes for control-id RHEL-08-010358.",
                 "props": [
@@ -11798,7 +11822,7 @@
                 ]
               },
               {
-                "uuid": "a9e64eb6-585a-48b1-99d8-adac77385ed4",
+                "uuid": "21d12004-32c9-4d08-81da-bae77000525a",
                 "control-id": "rhel-08.020035",
                 "description": "No notes for control-id RHEL-08-020035.",
                 "props": [
@@ -11815,7 +11839,7 @@
                 ]
               },
               {
-                "uuid": "3bb3bc07-5a4c-45d0-b58c-d688ec6ec677",
+                "uuid": "cc3d5bae-6aef-462a-8db5-645a79cf3772",
                 "control-id": "rhel-08.010296",
                 "description": "No notes for control-id RHEL-08-010296.",
                 "props": [
@@ -11837,7 +11861,7 @@
                 ]
               },
               {
-                "uuid": "0775f542-1fca-4820-a2d6-d1276ce44fca",
+                "uuid": "19db81f9-8a8b-495e-8cd4-32773979d9d9",
                 "control-id": "rhel-08.010297",
                 "description": "The description for control-id rhel-08.010297.",
                 "props": [
@@ -11850,7 +11874,7 @@
                 ]
               },
               {
-                "uuid": "8e87cd10-fd51-42ee-af2b-09994c033833",
+                "uuid": "183c7e5e-e307-4014-b27f-4560659359d3",
                 "control-id": "rhel-08.010455",
                 "description": "No notes for control-id RHEL-08-010455.",
                 "props": [
@@ -11867,7 +11891,7 @@
                 ]
               },
               {
-                "uuid": "c1cd2b87-9eda-4b6b-9d64-8e3a47b883cd",
+                "uuid": "09470ee3-aa4d-4279-b329-335748232c00",
                 "control-id": "needed_rules",
                 "description": "The description for control-id needed_rules.",
                 "props": [
