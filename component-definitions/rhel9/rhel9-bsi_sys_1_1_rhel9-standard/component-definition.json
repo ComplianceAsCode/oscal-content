@@ -3,8 +3,8 @@
     "uuid": "332b4dc3-f6a4-4716-a951-089914801377",
     "metadata": {
       "title": "Component definition for rhel9",
-      "last-modified": "2025-11-05T15:24:24.394193+00:00",
-      "version": "1.3",
+      "last-modified": "2025-11-05T15:24:47.346730+00:00",
+      "version": "1.4",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -4240,35 +4240,53 @@
           {
             "name": "Parameter_Id_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_policy_name",
+            "value": "var_audit_backlog_limit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
+            "value": "Value of the audit_backlog_limit argument in GRUB 2 configuration. The audit_backlog_limit parameter determines how auditd records can be held in the auditd backlog.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "value": "{'default': 8192, 8192: 8192}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_state",
+            "value": "var_selinux_policy_name",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_2",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Id_3",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_selinux_state",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Description_3",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Value_Alternatives_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
             "remarks": "rule_set_000"
@@ -8836,7 +8854,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "0ac20505-4edc-4597-9998-83932aaf1a86",
+            "uuid": "c397c82b-0293-4108-98c4-db9516e5a5f6",
             "source": "trestle://profiles/rhel9-bsi_sys_1_1_rhel9-standard/profile.json",
             "description": "Control implementation for bsi",
             "props": [
@@ -8854,6 +8872,12 @@
                 ]
               },
               {
+                "param-id": "var_audit_backlog_limit",
+                "values": [
+                  "8192"
+                ]
+              },
+              {
                 "param-id": "var_selinux_policy_name",
                 "values": [
                   "targeted"
@@ -8868,7 +8892,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "92c9f429-ead6-453c-b4c8-d1baa77884d7",
+                "uuid": "76b650bc-89e7-4bdc-a252-3c4f3a8cda1e",
                 "control-id": "sys-1.1.a1",
                 "description": "The description for control-id sys-1.1.a1.",
                 "props": [
@@ -8881,7 +8905,7 @@
                 ]
               },
               {
-                "uuid": "2bb6bec4-e4f9-40c2-9854-e59fc99419d9",
+                "uuid": "045b23c7-1c18-445b-badb-fd8e7d1ae2eb",
                 "control-id": "sys-1.1.a2",
                 "description": "The description for control-id sys-1.1.a2.",
                 "props": [
@@ -8894,7 +8918,7 @@
                 ]
               },
               {
-                "uuid": "ec38a670-2368-4d1d-a92c-7b0b572fa86f",
+                "uuid": "754c138b-e673-40a5-90b6-f9ac1860f456",
                 "control-id": "sys-1.1.a3",
                 "description": "The description for control-id sys-1.1.a3.",
                 "props": [
@@ -8907,7 +8931,7 @@
                 ]
               },
               {
-                "uuid": "df8ee689-8b56-4251-9a97-9f1293252c04",
+                "uuid": "960f3f20-cda4-46d1-9a25-4c3704e2fdba",
                 "control-id": "sys-1.1.a4",
                 "description": "The description for control-id sys-1.1.a4.",
                 "props": [
@@ -8920,7 +8944,7 @@
                 ]
               },
               {
-                "uuid": "86c81ac0-626a-413c-8fb7-e1c61387d237",
+                "uuid": "42793107-afb9-4457-bc00-f6d4bf075c36",
                 "control-id": "sys-1.1.a5",
                 "description": "Section 1: If you dont utilize specific software to control the allowed devices for usb ports,\nyou can ensure compliance by disabling the usb port completely.\nInterfaces is ambigious, it is focussed on usb etc. not on network.",
                 "props": [
@@ -8957,7 +8981,7 @@
                 ]
               },
               {
-                "uuid": "bd9639a7-aa3b-4793-ab7c-3d5fd53bdccc",
+                "uuid": "5f5acb43-b473-4892-a503-30be3ce729ea",
                 "control-id": "sys-1.1.a6",
                 "description": "Section 1: We can conclude for servers, that wireless protocols are unnecessary\nSection 4: Documentation and organizational tasks.",
                 "props": [
@@ -9054,7 +9078,7 @@
                 ]
               },
               {
-                "uuid": "b4207dad-d8a5-47ba-9e43-e69bbc3afda0",
+                "uuid": "e0247ea6-ab2e-45f3-b5c7-49bded14409a",
                 "control-id": "sys-1.1.a7",
                 "description": "The description for control-id sys-1.1.a7.",
                 "props": [
@@ -9067,7 +9091,7 @@
                 ]
               },
               {
-                "uuid": "1870eed4-8374-4ee0-b647-2db117885732",
+                "uuid": "e80e5bc9-ba42-4abf-8e9d-72794633627c",
                 "control-id": "sys-1.1.a8",
                 "description": "The description for control-id sys-1.1.a8.",
                 "props": [
@@ -9080,7 +9104,7 @@
                 ]
               },
               {
-                "uuid": "6f136cf7-7ccf-449b-99f8-22ba4626370b",
+                "uuid": "825d3a9c-0d59-4e15-843e-0b26a487007e",
                 "control-id": "sys-1.1.a9",
                 "description": "Section 1,2: Antivirus software on linux systems is more useful, if the servers provide any\nfile or mailservices to endpoints.",
                 "props": [
@@ -9102,7 +9126,7 @@
                 ]
               },
               {
-                "uuid": "94e1195c-70e2-49d9-b81e-daf7edb9137a",
+                "uuid": "152296bf-d920-4df3-8f7d-9b48c55137d0",
                 "control-id": "sys-1.1.a10",
                 "description": "This whole requirement is more specifically implemented in the CIS hardening guide, which also\ndefines permissions to protect against manipulations.\nSection 7 and 8 are not addressed explicitly with rules, as 8 is specific for the AV software\nand 7 is quite broad.\n# OPS.1.1.5: Logging Anforderung anschauen\n# AIDE\nSection 2: Only in system logs, not in specialized audit logs\nSection 5: Identify how firewalld logs and if we could use that",
                 "props": [
@@ -9279,7 +9303,7 @@
                 ]
               },
               {
-                "uuid": "a2e54d92-b4ef-4aeb-b813-5cfdadff566a",
+                "uuid": "36603822-6035-4fb5-9491-2ff0f5770cf5",
                 "control-id": "sys-1.1.a11",
                 "description": "The description for control-id sys-1.1.a11.",
                 "props": [
@@ -9292,7 +9316,7 @@
                 ]
               },
               {
-                "uuid": "26197cfc-5c4c-4107-83fa-9e36cbd85af4",
+                "uuid": "d8268dd3-e8f1-4dad-9539-e8b40f76f488",
                 "control-id": "sys-1.1.a12",
                 "description": "The description for control-id sys-1.1.a12.",
                 "props": [
@@ -9305,7 +9329,7 @@
                 ]
               },
               {
-                "uuid": "aea2918b-aa82-44a5-b916-b7f9ebd119f2",
+                "uuid": "b4c06d16-124c-469d-803d-ff9d84ed3b07",
                 "control-id": "sys-1.1.a13",
                 "description": "The description for control-id sys-1.1.a13.",
                 "props": [
@@ -9318,7 +9342,7 @@
                 ]
               },
               {
-                "uuid": "212d8897-7a54-4bf7-8ff2-2b9d58630538",
+                "uuid": "8a36814c-6d05-4a65-8e50-10b94126871d",
                 "control-id": "sys-1.1.a14",
                 "description": "The description for control-id sys-1.1.a14.",
                 "props": [
@@ -9331,7 +9355,7 @@
                 ]
               },
               {
-                "uuid": "00dd299f-394e-4b60-978d-42737baa3575",
+                "uuid": "68554d9e-a234-4512-b6be-69cafbc84741",
                 "control-id": "sys-1.1.a15",
                 "description": "The description for control-id sys-1.1.a15.",
                 "props": [
@@ -9344,7 +9368,7 @@
                 ]
               },
               {
-                "uuid": "1e8a262b-e0d0-40db-9eab-9e5c9562b14f",
+                "uuid": "7e44db99-ce08-4ed9-8617-ab224810cb2f",
                 "control-id": "sys-1.1.a16",
                 "description": "One could argue, that this is done with this profile. Or could utilize the CIS Benchmark again,\nif CIS is the security policy",
                 "props": [
@@ -9356,7 +9380,7 @@
                 ]
               },
               {
-                "uuid": "52607825-326d-4c27-9613-68c53acb1ed4",
+                "uuid": "bcd604b1-6900-48fd-a8ac-a35a25c43f4d",
                 "control-id": "sys-1.1.a17",
                 "description": "The description for control-id sys-1.1.a17.",
                 "props": [
@@ -9369,7 +9393,7 @@
                 ]
               },
               {
-                "uuid": "12c89ed0-cb02-4457-9c97-b99296612eeb",
+                "uuid": "828d0cbc-482f-47a6-8b86-1c55a33b73ef",
                 "control-id": "sys-1.1.a18",
                 "description": "The description for control-id sys-1.1.a18.",
                 "props": [
@@ -9382,7 +9406,7 @@
                 ]
               },
               {
-                "uuid": "0251e0c3-cfa8-476f-9a9b-774ae6215860",
+                "uuid": "fee8711a-2084-43dc-9c8f-cdc699661383",
                 "control-id": "sys-1.1.a19",
                 "description": "Section 1: This can be addressed by utilizing firewalld or therelike\nSection 2: this must be configured on the application layer\n# deactivate WebConsole to circumvent TLS",
                 "props": [
@@ -9414,7 +9438,7 @@
                 ]
               },
               {
-                "uuid": "7e58c4bf-8160-4add-ae68-01357490c250",
+                "uuid": "7a4b08cd-06e7-4617-9a5e-cef628743e41",
                 "control-id": "sys-1.1.a20",
                 "description": "The description for control-id sys-1.1.a20.",
                 "props": [
@@ -9427,7 +9451,7 @@
                 ]
               },
               {
-                "uuid": "ab26b3fb-03eb-429d-939b-3be7ceb7a31f",
+                "uuid": "0261242e-4256-44c2-a452-5dcf7c0b3662",
                 "control-id": "sys-1.1.a21",
                 "description": "The description for control-id sys-1.1.a21.",
                 "props": [
@@ -9440,7 +9464,7 @@
                 ]
               },
               {
-                "uuid": "28238eb0-2974-42a5-b49e-9b15a37a574c",
+                "uuid": "23ee32a3-e902-4b40-821f-68dd0f70df55",
                 "control-id": "sys-1.1.a22",
                 "description": "The description for control-id sys-1.1.a22.",
                 "props": [
@@ -9453,7 +9477,7 @@
                 ]
               },
               {
-                "uuid": "075ffbbf-6370-49de-86e3-f114af212bab",
+                "uuid": "74d70935-f16e-4a6d-9e86-302a25afc61f",
                 "control-id": "sys-1.1.a23",
                 "description": "The description for control-id sys-1.1.a23.",
                 "props": [
@@ -9466,7 +9490,7 @@
                 ]
               },
               {
-                "uuid": "fc823485-77ab-4373-927a-59f857e936e9",
+                "uuid": "40a02998-5751-474a-ac63-73d3cf90bdec",
                 "control-id": "sys-1.1.a24",
                 "description": "This is met due to the usage of this compliance profile.",
                 "props": [
@@ -9478,7 +9502,7 @@
                 ]
               },
               {
-                "uuid": "505928c3-35e3-4ce6-834d-63365dfa64cb",
+                "uuid": "287a0cd7-1dbd-4550-970a-8e44993c8ede",
                 "control-id": "sys-1.1.a25",
                 "description": "The description for control-id sys-1.1.a25.",
                 "props": [
@@ -9491,7 +9515,7 @@
                 ]
               },
               {
-                "uuid": "c8316ec5-82f3-4936-9d5a-80f35a876a25",
+                "uuid": "33caa61b-c2c4-4790-ae4b-c80508ba98ce",
                 "control-id": "sys-1.1.a35",
                 "description": "The description for control-id sys-1.1.a35.",
                 "props": [
@@ -9504,7 +9528,7 @@
                 ]
               },
               {
-                "uuid": "fffd618d-934a-46b4-bf13-b4b4563870e7",
+                "uuid": "15cb8f7c-8750-498f-92ba-00375a348606",
                 "control-id": "sys-1.1.a37",
                 "description": "Section 1-2: This can be done by utilizing SELinux for enhanced protection and/or container\ntechnology (Microsegmentation)",
                 "props": [
@@ -9546,7 +9570,7 @@
                 ]
               },
               {
-                "uuid": "9aaf4611-a7e4-4cc1-a273-308991a02716",
+                "uuid": "3088e7b5-065e-473e-9af0-b0c41ff48f9a",
                 "control-id": "sys-1.1.a1",
                 "description": "The description for control-id sys-1.1.a1.",
                 "props": [
@@ -9559,7 +9583,7 @@
                 ]
               },
               {
-                "uuid": "4533cbad-ba20-4fba-9e3e-c571134fc8f5",
+                "uuid": "85680301-445c-4117-b830-af2c5c37a9f7",
                 "control-id": "sys-1.1.a2",
                 "description": "The description for control-id sys-1.1.a2.",
                 "props": [
@@ -9572,7 +9596,7 @@
                 ]
               },
               {
-                "uuid": "bf9ad560-d84c-4130-aecf-303397f81bc7",
+                "uuid": "3319a3b7-d69a-4cfd-92a4-2ca3d85e4ff5",
                 "control-id": "sys-1.1.a3",
                 "description": "The description for control-id sys-1.1.a3.",
                 "props": [
@@ -9585,7 +9609,7 @@
                 ]
               },
               {
-                "uuid": "8f6e57f5-c053-46c8-83b0-7c6a46c01147",
+                "uuid": "d73a19e3-e07b-49f4-ad93-55ecc962fe96",
                 "control-id": "sys-1.1.a4",
                 "description": "The description for control-id sys-1.1.a4.",
                 "props": [
@@ -9598,7 +9622,7 @@
                 ]
               },
               {
-                "uuid": "6c8d895c-6fd5-4b9b-acc8-3b9de57bce7c",
+                "uuid": "c9e896e0-a1ce-49d5-a29f-161f78c192e5",
                 "control-id": "sys-1.1.a5",
                 "description": "Section 1: If you dont utilize specific software to control the allowed devices for usb ports,\nyou can ensure compliance by disabling the usb port completely.\nInterfaces is ambigious, it is focussed on usb etc. not on network.",
                 "props": [
@@ -9635,7 +9659,7 @@
                 ]
               },
               {
-                "uuid": "f96117b7-b253-4ee7-9dd6-e9fc96ecbfb7",
+                "uuid": "69d80933-54fe-4767-ac0a-8d695fc33b09",
                 "control-id": "sys-1.1.a6",
                 "description": "Section 1: We can conclude for servers, that wireless protocols are unnecessary\nSection 4: Documentation and organizational tasks.",
                 "props": [
@@ -9732,7 +9756,7 @@
                 ]
               },
               {
-                "uuid": "f8e948f3-c91b-4b85-a188-f42fa375ca5a",
+                "uuid": "2002c21a-10e9-4e51-b26f-7c721772b6d5",
                 "control-id": "sys-1.1.a7",
                 "description": "The description for control-id sys-1.1.a7.",
                 "props": [
@@ -9745,7 +9769,7 @@
                 ]
               },
               {
-                "uuid": "16a8cf11-206a-46bb-baff-b193854a72a4",
+                "uuid": "c7eb5eb5-d2f7-4b2f-aa4a-778a28d8116c",
                 "control-id": "sys-1.1.a8",
                 "description": "The description for control-id sys-1.1.a8.",
                 "props": [
@@ -9758,7 +9782,7 @@
                 ]
               },
               {
-                "uuid": "7e83b139-cbe4-40ab-8902-12e14087c228",
+                "uuid": "8a0427f2-a0b3-432e-8627-74e168fe3bcf",
                 "control-id": "sys-1.1.a9",
                 "description": "Section 1,2: Antivirus software on linux systems is more useful, if the servers provide any\nfile or mailservices to endpoints.",
                 "props": [
@@ -9780,7 +9804,7 @@
                 ]
               },
               {
-                "uuid": "0116a515-6326-451d-800b-eca8eb99e780",
+                "uuid": "23cd7060-4a6f-46c0-b462-5e5e5c79c69e",
                 "control-id": "sys-1.1.a10",
                 "description": "This whole requirement is more specifically implemented in the CIS hardening guide, which also\ndefines permissions to protect against manipulations.\nSection 7 and 8 are not addressed explicitly with rules, as 8 is specific for the AV software\nand 7 is quite broad.\n# OPS.1.1.5: Logging Anforderung anschauen\n# AIDE\nSection 2: Only in system logs, not in specialized audit logs\nSection 5: Identify how firewalld logs and if we could use that",
                 "props": [
@@ -9957,7 +9981,7 @@
                 ]
               },
               {
-                "uuid": "d3609585-aeec-4c4b-b551-153cc5da762b",
+                "uuid": "235c79a3-815a-4521-861d-305bb5e9c542",
                 "control-id": "sys-1.1.a11",
                 "description": "The description for control-id sys-1.1.a11.",
                 "props": [
@@ -9970,7 +9994,7 @@
                 ]
               },
               {
-                "uuid": "dc771269-a83f-4bcf-9142-f82561c0d578",
+                "uuid": "427bc4c4-4d95-4e4d-8bb3-e3e63440ad0c",
                 "control-id": "sys-1.1.a12",
                 "description": "The description for control-id sys-1.1.a12.",
                 "props": [
@@ -9983,7 +10007,7 @@
                 ]
               },
               {
-                "uuid": "11739e85-ca38-4c9b-b645-36cece895155",
+                "uuid": "b6cfe7d4-f07f-4025-a7b4-a9bfcc94f4e1",
                 "control-id": "sys-1.1.a13",
                 "description": "The description for control-id sys-1.1.a13.",
                 "props": [
@@ -9996,7 +10020,7 @@
                 ]
               },
               {
-                "uuid": "c119a718-6efd-4c81-a484-d75aefbb5f36",
+                "uuid": "5a355604-c844-4dca-a97c-b1a714d56d85",
                 "control-id": "sys-1.1.a14",
                 "description": "The description for control-id sys-1.1.a14.",
                 "props": [
@@ -10009,7 +10033,7 @@
                 ]
               },
               {
-                "uuid": "22f95540-cfae-495d-8d05-5147c60ba455",
+                "uuid": "75eaa3f5-3c00-4ce6-ae4f-30dd157dda58",
                 "control-id": "sys-1.1.a15",
                 "description": "The description for control-id sys-1.1.a15.",
                 "props": [
@@ -10022,7 +10046,7 @@
                 ]
               },
               {
-                "uuid": "26ebb840-5f41-4cb8-b751-d92051cd8341",
+                "uuid": "a23149ea-ca04-4579-8293-8ad4e1ad0539",
                 "control-id": "sys-1.1.a16",
                 "description": "One could argue, that this is done with this profile. Or could utilize the CIS Benchmark again,\nif CIS is the security policy",
                 "props": [
@@ -10034,7 +10058,7 @@
                 ]
               },
               {
-                "uuid": "a33ee281-fee8-4ba7-bacc-ec4410fa1d1d",
+                "uuid": "0e59bfa2-312d-43b8-bde7-0296604b109c",
                 "control-id": "sys-1.1.a17",
                 "description": "The description for control-id sys-1.1.a17.",
                 "props": [
@@ -10047,7 +10071,7 @@
                 ]
               },
               {
-                "uuid": "508a647c-87c4-4796-b218-1570d0cf3d03",
+                "uuid": "de8bd373-d5e9-488a-8575-a88922feebfd",
                 "control-id": "sys-1.1.a18",
                 "description": "The description for control-id sys-1.1.a18.",
                 "props": [
@@ -10060,7 +10084,7 @@
                 ]
               },
               {
-                "uuid": "2df584c3-35bd-46f8-83df-ccb9bf7122b0",
+                "uuid": "ea53cdef-e873-4ab5-9073-f728a92e545c",
                 "control-id": "sys-1.1.a19",
                 "description": "Section 1: This can be addressed by utilizing firewalld or therelike\nSection 2: this must be configured on the application layer\n# deactivate WebConsole to circumvent TLS",
                 "props": [
@@ -10092,7 +10116,7 @@
                 ]
               },
               {
-                "uuid": "cd2c1976-e507-4a0d-881d-49e13a718a11",
+                "uuid": "1c148bc2-0e77-47e8-b80a-c628603cb5ba",
                 "control-id": "sys-1.1.a20",
                 "description": "The description for control-id sys-1.1.a20.",
                 "props": [
@@ -10105,7 +10129,7 @@
                 ]
               },
               {
-                "uuid": "d465d4f7-93a4-4c4a-aaf4-3e6d4c111192",
+                "uuid": "9b10b631-1097-4f3a-8485-ab45e130b21d",
                 "control-id": "sys-1.1.a21",
                 "description": "The description for control-id sys-1.1.a21.",
                 "props": [
@@ -10118,7 +10142,7 @@
                 ]
               },
               {
-                "uuid": "066408f0-89f1-4d5b-bc0b-50a86973636b",
+                "uuid": "533e0610-b564-4242-8f89-6d7b85892529",
                 "control-id": "sys-1.1.a22",
                 "description": "The description for control-id sys-1.1.a22.",
                 "props": [
@@ -10131,7 +10155,7 @@
                 ]
               },
               {
-                "uuid": "49192b3a-e455-4ad9-99d7-18fd1a7ff314",
+                "uuid": "a9dda979-2e83-44fc-82e3-08bf98456d26",
                 "control-id": "sys-1.1.a23",
                 "description": "The description for control-id sys-1.1.a23.",
                 "props": [
@@ -10144,7 +10168,7 @@
                 ]
               },
               {
-                "uuid": "7a0b21c1-885f-4a62-838e-287820184626",
+                "uuid": "31e54256-2613-4395-b34a-6b893a58f681",
                 "control-id": "sys-1.1.a24",
                 "description": "This is met due to the usage of this compliance profile.",
                 "props": [
@@ -10156,7 +10180,7 @@
                 ]
               },
               {
-                "uuid": "cedd80ae-023f-42cb-9ae9-25f0d7e1905e",
+                "uuid": "c3809aa0-f727-45aa-b3b3-33053887377b",
                 "control-id": "sys-1.1.a25",
                 "description": "The description for control-id sys-1.1.a25.",
                 "props": [
@@ -10169,7 +10193,7 @@
                 ]
               },
               {
-                "uuid": "591ef63f-787e-4993-8445-3b4cd46af156",
+                "uuid": "49dc7ee0-2f5f-4192-8558-a9d70cbe9944",
                 "control-id": "sys-1.1.a35",
                 "description": "The description for control-id sys-1.1.a35.",
                 "props": [
@@ -10182,7 +10206,7 @@
                 ]
               },
               {
-                "uuid": "7e47009d-9440-43f4-9b6f-a5817599e4fc",
+                "uuid": "31606852-b01c-46c2-9ec5-9d8ac0db3009",
                 "control-id": "sys-1.1.a37",
                 "description": "Section 1-2: This can be done by utilizing SELinux for enhanced protection and/or container\ntechnology (Microsegmentation)",
                 "props": [
@@ -10224,7 +10248,7 @@
                 ]
               },
               {
-                "uuid": "5098531a-9037-4d1b-8610-09ba8763bbe9",
+                "uuid": "1a332401-c9a2-4add-8a5d-21f2fc4314ed",
                 "control-id": "sys-1.1.a1",
                 "description": "The description for control-id sys-1.1.a1.",
                 "props": [
@@ -10237,7 +10261,7 @@
                 ]
               },
               {
-                "uuid": "73c733ca-88c2-4c05-aee8-ba9cb764a4b8",
+                "uuid": "3ecc6dbf-17e0-4689-a2dd-d07a8e767c9e",
                 "control-id": "sys-1.1.a2",
                 "description": "The description for control-id sys-1.1.a2.",
                 "props": [
@@ -10250,7 +10274,7 @@
                 ]
               },
               {
-                "uuid": "6896f58a-a94a-46c2-9ef3-4c1fe34a9cbf",
+                "uuid": "b9785e32-ef52-4f0c-bddd-1563f5f5bb76",
                 "control-id": "sys-1.1.a3",
                 "description": "The description for control-id sys-1.1.a3.",
                 "props": [
@@ -10263,7 +10287,7 @@
                 ]
               },
               {
-                "uuid": "2ffaa8e5-b51e-436f-8cac-5f9880c97e81",
+                "uuid": "ac9e2cb5-084d-4232-8c85-54846a00df85",
                 "control-id": "sys-1.1.a4",
                 "description": "The description for control-id sys-1.1.a4.",
                 "props": [
@@ -10276,7 +10300,7 @@
                 ]
               },
               {
-                "uuid": "63d182d7-5cfb-4b33-824a-92aad9ddf49a",
+                "uuid": "590d3948-3b0b-419d-89db-80c66484dff6",
                 "control-id": "sys-1.1.a5",
                 "description": "Section 1: If you dont utilize specific software to control the allowed devices for usb ports,\nyou can ensure compliance by disabling the usb port completely.\nInterfaces is ambigious, it is focussed on usb etc. not on network.",
                 "props": [
@@ -10313,7 +10337,7 @@
                 ]
               },
               {
-                "uuid": "5f8decad-6c7a-4d42-a742-5c6fb1077128",
+                "uuid": "eff59af9-c652-4f25-863d-8c1913b4d726",
                 "control-id": "sys-1.1.a6",
                 "description": "Section 1: We can conclude for servers, that wireless protocols are unnecessary\nSection 4: Documentation and organizational tasks.",
                 "props": [
@@ -10410,7 +10434,7 @@
                 ]
               },
               {
-                "uuid": "3686ec5e-9723-4e07-a406-40bf0b52d505",
+                "uuid": "9910c287-eff9-4e91-888a-00cf84cff637",
                 "control-id": "sys-1.1.a7",
                 "description": "The description for control-id sys-1.1.a7.",
                 "props": [
@@ -10423,7 +10447,7 @@
                 ]
               },
               {
-                "uuid": "92f5db9e-8507-410d-81c4-cdd6c81a2c93",
+                "uuid": "b42e0f86-be99-4c25-8b43-412aafa24707",
                 "control-id": "sys-1.1.a8",
                 "description": "The description for control-id sys-1.1.a8.",
                 "props": [
@@ -10436,7 +10460,7 @@
                 ]
               },
               {
-                "uuid": "930dad81-527e-4c47-bc71-6741be155949",
+                "uuid": "3757b5a2-5a51-496c-bdf1-db997842795e",
                 "control-id": "sys-1.1.a9",
                 "description": "Section 1,2: Antivirus software on linux systems is more useful, if the servers provide any\nfile or mailservices to endpoints.",
                 "props": [
@@ -10458,7 +10482,7 @@
                 ]
               },
               {
-                "uuid": "c1bd3f9c-b8fe-4d79-a286-acad2f4d461d",
+                "uuid": "db44d747-0769-4b99-83a1-2a6f4fd902d4",
                 "control-id": "sys-1.1.a10",
                 "description": "This whole requirement is more specifically implemented in the CIS hardening guide, which also\ndefines permissions to protect against manipulations.\nSection 7 and 8 are not addressed explicitly with rules, as 8 is specific for the AV software\nand 7 is quite broad.\n# OPS.1.1.5: Logging Anforderung anschauen\n# AIDE\nSection 2: Only in system logs, not in specialized audit logs\nSection 5: Identify how firewalld logs and if we could use that",
                 "props": [
