@@ -3,8 +3,8 @@
     "uuid": "a6de6ef1-cb05-40a3-a5d0-09b4b4949aee",
     "metadata": {
       "title": "Component definition for rhel8",
-      "last-modified": "2025-10-31T16:32:47.702414+00:00",
-      "version": "2.4",
+      "last-modified": "2025-11-05T15:20:47.137991+00:00",
+      "version": "2.5",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -281,493 +281,493 @@
           {
             "name": "Parameter_Id_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_action_mail_acct",
+            "value": "var_audit_backlog_limit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for action_mail_acct in /etc/audit/auditd.conf",
+            "value": "Value of the audit_backlog_limit argument in GRUB 2 configuration. The audit_backlog_limit parameter determines how auditd records can be held in the auditd backlog.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_14",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'admin': 'admin', 'default': 'root', 'root': 'root'}",
+            "value": "{'default': 8192, 8192: 8192}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_disk_error_action",
+            "value": "var_auditd_action_mail_acct",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'The setting for disk_error_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
+            "value": "The setting for action_mail_acct in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_15",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
+            "value": "{'admin': 'admin', 'default': 'root', 'root': 'root'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_disk_full_action",
+            "value": "var_auditd_disk_error_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'The setting for disk_full_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
+            "value": "'The setting for disk_error_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_16",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_17",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_max_log_file_action",
+            "value": "var_auditd_disk_full_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_17",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for max_log_file_action in /etc/audit/auditd.conf. The following options are available: <br />ignore - audit daemon does nothing. <br />syslog - audit daemon will issue a warning to syslog. <br />suspend - audit daemon will stop writing records to the disk. <br />rotate - audit daemon will rotate logs in the same convention used by logrotate. <br />keep_logs - similar to rotate but prevents audit logs to be overwritten. May trigger space_left_action if volume is full.",
+            "value": "'The setting for disk_full_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_17",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'rotate', 'keep_logs': 'keep_logs', 'rotate': 'rotate', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_18",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_name_format",
+            "value": "var_auditd_max_log_file_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_18",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of hostname to record the audit event",
+            "value": "The setting for max_log_file_action in /etc/audit/auditd.conf. The following options are available: <br />ignore - audit daemon does nothing. <br />syslog - audit daemon will issue a warning to syslog. <br />suspend - audit daemon will stop writing records to the disk. <br />rotate - audit daemon will rotate logs in the same convention used by logrotate. <br />keep_logs - similar to rotate but prevents audit logs to be overwritten. May trigger space_left_action if volume is full.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_18",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'hostname', 'hostname': 'hostname', 'fqd': 'fqd', 'numeric': 'numeric', 'user': 'user', 'none': 'none', 'stig': 'hostname|fqd|numeric'}",
+            "value": "{'default': 'rotate', 'keep_logs': 'keep_logs', 'rotate': 'rotate', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_19",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_space_left_action",
+            "value": "var_auditd_name_format",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_19",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for space_left_action in /etc/audit/auditd.conf",
+            "value": "Type of hostname to record the audit event",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_19",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'email', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'email|exec|single|halt', 'cis_rhel9': 'email|exec|single|halt', 'cis_rhel10': 'email|exec|single|halt'}",
+            "value": "{'default': 'hostname', 'hostname': 'hostname', 'fqd': 'fqd', 'numeric': 'numeric', 'user': 'user', 'none': 'none', 'stig': 'hostname|fqd|numeric'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_20",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_space_left_percentage",
+            "value": "var_auditd_space_left_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_20",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for space_left as a percentage in /etc/audit/auditd.conf",
+            "value": "The setting for space_left_action in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_20",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'25pc': 25, '50pc': 50, '75pc': 75, 'default': 25}",
+            "value": "{'default': 'email', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'email|exec|single|halt', 'cis_rhel9': 'email|exec|single|halt', 'cis_rhel10': 'email|exec|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_21",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_authselect_profile",
+            "value": "var_auditd_space_left_percentage",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_21",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the authselect profile to select",
+            "value": "The setting for space_left as a percentage in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_21",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
+            "value": "{'25pc': 25, '50pc': 50, '75pc': 75, 'default': 25}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_22",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_logind_session_timeout",
+            "value": "var_authselect_profile",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_22",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify duration of allowed idle time.",
+            "value": "Specify the authselect profile to select",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_22",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'10_minutes': 600, '120_minutes': 7200, '14_minutes': 840, '15_minutes': 900, '30_minutes': 1800, '5_minutes': 300, '60_minutes': 3600, 'default': 300}",
+            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_23",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_multiple_time_servers",
+            "value": "var_logind_session_timeout",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_23",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The list of vendor-approved time servers",
+            "value": "Specify duration of allowed idle time.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_23",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'generic': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'stig': '0.us.pool.ntp.mil', 'fedora': '0.fedora.pool.ntp.org,1.fedora.pool.ntp.org,2.fedora.pool.ntp.org,3.fedora.pool.ntp.org', 'rhel': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ol': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'suse': '0.suse.pool.ntp.org,1.suse.pool.ntp.org,2.suse.pool.ntp.org,3.suse.pool.ntp.org', 'alinux': '0.ntp.cloud.aliyuncs.com,1.ntp.aliyun.com,2.ntp1.aliyun.com,3.ntp1.cloud.aliyuncs.com', 'amazon': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ubuntu': '0.ubuntu.pool.ntp.org,1.ubuntu.pool.ntp.org,2.ubuntu.pool.ntp.org,3.ubuntu.pool.ntp.org', 'almalinux': '0.almalinux.pool.ntp.org,1.almalinux.pool.ntp.org,2.almalinux.pool.ntp.org,3.almalinux.pool.ntp.org', 'debian': '0.debian.pool.ntp.org,1.debian.pool.ntp.org,2.debian.pool.ntp.org,3.debian.pool.ntp.org', 'nist': 'time.nist.gov,time-a-g.nist.gov,time-b-g.nist.gov,time-c-g.nist.gov'}",
+            "value": "{'10_minutes': 600, '120_minutes': 7200, '14_minutes': 840, '15_minutes': 900, '30_minutes': 1800, '5_minutes': 300, '60_minutes': 3600, 'default': 300}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_24",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_algorithm",
+            "value": "var_multiple_time_servers",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_24",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the value set as ENCRYPT_METHOD in /etc/login.defs.",
+            "value": "The list of vendor-approved time servers",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_24",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
+            "value": "{'default': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'generic': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'stig': '0.us.pool.ntp.mil', 'fedora': '0.fedora.pool.ntp.org,1.fedora.pool.ntp.org,2.fedora.pool.ntp.org,3.fedora.pool.ntp.org', 'rhel': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ol': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'suse': '0.suse.pool.ntp.org,1.suse.pool.ntp.org,2.suse.pool.ntp.org,3.suse.pool.ntp.org', 'alinux': '0.ntp.cloud.aliyuncs.com,1.ntp.aliyun.com,2.ntp1.aliyun.com,3.ntp1.cloud.aliyuncs.com', 'amazon': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ubuntu': '0.ubuntu.pool.ntp.org,1.ubuntu.pool.ntp.org,2.ubuntu.pool.ntp.org,3.ubuntu.pool.ntp.org', 'almalinux': '0.almalinux.pool.ntp.org,1.almalinux.pool.ntp.org,2.almalinux.pool.ntp.org,3.almalinux.pool.ntp.org', 'debian': '0.debian.pool.ntp.org,1.debian.pool.ntp.org,2.debian.pool.ntp.org,3.debian.pool.ntp.org', 'nist': 'time.nist.gov,time-a-g.nist.gov,time-b-g.nist.gov,time-c-g.nist.gov'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_25",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_algorithm_pam",
+            "value": "var_password_hashing_algorithm",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_25",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the hashing algorithm to be used in pam_unix.so.",
+            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the value set as ENCRYPT_METHOD in /etc/login.defs.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_25",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
+            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_26",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_min_rounds_login_defs",
+            "value": "var_password_hashing_algorithm_pam",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_26",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of password hashing rounds configured through /etc/login.defs",
+            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the hashing algorithm to be used in pam_unix.so.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_26",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 5000, '5000': 5000, '100000': 100000}",
+            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_27",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_dcredit",
+            "value": "var_password_hashing_min_rounds_login_defs",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_27",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of digits in password",
+            "value": "Minimum number of password hashing rounds configured through /etc/login.defs",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_27",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{'default': 5000, '5000': 5000, '100000': 100000}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_28",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_dictcheck",
+            "value": "var_password_pam_dcredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_28",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent the use of dictionary words for passwords.",
+            "value": "Minimum number of digits in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_28",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 'default': 1}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_29",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_difok",
+            "value": "var_password_pam_dictcheck",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_29",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of characters not present in old password",
+            "value": "Prevent the use of dictionary words for passwords.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_29",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{15: 15, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 'default': 8}",
+            "value": "{1: 1, 'default': 1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_30",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_lcredit",
+            "value": "var_password_pam_difok",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_30",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of lower case in password",
+            "value": "Minimum number of characters not present in old password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_30",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{15: 15, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 'default': 8}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_31",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_maxclassrepeat",
+            "value": "var_password_pam_lcredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_31",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Maximum Number of Consecutive Repeating Characters in a Password From the Same Character Class",
+            "value": "Minimum number of lower case in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_31",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 4}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_32",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_maxrepeat",
+            "value": "var_password_pam_maxclassrepeat",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_32",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Maximum Number of Consecutive Repeating Characters in a Password",
+            "value": "Maximum Number of Consecutive Repeating Characters in a Password From the Same Character Class",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_32",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 'default': 3}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 4}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_33",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_minclass",
+            "value": "var_password_pam_maxrepeat",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_33",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of categories of characters that must exist in a password",
+            "value": "Maximum Number of Consecutive Repeating Characters in a Password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_33",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 3}",
+            "value": "{1: 1, 2: 2, 3: 3, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_34",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_minlen",
+            "value": "var_password_pam_minclass",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_34",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of characters in password",
+            "value": "Minimum number of categories of characters that must exist in a password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_34",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 12: 12, 14: 14, 15: 15, 17: 17, 18: 18, 20: 20, 6: 6, 7: 7, 8: 8, 'default': 15}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_35",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_ocredit",
+            "value": "var_password_pam_minlen",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_35",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of other (special characters) in password",
+            "value": "Minimum number of characters in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_35",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{10: 10, 12: 12, 14: 14, 15: 15, 17: 17, 18: 18, 20: 20, 6: 6, 7: 7, 8: 8, 'default': 15}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_remember",
+            "value": "var_password_pam_ocredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent password reuse using password history lookup",
+            "value": "Minimum number of other (special characters) in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 24: 24, 'default': 5}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_remember_control_flag",
+            "value": "var_password_pam_remember",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'Specify the control flag required for password remember requirement. If multiple values are allowed write them separated by commas as in \"required,requisite\", for remediations the first value will be taken'",
+            "value": "Prevent password reuse using password history lookup",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'required': 'required', 'optional': 'optional', 'requisite': 'requisite', 'sufficient': 'sufficient', 'binding': 'binding', 'ol8': 'required,requisite', 'requisite_or_required': 'requisite,required', 'default': 'requisite'}",
+            "value": "{'0': '0', 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 24: 24, 'default': 5}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_retry",
+            "value": "var_password_pam_remember_control_flag",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Number of retry attempts before erroring out",
+            "value": "'Specify the control flag required for password remember requirement. If multiple values are allowed write them separated by commas as in \"required,requisite\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 'default': 3}",
+            "value": "{'required': 'required', 'optional': 'optional', 'requisite': 'requisite', 'sufficient': 'sufficient', 'binding': 'binding', 'ol8': 'required,requisite', 'requisite_or_required': 'requisite,required', 'default': 'requisite'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_ucredit",
+            "value": "var_password_pam_retry",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of upper case in password",
+            "value": "Number of retry attempts before erroring out",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_rekey_limit_size",
+            "value": "var_password_pam_ucredit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the size component of the rekey limit.",
+            "value": "Minimum number of upper case in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'sshd_default': 'default', 'default': '512M', '512M': '512M', '1G': '1G'}",
+            "value": "{'0': '0', 1: -1, 2: -2, 'default': -1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_rekey_limit_time",
+            "value": "var_rekey_limit_size",
             "remarks": "rule_set_000"
           },
           {
@@ -779,203 +779,221 @@
           {
             "name": "Parameter_Value_Alternatives_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'sshd_default': 'none', 'default': '1h', '1hour': '1h'}",
+            "value": "{'sshd_default': 'default', 'default': '512M', '512M': '512M', '1G': '1G'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_screensaver_lock_delay",
+            "value": "var_rekey_limit_time",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Choose allowed duration (in seconds) after a screensaver becomes active before displaying an authentication prompt",
+            "value": "Specify the size component of the rekey limit.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'10_seconds': 10, '5_seconds': 5, 'default': '0', 'immediate': '0'}",
+            "value": "{'sshd_default': 'none', 'default': '1h', '1hour': '1h'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_policy_name",
+            "value": "var_screensaver_lock_delay",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
+            "value": "Choose allowed duration (in seconds) after a screensaver becomes active before displaying an authentication prompt",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "value": "{'10_seconds': 10, '5_seconds': 5, 'default': '0', 'immediate': '0'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_state",
+            "value": "var_selinux_policy_name",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
+            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_ssh_client_rekey_limit_size",
+            "value": "var_selinux_state",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the size component of the rekey limit. This limit signifies amount of data. After this amount of data is transferred through the connection, the session key is renegotiated. The number is followed by K, M or G for kilobytes, megabytes or gigabytes. Note that the RekeyLimit can be also configured according to elapsed time.",
+            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '512M', '512M': '512M', '1G': '1G'}",
+            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_ssh_client_rekey_limit_time",
+            "value": "var_ssh_client_rekey_limit_size",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transferred data.",
+            "value": "Specify the size component of the rekey limit. This limit signifies amount of data. After this amount of data is transferred through the connection, the session key is renegotiated. The number is followed by K, M or G for kilobytes, megabytes or gigabytes. Note that the RekeyLimit can be also configured according to elapsed time.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '1h', '1hour': '1h'}",
+            "value": "{'default': '512M', '512M': '512M', '1G': '1G'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_keepalive",
+            "value": "var_ssh_client_rekey_limit_time",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the maximum number of idle message counts before session is terminated.",
+            "value": "Specify the time component of the rekey limit. The session key is renegotiated after the defined amount of time passes. The number is followed by units such as H or M for hours or minutes. Note that the RekeyLimit can be also configured according to amount of transferred data.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "value": "{'default': '1h', '1hour': '1h'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sssd_certificate_verification_digest_function",
+            "value": "var_sshd_set_keepalive",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Value of the certificate_verification option in the SSSD config.",
+            "value": "Specify the maximum number of idle message counts before session is terminated.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'sha1': 'sha1', 'sha256': 'sha256', 'sha384': 'sha384', 'sha512': 'sha512', 'default': 'sha1'}",
+            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sudo_timestamp_timeout",
+            "value": "var_sssd_certificate_verification_digest_function",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Defines the number of minutes that can elapse before <tt>sudo</tt> will ask for a passwd again. If set to a value less than 0 the user's time stamp will never expire. Defining 0 means always prompt for a  password. The default timeout value is 5 minutes.",
+            "value": "Value of the certificate_verification option in the SSSD config.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '5', 'always_prompt': '0', '1_minute': '1', '2_minutes': '2', '3_minutes': '3', '5_minutes': '5', '15_minutes': '15'}",
+            "value": "{'sha1': 'sha1', 'sha256': 'sha256', 'sha384': 'sha384', 'sha512': 'sha512', 'default': 'sha1'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_system_crypto_policy",
+            "value": "var_sudo_timestamp_timeout",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the crypto policy for the system.",
+            "value": "Defines the number of minutes that can elapse before <tt>sudo</tt> will ask for a passwd again. If set to a value less than 0 the user's time stamp will never expire. Defining 0 means always prompt for a  password. The default timeout value is 5 minutes.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
+            "value": "{'default': '5', 'always_prompt': '0', '1_minute': '1', '2_minutes': '2', '3_minutes': '3', '5_minutes': '5', '15_minutes': '15'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_time_service_set_maxpoll",
+            "value": "var_system_crypto_policy",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The maximum NTP or Chrony poll interval number in seconds specified as a power of two.",
+            "value": "Specify the crypto policy for the system.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'36_hours': 17, '18_hours': 16, 'default': 10, 'system_default': 10}",
+            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_user_initialization_files_regex",
+            "value": "var_time_service_set_maxpoll",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'A regular expression describing a list of file names for files that are sourced at login time for interactive users'",
+            "value": "The maximum NTP or Chrony poll interval number in seconds specified as a power of two.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_52",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "{'36_hours': 17, '18_hours': 16, 'default': 10, 'system_default': 10}",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Id_53",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_user_initialization_files_regex",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Description_53",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "'A regular expression describing a list of file names for files that are sourced at login time for interactive users'",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Value_Alternatives_53",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "{'default': '^(\\\\.bashrc|\\\\.zshrc|\\\\.cshrc|\\\\.profile|\\\\.bash_login|\\\\.bash_profile)$', 'all_dotfiles': '^\\\\.[\\\\w\\\\- ]+$'}",
             "remarks": "rule_set_000"
@@ -5819,7 +5837,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "79569c3e-b83c-4e99-8be5-89c4e9f131a5",
+            "uuid": "cf48866d-1caa-4e80-8b70-fc306fcb0954",
             "source": "trestle://profiles/rhel8-stig_rhel8-high/profile.json",
             "description": "Control implementation for stig",
             "props": [
@@ -5912,6 +5930,12 @@
                 "param-id": "var_accounts_user_umask",
                 "values": [
                   "077"
+                ]
+              },
+              {
+                "param-id": "var_audit_backlog_limit",
+                "values": [
+                  "8192"
                 ]
               },
               {
@@ -6151,7 +6175,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "48db8c7c-1314-428f-8ad3-a21581b2ad66",
+                "uuid": "bde39e13-6988-4623-aeee-e969e0dee41a",
                 "control-id": "needed_rules",
                 "description": "The description for control-id needed_rules.",
                 "props": [
@@ -6199,7 +6223,7 @@
                 ]
               },
               {
-                "uuid": "aa35f80b-f933-4945-a390-95573e281f5d",
+                "uuid": "992ccff0-f12e-4c22-bd8c-2a5a41c6ac63",
                 "control-id": "rhel-08.010000",
                 "description": "No notes for control-id RHEL-08-010000.",
                 "props": [
@@ -6216,7 +6240,7 @@
                 ]
               },
               {
-                "uuid": "c41f59e5-c48c-46dd-9bcf-f339b240ebd6",
+                "uuid": "a0ad3c7a-ec26-48b3-9021-13d6e768955e",
                 "control-id": "rhel-08.010020",
                 "description": "No notes for control-id RHEL-08-010020.",
                 "props": [
@@ -6278,7 +6302,7 @@
                 ]
               },
               {
-                "uuid": "95803083-52fc-4c87-aa53-d8fce4545deb",
+                "uuid": "29b8d1ae-a448-4489-a5a0-5893e89eb811",
                 "control-id": "rhel-08.010030",
                 "description": "No notes for control-id RHEL-08-010030.",
                 "props": [
@@ -6295,7 +6319,7 @@
                 ]
               },
               {
-                "uuid": "5da7107a-27ca-405c-a389-b89166da85c9",
+                "uuid": "b709827e-80f8-4927-8c36-107a143ab3c6",
                 "control-id": "rhel-08.010140",
                 "description": "No notes for control-id RHEL-08-010140.",
                 "props": [
@@ -6312,7 +6336,7 @@
                 ]
               },
               {
-                "uuid": "89c60c71-cfd8-47e3-bde8-278d394592a8",
+                "uuid": "ccc5fcc8-7b7c-429c-afb1-484ad536ba4e",
                 "control-id": "rhel-08.010150",
                 "description": "No notes for control-id RHEL-08-010150.",
                 "props": [
@@ -6329,7 +6353,7 @@
                 ]
               },
               {
-                "uuid": "6e4bb82d-fa2e-4a4e-b8d5-8a517162d2f5",
+                "uuid": "1775bd7a-d2e4-46d5-aa94-67915cb6b100",
                 "control-id": "rhel-08.010370",
                 "description": "No notes for control-id RHEL-08-010370.",
                 "props": [
@@ -6346,7 +6370,7 @@
                 ]
               },
               {
-                "uuid": "3edc7ffd-7ef0-4ca2-9d90-8ee874610bde",
+                "uuid": "e4769f92-2a03-4a91-929b-c2558ffa8e3a",
                 "control-id": "rhel-08.010371",
                 "description": "No notes for control-id RHEL-08-010371.",
                 "props": [
@@ -6363,7 +6387,7 @@
                 ]
               },
               {
-                "uuid": "0e48d681-f434-4775-8870-1747ab59735a",
+                "uuid": "054119e3-6038-4997-910b-072dc7843f89",
                 "control-id": "rhel-08.010460",
                 "description": "No notes for control-id RHEL-08-010460.",
                 "props": [
@@ -6380,7 +6404,7 @@
                 ]
               },
               {
-                "uuid": "89d888e3-15c5-42dd-8934-117f0d26056e",
+                "uuid": "f04f93b4-0a8e-4cf5-9cd4-fd83ff026a0d",
                 "control-id": "rhel-08.010470",
                 "description": "No notes for control-id RHEL-08-010470.",
                 "props": [
@@ -6397,7 +6421,7 @@
                 ]
               },
               {
-                "uuid": "c4297051-8e04-4cb2-a1c6-2db95691b6d2",
+                "uuid": "c085a7c6-df9d-4f9b-bf23-d02109c3e25e",
                 "control-id": "rhel-08.010820",
                 "description": "No notes for control-id RHEL-08-010820.",
                 "props": [
@@ -6414,7 +6438,7 @@
                 ]
               },
               {
-                "uuid": "ca8bd706-7717-4e78-bc04-c49e90c186e8",
+                "uuid": "66491663-00a2-43e5-b395-e6f21a0ff44b",
                 "control-id": "rhel-08.020330",
                 "description": "No notes for control-id RHEL-08-020330.",
                 "props": [
@@ -6431,7 +6455,7 @@
                 ]
               },
               {
-                "uuid": "f8413866-4fc4-447b-a18c-c92887f34174",
+                "uuid": "1678f732-c841-4132-b948-35f63b033289",
                 "control-id": "rhel-08.040000",
                 "description": "No notes for control-id RHEL-08-040000.",
                 "props": [
@@ -6448,7 +6472,7 @@
                 ]
               },
               {
-                "uuid": "b6fedd7e-fb24-4351-b31f-3b3f809ad4d4",
+                "uuid": "957c4bcd-e94e-4503-8692-1fa5642a93b5",
                 "control-id": "rhel-08.040010",
                 "description": "The description for control-id rhel-08.040010.",
                 "props": [
@@ -6461,7 +6485,7 @@
                 ]
               },
               {
-                "uuid": "b5d0bd36-b64c-4896-b01d-127db72a636c",
+                "uuid": "103dd9bd-160e-48ce-ab8c-bac6c63acaa6",
                 "control-id": "rhel-08.040170",
                 "description": "No notes for control-id RHEL-08-040170.",
                 "props": [
@@ -6478,7 +6502,7 @@
                 ]
               },
               {
-                "uuid": "80e68fcd-9f82-453d-9471-74bad874bddb",
+                "uuid": "2d927260-3ac4-449f-bb4a-feb284744be1",
                 "control-id": "rhel-08.040171",
                 "description": "No notes for control-id RHEL-08-040171.",
                 "props": [
@@ -6495,7 +6519,7 @@
                 ]
               },
               {
-                "uuid": "881c1ac5-bd20-4989-81bf-cee68b18ae60",
+                "uuid": "9ceeaa82-a220-452d-b68b-206a51b997d9",
                 "control-id": "rhel-08.040172",
                 "description": "No notes for control-id RHEL-08-040172.",
                 "props": [
@@ -6512,7 +6536,7 @@
                 ]
               },
               {
-                "uuid": "4d25e40a-0bc6-463b-9b21-493bad9351eb",
+                "uuid": "446308f8-4286-44e3-9666-affcb829c67d",
                 "control-id": "rhel-08.040190",
                 "description": "No notes for control-id RHEL-08-040190.",
                 "props": [
@@ -6529,7 +6553,7 @@
                 ]
               },
               {
-                "uuid": "950102c3-349b-4df8-9345-a06ac5ae6c7b",
+                "uuid": "e7584be4-e22a-48a9-8e04-a51319071395",
                 "control-id": "rhel-08.040200",
                 "description": "No notes for control-id RHEL-08-040200.",
                 "props": [
@@ -6546,7 +6570,7 @@
                 ]
               },
               {
-                "uuid": "034d95e2-0965-4200-a209-266db5842398",
+                "uuid": "d25cdcd1-abe5-42a2-81e3-cfe30cad1f21",
                 "control-id": "rhel-08.040360",
                 "description": "No notes for control-id RHEL-08-040360.",
                 "props": [
@@ -6563,7 +6587,7 @@
                 ]
               },
               {
-                "uuid": "f3f665d4-b564-4bd3-b7b2-375b77d03baf",
+                "uuid": "7698d9b3-1d2a-40f8-a164-be8244f63eea",
                 "control-id": "rhel-08.020332",
                 "description": "No notes for control-id RHEL-08-020332.",
                 "props": [
@@ -6580,7 +6604,7 @@
                 ]
               },
               {
-                "uuid": "1bc4f416-3820-4253-b3c4-b10142386f70",
+                "uuid": "5e5f7b41-0417-47fd-8e1c-6c3a529445d2",
                 "control-id": "rhel-08.010121",
                 "description": "No notes for control-id RHEL-08-010121.",
                 "props": [
@@ -6597,7 +6621,7 @@
                 ]
               },
               {
-                "uuid": "830ca81a-d064-4778-81c1-e8b6289f6617",
+                "uuid": "833031a1-7cd0-491c-8ea9-19f15f54ce56",
                 "control-id": "rhel-08.020331",
                 "description": "No notes for control-id RHEL-08-020331.",
                 "props": [
@@ -6614,7 +6638,7 @@
                 ]
               },
               {
-                "uuid": "d02ce11e-6cd8-417c-99f1-d606370a4614",
+                "uuid": "9053611a-baa7-41a3-bfbc-1c9feb1f87f5",
                 "control-id": "needed_rules",
                 "description": "The description for control-id needed_rules.",
                 "props": [
@@ -6662,7 +6686,7 @@
                 ]
               },
               {
-                "uuid": "51a58a21-7119-47fe-9120-9676621e2c4c",
+                "uuid": "b4d7b1bf-f0d1-4fd1-acc5-17d3512feabb",
                 "control-id": "needed_rules",
                 "description": "The description for control-id needed_rules.",
                 "props": [
