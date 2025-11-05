@@ -3,8 +3,8 @@
     "uuid": "728f5c33-2d56-4762-9099-a7923fb80339",
     "metadata": {
       "title": "Component definition for rhel9",
-      "last-modified": "2025-11-05T15:26:08.878914+00:00",
-      "version": "2.0",
+      "last-modified": "2025-11-05T15:26:36.788408+00:00",
+      "version": "2.1",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -12624,521 +12624,539 @@
           {
             "name": "Parameter_Id_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_action_mail_acct",
+            "value": "var_audit_backlog_limit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for action_mail_acct in /etc/audit/auditd.conf",
+            "value": "Value of the audit_backlog_limit argument in GRUB 2 configuration. The audit_backlog_limit parameter determines how auditd records can be held in the auditd backlog.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_36",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'admin': 'admin', 'default': 'root', 'root': 'root'}",
+            "value": "{'default': 8192, 8192: 8192}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_admin_space_left_action",
+            "value": "var_auditd_action_mail_acct",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for admin_space_left_action in /etc/audit/auditd.conf",
+            "value": "The setting for action_mail_acct in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_37",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'single|halt', 'cis_rhel9': 'single|halt', 'cis_rhel10': 'single|halt'}",
+            "value": "{'admin': 'admin', 'default': 'root', 'root': 'root'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_disk_error_action",
+            "value": "var_auditd_admin_space_left_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'The setting for disk_error_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
+            "value": "The setting for admin_space_left_action in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_38",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
+            "value": "{'default': 'single', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'single|halt', 'cis_rhel9': 'single|halt', 'cis_rhel10': 'single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_disk_full_action",
+            "value": "var_auditd_disk_error_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'The setting for disk_full_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
+            "value": "'The setting for disk_error_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_39",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'syslog|single|halt', 'cis_rhel10': 'syslog|single|halt', 'cis_ubuntu2204': 'syslog|single|halt', 'cis_ubuntu2404': 'syslog|single|halt', 'cis_debian12': 'syslog|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_max_log_file",
+            "value": "var_auditd_disk_full_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for max_log_file in /etc/audit/auditd.conf",
+            "value": "'The setting for disk_full_action in /etc/audit/auditd.conf, if multiple values are allowed write them separated by pipes as in \"syslog|single|halt\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_40",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 10: 10, 20: 20, 5: 5, 6: 6, 8: 8, 'default': 6}",
+            "value": "{'default': 'single', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore', 'rotate': 'rotate', 'ol8': 'syslog|single|halt', 'rhel8': 'syslog|single|halt', 'cis_rhel8': 'syslog|single|halt', 'cis_rhel9': 'halt|single', 'cis_rhel10': 'halt|single', 'cis_ubuntu2204': 'halt|single', 'cis_ubuntu2404': 'halt|single', 'cis_debian12': 'halt|single'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_max_log_file_action",
+            "value": "var_auditd_max_log_file",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for max_log_file_action in /etc/audit/auditd.conf. The following options are available: <br />ignore - audit daemon does nothing. <br />syslog - audit daemon will issue a warning to syslog. <br />suspend - audit daemon will stop writing records to the disk. <br />rotate - audit daemon will rotate logs in the same convention used by logrotate. <br />keep_logs - similar to rotate but prevents audit logs to be overwritten. May trigger space_left_action if volume is full.",
+            "value": "The setting for max_log_file in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_41",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'rotate', 'keep_logs': 'keep_logs', 'rotate': 'rotate', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore'}",
+            "value": "{1: 1, 10: 10, 20: 20, 5: 5, 6: 6, 8: 8, 'default': 6}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_auditd_space_left_action",
+            "value": "var_auditd_max_log_file_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for space_left_action in /etc/audit/auditd.conf",
+            "value": "The setting for max_log_file_action in /etc/audit/auditd.conf. The following options are available: <br />ignore - audit daemon does nothing. <br />syslog - audit daemon will issue a warning to syslog. <br />suspend - audit daemon will stop writing records to the disk. <br />rotate - audit daemon will rotate logs in the same convention used by logrotate. <br />keep_logs - similar to rotate but prevents audit logs to be overwritten. May trigger space_left_action if volume is full.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_42",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'email', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'email|exec|single|halt', 'cis_rhel9': 'email|exec|single|halt', 'cis_rhel10': 'email|exec|single|halt'}",
+            "value": "{'default': 'rotate', 'keep_logs': 'keep_logs', 'rotate': 'rotate', 'suspend': 'suspend', 'syslog': 'syslog', 'ignore': 'ignore'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_authselect_profile",
+            "value": "var_auditd_space_left_action",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the authselect profile to select",
+            "value": "The setting for space_left_action in /etc/audit/auditd.conf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_43",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
+            "value": "{'default': 'email', 'email': 'email', 'exec': 'exec', 'halt': 'halt', 'single': 'single', 'suspend': 'suspend', 'syslog': 'syslog', 'rotate': 'rotate', 'ignore': 'ignore', 'cis_rhel8': 'email|exec|single|halt', 'cis_rhel9': 'email|exec|single|halt', 'cis_rhel10': 'email|exec|single|halt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_multiple_time_servers",
+            "value": "var_authselect_profile",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The list of vendor-approved time servers",
+            "value": "Specify the authselect profile to select",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_44",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'generic': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'stig': '0.us.pool.ntp.mil', 'fedora': '0.fedora.pool.ntp.org,1.fedora.pool.ntp.org,2.fedora.pool.ntp.org,3.fedora.pool.ntp.org', 'rhel': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ol': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'suse': '0.suse.pool.ntp.org,1.suse.pool.ntp.org,2.suse.pool.ntp.org,3.suse.pool.ntp.org', 'alinux': '0.ntp.cloud.aliyuncs.com,1.ntp.aliyun.com,2.ntp1.aliyun.com,3.ntp1.cloud.aliyuncs.com', 'amazon': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ubuntu': '0.ubuntu.pool.ntp.org,1.ubuntu.pool.ntp.org,2.ubuntu.pool.ntp.org,3.ubuntu.pool.ntp.org', 'almalinux': '0.almalinux.pool.ntp.org,1.almalinux.pool.ntp.org,2.almalinux.pool.ntp.org,3.almalinux.pool.ntp.org', 'debian': '0.debian.pool.ntp.org,1.debian.pool.ntp.org,2.debian.pool.ntp.org,3.debian.pool.ntp.org', 'nist': 'time.nist.gov,time-a-g.nist.gov,time-b-g.nist.gov,time-c-g.nist.gov'}",
+            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_pam_wheel_group_for_su",
+            "value": "var_multiple_time_servers",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "pam_wheel module has a parameter called group, which controls which groups can access the su command. This variable holds the valid value for the parameter.",
+            "value": "The list of vendor-approved time servers",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_45",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'sugroup', 'cis': 'sugroup'}",
+            "value": "{'default': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'generic': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'stig': '0.us.pool.ntp.mil', 'fedora': '0.fedora.pool.ntp.org,1.fedora.pool.ntp.org,2.fedora.pool.ntp.org,3.fedora.pool.ntp.org', 'rhel': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ol': '0.pool.ntp.org,1.pool.ntp.org,2.pool.ntp.org,3.pool.ntp.org', 'suse': '0.suse.pool.ntp.org,1.suse.pool.ntp.org,2.suse.pool.ntp.org,3.suse.pool.ntp.org', 'alinux': '0.ntp.cloud.aliyuncs.com,1.ntp.aliyun.com,2.ntp1.aliyun.com,3.ntp1.cloud.aliyuncs.com', 'amazon': '0.rhel.pool.ntp.org,1.rhel.pool.ntp.org,2.rhel.pool.ntp.org,3.rhel.pool.ntp.org', 'ubuntu': '0.ubuntu.pool.ntp.org,1.ubuntu.pool.ntp.org,2.ubuntu.pool.ntp.org,3.ubuntu.pool.ntp.org', 'almalinux': '0.almalinux.pool.ntp.org,1.almalinux.pool.ntp.org,2.almalinux.pool.ntp.org,3.almalinux.pool.ntp.org', 'debian': '0.debian.pool.ntp.org,1.debian.pool.ntp.org,2.debian.pool.ntp.org,3.debian.pool.ntp.org', 'nist': 'time.nist.gov,time-a-g.nist.gov,time-b-g.nist.gov,time-c-g.nist.gov'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_algorithm",
+            "value": "var_pam_wheel_group_for_su",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the value set as ENCRYPT_METHOD in /etc/login.defs.",
+            "value": "pam_wheel module has a parameter called group, which controls which groups can access the su command. This variable holds the valid value for the parameter.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_46",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
+            "value": "{'default': 'sugroup', 'cis': 'sugroup'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_hashing_algorithm_pam",
+            "value": "var_password_hashing_algorithm",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the hashing algorithm to be used in pam_unix.so.",
+            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the value set as ENCRYPT_METHOD in /etc/login.defs.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_47",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
+            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_dictcheck",
+            "value": "var_password_hashing_algorithm_pam",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent the use of dictionary words for passwords.",
+            "value": "Specify the system default encryption algorithm for encrypting passwords. Defines the hashing algorithm to be used in pam_unix.so.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_48",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 'default': 1}",
+            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_difok",
+            "value": "var_password_pam_dictcheck",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of characters not present in old password",
+            "value": "Prevent the use of dictionary words for passwords.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_49",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{15: 15, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 'default': 8}",
+            "value": "{1: 1, 'default': 1}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_maxrepeat",
+            "value": "var_password_pam_difok",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Maximum Number of Consecutive Repeating Characters in a Password",
+            "value": "Minimum number of characters not present in old password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_50",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 'default': 3}",
+            "value": "{15: 15, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 'default': 8}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_minclass",
+            "value": "var_password_pam_maxrepeat",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of categories of characters that must exist in a password",
+            "value": "Maximum Number of Consecutive Repeating Characters in a Password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_51",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 3}",
+            "value": "{1: 1, 2: 2, 3: 3, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_minlen",
+            "value": "var_password_pam_minclass",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Minimum number of characters in password",
+            "value": "Minimum number of categories of characters that must exist in a password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_52",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 12: 12, 14: 14, 15: 15, 17: 17, 18: 18, 20: 20, 6: 6, 7: 7, 8: 8, 'default': 15}",
+            "value": "{1: 1, 2: 2, 3: 3, 4: 4, 'default': 3}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_53",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_remember",
+            "value": "var_password_pam_minlen",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_53",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Prevent password reuse using password history lookup",
+            "value": "Minimum number of characters in password",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_53",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'0': '0', 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 24: 24, 'default': 5}",
+            "value": "{10: 10, 12: 12, 14: 14, 15: 15, 17: 17, 18: 18, 20: 20, 6: 6, 7: 7, 8: 8, 'default': 15}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_54",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_password_pam_remember_control_flag",
+            "value": "var_password_pam_remember",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_54",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'Specify the control flag required for password remember requirement. If multiple values are allowed write them separated by commas as in \"required,requisite\", for remediations the first value will be taken'",
+            "value": "Prevent password reuse using password history lookup",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_54",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'required': 'required', 'optional': 'optional', 'requisite': 'requisite', 'sufficient': 'sufficient', 'binding': 'binding', 'ol8': 'required,requisite', 'requisite_or_required': 'requisite,required', 'default': 'requisite'}",
+            "value": "{'0': '0', 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 24: 24, 'default': 5}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_55",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_postfix_inet_interfaces",
+            "value": "var_password_pam_remember_control_flag",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_55",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "The setting for inet_interfaces in /etc/postfix/main.cf",
+            "value": "'Specify the control flag required for password remember requirement. If multiple values are allowed write them separated by commas as in \"required,requisite\", for remediations the first value will be taken'",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_55",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'loopback-only': 'loopback-only', 'default': 'loopback-only', 'localhost': 'localhost'}",
+            "value": "{'required': 'required', 'optional': 'optional', 'requisite': 'requisite', 'sufficient': 'sufficient', 'binding': 'binding', 'ol8': 'required,requisite', 'requisite_or_required': 'requisite,required', 'default': 'requisite'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_56",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_screensaver_lock_delay",
+            "value": "var_postfix_inet_interfaces",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_56",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Choose allowed duration (in seconds) after a screensaver becomes active before displaying an authentication prompt",
+            "value": "The setting for inet_interfaces in /etc/postfix/main.cf",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_56",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'10_seconds': 10, '5_seconds': 5, 'default': '0', 'immediate': '0'}",
+            "value": "{'loopback-only': 'loopback-only', 'default': 'loopback-only', 'localhost': 'localhost'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_57",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_policy_name",
+            "value": "var_screensaver_lock_delay",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_57",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
+            "value": "Choose allowed duration (in seconds) after a screensaver becomes active before displaying an authentication prompt",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_57",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "value": "{'10_seconds': 10, '5_seconds': 5, 'default': '0', 'immediate': '0'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_58",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_state",
+            "value": "var_selinux_policy_name",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_58",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_58",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
+            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_59",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_max_sessions",
+            "value": "var_selinux_state",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_59",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the maximum number of open sessions permitted.",
+            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_59",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 4: 4, 3: 3, 2: 2, 1: 1, 0: 0, 'default': 10}",
+            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_60",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_keepalive",
+            "value": "var_sshd_max_sessions",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_60",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the maximum number of idle message counts before session is terminated.",
+            "value": "Specify the maximum number of open sessions permitted.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_60",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "value": "{10: 10, 4: 4, 3: 3, 2: 2, 1: 1, 0: 0, 'default': 10}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_61",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_login_grace_time",
+            "value": "var_sshd_set_keepalive",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_61",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Configure parameters for how long the servers stays connected before the user has successfully logged in",
+            "value": "Specify the maximum number of idle message counts before session is terminated.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_61",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 60, 60: 60}",
+            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_62",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_maxstartups",
+            "value": "var_sshd_set_login_grace_time",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_62",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Configure parameters for maximum concurrent unauthenticated connections to the SSH daemon.",
+            "value": "Configure parameters for how long the servers stays connected before the user has successfully logged in",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_62",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': '10:30:100', '10:30:60': '10:30:60'}",
+            "value": "{'default': 60, 60: 60}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_63",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_system_crypto_policy",
+            "value": "var_sshd_set_maxstartups",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_63",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the crypto policy for the system.",
+            "value": "Configure parameters for maximum concurrent unauthenticated connections to the SSH daemon.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_63",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
+            "value": "{'default': '10:30:100', '10:30:60': '10:30:60'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_64",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_user_initialization_files_regex",
+            "value": "var_system_crypto_policy",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_64",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "'A regular expression describing a list of file names for files that are sourced at login time for interactive users'",
+            "value": "Specify the crypto policy for the system.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_64",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Id_65",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_user_initialization_files_regex",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Description_65",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "'A regular expression describing a list of file names for files that are sourced at login time for interactive users'",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Value_Alternatives_65",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "{'default': '^(\\\\.bashrc|\\\\.zshrc|\\\\.cshrc|\\\\.profile|\\\\.bash_login|\\\\.bash_profile)$', 'all_dotfiles': '^\\\\.[\\\\w\\\\- ]+$'}",
             "remarks": "rule_set_000"
@@ -22530,7 +22548,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "72ded37a-0686-4445-9f09-17f9de0b05d2",
+            "uuid": "5e6b5898-ec63-4087-bf0d-3f87bf5bd992",
             "source": "trestle://profiles/rhel9-cis_rhel9-l2_server/profile.json",
             "description": "Control implementation for cis",
             "props": [
@@ -22758,6 +22776,12 @@
                 ]
               },
               {
+                "param-id": "var_audit_backlog_limit",
+                "values": [
+                  "8192"
+                ]
+              },
+              {
                 "param-id": "var_auditd_action_mail_acct",
                 "values": [
                   "root"
@@ -22934,7 +22958,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "50905640-2ee8-4453-98f4-c58998f9c13e",
+                "uuid": "7b0f040f-c858-4c14-8aaa-6b2221fa43f4",
                 "control-id": "cis_rhel9_1-1.1.6",
                 "description": "No notes for control-id 1.1.1.6.",
                 "props": [
@@ -22951,7 +22975,7 @@
                 ]
               },
               {
-                "uuid": "dc97efcf-d9e2-42eb-bc1a-13c5382ac342",
+                "uuid": "8b93cc56-eb31-4000-aab6-d4c400d46069",
                 "control-id": "cis_rhel9_1-1.1.7",
                 "description": "No notes for control-id 1.1.1.7.",
                 "props": [
@@ -22968,7 +22992,7 @@
                 ]
               },
               {
-                "uuid": "27c4b2be-cfbc-42fd-97cc-91532c9caf0b",
+                "uuid": "f60c77cf-2e8d-4a30-978b-aac60c47e8db",
                 "control-id": "cis_rhel9_1-1.2.3.1",
                 "description": "No notes for control-id 1.1.2.3.1.",
                 "props": [
@@ -22985,7 +23009,7 @@
                 ]
               },
               {
-                "uuid": "01b62bcc-642a-4458-bd72-3068c3f92c0d",
+                "uuid": "8f1c0e92-b55d-460a-b885-4f946f95a4b3",
                 "control-id": "cis_rhel9_1-1.2.4.1",
                 "description": "No notes for control-id 1.1.2.4.1.",
                 "props": [
@@ -23002,7 +23026,7 @@
                 ]
               },
               {
-                "uuid": "c0999278-2220-45b5-bba4-157b590d9936",
+                "uuid": "aef928ec-1fca-4488-bfb7-eb3a2b5a5d09",
                 "control-id": "cis_rhel9_1-1.2.5.1",
                 "description": "No notes for control-id 1.1.2.5.1.",
                 "props": [
@@ -23019,7 +23043,7 @@
                 ]
               },
               {
-                "uuid": "e49da584-c607-4d04-b0f3-07b464638002",
+                "uuid": "3ffb3095-b4a3-4a74-a373-a95dc08dfe3c",
                 "control-id": "cis_rhel9_1-1.2.6.1",
                 "description": "No notes for control-id 1.1.2.6.1.",
                 "props": [
@@ -23036,7 +23060,7 @@
                 ]
               },
               {
-                "uuid": "3b0edbba-3c02-4dde-8733-e5947e61147f",
+                "uuid": "81b89ef7-f56d-4664-9970-7653ed544507",
                 "control-id": "cis_rhel9_1-1.2.7.1",
                 "description": "No notes for control-id 1.1.2.7.1.",
                 "props": [
@@ -23053,7 +23077,7 @@
                 ]
               },
               {
-                "uuid": "42f291e5-ec38-4a6e-bfee-5d19b3cfe785",
+                "uuid": "0a2f9143-7645-4cfb-9b29-1bfa57ac95bd",
                 "control-id": "cis_rhel9_1-2.1.3",
                 "description": "The description for control-id cis_rhel9_1-2.1.3.",
                 "props": [
@@ -23066,7 +23090,7 @@
                 ]
               },
               {
-                "uuid": "1ac5a351-d27b-4749-8551-04a10c54820f",
+                "uuid": "d9e97025-b781-4354-9a32-44f644ab67dc",
                 "control-id": "cis_rhel9_1-3.1.5",
                 "description": "No notes for control-id 1.3.1.5.",
                 "props": [
@@ -23083,7 +23107,7 @@
                 ]
               },
               {
-                "uuid": "b7abfbc1-cf68-49e3-be99-640ab708c435",
+                "uuid": "04cbb9c5-6129-4131-8bb7-f8c71619b8bb",
                 "control-id": "cis_rhel9_1-3.1.6",
                 "description": "The description for control-id cis_rhel9_1-3.1.6.",
                 "props": [
@@ -23096,7 +23120,7 @@
                 ]
               },
               {
-                "uuid": "752981f5-efed-4289-ade3-fa04ebc7e86e",
+                "uuid": "f009a0bb-0a15-449d-ab14-afbb0309ad55",
                 "control-id": "cis_rhel9_1-8.1",
                 "description": "No notes for control-id 1.8.1.",
                 "props": [
@@ -23113,7 +23137,7 @@
                 ]
               },
               {
-                "uuid": "10f04d51-ffbe-4357-9451-e25e3bb02e9c",
+                "uuid": "fc86e75b-67d2-48a5-ad51-5ccc3403ab8a",
                 "control-id": "cis_rhel9_2-1.20",
                 "description": "The rule also configures correct run level to prevent unbootable system.",
                 "props": [
@@ -23135,7 +23159,7 @@
                 ]
               },
               {
-                "uuid": "e29231fb-adbb-44a5-a91a-1c6e00240e45",
+                "uuid": "5cea3617-489c-418a-9a6d-9b5259973fdf",
                 "control-id": "cis_rhel9_2-2.2",
                 "description": "No notes for control-id 2.2.2.",
                 "props": [
@@ -23152,7 +23176,7 @@
                 ]
               },
               {
-                "uuid": "c88f7520-8870-436e-8ffd-5d8a48d22a16",
+                "uuid": "15d11eb8-bade-4d06-b1ab-6223f70af334",
                 "control-id": "cis_rhel9_3-2.1",
                 "description": "No notes for control-id 3.2.1.",
                 "props": [
@@ -23169,7 +23193,7 @@
                 ]
               },
               {
-                "uuid": "9530a9ce-f8e6-4755-8882-8bde98d8c59f",
+                "uuid": "aa0f71b2-78b7-4395-b1bd-49e7944f920a",
                 "control-id": "cis_rhel9_3-2.2",
                 "description": "No notes for control-id 3.2.2.",
                 "props": [
@@ -23186,7 +23210,7 @@
                 ]
               },
               {
-                "uuid": "3bf44af8-9731-4c9d-912f-f49b35251cc1",
+                "uuid": "33caa848-73b4-404b-af6f-1200c192af8f",
                 "control-id": "cis_rhel9_3-2.3",
                 "description": "No notes for control-id 3.2.3.",
                 "props": [
@@ -23203,7 +23227,7 @@
                 ]
               },
               {
-                "uuid": "df112559-b8f2-4449-b8fa-e86601c666cf",
+                "uuid": "71a5c63d-a790-40bf-bdf5-5d0de6362522",
                 "control-id": "cis_rhel9_3-2.4",
                 "description": "No notes for control-id 3.2.4.",
                 "props": [
@@ -23220,7 +23244,7 @@
                 ]
               },
               {
-                "uuid": "2eb8c763-4d9a-46a1-b894-7de1362733f9",
+                "uuid": "19a881d5-d32b-4bbd-9fe4-c067e659da6b",
                 "control-id": "cis_rhel9_5-1.10",
                 "description": "The description for control-id cis_rhel9_5-1.10.",
                 "props": [
@@ -23233,7 +23257,7 @@
                 ]
               },
               {
-                "uuid": "de3543e2-ddac-40c8-b775-8cab3d92ae9b",
+                "uuid": "6cda7be6-cd48-4f36-81f6-3a373ee852be",
                 "control-id": "cis_rhel9_5-1.11",
                 "description": "Introduced in CIS RHEL9 v2.0.0",
                 "props": [
@@ -23250,7 +23274,7 @@
                 ]
               },
               {
-                "uuid": "8766d943-6a24-46ac-87c0-e99add8ca65f",
+                "uuid": "dcd60a64-5613-45a5-a281-d6d6a6c5c00f",
                 "control-id": "cis_rhel9_5-2.4",
                 "description": "No notes for control-id 5.2.4.",
                 "props": [
@@ -23267,7 +23291,7 @@
                 ]
               },
               {
-                "uuid": "e7385815-746d-4c02-b3ba-202c4860add1",
+                "uuid": "341dd153-ec5a-4dd6-a390-b93086083b5f",
                 "control-id": "cis_rhel9_5-3.3.1.3",
                 "description": "No notes for control-id 5.3.3.1.3.",
                 "props": [
@@ -23284,7 +23308,7 @@
                 ]
               },
               {
-                "uuid": "b65355a4-e9b1-4a7e-8963-2b1e2814dca2",
+                "uuid": "252c1098-9fc8-4df1-b871-8e5f88aba08f",
                 "control-id": "cis_rhel9_5-4.1.2",
                 "description": "No notes for control-id 5.4.1.2.",
                 "props": [
@@ -23306,7 +23330,7 @@
                 ]
               },
               {
-                "uuid": "4a3a0297-5977-4253-becb-e0a2be1986ba",
+                "uuid": "c9efa64b-a61a-4eb0-bb7d-fa0595c16ff3",
                 "control-id": "cis_rhel9_5-4.3.1",
                 "description": "The description for control-id cis_rhel9_5-4.3.1.",
                 "props": [
@@ -23319,7 +23343,7 @@
                 ]
               },
               {
-                "uuid": "02ec061e-5348-4983-a478-083abdeabd0c",
+                "uuid": "b61c3317-b92d-4379-afa8-c030d85ff816",
                 "control-id": "cis_rhel9_6-3.1.1",
                 "description": "No notes for control-id 6.3.1.1.",
                 "props": [
@@ -23341,7 +23365,7 @@
                 ]
               },
               {
-                "uuid": "873c57dc-f5b0-4f80-ad82-7d68c1a0c071",
+                "uuid": "00a05b37-d43f-4add-8ca8-624492a0c19d",
                 "control-id": "cis_rhel9_6-3.1.2",
                 "description": "No notes for control-id 6.3.1.2.",
                 "props": [
@@ -23358,7 +23382,7 @@
                 ]
               },
               {
-                "uuid": "4079bb8e-a767-411f-a5c0-626250b52abb",
+                "uuid": "37699f63-356f-4537-85c3-b027e7f0f360",
                 "control-id": "cis_rhel9_6-3.1.3",
                 "description": "No notes for control-id 6.3.1.3.",
                 "props": [
@@ -23375,7 +23399,7 @@
                 ]
               },
               {
-                "uuid": "68812981-7188-415d-ad4e-2d5ddaccbbb0",
+                "uuid": "18c081ca-a230-43a2-b4c0-0931b4c0f586",
                 "control-id": "cis_rhel9_6-3.1.4",
                 "description": "No notes for control-id 6.3.1.4.",
                 "props": [
@@ -23392,7 +23416,7 @@
                 ]
               },
               {
-                "uuid": "ff55577f-8f1e-46bb-8c0a-add55aa9a5f0",
+                "uuid": "db40f59e-e62c-4e4b-95ca-c2827a73d3ec",
                 "control-id": "cis_rhel9_6-3.2.1",
                 "description": "No notes for control-id 6.3.2.1.",
                 "props": [
@@ -23409,7 +23433,7 @@
                 ]
               },
               {
-                "uuid": "9aef3282-62f3-4884-bb17-f89f75869aa8",
+                "uuid": "6a92404c-5864-4484-8fb6-9b68cf5514c5",
                 "control-id": "cis_rhel9_6-3.2.2",
                 "description": "No notes for control-id 6.3.2.2.",
                 "props": [
@@ -23426,7 +23450,7 @@
                 ]
               },
               {
-                "uuid": "7fd88a5e-6396-4836-a3c2-6915cbdeb79d",
+                "uuid": "dc3119a4-9f61-4b8b-ac8b-b195f9686f54",
                 "control-id": "cis_rhel9_6-3.2.3",
                 "description": "No notes for control-id 6.3.2.3.",
                 "props": [
@@ -23448,7 +23472,7 @@
                 ]
               },
               {
-                "uuid": "2ccc580b-0ec7-485e-b3ef-287625e51732",
+                "uuid": "51034a66-14e0-4d34-9549-f461cfaccbc7",
                 "control-id": "cis_rhel9_6-3.2.4",
                 "description": "No notes for control-id 6.3.2.4.",
                 "props": [
@@ -23475,7 +23499,7 @@
                 ]
               },
               {
-                "uuid": "739c1816-448a-4e09-804a-2bf08f84b41c",
+                "uuid": "d83921b4-bc74-4fdd-9622-9bc0c54fc485",
                 "control-id": "cis_rhel9_6-3.3.1",
                 "description": "No notes for control-id 6.3.3.1.",
                 "props": [
@@ -23492,7 +23516,7 @@
                 ]
               },
               {
-                "uuid": "7b940b0d-fdc0-489d-85a0-8f58553563a5",
+                "uuid": "8c930513-6811-409f-a73c-0647d323d2aa",
                 "control-id": "cis_rhel9_6-3.3.2",
                 "description": "No notes for control-id 6.3.3.2.",
                 "props": [
@@ -23509,7 +23533,7 @@
                 ]
               },
               {
-                "uuid": "a184c6a7-ccff-4933-8da3-82ce5aeae59b",
+                "uuid": "7bea3f89-69cb-4cf3-8a9f-e846dfbf6f89",
                 "control-id": "cis_rhel9_6-3.3.3",
                 "description": "No notes for control-id 6.3.3.3.",
                 "props": [
@@ -23526,7 +23550,7 @@
                 ]
               },
               {
-                "uuid": "c7847d82-5e70-4b74-aaeb-e7c40812770e",
+                "uuid": "8b89b90b-ba61-433d-a36d-04715d9f9edd",
                 "control-id": "cis_rhel9_6-3.3.4",
                 "description": "No notes for control-id 6.3.3.4.",
                 "props": [
@@ -23558,7 +23582,7 @@
                 ]
               },
               {
-                "uuid": "7fcca03d-4519-4ef9-8bdc-82aac7115c94",
+                "uuid": "c2eb8a63-b64a-4dfd-8b40-f3a5afdb3ebb",
                 "control-id": "cis_rhel9_6-3.3.5",
                 "description": "No notes for control-id 6.3.3.5.",
                 "props": [
@@ -23590,7 +23614,7 @@
                 ]
               },
               {
-                "uuid": "37ead031-8152-42e1-8b51-564decfd63c7",
+                "uuid": "482b3395-ce8b-4c37-ad60-5d0ee0be1073",
                 "control-id": "cis_rhel9_6-3.3.6",
                 "description": "No notes for control-id 6.3.3.6.",
                 "props": [
@@ -23607,7 +23631,7 @@
                 ]
               },
               {
-                "uuid": "c57cd69f-6b73-444f-9529-826c61f1df6f",
+                "uuid": "a155e8c3-67e1-451d-95a0-ec1d2fbaabe3",
                 "control-id": "cis_rhel9_6-3.3.7",
                 "description": "No notes for control-id 6.3.3.7.",
                 "props": [
@@ -23644,7 +23668,7 @@
                 ]
               },
               {
-                "uuid": "5998a096-a81f-4bd5-bfad-56e0dca1a012",
+                "uuid": "f28d9998-d75b-4b46-b7b0-40cd52328979",
                 "control-id": "cis_rhel9_6-3.3.8",
                 "description": "No notes for control-id 6.3.3.8.",
                 "props": [
@@ -23696,7 +23720,7 @@
                 ]
               },
               {
-                "uuid": "3b056ac3-38a3-496a-b2cb-7c374435edc9",
+                "uuid": "cede0111-d27d-49fa-8301-bd7a890e5021",
                 "control-id": "cis_rhel9_6-3.3.9",
                 "description": "No notes for control-id 6.3.3.9.",
                 "props": [
@@ -23773,7 +23797,7 @@
                 ]
               },
               {
-                "uuid": "ca7516dd-ca94-41ab-8274-aa7b3c54829f",
+                "uuid": "a221e0ae-0687-4911-9a49-70d836635e5b",
                 "control-id": "cis_rhel9_6-3.3.10",
                 "description": "No notes for control-id 6.3.3.10.",
                 "props": [
@@ -23790,7 +23814,7 @@
                 ]
               },
               {
-                "uuid": "e4471c35-dc71-4c6b-ac7a-603c47299476",
+                "uuid": "86009f8d-f9fb-4d10-9453-c82729b1fbff",
                 "control-id": "cis_rhel9_6-3.3.11",
                 "description": "No notes for control-id 6.3.3.11.",
                 "props": [
@@ -23817,7 +23841,7 @@
                 ]
               },
               {
-                "uuid": "be4931f8-2b95-4c6b-a43e-84780dafbcf9",
+                "uuid": "dec2f3d0-46d9-4ab8-a06f-106a76441dc9",
                 "control-id": "cis_rhel9_6-3.3.12",
                 "description": "No notes for control-id 6.3.3.12.",
                 "props": [
@@ -23839,7 +23863,7 @@
                 ]
               },
               {
-                "uuid": "e4210bc6-6f15-41ba-985e-01c5e8fc65f1",
+                "uuid": "f2727a2d-54ae-4a24-a1a2-5d2ee9d250d4",
                 "control-id": "cis_rhel9_6-3.3.13",
                 "description": "No notes for control-id 6.3.3.13.",
                 "props": [
@@ -23871,7 +23895,7 @@
                 ]
               },
               {
-                "uuid": "868bf6e5-d5bd-4d67-ae3e-f9cb54feb69a",
+                "uuid": "a416f30c-11bd-4b89-acaf-dd3614ca8d60",
                 "control-id": "cis_rhel9_6-3.3.14",
                 "description": "No notes for control-id 6.3.3.14.",
                 "props": [
@@ -23893,7 +23917,7 @@
                 ]
               },
               {
-                "uuid": "cca48425-8e12-4727-9bdf-f779bb11f968",
+                "uuid": "f49222e8-05f3-4391-9ff2-bdbebf0dba08",
                 "control-id": "cis_rhel9_6-3.3.15",
                 "description": "No notes for control-id 6.3.3.15.",
                 "props": [
@@ -23910,7 +23934,7 @@
                 ]
               },
               {
-                "uuid": "0e551e26-601b-47e6-89ec-52fc9cad10e7",
+                "uuid": "e8302bf8-5e59-4a71-ad30-0e0d19b92266",
                 "control-id": "cis_rhel9_6-3.3.16",
                 "description": "No notes for control-id 6.3.3.16.",
                 "props": [
@@ -23927,7 +23951,7 @@
                 ]
               },
               {
-                "uuid": "f73007ed-d936-4137-b442-0422d35e62af",
+                "uuid": "e39295b4-be28-4968-b439-4cc91f712319",
                 "control-id": "cis_rhel9_6-3.3.17",
                 "description": "No notes for control-id 6.3.3.17.",
                 "props": [
@@ -23944,7 +23968,7 @@
                 ]
               },
               {
-                "uuid": "3e045f39-4ff7-4c78-97bf-e2efa6e09c7b",
+                "uuid": "02b41f7d-8ec4-4f50-a797-40f0aeb5ce09",
                 "control-id": "cis_rhel9_6-3.3.18",
                 "description": "No notes for control-id 6.3.3.18.",
                 "props": [
@@ -23961,7 +23985,7 @@
                 ]
               },
               {
-                "uuid": "2703f80a-e0b4-444c-9779-763c4fef085f",
+                "uuid": "072fde91-4fbf-4450-956f-6370696afa2b",
                 "control-id": "cis_rhel9_6-3.3.19",
                 "description": "No notes for control-id 6.3.3.19.",
                 "props": [
@@ -24003,7 +24027,7 @@
                 ]
               },
               {
-                "uuid": "e8630b2b-c4d1-4d9b-b8cc-5601dc96ca09",
+                "uuid": "fb65fb95-05c5-4277-9083-f938ee9ecf5d",
                 "control-id": "cis_rhel9_6-3.3.20",
                 "description": "No notes for control-id 6.3.3.20.",
                 "props": [
@@ -24020,7 +24044,7 @@
                 ]
               },
               {
-                "uuid": "9df1e742-296a-47f4-bba1-0dcc34953adb",
+                "uuid": "08a22fe2-7781-4114-a9ed-b440707e295f",
                 "control-id": "cis_rhel9_6-3.3.21",
                 "description": "The description for control-id cis_rhel9_6-3.3.21.",
                 "props": [
@@ -24033,7 +24057,7 @@
                 ]
               },
               {
-                "uuid": "46d21887-7aac-4b47-a583-4e96d27920da",
+                "uuid": "fc4c7561-6b6f-434a-bf30-e8819bb9bc23",
                 "control-id": "cis_rhel9_6-3.4.1",
                 "description": "No notes for control-id 6.3.4.1.",
                 "props": [
@@ -24050,7 +24074,7 @@
                 ]
               },
               {
-                "uuid": "f98919a8-dc88-44df-8674-28fd864e121a",
+                "uuid": "587e200e-e9ba-4cca-ac4b-acd978196f84",
                 "control-id": "cis_rhel9_6-3.4.2",
                 "description": "No notes for control-id 6.3.4.2.",
                 "props": [
@@ -24067,7 +24091,7 @@
                 ]
               },
               {
-                "uuid": "ab934413-37eb-497c-9247-5eec1af39f35",
+                "uuid": "7d83ac23-2612-4074-9e32-993b4c996006",
                 "control-id": "cis_rhel9_6-3.4.3",
                 "description": "No notes for control-id 6.3.4.3.",
                 "props": [
@@ -24084,7 +24108,7 @@
                 ]
               },
               {
-                "uuid": "d40b45b3-2748-4a30-9877-cfa926800d8d",
+                "uuid": "a2eea69c-161f-46df-b9e0-8bc8a0b566a0",
                 "control-id": "cis_rhel9_6-3.4.4",
                 "description": "No notes for control-id 6.3.4.4.",
                 "props": [
@@ -24101,7 +24125,7 @@
                 ]
               },
               {
-                "uuid": "781f11f6-35aa-4256-ae0f-428979a80bec",
+                "uuid": "22029e74-88ce-4782-bc6f-af23789e3b70",
                 "control-id": "cis_rhel9_6-3.4.5",
                 "description": "No notes for control-id 6.3.4.5.",
                 "props": [
@@ -24118,7 +24142,7 @@
                 ]
               },
               {
-                "uuid": "9a86dd97-0e07-4029-bee7-c559cddeff9c",
+                "uuid": "787722bf-8d2a-46a7-b3d5-45c1a5b29968",
                 "control-id": "cis_rhel9_6-3.4.6",
                 "description": "No notes for control-id 6.3.4.6.",
                 "props": [
@@ -24135,7 +24159,7 @@
                 ]
               },
               {
-                "uuid": "b3a180f0-1de0-4435-867b-a47eb264185c",
+                "uuid": "79368402-6561-40bf-b9e3-ce60fa291f7f",
                 "control-id": "cis_rhel9_6-3.4.7",
                 "description": "No notes for control-id 6.3.4.7.",
                 "props": [
@@ -24152,7 +24176,7 @@
                 ]
               },
               {
-                "uuid": "0b4fa8cb-cfce-4f27-9f1b-685e031ad258",
+                "uuid": "1bd2ea86-0f95-4a30-a635-bc0b63a8df09",
                 "control-id": "cis_rhel9_6-3.4.8",
                 "description": "No notes for control-id 6.3.4.8.",
                 "props": [
@@ -24169,7 +24193,7 @@
                 ]
               },
               {
-                "uuid": "d0bbc07f-b01e-4d83-b084-53f8ca4d9a40",
+                "uuid": "b3cdaa40-e4e5-4e68-b7b8-cf8271c28906",
                 "control-id": "cis_rhel9_6-3.4.9",
                 "description": "No notes for control-id 6.3.4.9.",
                 "props": [
@@ -24186,7 +24210,7 @@
                 ]
               },
               {
-                "uuid": "5c27d957-b967-4f7d-a5c9-003475ab9761",
+                "uuid": "426e4d79-6699-4137-9593-0236c20759ad",
                 "control-id": "cis_rhel9_6-3.4.10",
                 "description": "No notes for control-id 6.3.4.10.",
                 "props": [
@@ -24203,7 +24227,7 @@
                 ]
               },
               {
-                "uuid": "ccee8db2-4678-4e72-97e4-e84827cdeec4",
+                "uuid": "4dfa7235-f209-4c53-bd32-71414a52cc71",
                 "control-id": "cis_rhel9_7-1.14",
                 "description": "The description for control-id cis_rhel9_7-1.14.",
                 "props": [
@@ -24216,7 +24240,7 @@
                 ]
               },
               {
-                "uuid": "3023ccbe-2f87-42bf-a399-6cd6e98a88a8",
+                "uuid": "cdb9d0b5-f533-4aaa-8f03-e822f780aba1",
                 "control-id": "reload_dconf_db",
                 "description": "This is a helper rule to reload Dconf database correctly.",
                 "props": [
@@ -24233,7 +24257,7 @@
                 ]
               },
               {
-                "uuid": "1a159f81-9792-401f-a141-2fd5649e1901",
+                "uuid": "4e590fab-0161-4456-b441-02592c11ada8",
                 "control-id": "enable_authselect",
                 "description": "We need this in all CIS versions, but the policy doesn't have any section where this\nwould fit better.",
                 "props": [
@@ -24250,7 +24274,7 @@
                 ]
               },
               {
-                "uuid": "995eafcb-c338-4602-b56e-914957d72055",
+                "uuid": "14371315-de7e-4981-984e-be0fb317258f",
                 "control-id": "cis_rhel9_1-1.1.1",
                 "description": "No notes for control-id 1.1.1.1.",
                 "props": [
@@ -24267,7 +24291,7 @@
                 ]
               },
               {
-                "uuid": "05563b1d-ebb4-4c14-b424-30158af38437",
+                "uuid": "4f9d1786-d708-4896-92a0-76e8bdb7d998",
                 "control-id": "cis_rhel9_1-1.1.2",
                 "description": "No notes for control-id 1.1.1.2.",
                 "props": [
@@ -24284,7 +24308,7 @@
                 ]
               },
               {
-                "uuid": "fffff4cf-0179-4605-9aed-7f7cf7088013",
+                "uuid": "cceb1346-b0cf-4a4f-807b-033c3e401a0c",
                 "control-id": "cis_rhel9_1-1.1.3",
                 "description": "No notes for control-id 1.1.1.3.",
                 "props": [
@@ -24301,7 +24325,7 @@
                 ]
               },
               {
-                "uuid": "f5af1b2d-9b91-425c-982f-3380b11804e5",
+                "uuid": "765c8de5-cd49-4c9e-855e-ea1b0552942d",
                 "control-id": "cis_rhel9_1-1.1.4",
                 "description": "No notes for control-id 1.1.1.4.",
                 "props": [
@@ -24318,7 +24342,7 @@
                 ]
               },
               {
-                "uuid": "5081be9a-809c-4b8a-978f-479f9d031239",
+                "uuid": "0f695652-1dee-449c-a869-42ce89b4a9d1",
                 "control-id": "cis_rhel9_1-1.1.5",
                 "description": "No notes for control-id 1.1.1.5.",
                 "props": [
@@ -24335,7 +24359,7 @@
                 ]
               },
               {
-                "uuid": "1ae92db1-77e1-4ffb-a1a9-d775dfcc854a",
+                "uuid": "34dd9806-1089-42f5-9e39-33397d588c1e",
                 "control-id": "cis_rhel9_1-1.1.8",
                 "description": "No notes for control-id 1.1.1.8.",
                 "props": [
@@ -24352,7 +24376,7 @@
                 ]
               },
               {
-                "uuid": "7cdd6b6e-50a1-450a-a4b7-4387363f4e59",
+                "uuid": "27cbb4bb-f5ce-4e8f-803b-0bc189eab99d",
                 "control-id": "cis_rhel9_1-1.1.9",
                 "description": "The description for control-id cis_rhel9_1-1.1.9.",
                 "props": [
@@ -24365,7 +24389,7 @@
                 ]
               },
               {
-                "uuid": "67822564-e43f-4e82-aa62-d7a9ea63fa47",
+                "uuid": "3a992262-77b3-45dd-9abd-82d91fe11125",
                 "control-id": "cis_rhel9_1-1.2.1.1",
                 "description": "No notes for control-id 1.1.2.1.1.",
                 "props": [
@@ -24382,7 +24406,7 @@
                 ]
               },
               {
-                "uuid": "bd18f39c-13ae-4512-b5b7-76787b2bba2e",
+                "uuid": "4e7347ee-6e85-4c98-b5b3-4cb3f1f8b403",
                 "control-id": "cis_rhel9_1-1.2.1.2",
                 "description": "No notes for control-id 1.1.2.1.2.",
                 "props": [
@@ -24399,7 +24423,7 @@
                 ]
               },
               {
-                "uuid": "d69d9f2a-afd7-4810-8ec2-bc7b74f19032",
+                "uuid": "bf340c2f-c715-40c8-ac8f-cbf06e82a15e",
                 "control-id": "cis_rhel9_1-1.2.1.3",
                 "description": "No notes for control-id 1.1.2.1.3.",
                 "props": [
@@ -24416,7 +24440,7 @@
                 ]
               },
               {
-                "uuid": "12c10ba2-b592-421b-98e9-c3f47fa4cccb",
+                "uuid": "07f472f3-5a7c-4f58-8a67-1cf1823eaa1e",
                 "control-id": "cis_rhel9_1-1.2.1.4",
                 "description": "No notes for control-id 1.1.2.1.4.",
                 "props": [
@@ -24433,7 +24457,7 @@
                 ]
               },
               {
-                "uuid": "702056ae-fc19-4d3a-9a9a-81ec26dee67a",
+                "uuid": "4d1bbbab-adc2-4d85-b0fd-5b036a4d1cb0",
                 "control-id": "cis_rhel9_1-1.2.2.1",
                 "description": "No notes for control-id 1.1.2.2.1.",
                 "props": [
@@ -24450,7 +24474,7 @@
                 ]
               },
               {
-                "uuid": "2a112acb-07da-41f2-a443-9cd2fd87e62c",
+                "uuid": "e8e8e2bb-f1f1-401d-866e-0a0007bd0668",
                 "control-id": "cis_rhel9_1-1.2.2.2",
                 "description": "No notes for control-id 1.1.2.2.2.",
                 "props": [
@@ -24467,7 +24491,7 @@
                 ]
               },
               {
-                "uuid": "07dc3fd6-0e29-4fdc-a4f3-f26760840f23",
+                "uuid": "933fbe91-17d3-4974-9948-3b6c79a5fc4e",
                 "control-id": "cis_rhel9_1-1.2.2.3",
                 "description": "No notes for control-id 1.1.2.2.3.",
                 "props": [
@@ -24484,7 +24508,7 @@
                 ]
               },
               {
-                "uuid": "19111319-fe94-42e1-beb1-60833b8d6c85",
+                "uuid": "26eeb4f5-e8fd-4ec4-8bfb-f2cb3498c935",
                 "control-id": "cis_rhel9_1-1.2.2.4",
                 "description": "No notes for control-id 1.1.2.2.4.",
                 "props": [
@@ -24501,7 +24525,7 @@
                 ]
               },
               {
-                "uuid": "4459ff7d-1af5-4bbe-9206-b477e3c494e2",
+                "uuid": "599b8ab4-aae1-4b63-b0b7-aef09b526358",
                 "control-id": "cis_rhel9_1-1.2.3.2",
                 "description": "No notes for control-id 1.1.2.3.2.",
                 "props": [
@@ -24518,7 +24542,7 @@
                 ]
               },
               {
-                "uuid": "0a36cbdf-f988-4ee0-a8d5-33e6da058c63",
+                "uuid": "45edfbeb-4e4d-457d-bbee-c9a1ef4be16d",
                 "control-id": "cis_rhel9_1-1.2.3.3",
                 "description": "No notes for control-id 1.1.2.3.3.",
                 "props": [
@@ -24535,7 +24559,7 @@
                 ]
               },
               {
-                "uuid": "f15ae93d-fb9a-42bf-bacd-c36a4bf59a6c",
+                "uuid": "edf191d2-0c36-47b7-9b5a-5dbaa8eeec8a",
                 "control-id": "cis_rhel9_1-1.2.4.2",
                 "description": "No notes for control-id 1.1.2.4.2.",
                 "props": [
@@ -24552,7 +24576,7 @@
                 ]
               },
               {
-                "uuid": "20dfde75-e96e-43b1-9b0b-8d08065a3119",
+                "uuid": "ff3a82fc-5dae-4ddc-a751-927cbdc44328",
                 "control-id": "cis_rhel9_1-1.2.4.3",
                 "description": "No notes for control-id 1.1.2.4.3.",
                 "props": [
@@ -24569,7 +24593,7 @@
                 ]
               },
               {
-                "uuid": "de0c63ed-689f-4f89-b861-7122c1016561",
+                "uuid": "4adbe76d-d536-46b2-a22f-74ab755c83a5",
                 "control-id": "cis_rhel9_1-1.2.5.2",
                 "description": "No notes for control-id 1.1.2.5.2.",
                 "props": [
@@ -24586,7 +24610,7 @@
                 ]
               },
               {
-                "uuid": "e7cb8f79-72fb-4c82-b302-fbc63cb67e86",
+                "uuid": "f2bc94a7-2371-4de9-9844-eacf7000816b",
                 "control-id": "cis_rhel9_1-1.2.5.3",
                 "description": "No notes for control-id 1.1.2.5.3.",
                 "props": [
@@ -24603,7 +24627,7 @@
                 ]
               },
               {
-                "uuid": "b37831bd-1258-462e-8b0c-1d68aff8c92e",
+                "uuid": "3cc40452-ade3-4d3f-a6f7-f3e8410664ec",
                 "control-id": "cis_rhel9_1-1.2.5.4",
                 "description": "No notes for control-id 1.1.2.5.4.",
                 "props": [
@@ -24620,7 +24644,7 @@
                 ]
               },
               {
-                "uuid": "d94e2aec-a947-432a-bed9-535bf039dc77",
+                "uuid": "7be243c4-f2b4-4746-bca9-611b0136d3f0",
                 "control-id": "cis_rhel9_1-1.2.6.2",
                 "description": "No notes for control-id 1.1.2.6.2.",
                 "props": [
@@ -24637,7 +24661,7 @@
                 ]
               },
               {
-                "uuid": "3a8bed54-e7b7-4fbd-be6b-f7e38ef79261",
+                "uuid": "a08df34b-c720-491f-b7f3-2464f23f36ee",
                 "control-id": "cis_rhel9_1-1.2.6.3",
                 "description": "No notes for control-id 1.1.2.6.3.",
                 "props": [
@@ -24654,7 +24678,7 @@
                 ]
               },
               {
-                "uuid": "4bf1359e-8912-43f9-861b-04a12b47f6ac",
+                "uuid": "3fb8ee9b-55dd-46bf-a87a-b352b9eb9ea2",
                 "control-id": "cis_rhel9_1-1.2.6.4",
                 "description": "No notes for control-id 1.1.2.6.4.",
                 "props": [
@@ -24671,7 +24695,7 @@
                 ]
               },
               {
-                "uuid": "3058fe25-b85f-4134-9aca-e9e88aca2fc0",
+                "uuid": "675da1ea-1f04-4bcf-bbed-abc286ee62c4",
                 "control-id": "cis_rhel9_1-1.2.7.2",
                 "description": "No notes for control-id 1.1.2.7.2.",
                 "props": [
@@ -24688,7 +24712,7 @@
                 ]
               },
               {
-                "uuid": "c8e74e8b-f37f-49f3-8314-fab3a57e151b",
+                "uuid": "7c415ec3-601c-4b45-bb89-934cc18e9652",
                 "control-id": "cis_rhel9_1-1.2.7.3",
                 "description": "No notes for control-id 1.1.2.7.3.",
                 "props": [
@@ -24705,7 +24729,7 @@
                 ]
               },
               {
-                "uuid": "ecbb6525-eaac-4e21-8570-e14083d80fbe",
+                "uuid": "214ed362-7e18-446d-b4b2-8ca909f869a0",
                 "control-id": "cis_rhel9_1-1.2.7.4",
                 "description": "No notes for control-id 1.1.2.7.4.",
                 "props": [
@@ -24722,7 +24746,7 @@
                 ]
               },
               {
-                "uuid": "b47bde2a-76e1-4720-aedf-e52a16d01cf2",
+                "uuid": "e5e07703-08c9-429b-83ff-9d3894e8c987",
                 "control-id": "cis_rhel9_1-2.1.1",
                 "description": "The description for control-id cis_rhel9_1-2.1.1.",
                 "props": [
@@ -24735,7 +24759,7 @@
                 ]
               },
               {
-                "uuid": "9077b55b-0e0d-44b5-a026-0ec33aef5e35",
+                "uuid": "b40cbbab-460f-46f8-8821-6978b0cb37de",
                 "control-id": "cis_rhel9_1-2.1.2",
                 "description": "No notes for control-id 1.2.1.2.",
                 "props": [
@@ -24757,7 +24781,7 @@
                 ]
               },
               {
-                "uuid": "6ce0edf2-ed47-4b43-962a-465be8a80a5e",
+                "uuid": "f7e2c46d-d573-4606-bdde-57483afb3fb4",
                 "control-id": "cis_rhel9_1-2.1.4",
                 "description": "The description for control-id cis_rhel9_1-2.1.4.",
                 "props": [
@@ -24770,7 +24794,7 @@
                 ]
               },
               {
-                "uuid": "3cc0c985-a2c3-4d2a-aa64-d9911579cb11",
+                "uuid": "c6beaf2a-842a-4e52-aa28-bc45ebe468b5",
                 "control-id": "cis_rhel9_1-2.2.1",
                 "description": "The description for control-id cis_rhel9_1-2.2.1.",
                 "props": [
@@ -24783,7 +24807,7 @@
                 ]
               },
               {
-                "uuid": "bd689f20-baa8-4874-b76f-4f46b9f10391",
+                "uuid": "1d378591-b85d-45af-ac7c-0f4ecf862841",
                 "control-id": "cis_rhel9_1-3.1.1",
                 "description": "No notes for control-id 1.3.1.1.",
                 "props": [
@@ -24800,7 +24824,7 @@
                 ]
               },
               {
-                "uuid": "1dd65c6f-5bc3-4645-9c1c-285e2120ce16",
+                "uuid": "a2992a25-1981-481a-a159-84565e4aa57b",
                 "control-id": "cis_rhel9_1-3.1.2",
                 "description": "No notes for control-id 1.3.1.2.",
                 "props": [
@@ -24817,7 +24841,7 @@
                 ]
               },
               {
-                "uuid": "39cad00a-b4f6-4603-ae76-5ca02af627b4",
+                "uuid": "7b699fca-388b-4185-9af0-f60d2af99098",
                 "control-id": "cis_rhel9_1-3.1.3",
                 "description": "No notes for control-id 1.3.1.3.",
                 "props": [
@@ -24834,7 +24858,7 @@
                 ]
               },
               {
-                "uuid": "9a688174-fc73-45f0-a19e-bd80be007d00",
+                "uuid": "5837ced0-6e23-4710-8b93-d3debcb6dd6c",
                 "control-id": "cis_rhel9_1-3.1.4",
                 "description": "No notes for control-id 1.3.1.4.",
                 "props": [
@@ -24851,7 +24875,7 @@
                 ]
               },
               {
-                "uuid": "3e4fd537-a558-441b-bf9a-fdd641c2b1e6",
+                "uuid": "a21da6a0-379f-4f91-b10c-a6b9ab8e0c5c",
                 "control-id": "cis_rhel9_1-3.1.7",
                 "description": "No notes for control-id 1.3.1.7.",
                 "props": [
@@ -24868,7 +24892,7 @@
                 ]
               },
               {
-                "uuid": "8e683505-be96-4c02-82af-f78f5563f757",
+                "uuid": "384a226b-630d-4f38-82d7-0d93e3ce92d1",
                 "control-id": "cis_rhel9_1-3.1.8",
                 "description": "No notes for control-id 1.3.1.8.",
                 "props": [
@@ -24885,7 +24909,7 @@
                 ]
               },
               {
-                "uuid": "192cf385-1a9d-4e51-80d2-8c61a235842c",
+                "uuid": "919551d6-e220-4869-a165-e67d541ede4f",
                 "control-id": "cis_rhel9_1-4.1",
                 "description": "RHEL9 unified the paths for grub2 files.",
                 "props": [
@@ -24902,7 +24926,7 @@
                 ]
               },
               {
-                "uuid": "95d16a9e-b989-47b9-b500-7f649026d60e",
+                "uuid": "57ba5f99-787b-4092-aeb3-94a69533213d",
                 "control-id": "cis_rhel9_1-4.2",
                 "description": "The description for control-id cis_rhel9_1-4.2.",
                 "props": [
@@ -24945,7 +24969,7 @@
                 ]
               },
               {
-                "uuid": "b9108824-a52d-4902-811b-3ebd3c9ad596",
+                "uuid": "45abe2c7-f8c3-4f32-a401-adae8ef52ae0",
                 "control-id": "cis_rhel9_1-5.1",
                 "description": "Address Space Layout Randomization (ASLR)",
                 "props": [
@@ -24962,7 +24986,7 @@
                 ]
               },
               {
-                "uuid": "57237c07-10eb-4608-8b2b-45076e327301",
+                "uuid": "e185b47e-f11c-44e7-b7ff-a486a342a36f",
                 "control-id": "cis_rhel9_1-5.2",
                 "description": "No notes for control-id 1.5.2.",
                 "props": [
@@ -24979,7 +25003,7 @@
                 ]
               },
               {
-                "uuid": "cc68f4aa-d009-48fd-a972-abcdd0417bc6",
+                "uuid": "6a20dbe7-9f2d-43c7-8d18-2ff288612ae6",
                 "control-id": "cis_rhel9_1-5.3",
                 "description": "No notes for control-id 1.5.3.",
                 "props": [
@@ -24996,7 +25020,7 @@
                 ]
               },
               {
-                "uuid": "3b227d42-fcd7-485e-bd68-de18893c6296",
+                "uuid": "4a985ef4-a652-4473-9750-7702b3ac5b9a",
                 "control-id": "cis_rhel9_1-5.4",
                 "description": "No notes for control-id 1.5.4.",
                 "props": [
@@ -25013,7 +25037,7 @@
                 ]
               },
               {
-                "uuid": "df9ff065-6fa1-4570-9e16-d565c40e99c0",
+                "uuid": "ee3d7ade-d654-44d7-997b-b35cd034d233",
                 "control-id": "cis_rhel9_1-6.1",
                 "description": "No notes for control-id 1.6.1.",
                 "props": [
@@ -25030,7 +25054,7 @@
                 ]
               },
               {
-                "uuid": "529e8a09-0007-44f8-962b-427de2911bba",
+                "uuid": "b08dbc0b-ffc7-4622-abc7-433a93e2c659",
                 "control-id": "cis_rhel9_1-6.2",
                 "description": "No notes for control-id 1.6.2.",
                 "props": [
@@ -25047,7 +25071,7 @@
                 ]
               },
               {
-                "uuid": "d1e47658-67a5-42b0-9d41-7d8605c4f679",
+                "uuid": "e2c5fb33-fa6f-49d6-8376-948130498be3",
                 "control-id": "cis_rhel9_1-6.3",
                 "description": "This requirement is already satisfied by 1.6.1.",
                 "props": [
@@ -25059,7 +25083,7 @@
                 ]
               },
               {
-                "uuid": "615823e1-b7f5-4134-a8ce-31af20ca7f60",
+                "uuid": "39edd542-02cf-4fad-a2fe-e365cb6dc27b",
                 "control-id": "cis_rhel9_1-6.4",
                 "description": "The description for control-id cis_rhel9_1-6.4.",
                 "props": [
@@ -25072,7 +25096,7 @@
                 ]
               },
               {
-                "uuid": "c97aaf8d-d1ca-4d34-823e-aef7f9db71e3",
+                "uuid": "77aae696-e81d-4f13-ac28-ba379c24673e",
                 "control-id": "cis_rhel9_1-6.5",
                 "description": "The description for control-id cis_rhel9_1-6.5.",
                 "props": [
@@ -25085,7 +25109,7 @@
                 ]
               },
               {
-                "uuid": "ecccb979-9c00-47ca-b822-a9a304d59d3a",
+                "uuid": "812ca069-eeba-40f8-95cc-ba7d8975daea",
                 "control-id": "cis_rhel9_1-6.6",
                 "description": "The description for control-id cis_rhel9_1-6.6.",
                 "props": [
@@ -25098,7 +25122,7 @@
                 ]
               },
               {
-                "uuid": "d534330b-48c3-44e3-b910-f700adb1a769",
+                "uuid": "8d7422e1-be9b-4ff4-a88f-7ae2baeb6795",
                 "control-id": "cis_rhel9_1-6.7",
                 "description": "The description for control-id cis_rhel9_1-6.7.",
                 "props": [
@@ -25111,7 +25135,7 @@
                 ]
               },
               {
-                "uuid": "2e5e8d91-4ea7-4856-922b-773d51b7ae28",
+                "uuid": "21a69a86-3e46-42c9-b975-a0026c95929d",
                 "control-id": "cis_rhel9_1-7.1",
                 "description": "No notes for control-id 1.7.1.",
                 "props": [
@@ -25128,7 +25152,7 @@
                 ]
               },
               {
-                "uuid": "cd3812ad-af12-4087-83ec-f9915ed9e2b0",
+                "uuid": "99d64a1f-ae0c-4fe9-8b93-11ce9b7858b1",
                 "control-id": "cis_rhel9_1-7.2",
                 "description": "No notes for control-id 1.7.2.",
                 "props": [
@@ -25145,7 +25169,7 @@
                 ]
               },
               {
-                "uuid": "562365a2-99cc-4db0-803b-d4d060305398",
+                "uuid": "6abcd506-738d-4719-bf68-2425b1e5f0c8",
                 "control-id": "cis_rhel9_1-7.3",
                 "description": "No notes for control-id 1.7.3.",
                 "props": [
@@ -25162,7 +25186,7 @@
                 ]
               },
               {
-                "uuid": "ca05c348-b587-4ff2-835a-620b4e24d112",
+                "uuid": "baacdd3e-c728-4fd6-9d8a-edb92c24cbbc",
                 "control-id": "cis_rhel9_1-7.4",
                 "description": "No notes for control-id 1.7.4.",
                 "props": [
@@ -25189,7 +25213,7 @@
                 ]
               },
               {
-                "uuid": "f6acd520-e262-4870-ba89-d6927a0ec794",
+                "uuid": "63056752-e228-4f03-853c-55d946e1b894",
                 "control-id": "cis_rhel9_1-7.5",
                 "description": "No notes for control-id 1.7.5.",
                 "props": [
@@ -25216,7 +25240,7 @@
                 ]
               },
               {
-                "uuid": "18503499-c1ab-4dbe-82a5-0dd923a98eb9",
+                "uuid": "c70f7543-58f3-485c-94b6-6b8d9cdbb301",
                 "control-id": "cis_rhel9_1-7.6",
                 "description": "No notes for control-id 1.7.6.",
                 "props": [
@@ -25243,7 +25267,7 @@
                 ]
               },
               {
-                "uuid": "f390ab0e-afdd-44e5-a923-25da45ef62e8",
+                "uuid": "d10a82a3-3260-45ce-9f79-9b718ed3ce1b",
                 "control-id": "cis_rhel9_1-8.2",
                 "description": "No notes for control-id 1.8.2.",
                 "props": [
@@ -25265,7 +25289,7 @@
                 ]
               },
               {
-                "uuid": "d7c519ab-263f-49ec-a05f-5dafdfc9dc50",
+                "uuid": "215b90ef-d049-439b-8bf6-6d469c05c259",
                 "control-id": "cis_rhel9_1-8.3",
                 "description": "No notes for control-id 1.8.3.",
                 "props": [
@@ -25282,7 +25306,7 @@
                 ]
               },
               {
-                "uuid": "a22b3cc2-264e-437f-84d7-498e4bfe545c",
+                "uuid": "c3e46330-8685-4153-b38f-a5d705b03db8",
                 "control-id": "cis_rhel9_1-8.4",
                 "description": "No notes for control-id 1.8.4.",
                 "props": [
@@ -25304,7 +25328,7 @@
                 ]
               },
               {
-                "uuid": "62d670a3-2e8c-443b-8f33-59539c4321c7",
+                "uuid": "e56f2a3f-996f-4564-858c-ae4fa99eec4b",
                 "control-id": "cis_rhel9_1-8.5",
                 "description": "No notes for control-id 1.8.5.",
                 "props": [
@@ -25326,7 +25350,7 @@
                 ]
               },
               {
-                "uuid": "0630f8e5-a29f-47e2-8613-3cc2491e84a7",
+                "uuid": "26736843-50db-4af1-9442-4715ae242426",
                 "control-id": "cis_rhel9_1-8.6",
                 "description": "No notes for control-id 1.8.6.",
                 "props": [
@@ -25348,7 +25372,7 @@
                 ]
               },
               {
-                "uuid": "af931891-3fc8-4079-a836-169697f0d8dd",
+                "uuid": "d92041e7-de62-45e4-9204-43a77c750a8e",
                 "control-id": "cis_rhel9_1-8.7",
                 "description": "No notes for control-id 1.8.7.",
                 "props": [
@@ -25370,7 +25394,7 @@
                 ]
               },
               {
-                "uuid": "233f6c06-0d7e-4d93-b0c7-40074f730da1",
+                "uuid": "dfa82b50-1d9a-4234-9337-be6e9c5e1358",
                 "control-id": "cis_rhel9_1-8.8",
                 "description": "No notes for control-id 1.8.8.",
                 "props": [
@@ -25387,7 +25411,7 @@
                 ]
               },
               {
-                "uuid": "e373f779-3005-4679-aefd-6e6a164f8f24",
+                "uuid": "659afb0f-98fd-4016-8364-055c92bff185",
                 "control-id": "cis_rhel9_1-8.9",
                 "description": "No notes for control-id 1.8.9.",
                 "props": [
@@ -25404,7 +25428,7 @@
                 ]
               },
               {
-                "uuid": "363ad02c-8f1d-4002-ba72-da2c67aed3d6",
+                "uuid": "b7b90fbc-152e-4135-b22f-458552c0a77d",
                 "control-id": "cis_rhel9_1-8.10",
                 "description": "No notes for control-id 1.8.10.",
                 "props": [
@@ -25421,7 +25445,7 @@
                 ]
               },
               {
-                "uuid": "07ba5273-b559-4399-a5b4-abb510e69148",
+                "uuid": "06272e0d-f5f6-4168-a0b1-1a4220f5fbf2",
                 "control-id": "cis_rhel9_2-1.1",
                 "description": "No notes for control-id 2.1.1.",
                 "props": [
@@ -25438,7 +25462,7 @@
                 ]
               },
               {
-                "uuid": "d20f4c24-b11b-4ed9-b777-55293ed317e3",
+                "uuid": "84ea53f4-4825-4d7e-8a9a-89e5eacc3f24",
                 "control-id": "cis_rhel9_2-1.2",
                 "description": "No notes for control-id 2.1.2.",
                 "props": [
@@ -25455,7 +25479,7 @@
                 ]
               },
               {
-                "uuid": "b2bc9d03-cf8c-4f0d-8428-406fd0215a1e",
+                "uuid": "01024550-a4f1-4524-a632-b39078e03c6e",
                 "control-id": "cis_rhel9_2-1.3",
                 "description": "No notes for control-id 2.1.3.",
                 "props": [
@@ -25472,7 +25496,7 @@
                 ]
               },
               {
-                "uuid": "ffab7035-2a32-4318-9bc8-1e1b69dfa8de",
+                "uuid": "58936315-9c61-4c2e-92f6-b4e126e6460b",
                 "control-id": "cis_rhel9_2-1.4",
                 "description": "No notes for control-id 2.1.4.",
                 "props": [
@@ -25489,7 +25513,7 @@
                 ]
               },
               {
-                "uuid": "1d6d49d2-3f6e-4fc8-a34c-e43fbb62f2e8",
+                "uuid": "db3c89a1-3ba0-4eea-bba6-63a3d012b7d6",
                 "control-id": "cis_rhel9_2-1.5",
                 "description": "No notes for control-id 2.1.5.",
                 "props": [
@@ -25506,7 +25530,7 @@
                 ]
               },
               {
-                "uuid": "6c918965-3fcc-4c0d-bca9-beba35cd8b4b",
+                "uuid": "8279ca45-f282-4b9d-b6cd-b21febc99362",
                 "control-id": "cis_rhel9_2-1.6",
                 "description": "No notes for control-id 2.1.6.",
                 "props": [
@@ -25523,7 +25547,7 @@
                 ]
               },
               {
-                "uuid": "21d6b81f-556f-4427-86cc-2e02ea29f6fa",
+                "uuid": "64232f76-615d-41da-bb9c-f7b23f071d30",
                 "control-id": "cis_rhel9_2-1.7",
                 "description": "No notes for control-id 2.1.7.",
                 "props": [
@@ -25540,7 +25564,7 @@
                 ]
               },
               {
-                "uuid": "eae7169a-2919-442f-bad4-37faecf2a6d1",
+                "uuid": "20ce7314-1e26-42ca-a410-73a7ea2ac702",
                 "control-id": "cis_rhel9_2-1.8",
                 "description": "No notes for control-id 2.1.8.",
                 "props": [
@@ -25562,7 +25586,7 @@
                 ]
               },
               {
-                "uuid": "c9cdf3bd-cb1d-4145-80e3-7bad0052ba15",
+                "uuid": "ed671117-96cd-49ab-a749-8f9ad52d2dbf",
                 "control-id": "cis_rhel9_2-1.9",
                 "description": "Many of the libvirt packages used by Enterprise Linux virtualization are dependent on the\nnfs-utils package.",
                 "props": [
@@ -25579,7 +25603,7 @@
                 ]
               },
               {
-                "uuid": "06ccfb19-1069-432b-8c37-5d1dbecbe6d4",
+                "uuid": "0b57f71d-2770-4c4f-8de6-fd0055c174d9",
                 "control-id": "cis_rhel9_2-1.10",
                 "description": "It appears that the ypserv package was never in RHEL 9.",
                 "props": [
@@ -25591,7 +25615,7 @@
                 ]
               },
               {
-                "uuid": "401e9948-ae5d-4f21-a5c0-ae98db635deb",
+                "uuid": "91484ffc-535d-4701-8152-6df8d2b5883a",
                 "control-id": "cis_rhel9_2-1.11",
                 "description": "No notes for control-id 2.1.11.",
                 "props": [
@@ -25608,7 +25632,7 @@
                 ]
               },
               {
-                "uuid": "192f4d97-7d29-4989-ae7e-6352d3bddaa6",
+                "uuid": "117dbcec-835b-4a3f-9bdd-a82934266f5d",
                 "control-id": "cis_rhel9_2-1.12",
                 "description": "Many of the libvirt packages used by Enterprise Linux virtualization, and the nfs-utils\npackage used for The Network File System (NFS), are dependent on the rpcbind package.",
                 "props": [
@@ -25625,7 +25649,7 @@
                 ]
               },
               {
-                "uuid": "407070b9-1411-416f-af2a-dafaa7e87d55",
+                "uuid": "a840eb87-d484-421c-8a70-33a6a6af8c58",
                 "control-id": "cis_rhel9_2-1.13",
                 "description": "No notes for control-id 2.1.13.",
                 "props": [
@@ -25642,7 +25666,7 @@
                 ]
               },
               {
-                "uuid": "19ef4714-0144-4920-81ee-bbfd8c758159",
+                "uuid": "498e0320-b424-4212-8e8d-8258ce73beb6",
                 "control-id": "cis_rhel9_2-1.14",
                 "description": "No notes for control-id 2.1.14.",
                 "props": [
@@ -25659,7 +25683,7 @@
                 ]
               },
               {
-                "uuid": "2e8e9d3c-cedb-413d-b2eb-f26a56db8859",
+                "uuid": "4330535a-6984-4ccd-a265-e2a2398e45a6",
                 "control-id": "cis_rhel9_2-1.15",
                 "description": "No notes for control-id 2.1.15.",
                 "props": [
@@ -25676,7 +25700,7 @@
                 ]
               },
               {
-                "uuid": "4656f898-4e38-4113-884e-999a78b87d1e",
+                "uuid": "2025e0c6-b8cf-4e9c-b44a-e589af65bf34",
                 "control-id": "cis_rhel9_2-1.16",
                 "description": "No notes for control-id 2.1.16.",
                 "props": [
@@ -25693,7 +25717,7 @@
                 ]
               },
               {
-                "uuid": "1317910e-be82-4086-87b8-4175af1f15b8",
+                "uuid": "9c99b5da-cae8-4e17-b85f-d42ad0729bab",
                 "control-id": "cis_rhel9_2-1.17",
                 "description": "No notes for control-id 2.1.17.",
                 "props": [
@@ -25710,7 +25734,7 @@
                 ]
               },
               {
-                "uuid": "15f20e54-154e-4fc4-baa0-5496ceaad5ea",
+                "uuid": "acaf4eec-cb2e-420b-bbae-aa19cb638bad",
                 "control-id": "cis_rhel9_2-1.18",
                 "description": "No notes for control-id 2.1.18.",
                 "props": [
@@ -25732,7 +25756,7 @@
                 ]
               },
               {
-                "uuid": "745a0a13-5627-4e4a-ac32-f2fdc9d42a87",
+                "uuid": "498e004e-47e2-413e-9feb-f6427e66d941",
                 "control-id": "cis_rhel9_2-1.19",
                 "description": "The xinetd appears to never have been in RHEL 9.",
                 "props": [
@@ -25744,7 +25768,7 @@
                 ]
               },
               {
-                "uuid": "d0dcb036-4253-41b3-8a46-ceaecbfb46d7",
+                "uuid": "e2312fbb-910c-484f-931f-04fb37bf1be5",
                 "control-id": "cis_rhel9_2-1.21",
                 "description": "The rule has_nonlocal_mta currently checks for services listening only on port 25,\nbut the policy checks also for ports 465 and 587",
                 "props": [
@@ -25766,7 +25790,7 @@
                 ]
               },
               {
-                "uuid": "d51a089e-7c2a-4c56-b2ef-2fc8e21bf630",
+                "uuid": "b3c238f7-a1fb-469b-98b1-5123e6845e48",
                 "control-id": "cis_rhel9_2-1.22",
                 "description": "The description for control-id cis_rhel9_2-1.22.",
                 "props": [
@@ -25779,7 +25803,7 @@
                 ]
               },
               {
-                "uuid": "448e4b3f-f6a7-495d-ade9-94d14722298c",
+                "uuid": "75acc2ac-10b2-4867-9540-9d41cf3a20b0",
                 "control-id": "cis_rhel9_2-2.1",
                 "description": "No notes for control-id 2.2.1.",
                 "props": [
@@ -25796,7 +25820,7 @@
                 ]
               },
               {
-                "uuid": "26c65d89-0abc-4c55-b9a8-d3ce75be5eb8",
+                "uuid": "6187381e-81d8-496c-a1c7-9aa5d5e8f9ec",
                 "control-id": "cis_rhel9_2-2.3",
                 "description": "It appears this package was never in RHEL 9.",
                 "props": [
@@ -25808,7 +25832,7 @@
                 ]
               },
               {
-                "uuid": "f2d62a8c-fed7-4a53-8267-c28e98df6d36",
+                "uuid": "f2ad1324-b1fa-4f78-a3dd-2f4b7367570e",
                 "control-id": "cis_rhel9_2-2.4",
                 "description": "No notes for control-id 2.2.4.",
                 "props": [
@@ -25825,7 +25849,7 @@
                 ]
               },
               {
-                "uuid": "9853c4e4-1dc5-435f-8052-8cf86b61c72e",
+                "uuid": "338ef181-a167-4a8c-a079-1467129d4fa7",
                 "control-id": "cis_rhel9_2-2.5",
                 "description": "No notes for control-id 2.2.5.",
                 "props": [
@@ -25842,7 +25866,7 @@
                 ]
               },
               {
-                "uuid": "c09be568-efd6-4bc9-ba68-2b19a4803649",
+                "uuid": "48008440-3ac4-4e66-a2df-969b76ffb3f1",
                 "control-id": "cis_rhel9_2-3.1",
                 "description": "No notes for control-id 2.3.1.",
                 "props": [
@@ -25859,7 +25883,7 @@
                 ]
               },
               {
-                "uuid": "d89e8f28-be8d-447e-afc8-6bbba62014ad",
+                "uuid": "f1288677-d5e1-475e-85f9-7d30504d9dfd",
                 "control-id": "cis_rhel9_2-3.2",
                 "description": "No notes for control-id 2.3.2.",
                 "props": [
@@ -25876,7 +25900,7 @@
                 ]
               },
               {
-                "uuid": "ecc9b885-7a63-4466-a331-1f5a3b6be321",
+                "uuid": "37be749d-e65b-42f5-a78e-2fc4bf171ab1",
                 "control-id": "cis_rhel9_2-3.3",
                 "description": "No notes for control-id 2.3.3.",
                 "props": [
@@ -25893,7 +25917,7 @@
                 ]
               },
               {
-                "uuid": "26fdf91b-c7e3-4790-9737-d320cd733881",
+                "uuid": "1d1513f9-c97f-425d-8b4a-313872dc34b9",
                 "control-id": "cis_rhel9_2-4.1.1",
                 "description": "No notes for control-id 2.4.1.1.",
                 "props": [
@@ -25915,7 +25939,7 @@
                 ]
               },
               {
-                "uuid": "e84e4194-7063-4aa8-87fd-5038a18bc0ef",
+                "uuid": "ecd941b0-528d-4752-9b97-069a6308db9d",
                 "control-id": "cis_rhel9_2-4.1.2",
                 "description": "No notes for control-id 2.4.1.2.",
                 "props": [
@@ -25942,7 +25966,7 @@
                 ]
               },
               {
-                "uuid": "cbc1d967-b447-4978-95fe-ae909df517be",
+                "uuid": "bdeb3848-852c-47ff-89bc-525b4e8da61e",
                 "control-id": "cis_rhel9_2-4.1.3",
                 "description": "No notes for control-id 2.4.1.3.",
                 "props": [
@@ -25969,7 +25993,7 @@
                 ]
               },
               {
-                "uuid": "e19e8f40-bc40-4542-8b65-cf915de62763",
+                "uuid": "2d3f5c07-15b2-41a1-9945-dfb4da417f3a",
                 "control-id": "cis_rhel9_2-4.1.4",
                 "description": "No notes for control-id 2.4.1.4.",
                 "props": [
@@ -25996,7 +26020,7 @@
                 ]
               },
               {
-                "uuid": "3511ca45-f83a-458b-b89f-4211f4324030",
+                "uuid": "8c503ced-3405-4bc5-8b1a-0de413aa52ca",
                 "control-id": "cis_rhel9_2-4.1.5",
                 "description": "No notes for control-id 2.4.1.5.",
                 "props": [
@@ -26023,7 +26047,7 @@
                 ]
               },
               {
-                "uuid": "42c4e139-9d16-42c8-80f9-c1190da35661",
+                "uuid": "ab79dcaa-fc78-4fba-b5db-79abd5a977a5",
                 "control-id": "cis_rhel9_2-4.1.6",
                 "description": "No notes for control-id 2.4.1.6.",
                 "props": [
@@ -26050,7 +26074,7 @@
                 ]
               },
               {
-                "uuid": "6d35a9bc-4295-494b-a2d2-87462182035c",
+                "uuid": "966c4e75-5ee6-48b9-acc6-79120c301a07",
                 "control-id": "cis_rhel9_2-4.1.7",
                 "description": "No notes for control-id 2.4.1.7.",
                 "props": [
@@ -26077,7 +26101,7 @@
                 ]
               },
               {
-                "uuid": "e9fbe8f2-c64c-476c-9b62-9795787fd7e2",
+                "uuid": "b224c4c8-ff4d-408c-ae14-e8a7e64e055c",
                 "control-id": "cis_rhel9_2-4.1.8",
                 "description": "No notes for control-id 2.4.1.8.",
                 "props": [
@@ -26114,7 +26138,7 @@
                 ]
               },
               {
-                "uuid": "448c7825-b7fb-48f0-997b-413d862f4f74",
+                "uuid": "ed1c7dd0-5384-45f5-b103-74cbc2f9e7b7",
                 "control-id": "cis_rhel9_2-4.2.1",
                 "description": "It is necessary to create a rule to ensure the existence of at.allow.\nfile_cron_allow_exists can be used as reference for a new templated rule.",
                 "props": [
@@ -26141,7 +26165,7 @@
                 ]
               },
               {
-                "uuid": "2a9a5c4e-7651-4b6d-86f8-0261c12d7d5b",
+                "uuid": "4edd5e84-fed8-40d6-98c2-1b6b8799e6c8",
                 "control-id": "cis_rhel9_3-1.1",
                 "description": "The description for control-id cis_rhel9_3-1.1.",
                 "props": [
@@ -26154,7 +26178,7 @@
                 ]
               },
               {
-                "uuid": "7b4eab89-ba03-4d73-9228-b8f77a76c333",
+                "uuid": "c6a0fb2d-e6d1-4926-888c-7c2b3efa573f",
                 "control-id": "cis_rhel9_3-1.2",
                 "description": "No notes for control-id 3.1.2.",
                 "props": [
@@ -26171,7 +26195,7 @@
                 ]
               },
               {
-                "uuid": "40d2df81-b161-4f1b-9c23-3bada9e38833",
+                "uuid": "81710c81-35a6-4c78-9aa6-2d8f82ef0969",
                 "control-id": "cis_rhel9_3-1.3",
                 "description": "No notes for control-id 3.1.3.",
                 "props": [
@@ -26188,7 +26212,7 @@
                 ]
               },
               {
-                "uuid": "82dcf6ae-fdf0-45a1-a04f-a86580e6f7b7",
+                "uuid": "977e6374-5d21-4692-8d4e-bfc6fe2ef40d",
                 "control-id": "cis_rhel9_3-3.1",
                 "description": "No notes for control-id 3.3.1.",
                 "props": [
@@ -26210,7 +26234,7 @@
                 ]
               },
               {
-                "uuid": "4e3ad94d-60da-4db0-8646-872302b35560",
+                "uuid": "cafcc263-d5f9-4eee-bf2a-13843db0b07d",
                 "control-id": "cis_rhel9_3-3.2",
                 "description": "No notes for control-id 3.3.2.",
                 "props": [
@@ -26232,7 +26256,7 @@
                 ]
               },
               {
-                "uuid": "bdeeae5d-7f2d-4c17-8320-ed2203b4fcde",
+                "uuid": "45e59c4a-27b6-45cc-8738-d58a1712954a",
                 "control-id": "cis_rhel9_3-3.3",
                 "description": "No notes for control-id 3.3.3.",
                 "props": [
@@ -26249,7 +26273,7 @@
                 ]
               },
               {
-                "uuid": "47feda3f-0c16-43ee-8a5f-487e9c783f5e",
+                "uuid": "0d5e9536-99c0-4e10-b820-9802dc26ee5d",
                 "control-id": "cis_rhel9_3-3.4",
                 "description": "No notes for control-id 3.3.4.",
                 "props": [
@@ -26266,7 +26290,7 @@
                 ]
               },
               {
-                "uuid": "5732b210-4d89-4225-930d-729aab3aa3e7",
+                "uuid": "2d905ef0-fc71-4db2-87ae-a16e5b229024",
                 "control-id": "cis_rhel9_3-3.5",
                 "description": "No notes for control-id 3.3.5.",
                 "props": [
@@ -26298,7 +26322,7 @@
                 ]
               },
               {
-                "uuid": "182366b0-9a85-4315-ab22-6ec5298fd841",
+                "uuid": "bc624e33-d979-4459-87ff-1e5f989aa0e9",
                 "control-id": "cis_rhel9_3-3.6",
                 "description": "No notes for control-id 3.3.6.",
                 "props": [
@@ -26320,7 +26344,7 @@
                 ]
               },
               {
-                "uuid": "c7c69999-1221-4284-a885-b8efd300814e",
+                "uuid": "cb6f2734-68e5-449c-bdc5-03bf0b1673c9",
                 "control-id": "cis_rhel9_3-3.7",
                 "description": "No notes for control-id 3.3.7.",
                 "props": [
@@ -26342,7 +26366,7 @@
                 ]
               },
               {
-                "uuid": "499a858f-7a6b-4d3b-9f45-20b4d9f08168",
+                "uuid": "5444975c-6377-4879-92bb-57c184badf38",
                 "control-id": "cis_rhel9_3-3.8",
                 "description": "No notes for control-id 3.3.8.",
                 "props": [
@@ -26374,7 +26398,7 @@
                 ]
               },
               {
-                "uuid": "bbc67d1f-85bd-4056-a981-f80270bc9ea1",
+                "uuid": "19e615a4-d6bf-48a5-8992-ee5b00f0a0c2",
                 "control-id": "cis_rhel9_3-3.9",
                 "description": "No notes for control-id 3.3.9.",
                 "props": [
@@ -26396,7 +26420,7 @@
                 ]
               },
               {
-                "uuid": "1cc5d981-6602-4e2f-ac71-24f3bc6afe3a",
+                "uuid": "4de278de-ee4f-44a4-b08a-74b5ac9062d8",
                 "control-id": "cis_rhel9_3-3.10",
                 "description": "No notes for control-id 3.3.10.",
                 "props": [
@@ -26413,7 +26437,7 @@
                 ]
               },
               {
-                "uuid": "4da6015e-c93e-43f7-80e6-cfb221fc2729",
+                "uuid": "e330db51-ac63-4dc3-9382-cad168a663ab",
                 "control-id": "cis_rhel9_3-3.11",
                 "description": "No notes for control-id 3.3.11.",
                 "props": [
@@ -26435,7 +26459,7 @@
                 ]
               },
               {
-                "uuid": "bac3cead-685a-4af5-b1f9-5cb589f9b915",
+                "uuid": "94c33850-0bb6-4453-bee9-3afd7a8765eb",
                 "control-id": "cis_rhel9_4-1.1",
                 "description": "No notes for control-id 4.1.1.",
                 "props": [
@@ -26452,7 +26476,7 @@
                 ]
               },
               {
-                "uuid": "986fd9c7-93db-469b-bce1-ad64e870d82d",
+                "uuid": "b521d5b6-246f-42cd-acde-816273f09cc9",
                 "control-id": "cis_rhel9_4-1.2",
                 "description": "No notes for control-id 4.1.2.",
                 "props": [
@@ -26479,7 +26503,7 @@
                 ]
               },
               {
-                "uuid": "7e37f0fe-241c-4b77-bf89-8ba1f6496625",
+                "uuid": "bbb5cdb3-9a12-4710-b718-26007faad6de",
                 "control-id": "cis_rhel9_4-2.1",
                 "description": "The description for control-id cis_rhel9_4-2.1.",
                 "props": [
@@ -26492,7 +26516,7 @@
                 ]
               },
               {
-                "uuid": "f469d495-b900-434a-8cb9-6b3f5b432921",
+                "uuid": "66947314-337a-4c82-9e5f-80d1b0ba48cf",
                 "control-id": "cis_rhel9_4-2.2",
                 "description": "No notes for control-id 4.2.2.",
                 "props": [
@@ -26514,7 +26538,7 @@
                 ]
               },
               {
-                "uuid": "885b9f26-7405-45a7-a299-db7eb9c43a95",
+                "uuid": "dbcdbdf2-7510-4cc7-a324-ce2a4e4c8de8",
                 "control-id": "cis_rhel9_4-3.1",
                 "description": "RHEL systems use firewalld for firewall management. Although nftables is the default\nback-end for firewalld, it is not recommended to use nftables directly when firewalld\nis in use. When using firewalld the base chains are installed by default.",
                 "props": [
@@ -26526,7 +26550,7 @@
                 ]
               },
               {
-                "uuid": "ddd14d63-8757-4b94-8d8b-c3edfdee894f",
+                "uuid": "c85e0bb2-c42a-47f3-a123-dcf6c2d9c7d0",
                 "control-id": "cis_rhel9_4-3.2",
                 "description": "The description for control-id cis_rhel9_4-3.2.",
                 "props": [
@@ -26539,7 +26563,7 @@
                 ]
               },
               {
-                "uuid": "f5890f9e-f282-44c5-9ef6-59bde5660416",
+                "uuid": "ca7ae092-aee4-4d44-9d71-d8fa8b621ba9",
                 "control-id": "cis_rhel9_4-3.3",
                 "description": "RHEL systems use firewalld for firewall management. Although nftables is the default\nback-end for firewalld, it is not recommended to use nftables directly when firewalld\nis in use.",
                 "props": [
@@ -26551,7 +26575,7 @@
                 ]
               },
               {
-                "uuid": "325954b7-63b6-4f1d-a10e-38bb5eb41ef3",
+                "uuid": "e39e4d2f-c099-43fe-9db5-b8378a6c21b9",
                 "control-id": "cis_rhel9_4-3.4",
                 "description": "RHEL systems use firewalld for firewall management. Although nftables is the default\nback-end for firewalld, it is not recommended to use nftables directly when firewalld\nis in use.",
                 "props": [
@@ -26563,7 +26587,7 @@
                 ]
               },
               {
-                "uuid": "bb3f5953-67e1-4e4f-80e9-1dba0299ca5d",
+                "uuid": "eb33dc0f-a5ce-429c-a63b-7380968b403c",
                 "control-id": "cis_rhel9_5-1.1",
                 "description": "No notes for control-id 5.1.1.",
                 "props": [
@@ -26590,7 +26614,7 @@
                 ]
               },
               {
-                "uuid": "e0239683-7eb7-4e7d-a7c9-f49ba805801e",
+                "uuid": "d6eccded-dfa2-47d6-822e-0fb44629f7f5",
                 "control-id": "cis_rhel9_5-1.2",
                 "description": "No notes for control-id 5.1.2.",
                 "props": [
@@ -26617,7 +26641,7 @@
                 ]
               },
               {
-                "uuid": "49ed42ac-295c-463f-aea2-0a245807bc09",
+                "uuid": "9ee2e584-c44a-45d6-a1d7-8a8354ee63e3",
                 "control-id": "cis_rhel9_5-1.3",
                 "description": "No notes for control-id 5.1.3.",
                 "props": [
@@ -26644,7 +26668,7 @@
                 ]
               },
               {
-                "uuid": "220095b3-cd50-4dc0-842e-ec6d217bf440",
+                "uuid": "218de020-b5a4-4093-90c9-74ac8eda3bae",
                 "control-id": "cis_rhel9_5-1.4",
                 "description": "The description for control-id cis_rhel9_5-1.4.",
                 "props": [
@@ -26657,7 +26681,7 @@
                 ]
               },
               {
-                "uuid": "890e3e3e-d612-4bf2-91aa-1539cf3c22bb",
+                "uuid": "fb268323-6fa2-42d9-bb63-dc6b2f72bea3",
                 "control-id": "cis_rhel9_5-1.5",
                 "description": "The description for control-id cis_rhel9_5-1.5.",
                 "props": [
@@ -26675,7 +26699,7 @@
                 ]
               },
               {
-                "uuid": "a994e73a-de15-4a11-8009-3b2424344bab",
+                "uuid": "a817bbe3-ea73-4e91-9741-34a421e723da",
                 "control-id": "cis_rhel9_5-1.6",
                 "description": "The description for control-id cis_rhel9_5-1.6.",
                 "props": [
@@ -26693,7 +26717,7 @@
                 ]
               },
               {
-                "uuid": "55a568e4-4727-4d5e-b39b-4eae3c48cfca",
+                "uuid": "a79652f6-60e2-4888-b8cf-aa1d20366887",
                 "control-id": "cis_rhel9_5-1.7",
                 "description": "No notes for control-id 5.1.7.",
                 "props": [
@@ -26710,7 +26734,7 @@
                 ]
               },
               {
-                "uuid": "240e0567-fc8d-47be-a18d-41934e0f16f8",
+                "uuid": "05ff7829-9cba-4716-a424-0dc8dcd0f9db",
                 "control-id": "cis_rhel9_5-1.8",
                 "description": "No notes for control-id 5.1.8.",
                 "props": [
@@ -26727,7 +26751,7 @@
                 ]
               },
               {
-                "uuid": "3fe6563c-c43a-4503-9b34-00b50f3ce8b6",
+                "uuid": "07d2987e-29a6-45d9-b2c9-81608284a80a",
                 "control-id": "cis_rhel9_5-1.9",
                 "description": "The requirement gives an example of 45 seconds, but is flexible about the values. It is only\nnecessary to ensure there is a timeout configured in alignment to the site policy.",
                 "props": [
@@ -26749,7 +26773,7 @@
                 ]
               },
               {
-                "uuid": "3d97705f-3211-4809-b014-3f4ea6982d6e",
+                "uuid": "741153ae-3d29-4418-9512-41c218c7643f",
                 "control-id": "cis_rhel9_5-1.12",
                 "description": "No notes for control-id 5.1.12.",
                 "props": [
@@ -26766,7 +26790,7 @@
                 ]
               },
               {
-                "uuid": "f44a608c-923d-439d-ba5e-ac630e75e040",
+                "uuid": "5021d791-c352-47cf-98e7-5b3eec04630f",
                 "control-id": "cis_rhel9_5-1.13",
                 "description": "No notes for control-id 5.1.13.",
                 "props": [
@@ -26783,7 +26807,7 @@
                 ]
               },
               {
-                "uuid": "f46da018-7e6e-4fd0-8eb5-8835515fa4a7",
+                "uuid": "fcba07d5-2e84-46cc-8e31-a80d5ab988fe",
                 "control-id": "cis_rhel9_5-1.14",
                 "description": "No notes for control-id 5.1.14.",
                 "props": [
@@ -26800,7 +26824,7 @@
                 ]
               },
               {
-                "uuid": "372b6c20-63b6-460d-9af7-9832b1b6043c",
+                "uuid": "a207d879-fd3a-4546-96ff-74094523a702",
                 "control-id": "cis_rhel9_5-1.15",
                 "description": "The CIS benchmark is not opinionated about which loglevel is selected here. Here, this\nprofile uses VERBOSE by default, as it allows for the capture of login and logout activity\nas well as key fingerprints.",
                 "props": [
@@ -26817,7 +26841,7 @@
                 ]
               },
               {
-                "uuid": "9f84cf2e-f029-41c9-b859-66342a7b36c0",
+                "uuid": "ed8f19d3-faad-4707-aa23-03675bc1b7b7",
                 "control-id": "cis_rhel9_5-1.16",
                 "description": "No notes for control-id 5.1.16.",
                 "props": [
@@ -26834,7 +26858,7 @@
                 ]
               },
               {
-                "uuid": "bdaccc8c-cbd3-4994-aacb-a3eb4b16821e",
+                "uuid": "4b0dfb90-bb56-4f78-a32b-1135e00d9680",
                 "control-id": "cis_rhel9_5-1.17",
                 "description": "No notes for control-id 5.1.17.",
                 "props": [
@@ -26851,7 +26875,7 @@
                 ]
               },
               {
-                "uuid": "6e0d4ffc-4ab4-490d-b618-470b1d0c67cb",
+                "uuid": "15a07432-6c88-4f11-bee7-3b211d6c78cd",
                 "control-id": "cis_rhel9_5-1.18",
                 "description": "No notes for control-id 5.1.18.",
                 "props": [
@@ -26868,7 +26892,7 @@
                 ]
               },
               {
-                "uuid": "7af44a1c-5927-42b7-af5a-ab668b849608",
+                "uuid": "31a8629e-cef0-4a84-9b78-b9efbf3b1adb",
                 "control-id": "cis_rhel9_5-1.19",
                 "description": "No notes for control-id 5.1.19.",
                 "props": [
@@ -26885,7 +26909,7 @@
                 ]
               },
               {
-                "uuid": "6be45d49-6c0c-4716-b989-c2a33fae54c7",
+                "uuid": "5fcff0bc-36d1-41dc-82a3-5a3fbf318431",
                 "control-id": "cis_rhel9_5-1.20",
                 "description": "No notes for control-id 5.1.20.",
                 "props": [
@@ -26902,7 +26926,7 @@
                 ]
               },
               {
-                "uuid": "e47abe9b-7d89-4e17-9384-8fff26f17ef3",
+                "uuid": "624ba983-20f3-4607-8ea4-fd724b67c4db",
                 "control-id": "cis_rhel9_5-1.21",
                 "description": "No notes for control-id 5.1.21.",
                 "props": [
@@ -26919,7 +26943,7 @@
                 ]
               },
               {
-                "uuid": "f80e5c6f-1bdd-472b-8219-c342758bd6b5",
+                "uuid": "09e12eb1-abba-44db-a9f8-1151af27f2c3",
                 "control-id": "cis_rhel9_5-1.22",
                 "description": "No notes for control-id 5.1.22.",
                 "props": [
@@ -26936,7 +26960,7 @@
                 ]
               },
               {
-                "uuid": "524e3de7-5807-405a-a1b5-b9d919e1b3d7",
+                "uuid": "44b3282f-1180-4475-96fe-90d0389b35d5",
                 "control-id": "cis_rhel9_5-2.1",
                 "description": "No notes for control-id 5.2.1.",
                 "props": [
@@ -26953,7 +26977,7 @@
                 ]
               },
               {
-                "uuid": "e50615bd-be0e-4b26-a0ca-a22a776f9aed",
+                "uuid": "221f775c-8a19-4821-80c9-5c593e191800",
                 "control-id": "cis_rhel9_5-2.2",
                 "description": "No notes for control-id 5.2.2.",
                 "props": [
@@ -26970,7 +26994,7 @@
                 ]
               },
               {
-                "uuid": "c13f5fff-7087-4029-8390-1d3ae71f381c",
+                "uuid": "94d66835-9567-4971-928f-4d1b2b835554",
                 "control-id": "cis_rhel9_5-2.3",
                 "description": "No notes for control-id 5.2.3.",
                 "props": [
@@ -26987,7 +27011,7 @@
                 ]
               },
               {
-                "uuid": "02e673c2-aa39-4800-b526-9933dbd7fb65",
+                "uuid": "8a1685a9-1add-4cd1-b78f-80758f0a9572",
                 "control-id": "cis_rhel9_5-2.5",
                 "description": "No notes for control-id 5.2.5.",
                 "props": [
@@ -27004,7 +27028,7 @@
                 ]
               },
               {
-                "uuid": "9901b37e-957c-4753-a8a7-b22b975564df",
+                "uuid": "894e15c4-7616-4ff0-ada8-e649f4be5078",
                 "control-id": "cis_rhel9_5-2.6",
                 "description": "No notes for control-id 5.2.6.",
                 "props": [
@@ -27021,7 +27045,7 @@
                 ]
               },
               {
-                "uuid": "81207232-849a-477d-8044-b2801847f12f",
+                "uuid": "5421a7d0-844c-4441-9d54-64da31adc214",
                 "control-id": "cis_rhel9_5-2.7",
                 "description": "Members of \"wheel\" or GID 0 groups are checked by default if the group option is not set for\npam_wheel.so module. The recommendation states the group should be empty to reinforce the\nuse of \"sudo\" for privileged access. Therefore, members of these groups should be manually\nchecked or a different group should be informed.",
                 "props": [
@@ -27043,7 +27067,7 @@
                 ]
               },
               {
-                "uuid": "6832c751-530e-4c5a-b81e-b024def7619a",
+                "uuid": "29daa12c-5f71-49a9-8876-d45774888bb3",
                 "control-id": "cis_rhel9_5-3.1.1",
                 "description": "The description for control-id cis_rhel9_5-3.1.1.",
                 "props": [
@@ -27056,7 +27080,7 @@
                 ]
               },
               {
-                "uuid": "b99b9b91-d204-4d96-8395-092c8f7ac819",
+                "uuid": "a7897c64-1f56-4fb3-af3f-863e49ca274e",
                 "control-id": "cis_rhel9_5-3.1.2",
                 "description": "The description for control-id cis_rhel9_5-3.1.2.",
                 "props": [
@@ -27069,7 +27093,7 @@
                 ]
               },
               {
-                "uuid": "4530509d-844e-4212-96cf-7ffa7df7b47c",
+                "uuid": "6bfe59e4-9fb7-40c5-b59c-b55720b141a1",
                 "control-id": "cis_rhel9_5-3.1.3",
                 "description": "The description for control-id cis_rhel9_5-3.1.3.",
                 "props": [
@@ -27087,7 +27111,7 @@
                 ]
               },
               {
-                "uuid": "90d95850-9a35-45d9-adff-f4c156e1c214",
+                "uuid": "9749cd35-a18a-489c-8d6e-8b789138fa40",
                 "control-id": "cis_rhel9_5-3.2.1",
                 "description": "This requirement is hard to be automated without any specific requirement. The policy even\nstates that provided commands are examples, other custom settings might be in place and the\nsettings might be different depending on site policies. The other rules will already make\nsure there is a correct autheselect profile regardless of the existing settings. It is\nnecessary to better discuss with CIS Community.",
                 "props": [
@@ -27099,7 +27123,7 @@
                 ]
               },
               {
-                "uuid": "6345d022-6b54-4b29-9f4f-81463308de68",
+                "uuid": "0c855e9e-0c84-48e7-9802-787a17c635f8",
                 "control-id": "cis_rhel9_5-3.2.2",
                 "description": "This requirement is also indirectly satisfied by the requirement 5.3.3.1.",
                 "props": [
@@ -27121,7 +27145,7 @@
                 ]
               },
               {
-                "uuid": "eee4aeda-6662-48e2-92bc-81ff77c98cd6",
+                "uuid": "eb397f78-f1d8-4778-b6b7-9ddb7f9b208e",
                 "control-id": "cis_rhel9_5-3.2.3",
                 "description": "This requirement is also indirectly satisfied by the requirement 5.3.3.2.",
                 "props": [
@@ -27133,7 +27157,7 @@
                 ]
               },
               {
-                "uuid": "efab6774-4290-4957-8376-2d51325cf43d",
+                "uuid": "da4f92cf-cdfd-4b4e-bd5e-3a1366a46b78",
                 "control-id": "cis_rhel9_5-3.2.4",
                 "description": "The module is properly enabled by the rules mentioned in related_rules.\nRequirements in 5.3.3.3 use these rules.",
                 "props": [
@@ -27145,7 +27169,7 @@
                 ]
               },
               {
-                "uuid": "bb21406d-5b4e-4aa9-b99c-0b71bb467470",
+                "uuid": "27c46e18-e4a5-44fc-8d16-be9e89d1ed08",
                 "control-id": "cis_rhel9_5-3.2.5",
                 "description": "This module is always present by default. It is necessary to investigate if a new rule to\ncheck its existence needs to be created. But so far the rule no_empty_passwords, used in\n5.3.3.4 can ensure this requirement is attended.",
                 "props": [
@@ -27157,7 +27181,7 @@
                 ]
               },
               {
-                "uuid": "5852a0fd-5f9a-4468-851a-673e7de86005",
+                "uuid": "dac652af-2341-4ae4-a6f7-5143084bd84e",
                 "control-id": "cis_rhel9_5-3.3.1.1",
                 "description": "No notes for control-id 5.3.3.1.1.",
                 "props": [
@@ -27174,7 +27198,7 @@
                 ]
               },
               {
-                "uuid": "642dd98a-823c-4a6b-a30d-b92ecba0adfa",
+                "uuid": "a744953c-4f99-426d-b382-23c350c0ad16",
                 "control-id": "cis_rhel9_5-3.3.1.2",
                 "description": "The policy also accepts value 0, which means the locked accounts should be manually unlocked\nby an administrator. However, it also mentions that using value 0 can facilitate a DoS\nattack to legitimate users.",
                 "props": [
@@ -27191,7 +27215,7 @@
                 ]
               },
               {
-                "uuid": "3825566b-028c-4a7c-b2c4-b747ae9055d7",
+                "uuid": "dd1e060f-7efb-47e0-9ee8-9b0e429cd655",
                 "control-id": "cis_rhel9_5-3.3.2.1",
                 "description": "No notes for control-id 5.3.3.2.1.",
                 "props": [
@@ -27208,7 +27232,7 @@
                 ]
               },
               {
-                "uuid": "04d401e2-bbcb-4f2a-a819-3f8dc0e2bd65",
+                "uuid": "c01c527d-b24d-4bc5-b09e-8e7bcd60a5ad",
                 "control-id": "cis_rhel9_5-3.3.2.2",
                 "description": "No notes for control-id 5.3.3.2.2.",
                 "props": [
@@ -27225,7 +27249,7 @@
                 ]
               },
               {
-                "uuid": "8d607d4f-7830-4c81-9fa7-fed83c19df6c",
+                "uuid": "edd920b0-2c8a-4f53-8387-00d8fca756f7",
                 "control-id": "cis_rhel9_5-3.3.2.3",
                 "description": "This requirement is expected to be manual. However, in previous versions of the policy\nit was already automated the configuration of \"minclass\" option. This posture was kept for\nRHEL 9 in this new version. Rules related to other options are informed in related_rules.\nIn short, minclass=4 alone can achieve the same result achieved by the combination of the\nother 4 options mentioned in the policy.",
                 "props": [
@@ -27242,7 +27266,7 @@
                 ]
               },
               {
-                "uuid": "26d237a4-81d9-40f2-9aab-9ce4e493cf4c",
+                "uuid": "a2584104-cd21-4e0b-9520-7128bd07ea9a",
                 "control-id": "cis_rhel9_5-3.3.2.4",
                 "description": "No notes for control-id 5.3.3.2.4.",
                 "props": [
@@ -27259,7 +27283,7 @@
                 ]
               },
               {
-                "uuid": "2f2ddd07-7af7-4df9-b333-8ffe1cd9f535",
+                "uuid": "b7e8a447-0160-43f0-8a8b-c4d60c824b10",
                 "control-id": "cis_rhel9_5-3.3.2.5",
                 "description": "The description for control-id cis_rhel9_5-3.3.2.5.",
                 "props": [
@@ -27272,7 +27296,7 @@
                 ]
               },
               {
-                "uuid": "8e416d4f-6d9f-411b-95ca-3fc09b0dc778",
+                "uuid": "3c746deb-d946-472c-ab0c-8b8e4d9e0518",
                 "control-id": "cis_rhel9_5-3.3.2.6",
                 "description": "No notes for control-id 5.3.3.2.6.",
                 "props": [
@@ -27289,7 +27313,7 @@
                 ]
               },
               {
-                "uuid": "19548c6f-a1b1-46c7-a432-eca32fcb3f74",
+                "uuid": "00d0a2bc-235a-4318-a2de-0568af70885e",
                 "control-id": "cis_rhel9_5-3.3.2.7",
                 "description": "No notes for control-id 5.3.3.2.7.",
                 "props": [
@@ -27306,7 +27330,7 @@
                 ]
               },
               {
-                "uuid": "52307034-d6fe-4f84-bdd2-52af733d21b2",
+                "uuid": "f399d165-e70a-4ecb-9546-a968f6e34289",
                 "control-id": "cis_rhel9_5-3.3.3.1",
                 "description": "Although mentioned in the section 5.3.3.3, there is no explicit requirement to configure\nretry option of pam_pwhistory. If come in the future, the rule accounts_password_pam_retry\ncan be used.",
                 "props": [
@@ -27328,7 +27352,7 @@
                 ]
               },
               {
-                "uuid": "30fbdc62-60be-458e-9ba6-feed06b2ad69",
+                "uuid": "7bf36670-60a6-44a1-a306-eeb6b454a3fb",
                 "control-id": "cis_rhel9_5-3.3.3.2",
                 "description": "The description for control-id cis_rhel9_5-3.3.3.2.",
                 "props": [
@@ -27341,7 +27365,7 @@
                 ]
               },
               {
-                "uuid": "0c44eafa-2f6f-4bad-be0b-0a2a5d2a22bb",
+                "uuid": "ad3151da-c1ff-414f-b5e5-d3b3e4830483",
                 "control-id": "cis_rhel9_5-3.3.3.3",
                 "description": "In RHEL 9 pam_pwhistory is enabled via authselect feature, as required in 5.3.2.4. The\nfeature automatically set \"use_authok\" option. In any case, we don't have a rule to check\nthis option specifically.",
                 "props": [
@@ -27353,7 +27377,7 @@
                 ]
               },
               {
-                "uuid": "df410a12-3add-4359-8e17-74349876376b",
+                "uuid": "b7dfffcb-96bd-49bf-951d-7a924b97bcec",
                 "control-id": "cis_rhel9_5-3.3.4.1",
                 "description": "The rule more specifically used in this requirement also satify the requirement 5.3.2.5.",
                 "props": [
@@ -27370,7 +27394,7 @@
                 ]
               },
               {
-                "uuid": "43a9845f-9d9f-44a9-b1d8-9f888c935ee2",
+                "uuid": "a146431d-14fb-40ee-a8f0-38a0d6c8533a",
                 "control-id": "cis_rhel9_5-3.3.4.2",
                 "description": "The description for control-id cis_rhel9_5-3.3.4.2.",
                 "props": [
@@ -27383,7 +27407,7 @@
                 ]
               },
               {
-                "uuid": "16b9af0e-e9b3-44e0-904e-2cb269e771bf",
+                "uuid": "0257c872-1395-463d-a67c-96aa6e46b66b",
                 "control-id": "cis_rhel9_5-3.3.4.3",
                 "description": "Changes in logindefs mentioned in this requirement are more specifically covered by 5.4.1.4",
                 "props": [
@@ -27405,7 +27429,7 @@
                 ]
               },
               {
-                "uuid": "1cdb9096-309e-46b5-9fbd-d409180dbd99",
+                "uuid": "f7bf357b-005e-4ef6-afcb-a974e3c321af",
                 "control-id": "cis_rhel9_5-3.3.4.4",
                 "description": "In RHEL 9 pam_unix is enabled by default in all authselect profiles already with the\nuse_authtok option set. In any case, we don't have a rule to check this option specifically,\nlike in 5.3.3.3.3.",
                 "props": [
@@ -27417,7 +27441,7 @@
                 ]
               },
               {
-                "uuid": "149e309a-6361-458d-a753-7557733dcdfc",
+                "uuid": "91303f1c-2fb2-4437-bcc5-747472475495",
                 "control-id": "cis_rhel9_5-4.1.1",
                 "description": "No notes for control-id 5.4.1.1.",
                 "props": [
@@ -27439,7 +27463,7 @@
                 ]
               },
               {
-                "uuid": "b3105fa1-a813-47fa-8b8c-6bd46f9d066e",
+                "uuid": "67937cc0-86cb-4417-8961-507bf1fb6c84",
                 "control-id": "cis_rhel9_5-4.1.3",
                 "description": "No notes for control-id 5.4.1.3.",
                 "props": [
@@ -27461,7 +27485,7 @@
                 ]
               },
               {
-                "uuid": "00eaaa26-85ad-4e0e-8ebb-792ad9613cb7",
+                "uuid": "c4408f88-61b3-4be4-8993-26ad5c453519",
                 "control-id": "cis_rhel9_5-4.1.4",
                 "description": "No notes for control-id 5.4.1.4.",
                 "props": [
@@ -27483,7 +27507,7 @@
                 ]
               },
               {
-                "uuid": "b9901917-47d8-4e8d-86a2-e652f43053e4",
+                "uuid": "23b7b9f4-e092-499a-aa20-f1debfa0aca2",
                 "control-id": "cis_rhel9_5-4.1.5",
                 "description": "No notes for control-id 5.4.1.5.",
                 "props": [
@@ -27505,7 +27529,7 @@
                 ]
               },
               {
-                "uuid": "d82f4644-c832-44bf-b410-7491cc1822f2",
+                "uuid": "6cd851ba-5eba-41bc-82c1-011fa1da960d",
                 "control-id": "cis_rhel9_5-4.1.6",
                 "description": "No notes for control-id 5.4.1.6.",
                 "props": [
@@ -27522,7 +27546,7 @@
                 ]
               },
               {
-                "uuid": "4309893d-21aa-4344-85ad-ee48dc8d4612",
+                "uuid": "0dfeb053-0032-453f-9ad8-5d82325dc0a7",
                 "control-id": "cis_rhel9_5-4.2.1",
                 "description": "No notes for control-id 5.4.2.1.",
                 "props": [
@@ -27539,7 +27563,7 @@
                 ]
               },
               {
-                "uuid": "bdc6287d-3068-40f8-bd03-49c8bb282ee6",
+                "uuid": "a25d95c7-2a0f-4e7f-9d9e-8bc3cd9b2257",
                 "control-id": "cis_rhel9_5-4.2.2",
                 "description": "The rule confirms the primary group for root, but doesn't check if any other user are also\nusing GID 0. New rule is necessary.\nThere is assessment but no automated remediation for this rule and this sounds reasonable.",
                 "props": [
@@ -27556,7 +27580,7 @@
                 ]
               },
               {
-                "uuid": "98e7b75b-6545-49b5-99be-544c2a81b9b2",
+                "uuid": "3c704c0a-549f-4692-83fd-b33d52f870e2",
                 "control-id": "cis_rhel9_5-4.2.3",
                 "description": "The description for control-id cis_rhel9_5-4.2.3.",
                 "props": [
@@ -27569,7 +27593,7 @@
                 ]
               },
               {
-                "uuid": "2abc32fd-3a2a-4792-b739-b4e83b196fff",
+                "uuid": "30c00bf0-eefb-413e-93d4-e54fe62b17cb",
                 "control-id": "cis_rhel9_5-4.2.4",
                 "description": "No notes for control-id 5.4.2.4.",
                 "props": [
@@ -27586,7 +27610,7 @@
                 ]
               },
               {
-                "uuid": "19677cef-6f2c-4adf-ace9-ae137195b59c",
+                "uuid": "4c8fda4a-06ab-46ff-9078-0e9e4820d019",
                 "control-id": "cis_rhel9_5-4.2.5",
                 "description": "No notes for control-id 5.4.2.5.",
                 "props": [
@@ -27618,7 +27642,7 @@
                 ]
               },
               {
-                "uuid": "e4a1bff1-637e-4431-a4df-cd662115fdd7",
+                "uuid": "122634a1-4f46-4d25-8ed2-fe881479245c",
                 "control-id": "cis_rhel9_5-4.2.6",
                 "description": "The description for control-id cis_rhel9_5-4.2.6.",
                 "props": [
@@ -27631,7 +27655,7 @@
                 ]
               },
               {
-                "uuid": "68fa0ea5-7353-4fd1-b6a9-080bc2d29ceb",
+                "uuid": "c0e9c4ec-a6aa-4302-bb0c-49381997b5cb",
                 "control-id": "cis_rhel9_5-4.2.7",
                 "description": "No notes for control-id 5.4.2.7.",
                 "props": [
@@ -27653,7 +27677,7 @@
                 ]
               },
               {
-                "uuid": "a3108f49-5311-45bb-af0e-3d47c2c896ad",
+                "uuid": "567475aa-82f2-40d8-b87b-0a45b1bd4812",
                 "control-id": "cis_rhel9_5-4.2.8",
                 "description": "The description for control-id cis_rhel9_5-4.2.8.",
                 "props": [
@@ -27666,7 +27690,7 @@
                 ]
               },
               {
-                "uuid": "2a46b4b3-0b32-424d-be63-50744dce2316",
+                "uuid": "5f2693f9-f83f-4092-9647-b28037ff743a",
                 "control-id": "cis_rhel9_5-4.3.2",
                 "description": "No notes for control-id 5.4.3.2.",
                 "props": [
@@ -27683,7 +27707,7 @@
                 ]
               },
               {
-                "uuid": "4bc3a710-8f30-42f3-b366-ebcd7cb7a514",
+                "uuid": "33c74b3b-1121-4913-ad35-9db61a5fe45b",
                 "control-id": "cis_rhel9_5-4.3.3",
                 "description": "No notes for control-id 5.4.3.3.",
                 "props": [
@@ -27710,7 +27734,7 @@
                 ]
               },
               {
-                "uuid": "ff547b44-71db-4161-8583-7a9dc3f2eb42",
+                "uuid": "1363c73a-ebe0-4766-a47c-6167ca978fbb",
                 "control-id": "cis_rhel9_6-1.1",
                 "description": "No notes for control-id 6.1.1.",
                 "props": [
@@ -27732,7 +27756,7 @@
                 ]
               },
               {
-                "uuid": "ee0be876-ab86-47ce-ba9e-0b2fe0891b11",
+                "uuid": "098d1dfb-2d0f-4eb3-907c-a998aab82eb7",
                 "control-id": "cis_rhel9_6-1.2",
                 "description": "No notes for control-id 6.1.2.",
                 "props": [
@@ -27749,7 +27773,7 @@
                 ]
               },
               {
-                "uuid": "4fc7d45c-d523-47ee-a169-118e0f7ceee4",
+                "uuid": "13c082c0-6661-4cef-8a60-89836566f3d1",
                 "control-id": "cis_rhel9_6-1.3",
                 "description": "No notes for control-id 6.1.3.",
                 "props": [
@@ -27766,7 +27790,7 @@
                 ]
               },
               {
-                "uuid": "43a36fdd-fa9b-407a-8edf-f4d5ffdb62a6",
+                "uuid": "2aedf6db-e662-4460-b7f7-94beaaeb82b3",
                 "control-id": "cis_rhel9_6-2.1.1",
                 "description": "No notes for control-id 6.2.1.1.",
                 "props": [
@@ -27783,7 +27807,7 @@
                 ]
               },
               {
-                "uuid": "c056a68e-d287-4ae8-b1e4-3c74b157cb0e",
+                "uuid": "4b3ed989-ed44-4210-893e-759220c954e5",
                 "control-id": "cis_rhel9_6-2.1.2",
                 "description": "The description for control-id cis_rhel9_6-2.1.2.",
                 "props": [
@@ -27796,7 +27820,7 @@
                 ]
               },
               {
-                "uuid": "1eeda0f5-6e24-44f3-8997-999aef81c67f",
+                "uuid": "0c416d4d-3f56-4ab6-96ca-88e833d395f5",
                 "control-id": "cis_rhel9_6-2.1.3",
                 "description": "The description for control-id cis_rhel9_6-2.1.3.",
                 "props": [
@@ -27809,7 +27833,7 @@
                 ]
               },
               {
-                "uuid": "e165d542-f89b-40cb-a045-05fcabd8e303",
+                "uuid": "320d6094-2c10-493d-8a51-8cae8130467b",
                 "control-id": "cis_rhel9_6-2.1.4",
                 "description": "The description for control-id cis_rhel9_6-2.1.4.",
                 "props": [
@@ -27822,7 +27846,7 @@
                 ]
               },
               {
-                "uuid": "f14c0f17-4aec-4473-b10c-ac89e7b02273",
+                "uuid": "07cd065a-036f-4849-81bd-047ddfe37574",
                 "control-id": "cis_rhel9_6-2.2.1.1",
                 "description": "No notes for control-id 6.2.2.1.1.",
                 "props": [
@@ -27839,7 +27863,7 @@
                 ]
               },
               {
-                "uuid": "b638713e-8a6d-42cb-810c-51458745d2d3",
+                "uuid": "531876ea-b41b-4fb8-bb4e-569769c4e09d",
                 "control-id": "cis_rhel9_6-2.2.1.2",
                 "description": "The description for control-id cis_rhel9_6-2.2.1.2.",
                 "props": [
@@ -27852,7 +27876,7 @@
                 ]
               },
               {
-                "uuid": "45c32df3-1410-4a05-a22e-b5d789bb826d",
+                "uuid": "53cff41d-b057-4c51-8f8a-1facce4b1654",
                 "control-id": "cis_rhel9_6-2.2.1.3",
                 "description": "The description for control-id cis_rhel9_6-2.2.1.3.",
                 "props": [
@@ -27865,7 +27889,7 @@
                 ]
               },
               {
-                "uuid": "675118c4-955e-4e98-82cb-46a355cc5c69",
+                "uuid": "1c6d3154-fa24-44cf-be7e-8deae6bd3cb2",
                 "control-id": "cis_rhel9_6-2.2.1.4",
                 "description": "No notes for control-id 6.2.2.1.4.",
                 "props": [
@@ -27882,7 +27906,7 @@
                 ]
               },
               {
-                "uuid": "10ce25fd-57b1-4e52-87d2-82b5fc8caac0",
+                "uuid": "7730ce9a-7a99-46ae-856b-28f7b0e095e3",
                 "control-id": "cis_rhel9_6-2.2.2",
                 "description": "The description for control-id cis_rhel9_6-2.2.2.",
                 "props": [
@@ -27895,7 +27919,7 @@
                 ]
               },
               {
-                "uuid": "a42e6fdb-67c0-4cfe-b562-3b4e7926094a",
+                "uuid": "2c92ac57-4d5d-4407-b25e-dec5bd7be69d",
                 "control-id": "cis_rhel9_6-2.2.3",
                 "description": "No notes for control-id 6.2.2.3.",
                 "props": [
@@ -27912,7 +27936,7 @@
                 ]
               },
               {
-                "uuid": "926e44b7-6065-4628-ad39-bc3a345e2233",
+                "uuid": "66123c42-74cb-4ae2-a8e8-46d486c98e9c",
                 "control-id": "cis_rhel9_6-2.2.4",
                 "description": "No notes for control-id 6.2.2.4.",
                 "props": [
@@ -27929,7 +27953,7 @@
                 ]
               },
               {
-                "uuid": "1d86aa9b-ebc8-4883-bd3e-fd5d8a3c1ed5",
+                "uuid": "b8127431-0794-4bd7-b2cf-92351d50a129",
                 "control-id": "cis_rhel9_6-2.3.1",
                 "description": "No notes for control-id 6.2.3.1.",
                 "props": [
@@ -27941,7 +27965,7 @@
                 ]
               },
               {
-                "uuid": "4b081dc3-496a-481c-800b-ef8fa916c408",
+                "uuid": "a9a1fa57-3634-4377-a056-cdef7523d936",
                 "control-id": "cis_rhel9_6-2.3.2",
                 "description": "No notes for control-id 6.2.3.2.",
                 "props": [
@@ -27953,7 +27977,7 @@
                 ]
               },
               {
-                "uuid": "0c370df0-859a-40b2-ae89-f7ffefb1da90",
+                "uuid": "bcd6d5b9-1cbd-4dda-85c2-78b6de9b1e36",
                 "control-id": "cis_rhel9_6-2.3.3",
                 "description": "No notes for control-id 6.2.3.3.",
                 "props": [
@@ -27965,7 +27989,7 @@
                 ]
               },
               {
-                "uuid": "76ffd6f2-d497-48c6-a299-1838b030285b",
+                "uuid": "a71591fb-bde6-4b9c-8000-942828f5e33e",
                 "control-id": "cis_rhel9_6-2.3.4",
                 "description": "No notes for control-id 6.2.3.4.",
                 "props": [
@@ -27977,7 +28001,7 @@
                 ]
               },
               {
-                "uuid": "985d0dce-f96c-4df8-b277-324f00a1b9bc",
+                "uuid": "a31be624-a0fc-4631-aaa6-acf2eac3757c",
                 "control-id": "cis_rhel9_6-2.3.5",
                 "description": "The description for control-id cis_rhel9_6-2.3.5.",
                 "props": [
@@ -27990,7 +28014,7 @@
                 ]
               },
               {
-                "uuid": "88c9903a-d220-46e0-a90d-6fb1d99e2072",
+                "uuid": "0e730c78-ae53-4b0b-859b-1c42b83a6abb",
                 "control-id": "cis_rhel9_6-2.3.6",
                 "description": "The description for control-id cis_rhel9_6-2.3.6.",
                 "props": [
@@ -28003,7 +28027,7 @@
                 ]
               },
               {
-                "uuid": "ac9f40c3-fc50-4ae5-b02c-4581b0ea9e4c",
+                "uuid": "23439328-f426-4323-b27b-c40e23947940",
                 "control-id": "cis_rhel9_6-2.3.7",
                 "description": "No notes for control-id 6.2.3.7.",
                 "props": [
@@ -28015,7 +28039,7 @@
                 ]
               },
               {
-                "uuid": "b2eafa0e-a45e-4e60-9beb-b9f8010d8412",
+                "uuid": "1edc0877-a87e-4ef3-af18-4b4d913fe5fa",
                 "control-id": "cis_rhel9_6-2.3.8",
                 "description": "The description for control-id cis_rhel9_6-2.3.8.",
                 "props": [
@@ -28028,7 +28052,7 @@
                 ]
               },
               {
-                "uuid": "245aefc2-8e0c-4330-833d-c10fd4a270b2",
+                "uuid": "a95d7e54-612a-4461-8624-a18beb28fd6f",
                 "control-id": "cis_rhel9_6-2.4.1",
                 "description": "It is not harmful to run these rules even if rsyslog is not installed or active.",
                 "props": [
@@ -28055,7 +28079,7 @@
                 ]
               },
               {
-                "uuid": "93c3ac90-7585-4294-a56c-6970b5b492a4",
+                "uuid": "652315d5-e876-4e4f-bebe-171123efb0eb",
                 "control-id": "cis_rhel9_7-1.1",
                 "description": "No notes for control-id 7.1.1.",
                 "props": [
@@ -28082,7 +28106,7 @@
                 ]
               },
               {
-                "uuid": "6c502ac5-d1f2-444e-8fd9-bbe1e8cf870a",
+                "uuid": "d4c0c478-5c8d-448d-973e-2b64f8d6a7c2",
                 "control-id": "cis_rhel9_7-1.2",
                 "description": "No notes for control-id 7.1.2.",
                 "props": [
@@ -28109,7 +28133,7 @@
                 ]
               },
               {
-                "uuid": "e5dfb5b9-2c85-4b65-a8b6-0a97103e5dda",
+                "uuid": "288d0c0d-db4f-428d-a6ad-11888cb28a40",
                 "control-id": "cis_rhel9_7-1.3",
                 "description": "No notes for control-id 7.1.3.",
                 "props": [
@@ -28136,7 +28160,7 @@
                 ]
               },
               {
-                "uuid": "8db17a77-d4ba-4cc4-8d00-c2a1d76c281a",
+                "uuid": "832bef3e-856a-479f-9198-103414750e09",
                 "control-id": "cis_rhel9_7-1.4",
                 "description": "No notes for control-id 7.1.4.",
                 "props": [
@@ -28163,7 +28187,7 @@
                 ]
               },
               {
-                "uuid": "6ba2587e-7486-4c11-b4e5-6d59e5145d10",
+                "uuid": "dba6c99a-34e0-4b12-842f-e0dfe380e8f7",
                 "control-id": "cis_rhel9_7-1.5",
                 "description": "No notes for control-id 7.1.5.",
                 "props": [
@@ -28190,7 +28214,7 @@
                 ]
               },
               {
-                "uuid": "ab8ae919-0cf6-4518-a7e6-a681b90f99ae",
+                "uuid": "2caee57f-e0dd-4666-891e-82c00e637df0",
                 "control-id": "cis_rhel9_7-1.6",
                 "description": "No notes for control-id 7.1.6.",
                 "props": [
@@ -28217,7 +28241,7 @@
                 ]
               },
               {
-                "uuid": "2fd4a5bd-26ef-4557-a9fe-978dac1b16bc",
+                "uuid": "706e122b-dfdb-4e39-b8c5-5f5d3a4ef573",
                 "control-id": "cis_rhel9_7-1.7",
                 "description": "No notes for control-id 7.1.7.",
                 "props": [
@@ -28244,7 +28268,7 @@
                 ]
               },
               {
-                "uuid": "6e3f78fe-acf9-4af2-b2ea-7e3f7327e91b",
+                "uuid": "3ecef98b-5104-4302-8952-e5d7ec08d31e",
                 "control-id": "cis_rhel9_7-1.8",
                 "description": "No notes for control-id 7.1.8.",
                 "props": [
@@ -28271,7 +28295,7 @@
                 ]
               },
               {
-                "uuid": "6c49ee76-5cc7-415d-a1f4-02a1786a9ab3",
+                "uuid": "02e14d2c-a666-4cbb-8ff7-aa759ff7e2e3",
                 "control-id": "cis_rhel9_7-1.9",
                 "description": "No notes for control-id 7.1.9.",
                 "props": [
@@ -28298,7 +28322,7 @@
                 ]
               },
               {
-                "uuid": "6b16aa29-74a3-4c94-b28e-db493d506142",
+                "uuid": "82541a10-85e6-495f-9d85-794218b1120f",
                 "control-id": "cis_rhel9_7-1.10",
                 "description": "No notes for control-id 7.1.10.",
                 "props": [
@@ -28315,7 +28339,7 @@
                 ]
               },
               {
-                "uuid": "35c990ed-2899-42d4-9935-0614244b4a4e",
+                "uuid": "d4fdec54-911c-4b3f-ae45-73aeec8e01f0",
                 "control-id": "cis_rhel9_7-1.11",
                 "description": "No notes for control-id 7.1.11.",
                 "props": [
@@ -28337,7 +28361,7 @@
                 ]
               },
               {
-                "uuid": "d1a79863-ffde-42c0-8300-e593bea9f59e",
+                "uuid": "ebe7f51c-d6eb-4486-a7a3-f46e05000409",
                 "control-id": "cis_rhel9_7-1.12",
                 "description": "No notes for control-id 7.1.12.",
                 "props": [
@@ -28359,7 +28383,7 @@
                 ]
               },
               {
-                "uuid": "5ae59faf-f54b-4002-8bb5-df6bdf685af3",
+                "uuid": "97ab7ec0-9a3a-48b1-b4c5-6e2bcf83fe99",
                 "control-id": "cis_rhel9_7-1.13",
                 "description": "The description for control-id cis_rhel9_7-1.13.",
                 "props": [
@@ -28372,7 +28396,7 @@
                 ]
               },
               {
-                "uuid": "1fd8b107-076a-4d90-a24e-b7cd72682930",
+                "uuid": "151e4199-2241-471f-8db3-0dbebc9f9a2a",
                 "control-id": "cis_rhel9_7-2.1",
                 "description": "No notes for control-id 7.2.1.",
                 "props": [
@@ -28389,7 +28413,7 @@
                 ]
               },
               {
-                "uuid": "47b1e9a9-2046-46a9-8fc5-cc9da69ad789",
+                "uuid": "0b058a36-d2a4-4883-a2e2-6783d8cc6ed8",
                 "control-id": "cis_rhel9_7-2.2",
                 "description": "No notes for control-id 7.2.2.",
                 "props": [
@@ -28406,7 +28430,7 @@
                 ]
               },
               {
-                "uuid": "e5f5aef5-14ac-4558-ac4a-602df284d1ec",
+                "uuid": "5ec1597e-a354-4800-9cb6-09dfbb511ce8",
                 "control-id": "cis_rhel9_7-2.3",
                 "description": "No notes for control-id 7.2.3.",
                 "props": [
@@ -28423,7 +28447,7 @@
                 ]
               },
               {
-                "uuid": "8e2dff3d-9f56-461f-b516-efafd5c0fb07",
+                "uuid": "879ca1a8-416e-4d67-8c26-5549324b806b",
                 "control-id": "cis_rhel9_7-2.4",
                 "description": "No notes for control-id 7.2.4.",
                 "props": [
@@ -28440,7 +28464,7 @@
                 ]
               },
               {
-                "uuid": "f2d3dc34-4fb8-4c60-8dbb-e0a611b15c42",
+                "uuid": "569c1c16-1720-4ecf-bc90-4f32785e25cc",
                 "control-id": "cis_rhel9_7-2.5",
                 "description": "No notes for control-id 7.2.5.",
                 "props": [
@@ -28457,7 +28481,7 @@
                 ]
               },
               {
-                "uuid": "060a2d0a-8a7e-4a4a-911a-8ba85d54da3e",
+                "uuid": "904b987d-1639-4a72-9d27-9fbd4bb9f0a7",
                 "control-id": "cis_rhel9_7-2.6",
                 "description": "No notes for control-id 7.2.6.",
                 "props": [
@@ -28474,7 +28498,7 @@
                 ]
               },
               {
-                "uuid": "d5ede08f-6500-496a-8d3a-cd3db60d7fd4",
+                "uuid": "a54d47a4-6951-4896-9a63-60243b3f9547",
                 "control-id": "cis_rhel9_7-2.7",
                 "description": "No notes for control-id 7.2.7.",
                 "props": [
@@ -28486,7 +28510,7 @@
                 ]
               },
               {
-                "uuid": "1d769414-467f-469f-9d60-02e2bc0d7c23",
+                "uuid": "c7a801aa-72b9-4720-9d18-9c8c74e7be7f",
                 "control-id": "cis_rhel9_7-2.8",
                 "description": "No notes for control-id 7.2.8.",
                 "props": [
@@ -28508,7 +28532,7 @@
                 ]
               },
               {
-                "uuid": "d9ddd637-a53f-4c84-9be0-5388826d58f1",
+                "uuid": "a8bc1301-0ef9-4c42-b3de-312a4f801d45",
                 "control-id": "cis_rhel9_7-2.9",
                 "description": "Missing a rule to check that .bash_history is mode 0600 or more restrictive.",
                 "props": [
