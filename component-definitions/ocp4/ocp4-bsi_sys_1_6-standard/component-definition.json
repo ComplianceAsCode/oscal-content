@@ -3,8 +3,8 @@
     "uuid": "e5308ff4-6e9d-4a52-92ff-5299f8c10a11",
     "metadata": {
       "title": "Component definition for ocp4",
-      "last-modified": "2025-09-28T09:42:57.691650+08:00",
-      "version": "1.1",
+      "last-modified": "2025-12-11T12:31:24.915204+08:00",
+      "version": "1.2",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -1301,7 +1301,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "50036f80-41c1-4642-801a-d6779ed2ce06",
+            "uuid": "dba6a231-75e3-4ca7-a114-148bd3b2ad92",
             "source": "trestle://profiles/ocp4-bsi_sys_1_6-standard/profile.json",
             "description": "Control implementation for bsi-node-2022",
             "props": [
@@ -1313,7 +1313,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "af88bae3-9594-4f01-810a-f2a8b441ebaa",
+                "uuid": "7a5ed98c-7b47-442d-9a46-389d30dbee4b",
                 "control-id": "sys-1.6.a1",
                 "description": "The description for control-id sys-1.6.a1.",
                 "props": [
@@ -1326,7 +1326,7 @@
                 ]
               },
               {
-                "uuid": "8ad95fb0-5b6d-4561-b738-b21ac25ba30b",
+                "uuid": "513ce6fd-146b-41f9-afb7-eaab03df420a",
                 "control-id": "sys-1.6.a2",
                 "description": "The description for control-id sys-1.6.a2.",
                 "props": [
@@ -1339,7 +1339,7 @@
                 ]
               },
               {
-                "uuid": "4f026887-8026-4d46-8bf0-91d51d775dff",
+                "uuid": "64fc2a96-723e-48bd-b746-dc32de7e97fa",
                 "control-id": "sys-1.6.a3",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: This requirement is actively supported by OpenShift. For example, OpenShift does not allow applications with fixed UID/GID settings as standard; on the contrary, these IDs are assigned dynamically (security-by-design). The behavior can be adjusted by administrators, for example for system tasks.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift supports the requirements through strict client separation based on a “Project” (an extension to the Kubernetes namespace). The containers are separated from each other and from the host system via cgroups using SELinux. As long as all applications run “restricted” in the Security Context Constraint (SCC), OpenShift maintains strict client separation.\nSection 3: This requirement must be implemented organizationally. OpenShift supports this requirement by leveraging SELinux with its cgroups to create the container sandbox.\nSection 4: This requirement must be implemented organizationally.\nSection 5: This requirement must be implemented organizationally. Note: OpenShift supports different network infrastructures via the CNI plugin interface (e.g. OVN-Kubernetes, OpenShift-SDN, hardware networks etc.) OVN-Kubernetes, hardware networks etc.) The underlying network is abstracted by the network model in Openshift and usage is consistent across containers. This allows OpenShift to uniformly implement network security features such as: Firewall rules over network policies.\nSection 6: This requirement must be implemented organizationally. Note: OpenShift provides fine-grained metrics for external capacity management via monitoring.\nSection 7: OpenShift offers automated checks for the availability and health of an application. If the LivenessProbe (Health) repeatedly receives a negative result or is not reachable, the affected pod with the container is restarted. Using ReadinessProbe, a container can control whether it is ready to accept HTTP(S) based requests or not. Note: Monitoring is considered in APP.4.4.A11.",
                 "props": [
@@ -1386,7 +1386,7 @@
                 ]
               },
               {
-                "uuid": "6d4c05a8-22dd-41bc-8c97-5cff6b29734f",
+                "uuid": "b8ffd4a0-38c4-474a-8a13-0ec9aaf28a5d",
                 "control-id": "sys-1.6.a4",
                 "description": "The description for control-id sys-1.6.a4.",
                 "props": [
@@ -1399,7 +1399,7 @@
                 ]
               },
               {
-                "uuid": "3aa2c11d-1fb0-4221-b89c-e7dc652a1511",
+                "uuid": "282c4ff1-54bb-4b49-a5c1-dbd495502d24",
                 "control-id": "sys-1.6.a5",
                 "description": "Section 1: Hosts and containers are controlled via the Kubernetes API. This is addressed via api. The load balancer used for this is located in the administration network. The load balancer for *.apps. is set up separately in the active network. This means that the administration is appropriately separated. The Console (the OpenShift web UI) is used by all users. Authorization takes place at the API level and is secured via RBAC. The control plane is to be located in an administration network.\nSection 2: The web UI can be configured on another router that is terminated on the administration load balancer and is therefore only accessible from the administration network. This means that it can no longer be reached from the active network.\nSection 3: This is a standard OpenShift feature. The OpenShift documentation contains the necessary communication paths between control plane, infrastructure and worker nodes, as well as the necessary firewall activations of the underlying network stack at hardware or IaaS level. The communication between containers or pods within a client (“Project”) is not restricted by default, but can be regulated with micro-segmentation if necessary or as a service mesh with mTLS authentication be implemented (see APP.4.4.A18).\nExternally exposed services can receive their own IP and thus data traffic can also be separated outside the platform. Inter-node communication is carried out via suitable tunnel protocols (VXLAN, GENEVE) and can also be encrypted using IPSec.",
                 "props": [
@@ -1431,7 +1431,7 @@
                 ]
               },
               {
-                "uuid": "f15da45a-66ed-4ac0-8288-ff4a9f8626e7",
+                "uuid": "ab46afb7-41ce-4d41-899d-45bdd4c24fec",
                 "control-id": "sys-1.6.a6",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: OpenShift supports the requirement by allowing only certain sources. This allows the sources from which images come to be restricted and new sources to be added in a controlled process. Quay can also be used to provide your own registry in an open environment as a trustworthy delivery point for external software. Images can also be checked for vulnerabilities here.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift makes it possible to verify the signatures of images before use and thus enforce the identification requirement. Red Hat Advanced Cluster Security for Kubernetes (ACS) can check and optionally enforce signatures as well as certain labels (e.g. MAINTAINER) for images. For images delivered by Red Hat via the official Red Hat Registry, the MAINTAINER label of the container images is always maintained, through which Red Hat can be identified as the creator of the images. Images are also signed with GPG keys.\nSection 3: This requirement must be implemented organizationally. Note: Images from the Red Hat Registry are regularly checked for security vulnerabilities and updated accordingly. The security status of the images is indicated via a health indicator. ACS can perform technical checks through regular scans and report conspicuous containers or containers with identified vulnerabilities, thereby supporting the implementation of the requirement.\nSection 4: This requirement must be implemented organizationally. Note: For discontinued images with appropriate identification (e.g. through labels), policies implemented in ACS can report these violations. ACS also provides policies that report when images have not been scanned for more than 30/60/90 days. However, this means that an image must be built and rolled out at this interval so that the scans during the build process are effective. With a CI/CD pipeline with a high level of automation, this usually does not represent any increased effort.\nSection 5: This requirement must be implemented organizationally. Note: Image-level labels or image tags could be used here.\nSection 6: This requirement must be implemented organizationally for integrated software or self-created software. Note: OpenShift supports Lifecycle Management (OLM) with Operator. Software managed using OLM or Cluster Operator receives updates via the Operator Hub or Cluster Updates. An automated check with automatic or alternatively manual release is possible for this software.",
                 "props": [
@@ -1468,7 +1468,7 @@
                 ]
               },
               {
-                "uuid": "844bcf4b-6d84-424b-acf4-ae1421009398",
+                "uuid": "84fcb928-0b12-496e-894d-28bef2eadeca",
                 "control-id": "sys-1.6.a7",
                 "description": "The description for control-id sys-1.6.a7.",
                 "props": [
@@ -1481,7 +1481,7 @@
                 ]
               },
               {
-                "uuid": "358e9194-2493-456c-a081-37be65607c11",
+                "uuid": "5d03fd31-4d45-43f3-ab23-b251670585dd",
                 "control-id": "sys-1.6.a8",
                 "description": "Section 1: OpenShift offers secrets that are only available to the containers and the people authorized via RBAC in the tenant or project (client). Section 2: This requirement must be enforced as part of application development. OpenShift offers suitable mechanisms (secrets) with encryption of the etcd store if necessary. Section 3: OpenShift offers corresponding mechanisms (secrets). Unless the secrets are dynamically generated, third-party/community tools such as SealedSecrets or HashiCorp Vault can help securely deploy the secrets. Section 4: This requirement must be implemented organizationally. All of this information can and should be managed in Secrets.",
                 "props": [
@@ -1538,7 +1538,7 @@
                 ]
               },
               {
-                "uuid": "c2b28d60-59ae-4da9-9447-9fbda2047a83",
+                "uuid": "e8e967dd-ca12-4bf0-bfff-e3850f28dab9",
                 "control-id": "sys-1.6.a9",
                 "description": "The description for control-id sys-1.6.a9.",
                 "props": [
@@ -1551,7 +1551,7 @@
                 ]
               },
               {
-                "uuid": "cbaa7511-7638-472f-8994-0c0db4e06898",
+                "uuid": "33902a72-fd6a-4e5e-9888-ab7e40844d33",
                 "control-id": "sys-1.6.a10",
                 "description": "The description for control-id sys-1.6.a10.",
                 "props": [
@@ -1564,7 +1564,7 @@
                 ]
               },
               {
-                "uuid": "c1358f27-8c38-47b8-81df-e9a52d7987a4",
+                "uuid": "d3198279-e63b-4ef3-b417-1ee5d2aeafaa",
                 "control-id": "sys-1.6.a11",
                 "description": "The description for control-id sys-1.6.a11.",
                 "props": [
@@ -1577,7 +1577,7 @@
                 ]
               },
               {
-                "uuid": "0020ab38-6fc8-4cdf-af26-c894679a6c42",
+                "uuid": "401c4e26-6958-442a-bfc8-083a4b1815d3",
                 "control-id": "sys-1.6.a12",
                 "description": "Section 1: The source of images can be restricted by configuring the allowed registries. In addition, this requirement must be implemented organizationally. Section 2: This requirement must be implemented organizationally. Section 3: This requirement is solved using image labels. Red Hat Images contain the labels io.k8s.description, summary, vender, version, url, vcs-ref and vcs-type, through which the delivered images are transparent in their function and history. For internal images, the existence of the labels can be ensured during application development. The existence of the corresponding labels can be ensured via ACS. Section 4: OpenShift can be configured to assign a digital signature to each approved registry. OpenShift then only executes images from this registry that are secured using this signature.",
                 "props": [
@@ -1604,7 +1604,7 @@
                 ]
               },
               {
-                "uuid": "3a1e2597-b6f4-4133-9015-9fb78259605d",
+                "uuid": "d6b9d15c-8a2f-41c7-adbd-649bd4052d20",
                 "control-id": "sys-1.6.a13",
                 "description": "The description for control-id sys-1.6.a13.",
                 "props": [
@@ -1617,7 +1617,7 @@
                 ]
               },
               {
-                "uuid": "f591a0e0-319c-4e94-b6a1-50e03411b378",
+                "uuid": "04a379ec-0da7-4b61-bbb6-c528ea660dba",
                 "control-id": "sys-1.6.a14",
                 "description": "The description for control-id sys-1.6.a14.",
                 "props": [
@@ -1630,7 +1630,7 @@
                 ]
               },
               {
-                "uuid": "a16d1365-f3d9-4ffb-b00e-8bf828051c1d",
+                "uuid": "781f016b-5161-4c46-8316-6df31dd865ab",
                 "control-id": "sys-1.6.a15",
                 "description": "Section 1: OpenShift supports the configuration of quotas for a project (client). Applications can have their resources appropriately limited using limits/requests. Network bandwidth is limited at the pod level and can be determined separately according to incoming and outgoing network bandwidth. In addition, outgoing traffic (egress) can be marked at the namespace level with differentiated services code point (DSCP) classifications in order to assign quality of service classes to the outgoing packets in the physical network. Section 2: This requirement must be implemented organizationally. Note: The behavior of OpenShift completely replicates the standard behavior of Kubernetes. If CPU limits are exceeded, the process is slowed down. If volatile memory is exceeded, the process is stopped and restarted by the scheduler. The persistent memory management is responsible for exceeding the persistent memory - OpenShift will not enforce or limit anything here. Compliance with the limited network bandwidth is enforced by dropping packets that exceed the limit.",
                 "props": [
@@ -1687,7 +1687,7 @@
                 ]
               },
               {
-                "uuid": "ade7dea2-e0a2-4110-8896-435642f46c14",
+                "uuid": "c69d7a79-afb4-433a-b52b-409648ef003f",
                 "control-id": "sys-1.6.a16",
                 "description": "The description for control-id sys-1.6.a16.",
                 "props": [
@@ -1755,7 +1755,7 @@
                 ]
               },
               {
-                "uuid": "73e53196-3ee4-4990-b3d8-0e003a793074",
+                "uuid": "d9444839-b1da-4076-9df6-b66e4352a479",
                 "control-id": "sys-1.6.a17",
                 "description": "Section 1: With OpenShift, application containers run in the Security Context Constraint (SCC) “restricted” by default. Section 2: OpenShift supports encapsulation by using SELinux. If necessary, entire nodes can also be encapsulated via underlying virtualization. This is always necessary when application containers require extended security context constraints (SCCs). With the sandbox function based on Kata Containers, OpenShift provides a convenient way to isolate containers using virtualization technology. Section 3: OpenShift offers several SCC to restrict access to the network, file system or the host itself. This should only be allowed for administrative applications such as SIEM scanners or other infrastructure services that require access to the host. These SCCs should never be given to application containers. Section 4: These exceptions must be documented in the operational documentation. A list of pods with the corresponding SCC annotation can serve as the basis for the documentation.",
                 "props": [
@@ -1832,7 +1832,7 @@
                 ]
               },
               {
-                "uuid": "e8b9c15f-24f5-4f52-8113-714c052b6ee8",
+                "uuid": "531d93f0-667e-4f61-8a54-8ddebab34797",
                 "control-id": "sys-1.6.a18",
                 "description": "Section 1: With OpenShift, accounts within the container are separated from the host system by SELinux. This includes preventing the use of privileged user and group IDs as well as corresponding rights extensions (SET-UID, Set-GID bit). A range of UIDs/GIDs is provided for use in containers.\nSection 2: Security Context Constraints (SCCs) allow accounts in the container to gain controlled access.\nSection 3: The host system Red Hat CoreOS is immutable. The changes to the host operating system should only be made by OpenShift and should be necessary so that hardening by Red Hat is not inadvertently undermined. Since, in contrast to an unprotected container runtime environment, SELinux enforces the separation between the container runtime and the operating system, this mirroring of account names is not necessary.",
                 "props": [
@@ -1899,7 +1899,7 @@
                 ]
               },
               {
-                "uuid": "dfa0ad0c-1b68-49fe-968f-de4e963c2dfb",
+                "uuid": "d71e2835-dad2-4139-a4d1-3759bdcd6a06",
                 "control-id": "sys-1.6.a19",
                 "description": "Section 1: Applications can access persistent volumes (PVs) and temporary (ephemeral) storage in OpenShift. Persisted volumes are connected as network storage, ephemeral storage serves primarily as volatile, short-lived mass storage and is allocated within the container file system. This configures which PV can be reached and the use of the ephemeral storage is separated per pod. This means that each pod has its own volatile mass storage. Volumes can be limited in size.\nSection 2: OpenShift implements the principle of least privileges. The definition is made via an explicit configuration at the deployment level.\nSection 3: By default, no local storage is included. For reasons of reliability, this is explicitly not recommended.\nSection 4: The network storage dictates the permissions. OpenShift supports this with the dynamically assigned UID/GID of the projects (clients).",
                 "props": [
@@ -1921,7 +1921,7 @@
                 ]
               },
               {
-                "uuid": "a5bf3d46-a68d-460d-82b9-c2e4097a5338",
+                "uuid": "63fec672-44f0-4c37-b437-25162937d914",
                 "control-id": "sys-1.6.a20",
                 "description": "Section 1: OpenShift only maintains the current version of the configuration. It is therefore recommended to use GitOps, in which the configuration is transferred from a git repository to the OpenShift cluster. OpenShift includes OpenShift GitOps (based on the community project ArgoCD), which supports easy implementation of a GitOps-based administration concept.\nSection 2: With a GitOps approach, all changes are documented in git.",
                 "props": [
@@ -1938,7 +1938,7 @@
                 ]
               },
               {
-                "uuid": "e7987002-053b-4f32-b6d3-79c9756c5304",
+                "uuid": "2f2257bb-96ab-4d46-b6ef-1c9abe9bbd25",
                 "control-id": "sys-1.6.a1",
                 "description": "The description for control-id sys-1.6.a1.",
                 "props": [
@@ -1951,7 +1951,7 @@
                 ]
               },
               {
-                "uuid": "49a86928-2d5a-4b81-9478-a42b68083e7b",
+                "uuid": "d4c94e9d-a2ec-4be9-8308-aa0dea091dff",
                 "control-id": "sys-1.6.a2",
                 "description": "The description for control-id sys-1.6.a2.",
                 "props": [
@@ -1964,7 +1964,7 @@
                 ]
               },
               {
-                "uuid": "7daccb7f-a8cd-46a6-b352-646be5666bee",
+                "uuid": "84c061f5-a5c1-42da-b5fb-3bc4afa7fbaa",
                 "control-id": "sys-1.6.a3",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: This requirement is actively supported by OpenShift. For example, OpenShift does not allow applications with fixed UID/GID settings as standard; on the contrary, these IDs are assigned dynamically (security-by-design). The behavior can be adjusted by administrators, for example for system tasks.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift supports the requirements through strict client separation based on a “Project” (an extension to the Kubernetes namespace). The containers are separated from each other and from the host system via cgroups using SELinux. As long as all applications run “restricted” in the Security Context Constraint (SCC), OpenShift maintains strict client separation.\nSection 3: This requirement must be implemented organizationally. OpenShift supports this requirement by leveraging SELinux with its cgroups to create the container sandbox.\nSection 4: This requirement must be implemented organizationally.\nSection 5: This requirement must be implemented organizationally. Note: OpenShift supports different network infrastructures via the CNI plugin interface (e.g. OVN-Kubernetes, OpenShift-SDN, hardware networks etc.) OVN-Kubernetes, hardware networks etc.) The underlying network is abstracted by the network model in Openshift and usage is consistent across containers. This allows OpenShift to uniformly implement network security features such as: Firewall rules over network policies.\nSection 6: This requirement must be implemented organizationally. Note: OpenShift provides fine-grained metrics for external capacity management via monitoring.\nSection 7: OpenShift offers automated checks for the availability and health of an application. If the LivenessProbe (Health) repeatedly receives a negative result or is not reachable, the affected pod with the container is restarted. Using ReadinessProbe, a container can control whether it is ready to accept HTTP(S) based requests or not. Note: Monitoring is considered in APP.4.4.A11.",
                 "props": [
@@ -2011,7 +2011,7 @@
                 ]
               },
               {
-                "uuid": "752be377-0fbd-4445-ab27-5026329bff7c",
+                "uuid": "2221c01e-c0e0-43eb-9c21-1c8a00611d7f",
                 "control-id": "sys-1.6.a4",
                 "description": "The description for control-id sys-1.6.a4.",
                 "props": [
@@ -2024,7 +2024,7 @@
                 ]
               },
               {
-                "uuid": "5496fb76-77c5-4dab-8c47-a0dcad49786c",
+                "uuid": "4e36924b-dd63-4364-abc2-566edbdc36d0",
                 "control-id": "sys-1.6.a5",
                 "description": "Section 1: Hosts and containers are controlled via the Kubernetes API. This is addressed via api. The load balancer used for this is located in the administration network. The load balancer for *.apps. is set up separately in the active network. This means that the administration is appropriately separated. The Console (the OpenShift web UI) is used by all users. Authorization takes place at the API level and is secured via RBAC. The control plane is to be located in an administration network.\nSection 2: The web UI can be configured on another router that is terminated on the administration load balancer and is therefore only accessible from the administration network. This means that it can no longer be reached from the active network.\nSection 3: This is a standard OpenShift feature. The OpenShift documentation contains the necessary communication paths between control plane, infrastructure and worker nodes, as well as the necessary firewall activations of the underlying network stack at hardware or IaaS level. The communication between containers or pods within a client (“Project”) is not restricted by default, but can be regulated with micro-segmentation if necessary or as a service mesh with mTLS authentication be implemented (see APP.4.4.A18).\nExternally exposed services can receive their own IP and thus data traffic can also be separated outside the platform. Inter-node communication is carried out via suitable tunnel protocols (VXLAN, GENEVE) and can also be encrypted using IPSec.",
                 "props": [
@@ -2056,7 +2056,7 @@
                 ]
               },
               {
-                "uuid": "3f7a8e98-b6a6-443c-b05c-ec1b2aa3b3fe",
+                "uuid": "000e468a-f3f7-43d6-854b-e8c49aa31232",
                 "control-id": "sys-1.6.a6",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: OpenShift supports the requirement by allowing only certain sources. This allows the sources from which images come to be restricted and new sources to be added in a controlled process. Quay can also be used to provide your own registry in an open environment as a trustworthy delivery point for external software. Images can also be checked for vulnerabilities here.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift makes it possible to verify the signatures of images before use and thus enforce the identification requirement. Red Hat Advanced Cluster Security for Kubernetes (ACS) can check and optionally enforce signatures as well as certain labels (e.g. MAINTAINER) for images. For images delivered by Red Hat via the official Red Hat Registry, the MAINTAINER label of the container images is always maintained, through which Red Hat can be identified as the creator of the images. Images are also signed with GPG keys.\nSection 3: This requirement must be implemented organizationally. Note: Images from the Red Hat Registry are regularly checked for security vulnerabilities and updated accordingly. The security status of the images is indicated via a health indicator. ACS can perform technical checks through regular scans and report conspicuous containers or containers with identified vulnerabilities, thereby supporting the implementation of the requirement.\nSection 4: This requirement must be implemented organizationally. Note: For discontinued images with appropriate identification (e.g. through labels), policies implemented in ACS can report these violations. ACS also provides policies that report when images have not been scanned for more than 30/60/90 days. However, this means that an image must be built and rolled out at this interval so that the scans during the build process are effective. With a CI/CD pipeline with a high level of automation, this usually does not represent any increased effort.\nSection 5: This requirement must be implemented organizationally. Note: Image-level labels or image tags could be used here.\nSection 6: This requirement must be implemented organizationally for integrated software or self-created software. Note: OpenShift supports Lifecycle Management (OLM) with Operator. Software managed using OLM or Cluster Operator receives updates via the Operator Hub or Cluster Updates. An automated check with automatic or alternatively manual release is possible for this software.",
                 "props": [
@@ -2093,7 +2093,7 @@
                 ]
               },
               {
-                "uuid": "df3d969b-a706-42bc-864c-ca68b778c10a",
+                "uuid": "40fb1e82-3307-4300-8424-387756c369d7",
                 "control-id": "sys-1.6.a7",
                 "description": "The description for control-id sys-1.6.a7.",
                 "props": [
@@ -2106,7 +2106,7 @@
                 ]
               },
               {
-                "uuid": "cb4c99f7-0bc2-4cb1-8eb0-e979a9e5f5eb",
+                "uuid": "1b0b38a8-bd5b-40da-a72f-7ae5e2311c90",
                 "control-id": "sys-1.6.a8",
                 "description": "Section 1: OpenShift offers secrets that are only available to the containers and the people authorized via RBAC in the tenant or project (client). Section 2: This requirement must be enforced as part of application development. OpenShift offers suitable mechanisms (secrets) with encryption of the etcd store if necessary. Section 3: OpenShift offers corresponding mechanisms (secrets). Unless the secrets are dynamically generated, third-party/community tools such as SealedSecrets or HashiCorp Vault can help securely deploy the secrets. Section 4: This requirement must be implemented organizationally. All of this information can and should be managed in Secrets.",
                 "props": [
@@ -2163,7 +2163,7 @@
                 ]
               },
               {
-                "uuid": "b530d9ff-54f1-4ab1-89f7-983b366feac9",
+                "uuid": "54686578-1a72-4e17-86c8-0b0fa9eb44cf",
                 "control-id": "sys-1.6.a9",
                 "description": "The description for control-id sys-1.6.a9.",
                 "props": [
@@ -2176,7 +2176,7 @@
                 ]
               },
               {
-                "uuid": "fa2268c5-9a97-404f-8844-e25404b835ec",
+                "uuid": "22b993ea-acb7-4fda-b835-30b2bec93096",
                 "control-id": "sys-1.6.a10",
                 "description": "The description for control-id sys-1.6.a10.",
                 "props": [
@@ -2189,7 +2189,7 @@
                 ]
               },
               {
-                "uuid": "460613ca-c6dd-412a-9abc-20ce9da34632",
+                "uuid": "3b060799-e35c-412d-81d2-25dc7ea0ac5b",
                 "control-id": "sys-1.6.a11",
                 "description": "The description for control-id sys-1.6.a11.",
                 "props": [
@@ -2202,7 +2202,7 @@
                 ]
               },
               {
-                "uuid": "496113e5-204b-47eb-9cb1-a94f7c35f354",
+                "uuid": "55f84e47-f8ab-4ab6-83cd-a45349d32c63",
                 "control-id": "sys-1.6.a12",
                 "description": "Section 1: The source of images can be restricted by configuring the allowed registries. In addition, this requirement must be implemented organizationally. Section 2: This requirement must be implemented organizationally. Section 3: This requirement is solved using image labels. Red Hat Images contain the labels io.k8s.description, summary, vender, version, url, vcs-ref and vcs-type, through which the delivered images are transparent in their function and history. For internal images, the existence of the labels can be ensured during application development. The existence of the corresponding labels can be ensured via ACS. Section 4: OpenShift can be configured to assign a digital signature to each approved registry. OpenShift then only executes images from this registry that are secured using this signature.",
                 "props": [
@@ -2229,7 +2229,7 @@
                 ]
               },
               {
-                "uuid": "ba4130b2-a3b8-4126-a4c3-b21a32e43486",
+                "uuid": "dfff117b-9c94-4c86-8e10-198a1f8e317a",
                 "control-id": "sys-1.6.a13",
                 "description": "The description for control-id sys-1.6.a13.",
                 "props": [
@@ -2242,7 +2242,7 @@
                 ]
               },
               {
-                "uuid": "18f0aea9-b4c0-4a27-a6d0-7ac1e3f8aaaf",
+                "uuid": "61767b87-1587-4d25-9f81-ee3f4b009783",
                 "control-id": "sys-1.6.a14",
                 "description": "The description for control-id sys-1.6.a14.",
                 "props": [
@@ -2255,7 +2255,7 @@
                 ]
               },
               {
-                "uuid": "2ff11e9d-a289-48e3-9bd2-5ba692fd2200",
+                "uuid": "969a8e42-411a-4a3d-8b73-05bfee930d11",
                 "control-id": "sys-1.6.a15",
                 "description": "Section 1: OpenShift supports the configuration of quotas for a project (client). Applications can have their resources appropriately limited using limits/requests. Network bandwidth is limited at the pod level and can be determined separately according to incoming and outgoing network bandwidth. In addition, outgoing traffic (egress) can be marked at the namespace level with differentiated services code point (DSCP) classifications in order to assign quality of service classes to the outgoing packets in the physical network. Section 2: This requirement must be implemented organizationally. Note: The behavior of OpenShift completely replicates the standard behavior of Kubernetes. If CPU limits are exceeded, the process is slowed down. If volatile memory is exceeded, the process is stopped and restarted by the scheduler. The persistent memory management is responsible for exceeding the persistent memory - OpenShift will not enforce or limit anything here. Compliance with the limited network bandwidth is enforced by dropping packets that exceed the limit.",
                 "props": [
@@ -2312,7 +2312,7 @@
                 ]
               },
               {
-                "uuid": "7f181899-d452-4a15-aaff-0cf51acaaeeb",
+                "uuid": "a23c9027-5c01-41db-8bf2-a358c7b52d01",
                 "control-id": "sys-1.6.a16",
                 "description": "The description for control-id sys-1.6.a16.",
                 "props": [
@@ -2380,7 +2380,7 @@
                 ]
               },
               {
-                "uuid": "701aa2a1-0de9-4df7-b934-e7f18b3db4f5",
+                "uuid": "f75074b5-1840-4cc3-b600-c4a33e119758",
                 "control-id": "sys-1.6.a17",
                 "description": "Section 1: With OpenShift, application containers run in the Security Context Constraint (SCC) “restricted” by default. Section 2: OpenShift supports encapsulation by using SELinux. If necessary, entire nodes can also be encapsulated via underlying virtualization. This is always necessary when application containers require extended security context constraints (SCCs). With the sandbox function based on Kata Containers, OpenShift provides a convenient way to isolate containers using virtualization technology. Section 3: OpenShift offers several SCC to restrict access to the network, file system or the host itself. This should only be allowed for administrative applications such as SIEM scanners or other infrastructure services that require access to the host. These SCCs should never be given to application containers. Section 4: These exceptions must be documented in the operational documentation. A list of pods with the corresponding SCC annotation can serve as the basis for the documentation.",
                 "props": [
@@ -2457,7 +2457,7 @@
                 ]
               },
               {
-                "uuid": "047c2553-539b-4566-8585-450837dd9501",
+                "uuid": "311e6167-d189-4c6d-92b1-c261dbcd02a2",
                 "control-id": "sys-1.6.a18",
                 "description": "Section 1: With OpenShift, accounts within the container are separated from the host system by SELinux. This includes preventing the use of privileged user and group IDs as well as corresponding rights extensions (SET-UID, Set-GID bit). A range of UIDs/GIDs is provided for use in containers.\nSection 2: Security Context Constraints (SCCs) allow accounts in the container to gain controlled access.\nSection 3: The host system Red Hat CoreOS is immutable. The changes to the host operating system should only be made by OpenShift and should be necessary so that hardening by Red Hat is not inadvertently undermined. Since, in contrast to an unprotected container runtime environment, SELinux enforces the separation between the container runtime and the operating system, this mirroring of account names is not necessary.",
                 "props": [
@@ -2524,7 +2524,7 @@
                 ]
               },
               {
-                "uuid": "3a0405df-a609-44e6-b7f8-720ea78413b6",
+                "uuid": "de69fe17-a36d-49e3-af8a-6dfed41b979c",
                 "control-id": "sys-1.6.a19",
                 "description": "Section 1: Applications can access persistent volumes (PVs) and temporary (ephemeral) storage in OpenShift. Persisted volumes are connected as network storage, ephemeral storage serves primarily as volatile, short-lived mass storage and is allocated within the container file system. This configures which PV can be reached and the use of the ephemeral storage is separated per pod. This means that each pod has its own volatile mass storage. Volumes can be limited in size.\nSection 2: OpenShift implements the principle of least privileges. The definition is made via an explicit configuration at the deployment level.\nSection 3: By default, no local storage is included. For reasons of reliability, this is explicitly not recommended.\nSection 4: The network storage dictates the permissions. OpenShift supports this with the dynamically assigned UID/GID of the projects (clients).",
                 "props": [
@@ -2546,7 +2546,7 @@
                 ]
               },
               {
-                "uuid": "f61889e6-c291-4c13-b5ce-2a08e298870f",
+                "uuid": "7c7fb662-e018-4658-a53b-41882602800e",
                 "control-id": "sys-1.6.a20",
                 "description": "Section 1: OpenShift only maintains the current version of the configuration. It is therefore recommended to use GitOps, in which the configuration is transferred from a git repository to the OpenShift cluster. OpenShift includes OpenShift GitOps (based on the community project ArgoCD), which supports easy implementation of a GitOps-based administration concept.\nSection 2: With a GitOps approach, all changes are documented in git.",
                 "props": [
@@ -2563,7 +2563,7 @@
                 ]
               },
               {
-                "uuid": "1f80121b-9038-441a-ae1d-b8371c0ce005",
+                "uuid": "8238d457-f6ee-4a44-bfec-7f41f565e779",
                 "control-id": "sys-1.6.a1",
                 "description": "The description for control-id sys-1.6.a1.",
                 "props": [
@@ -2576,7 +2576,7 @@
                 ]
               },
               {
-                "uuid": "2db6d0dd-1c12-4463-a988-4aa5b7644e34",
+                "uuid": "fa4c18f7-cc5f-4d99-b4df-ca0c33bb2cc6",
                 "control-id": "sys-1.6.a2",
                 "description": "The description for control-id sys-1.6.a2.",
                 "props": [
@@ -2589,7 +2589,7 @@
                 ]
               },
               {
-                "uuid": "cc92b002-e1f7-423d-8c2e-27b2abafc088",
+                "uuid": "f4ea6764-b5b2-4644-a8e4-bfc3867659c9",
                 "control-id": "sys-1.6.a3",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: This requirement is actively supported by OpenShift. For example, OpenShift does not allow applications with fixed UID/GID settings as standard; on the contrary, these IDs are assigned dynamically (security-by-design). The behavior can be adjusted by administrators, for example for system tasks.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift supports the requirements through strict client separation based on a “Project” (an extension to the Kubernetes namespace). The containers are separated from each other and from the host system via cgroups using SELinux. As long as all applications run “restricted” in the Security Context Constraint (SCC), OpenShift maintains strict client separation.\nSection 3: This requirement must be implemented organizationally. OpenShift supports this requirement by leveraging SELinux with its cgroups to create the container sandbox.\nSection 4: This requirement must be implemented organizationally.\nSection 5: This requirement must be implemented organizationally. Note: OpenShift supports different network infrastructures via the CNI plugin interface (e.g. OVN-Kubernetes, OpenShift-SDN, hardware networks etc.) OVN-Kubernetes, hardware networks etc.) The underlying network is abstracted by the network model in Openshift and usage is consistent across containers. This allows OpenShift to uniformly implement network security features such as: Firewall rules over network policies.\nSection 6: This requirement must be implemented organizationally. Note: OpenShift provides fine-grained metrics for external capacity management via monitoring.\nSection 7: OpenShift offers automated checks for the availability and health of an application. If the LivenessProbe (Health) repeatedly receives a negative result or is not reachable, the affected pod with the container is restarted. Using ReadinessProbe, a container can control whether it is ready to accept HTTP(S) based requests or not. Note: Monitoring is considered in APP.4.4.A11.",
                 "props": [
@@ -2636,7 +2636,7 @@
                 ]
               },
               {
-                "uuid": "d9e5593d-6783-40a1-adb8-e7d00b061865",
+                "uuid": "ce71c57f-0427-4247-bdfc-2510494667b9",
                 "control-id": "sys-1.6.a4",
                 "description": "The description for control-id sys-1.6.a4.",
                 "props": [
@@ -2649,7 +2649,7 @@
                 ]
               },
               {
-                "uuid": "cbdb169a-68b2-40fb-b34c-774ad463a0f0",
+                "uuid": "6cbdfd6a-a3d6-4bbc-86de-4039de6d7d8e",
                 "control-id": "sys-1.6.a5",
                 "description": "Section 1: Hosts and containers are controlled via the Kubernetes API. This is addressed via api. The load balancer used for this is located in the administration network. The load balancer for *.apps. is set up separately in the active network. This means that the administration is appropriately separated. The Console (the OpenShift web UI) is used by all users. Authorization takes place at the API level and is secured via RBAC. The control plane is to be located in an administration network.\nSection 2: The web UI can be configured on another router that is terminated on the administration load balancer and is therefore only accessible from the administration network. This means that it can no longer be reached from the active network.\nSection 3: This is a standard OpenShift feature. The OpenShift documentation contains the necessary communication paths between control plane, infrastructure and worker nodes, as well as the necessary firewall activations of the underlying network stack at hardware or IaaS level. The communication between containers or pods within a client (“Project”) is not restricted by default, but can be regulated with micro-segmentation if necessary or as a service mesh with mTLS authentication be implemented (see APP.4.4.A18).\nExternally exposed services can receive their own IP and thus data traffic can also be separated outside the platform. Inter-node communication is carried out via suitable tunnel protocols (VXLAN, GENEVE) and can also be encrypted using IPSec.",
                 "props": [
@@ -2681,7 +2681,7 @@
                 ]
               },
               {
-                "uuid": "54f2e2a4-d887-40e8-baad-1a4c0f374ff9",
+                "uuid": "7bc68912-5528-47b8-94bb-625353db3712",
                 "control-id": "sys-1.6.a6",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: OpenShift supports the requirement by allowing only certain sources. This allows the sources from which images come to be restricted and new sources to be added in a controlled process. Quay can also be used to provide your own registry in an open environment as a trustworthy delivery point for external software. Images can also be checked for vulnerabilities here.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift makes it possible to verify the signatures of images before use and thus enforce the identification requirement. Red Hat Advanced Cluster Security for Kubernetes (ACS) can check and optionally enforce signatures as well as certain labels (e.g. MAINTAINER) for images. For images delivered by Red Hat via the official Red Hat Registry, the MAINTAINER label of the container images is always maintained, through which Red Hat can be identified as the creator of the images. Images are also signed with GPG keys.\nSection 3: This requirement must be implemented organizationally. Note: Images from the Red Hat Registry are regularly checked for security vulnerabilities and updated accordingly. The security status of the images is indicated via a health indicator. ACS can perform technical checks through regular scans and report conspicuous containers or containers with identified vulnerabilities, thereby supporting the implementation of the requirement.\nSection 4: This requirement must be implemented organizationally. Note: For discontinued images with appropriate identification (e.g. through labels), policies implemented in ACS can report these violations. ACS also provides policies that report when images have not been scanned for more than 30/60/90 days. However, this means that an image must be built and rolled out at this interval so that the scans during the build process are effective. With a CI/CD pipeline with a high level of automation, this usually does not represent any increased effort.\nSection 5: This requirement must be implemented organizationally. Note: Image-level labels or image tags could be used here.\nSection 6: This requirement must be implemented organizationally for integrated software or self-created software. Note: OpenShift supports Lifecycle Management (OLM) with Operator. Software managed using OLM or Cluster Operator receives updates via the Operator Hub or Cluster Updates. An automated check with automatic or alternatively manual release is possible for this software.",
                 "props": [
@@ -2718,7 +2718,7 @@
                 ]
               },
               {
-                "uuid": "1657b807-eb16-40cf-907e-7866a9ad2b43",
+                "uuid": "675613dc-65d7-444f-b358-d9c0189b474a",
                 "control-id": "sys-1.6.a7",
                 "description": "The description for control-id sys-1.6.a7.",
                 "props": [
@@ -2731,7 +2731,7 @@
                 ]
               },
               {
-                "uuid": "c0421c1e-d1a2-4de0-9038-d4d2e7f89179",
+                "uuid": "33c0a175-e782-4460-9f76-7fdda606acae",
                 "control-id": "sys-1.6.a8",
                 "description": "Section 1: OpenShift offers secrets that are only available to the containers and the people authorized via RBAC in the tenant or project (client). Section 2: This requirement must be enforced as part of application development. OpenShift offers suitable mechanisms (secrets) with encryption of the etcd store if necessary. Section 3: OpenShift offers corresponding mechanisms (secrets). Unless the secrets are dynamically generated, third-party/community tools such as SealedSecrets or HashiCorp Vault can help securely deploy the secrets. Section 4: This requirement must be implemented organizationally. All of this information can and should be managed in Secrets.",
                 "props": [
@@ -5368,7 +5368,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "ee04285d-440a-4f14-93f9-b52f3b71a58e",
+            "uuid": "34ef752e-bd37-4602-9283-af5b9e9d04c5",
             "source": "trestle://profiles/ocp4-bsi_sys_1_6-standard/profile.json",
             "description": "Control implementation for bsi-node-2022",
             "props": [
@@ -5380,7 +5380,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "f1d2727b-c852-4eaa-9b0d-ca796e5afde4",
+                "uuid": "cbcc0696-150b-4992-9533-07b187c29278",
                 "control-id": "sys-1.6.a1",
                 "description": "The description for control-id sys-1.6.a1.",
                 "props": [
@@ -5393,7 +5393,7 @@
                 ]
               },
               {
-                "uuid": "1c2f6a70-f0f4-4b50-aeba-4c5fc4595a93",
+                "uuid": "ffa8d8d2-a65a-439a-ad24-19f32f48e437",
                 "control-id": "sys-1.6.a2",
                 "description": "The description for control-id sys-1.6.a2.",
                 "props": [
@@ -5406,7 +5406,7 @@
                 ]
               },
               {
-                "uuid": "143afe22-fefd-4559-9e3b-f731a259a272",
+                "uuid": "587ed50a-a901-466c-a676-52d6ff656b1e",
                 "control-id": "sys-1.6.a3",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: This requirement is actively supported by OpenShift. For example, OpenShift does not allow applications with fixed UID/GID settings as standard; on the contrary, these IDs are assigned dynamically (security-by-design). The behavior can be adjusted by administrators, for example for system tasks.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift supports the requirements through strict client separation based on a “Project” (an extension to the Kubernetes namespace). The containers are separated from each other and from the host system via cgroups using SELinux. As long as all applications run “restricted” in the Security Context Constraint (SCC), OpenShift maintains strict client separation.\nSection 3: This requirement must be implemented organizationally. OpenShift supports this requirement by leveraging SELinux with its cgroups to create the container sandbox.\nSection 4: This requirement must be implemented organizationally.\nSection 5: This requirement must be implemented organizationally. Note: OpenShift supports different network infrastructures via the CNI plugin interface (e.g. OVN-Kubernetes, OpenShift-SDN, hardware networks etc.) OVN-Kubernetes, hardware networks etc.) The underlying network is abstracted by the network model in Openshift and usage is consistent across containers. This allows OpenShift to uniformly implement network security features such as: Firewall rules over network policies.\nSection 6: This requirement must be implemented organizationally. Note: OpenShift provides fine-grained metrics for external capacity management via monitoring.\nSection 7: OpenShift offers automated checks for the availability and health of an application. If the LivenessProbe (Health) repeatedly receives a negative result or is not reachable, the affected pod with the container is restarted. Using ReadinessProbe, a container can control whether it is ready to accept HTTP(S) based requests or not. Note: Monitoring is considered in APP.4.4.A11.",
                 "props": [
@@ -5453,7 +5453,7 @@
                 ]
               },
               {
-                "uuid": "293e24c5-0ccc-4e5a-8c1f-1d4921e32707",
+                "uuid": "2e411180-8b9b-4d90-bac6-cbd7adc3cce0",
                 "control-id": "sys-1.6.a4",
                 "description": "The description for control-id sys-1.6.a4.",
                 "props": [
@@ -5466,7 +5466,7 @@
                 ]
               },
               {
-                "uuid": "43a76fcd-29ab-416d-9af2-df4470ee1a8d",
+                "uuid": "bf32b450-34f9-449d-b690-4438bd3206b3",
                 "control-id": "sys-1.6.a5",
                 "description": "Section 1: Hosts and containers are controlled via the Kubernetes API. This is addressed via api. The load balancer used for this is located in the administration network. The load balancer for *.apps. is set up separately in the active network. This means that the administration is appropriately separated. The Console (the OpenShift web UI) is used by all users. Authorization takes place at the API level and is secured via RBAC. The control plane is to be located in an administration network.\nSection 2: The web UI can be configured on another router that is terminated on the administration load balancer and is therefore only accessible from the administration network. This means that it can no longer be reached from the active network.\nSection 3: This is a standard OpenShift feature. The OpenShift documentation contains the necessary communication paths between control plane, infrastructure and worker nodes, as well as the necessary firewall activations of the underlying network stack at hardware or IaaS level. The communication between containers or pods within a client (“Project”) is not restricted by default, but can be regulated with micro-segmentation if necessary or as a service mesh with mTLS authentication be implemented (see APP.4.4.A18).\nExternally exposed services can receive their own IP and thus data traffic can also be separated outside the platform. Inter-node communication is carried out via suitable tunnel protocols (VXLAN, GENEVE) and can also be encrypted using IPSec.",
                 "props": [
@@ -5498,7 +5498,7 @@
                 ]
               },
               {
-                "uuid": "c824af9f-8fb0-4a5c-9b6a-9f58ac003f0b",
+                "uuid": "b1a37266-e90a-427a-8a11-7dc378d72c18",
                 "control-id": "sys-1.6.a6",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: OpenShift supports the requirement by allowing only certain sources. This allows the sources from which images come to be restricted and new sources to be added in a controlled process. Quay can also be used to provide your own registry in an open environment as a trustworthy delivery point for external software. Images can also be checked for vulnerabilities here.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift makes it possible to verify the signatures of images before use and thus enforce the identification requirement. Red Hat Advanced Cluster Security for Kubernetes (ACS) can check and optionally enforce signatures as well as certain labels (e.g. MAINTAINER) for images. For images delivered by Red Hat via the official Red Hat Registry, the MAINTAINER label of the container images is always maintained, through which Red Hat can be identified as the creator of the images. Images are also signed with GPG keys.\nSection 3: This requirement must be implemented organizationally. Note: Images from the Red Hat Registry are regularly checked for security vulnerabilities and updated accordingly. The security status of the images is indicated via a health indicator. ACS can perform technical checks through regular scans and report conspicuous containers or containers with identified vulnerabilities, thereby supporting the implementation of the requirement.\nSection 4: This requirement must be implemented organizationally. Note: For discontinued images with appropriate identification (e.g. through labels), policies implemented in ACS can report these violations. ACS also provides policies that report when images have not been scanned for more than 30/60/90 days. However, this means that an image must be built and rolled out at this interval so that the scans during the build process are effective. With a CI/CD pipeline with a high level of automation, this usually does not represent any increased effort.\nSection 5: This requirement must be implemented organizationally. Note: Image-level labels or image tags could be used here.\nSection 6: This requirement must be implemented organizationally for integrated software or self-created software. Note: OpenShift supports Lifecycle Management (OLM) with Operator. Software managed using OLM or Cluster Operator receives updates via the Operator Hub or Cluster Updates. An automated check with automatic or alternatively manual release is possible for this software.",
                 "props": [
@@ -5535,7 +5535,7 @@
                 ]
               },
               {
-                "uuid": "aa7bece1-1ac7-43b6-8146-8b131d227567",
+                "uuid": "0050bab7-2930-45f4-8a58-854e4c08d108",
                 "control-id": "sys-1.6.a7",
                 "description": "The description for control-id sys-1.6.a7.",
                 "props": [
@@ -5548,7 +5548,7 @@
                 ]
               },
               {
-                "uuid": "8e3bbac1-ba4e-4f41-83eb-04d7cfd76e4d",
+                "uuid": "69e6222b-cb9b-4403-b7e4-b5bd3203b355",
                 "control-id": "sys-1.6.a8",
                 "description": "Section 1: OpenShift offers secrets that are only available to the containers and the people authorized via RBAC in the tenant or project (client). Section 2: This requirement must be enforced as part of application development. OpenShift offers suitable mechanisms (secrets) with encryption of the etcd store if necessary. Section 3: OpenShift offers corresponding mechanisms (secrets). Unless the secrets are dynamically generated, third-party/community tools such as SealedSecrets or HashiCorp Vault can help securely deploy the secrets. Section 4: This requirement must be implemented organizationally. All of this information can and should be managed in Secrets.",
                 "props": [
@@ -5605,7 +5605,7 @@
                 ]
               },
               {
-                "uuid": "d256946f-25ad-4c0f-b657-f2ff04d3a8b1",
+                "uuid": "9ab90d36-0c1a-4e0f-baea-adf90d7f18b8",
                 "control-id": "sys-1.6.a9",
                 "description": "The description for control-id sys-1.6.a9.",
                 "props": [
@@ -5618,7 +5618,7 @@
                 ]
               },
               {
-                "uuid": "0687c9a5-a14b-4a4e-853a-a894308485fc",
+                "uuid": "39707d8b-6ef7-4b08-a90c-c4db61294f96",
                 "control-id": "sys-1.6.a10",
                 "description": "The description for control-id sys-1.6.a10.",
                 "props": [
@@ -5631,7 +5631,7 @@
                 ]
               },
               {
-                "uuid": "589c45ee-ab50-484f-a911-e4c1d52b8b3c",
+                "uuid": "cd418f83-ec51-4021-bbc9-f3054bb3b31a",
                 "control-id": "sys-1.6.a11",
                 "description": "The description for control-id sys-1.6.a11.",
                 "props": [
@@ -5644,7 +5644,7 @@
                 ]
               },
               {
-                "uuid": "91dd8b52-3cba-465c-b245-95223a044a18",
+                "uuid": "4e5c87af-cff8-40cc-9c81-2536e3b9c82c",
                 "control-id": "sys-1.6.a12",
                 "description": "Section 1: The source of images can be restricted by configuring the allowed registries. In addition, this requirement must be implemented organizationally. Section 2: This requirement must be implemented organizationally. Section 3: This requirement is solved using image labels. Red Hat Images contain the labels io.k8s.description, summary, vender, version, url, vcs-ref and vcs-type, through which the delivered images are transparent in their function and history. For internal images, the existence of the labels can be ensured during application development. The existence of the corresponding labels can be ensured via ACS. Section 4: OpenShift can be configured to assign a digital signature to each approved registry. OpenShift then only executes images from this registry that are secured using this signature.",
                 "props": [
@@ -5671,7 +5671,7 @@
                 ]
               },
               {
-                "uuid": "dfaf1eb7-29ec-4488-8314-5d8684867e52",
+                "uuid": "16081056-4ae7-4143-9406-3239a8c884e0",
                 "control-id": "sys-1.6.a13",
                 "description": "The description for control-id sys-1.6.a13.",
                 "props": [
@@ -5684,7 +5684,7 @@
                 ]
               },
               {
-                "uuid": "2233d2fa-1d38-4796-962d-5160648578e4",
+                "uuid": "727524a2-fd97-4e7a-8a49-84428d7c2207",
                 "control-id": "sys-1.6.a14",
                 "description": "The description for control-id sys-1.6.a14.",
                 "props": [
@@ -5697,7 +5697,7 @@
                 ]
               },
               {
-                "uuid": "4ab6ac9a-1849-4198-b207-abee712db758",
+                "uuid": "52ec8559-1aee-4e4d-80be-f3b664d0fb2d",
                 "control-id": "sys-1.6.a15",
                 "description": "Section 1: OpenShift supports the configuration of quotas for a project (client). Applications can have their resources appropriately limited using limits/requests. Network bandwidth is limited at the pod level and can be determined separately according to incoming and outgoing network bandwidth. In addition, outgoing traffic (egress) can be marked at the namespace level with differentiated services code point (DSCP) classifications in order to assign quality of service classes to the outgoing packets in the physical network. Section 2: This requirement must be implemented organizationally. Note: The behavior of OpenShift completely replicates the standard behavior of Kubernetes. If CPU limits are exceeded, the process is slowed down. If volatile memory is exceeded, the process is stopped and restarted by the scheduler. The persistent memory management is responsible for exceeding the persistent memory - OpenShift will not enforce or limit anything here. Compliance with the limited network bandwidth is enforced by dropping packets that exceed the limit.",
                 "props": [
@@ -5754,7 +5754,7 @@
                 ]
               },
               {
-                "uuid": "712840fa-1057-490c-bfc2-dbc48247098e",
+                "uuid": "131287b3-df2e-4f75-a62f-6398105ac636",
                 "control-id": "sys-1.6.a16",
                 "description": "The description for control-id sys-1.6.a16.",
                 "props": [
@@ -5822,7 +5822,7 @@
                 ]
               },
               {
-                "uuid": "d592b996-8bba-418d-98c1-ce747b8b67af",
+                "uuid": "e7062a8e-99bf-4816-b8f2-f4548b8585d7",
                 "control-id": "sys-1.6.a17",
                 "description": "Section 1: With OpenShift, application containers run in the Security Context Constraint (SCC) “restricted” by default. Section 2: OpenShift supports encapsulation by using SELinux. If necessary, entire nodes can also be encapsulated via underlying virtualization. This is always necessary when application containers require extended security context constraints (SCCs). With the sandbox function based on Kata Containers, OpenShift provides a convenient way to isolate containers using virtualization technology. Section 3: OpenShift offers several SCC to restrict access to the network, file system or the host itself. This should only be allowed for administrative applications such as SIEM scanners or other infrastructure services that require access to the host. These SCCs should never be given to application containers. Section 4: These exceptions must be documented in the operational documentation. A list of pods with the corresponding SCC annotation can serve as the basis for the documentation.",
                 "props": [
@@ -5899,7 +5899,7 @@
                 ]
               },
               {
-                "uuid": "ce9db940-d689-41d7-8277-055affcb0ee4",
+                "uuid": "5cb8ad44-213c-499c-8539-218561c5fe15",
                 "control-id": "sys-1.6.a18",
                 "description": "Section 1: With OpenShift, accounts within the container are separated from the host system by SELinux. This includes preventing the use of privileged user and group IDs as well as corresponding rights extensions (SET-UID, Set-GID bit). A range of UIDs/GIDs is provided for use in containers.\nSection 2: Security Context Constraints (SCCs) allow accounts in the container to gain controlled access.\nSection 3: The host system Red Hat CoreOS is immutable. The changes to the host operating system should only be made by OpenShift and should be necessary so that hardening by Red Hat is not inadvertently undermined. Since, in contrast to an unprotected container runtime environment, SELinux enforces the separation between the container runtime and the operating system, this mirroring of account names is not necessary.",
                 "props": [
@@ -5966,7 +5966,7 @@
                 ]
               },
               {
-                "uuid": "dccb3576-e8b5-4087-8bf6-361b8d979007",
+                "uuid": "62fdd164-eb45-48b4-b1a5-98a4651ae9b9",
                 "control-id": "sys-1.6.a19",
                 "description": "Section 1: Applications can access persistent volumes (PVs) and temporary (ephemeral) storage in OpenShift. Persisted volumes are connected as network storage, ephemeral storage serves primarily as volatile, short-lived mass storage and is allocated within the container file system. This configures which PV can be reached and the use of the ephemeral storage is separated per pod. This means that each pod has its own volatile mass storage. Volumes can be limited in size.\nSection 2: OpenShift implements the principle of least privileges. The definition is made via an explicit configuration at the deployment level.\nSection 3: By default, no local storage is included. For reasons of reliability, this is explicitly not recommended.\nSection 4: The network storage dictates the permissions. OpenShift supports this with the dynamically assigned UID/GID of the projects (clients).",
                 "props": [
@@ -5988,7 +5988,7 @@
                 ]
               },
               {
-                "uuid": "fee30c50-590a-4e2d-a647-fc0c603c1570",
+                "uuid": "5f2bf798-7d8a-47cf-8d73-90c941d2dcfb",
                 "control-id": "sys-1.6.a20",
                 "description": "Section 1: OpenShift only maintains the current version of the configuration. It is therefore recommended to use GitOps, in which the configuration is transferred from a git repository to the OpenShift cluster. OpenShift includes OpenShift GitOps (based on the community project ArgoCD), which supports easy implementation of a GitOps-based administration concept.\nSection 2: With a GitOps approach, all changes are documented in git.",
                 "props": [
@@ -6005,7 +6005,7 @@
                 ]
               },
               {
-                "uuid": "e650655b-1aab-4179-bed5-1fc27d4e42cf",
+                "uuid": "faa1deb0-0f6b-43c7-92d4-2cd2fc759491",
                 "control-id": "sys-1.6.a1",
                 "description": "The description for control-id sys-1.6.a1.",
                 "props": [
@@ -6018,7 +6018,7 @@
                 ]
               },
               {
-                "uuid": "ecc5898a-364f-4a79-88ca-39242d27278c",
+                "uuid": "8c5e214e-983e-4336-b0cb-2b93156ba25f",
                 "control-id": "sys-1.6.a2",
                 "description": "The description for control-id sys-1.6.a2.",
                 "props": [
@@ -6031,7 +6031,7 @@
                 ]
               },
               {
-                "uuid": "e270fcfe-24dc-46d8-822c-e7c9690c7e6b",
+                "uuid": "53ce4151-fbc1-496e-9bbe-4dc9cd31f925",
                 "control-id": "sys-1.6.a3",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: This requirement is actively supported by OpenShift. For example, OpenShift does not allow applications with fixed UID/GID settings as standard; on the contrary, these IDs are assigned dynamically (security-by-design). The behavior can be adjusted by administrators, for example for system tasks.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift supports the requirements through strict client separation based on a “Project” (an extension to the Kubernetes namespace). The containers are separated from each other and from the host system via cgroups using SELinux. As long as all applications run “restricted” in the Security Context Constraint (SCC), OpenShift maintains strict client separation.\nSection 3: This requirement must be implemented organizationally. OpenShift supports this requirement by leveraging SELinux with its cgroups to create the container sandbox.\nSection 4: This requirement must be implemented organizationally.\nSection 5: This requirement must be implemented organizationally. Note: OpenShift supports different network infrastructures via the CNI plugin interface (e.g. OVN-Kubernetes, OpenShift-SDN, hardware networks etc.) OVN-Kubernetes, hardware networks etc.) The underlying network is abstracted by the network model in Openshift and usage is consistent across containers. This allows OpenShift to uniformly implement network security features such as: Firewall rules over network policies.\nSection 6: This requirement must be implemented organizationally. Note: OpenShift provides fine-grained metrics for external capacity management via monitoring.\nSection 7: OpenShift offers automated checks for the availability and health of an application. If the LivenessProbe (Health) repeatedly receives a negative result or is not reachable, the affected pod with the container is restarted. Using ReadinessProbe, a container can control whether it is ready to accept HTTP(S) based requests or not. Note: Monitoring is considered in APP.4.4.A11.",
                 "props": [
@@ -6078,7 +6078,7 @@
                 ]
               },
               {
-                "uuid": "feaa5ea5-bea5-419f-a591-863412e8fae8",
+                "uuid": "904c493e-e92f-4c88-9323-f9a83598d7d4",
                 "control-id": "sys-1.6.a4",
                 "description": "The description for control-id sys-1.6.a4.",
                 "props": [
@@ -6091,7 +6091,7 @@
                 ]
               },
               {
-                "uuid": "fd4cb074-bd3d-45a7-96e5-6437c8f55d04",
+                "uuid": "ac53256c-97fc-4e94-96f8-47000e099403",
                 "control-id": "sys-1.6.a5",
                 "description": "Section 1: Hosts and containers are controlled via the Kubernetes API. This is addressed via api. The load balancer used for this is located in the administration network. The load balancer for *.apps. is set up separately in the active network. This means that the administration is appropriately separated. The Console (the OpenShift web UI) is used by all users. Authorization takes place at the API level and is secured via RBAC. The control plane is to be located in an administration network.\nSection 2: The web UI can be configured on another router that is terminated on the administration load balancer and is therefore only accessible from the administration network. This means that it can no longer be reached from the active network.\nSection 3: This is a standard OpenShift feature. The OpenShift documentation contains the necessary communication paths between control plane, infrastructure and worker nodes, as well as the necessary firewall activations of the underlying network stack at hardware or IaaS level. The communication between containers or pods within a client (“Project”) is not restricted by default, but can be regulated with micro-segmentation if necessary or as a service mesh with mTLS authentication be implemented (see APP.4.4.A18).\nExternally exposed services can receive their own IP and thus data traffic can also be separated outside the platform. Inter-node communication is carried out via suitable tunnel protocols (VXLAN, GENEVE) and can also be encrypted using IPSec.",
                 "props": [
@@ -6123,7 +6123,7 @@
                 ]
               },
               {
-                "uuid": "14793b13-646b-4f3d-9126-18e40c2bcf6e",
+                "uuid": "8b1eb387-016e-4e3d-ba5e-9781c26be2ca",
                 "control-id": "sys-1.6.a6",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: OpenShift supports the requirement by allowing only certain sources. This allows the sources from which images come to be restricted and new sources to be added in a controlled process. Quay can also be used to provide your own registry in an open environment as a trustworthy delivery point for external software. Images can also be checked for vulnerabilities here.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift makes it possible to verify the signatures of images before use and thus enforce the identification requirement. Red Hat Advanced Cluster Security for Kubernetes (ACS) can check and optionally enforce signatures as well as certain labels (e.g. MAINTAINER) for images. For images delivered by Red Hat via the official Red Hat Registry, the MAINTAINER label of the container images is always maintained, through which Red Hat can be identified as the creator of the images. Images are also signed with GPG keys.\nSection 3: This requirement must be implemented organizationally. Note: Images from the Red Hat Registry are regularly checked for security vulnerabilities and updated accordingly. The security status of the images is indicated via a health indicator. ACS can perform technical checks through regular scans and report conspicuous containers or containers with identified vulnerabilities, thereby supporting the implementation of the requirement.\nSection 4: This requirement must be implemented organizationally. Note: For discontinued images with appropriate identification (e.g. through labels), policies implemented in ACS can report these violations. ACS also provides policies that report when images have not been scanned for more than 30/60/90 days. However, this means that an image must be built and rolled out at this interval so that the scans during the build process are effective. With a CI/CD pipeline with a high level of automation, this usually does not represent any increased effort.\nSection 5: This requirement must be implemented organizationally. Note: Image-level labels or image tags could be used here.\nSection 6: This requirement must be implemented organizationally for integrated software or self-created software. Note: OpenShift supports Lifecycle Management (OLM) with Operator. Software managed using OLM or Cluster Operator receives updates via the Operator Hub or Cluster Updates. An automated check with automatic or alternatively manual release is possible for this software.",
                 "props": [
@@ -6160,7 +6160,7 @@
                 ]
               },
               {
-                "uuid": "2196dc16-01fa-4e82-99a7-33703695ba09",
+                "uuid": "d99b1d05-2d98-46d5-93ad-a05abc9fde66",
                 "control-id": "sys-1.6.a7",
                 "description": "The description for control-id sys-1.6.a7.",
                 "props": [
@@ -6173,7 +6173,7 @@
                 ]
               },
               {
-                "uuid": "6daa10c9-b5e0-4996-add6-3639d06ca88a",
+                "uuid": "18766ec6-5884-4302-8b5a-481100157268",
                 "control-id": "sys-1.6.a8",
                 "description": "Section 1: OpenShift offers secrets that are only available to the containers and the people authorized via RBAC in the tenant or project (client). Section 2: This requirement must be enforced as part of application development. OpenShift offers suitable mechanisms (secrets) with encryption of the etcd store if necessary. Section 3: OpenShift offers corresponding mechanisms (secrets). Unless the secrets are dynamically generated, third-party/community tools such as SealedSecrets or HashiCorp Vault can help securely deploy the secrets. Section 4: This requirement must be implemented organizationally. All of this information can and should be managed in Secrets.",
                 "props": [
@@ -6230,7 +6230,7 @@
                 ]
               },
               {
-                "uuid": "4d408be8-d502-4c07-bfc3-bc5e8a617035",
+                "uuid": "c36d18d4-4812-41a4-b1f9-207ba86207ea",
                 "control-id": "sys-1.6.a9",
                 "description": "The description for control-id sys-1.6.a9.",
                 "props": [
@@ -6243,7 +6243,7 @@
                 ]
               },
               {
-                "uuid": "4be01c71-a0ec-46c5-b272-2948a6591d1f",
+                "uuid": "0cdafbca-df2f-4556-b16c-ba9bc0153b02",
                 "control-id": "sys-1.6.a10",
                 "description": "The description for control-id sys-1.6.a10.",
                 "props": [
@@ -6256,7 +6256,7 @@
                 ]
               },
               {
-                "uuid": "ec8834f8-f06a-4b16-8f4a-3152e024193d",
+                "uuid": "d56c7150-a246-4f5d-b5ce-9fd20fe0779f",
                 "control-id": "sys-1.6.a11",
                 "description": "The description for control-id sys-1.6.a11.",
                 "props": [
@@ -6269,7 +6269,7 @@
                 ]
               },
               {
-                "uuid": "b31c0c71-ff18-4630-8657-0859f392cc1a",
+                "uuid": "2c86b46b-8d15-4a84-bc78-04a1892436eb",
                 "control-id": "sys-1.6.a12",
                 "description": "Section 1: The source of images can be restricted by configuring the allowed registries. In addition, this requirement must be implemented organizationally. Section 2: This requirement must be implemented organizationally. Section 3: This requirement is solved using image labels. Red Hat Images contain the labels io.k8s.description, summary, vender, version, url, vcs-ref and vcs-type, through which the delivered images are transparent in their function and history. For internal images, the existence of the labels can be ensured during application development. The existence of the corresponding labels can be ensured via ACS. Section 4: OpenShift can be configured to assign a digital signature to each approved registry. OpenShift then only executes images from this registry that are secured using this signature.",
                 "props": [
@@ -6296,7 +6296,7 @@
                 ]
               },
               {
-                "uuid": "f41cb149-59b3-41af-b341-7dbfc4ccce49",
+                "uuid": "b3ea8043-c2ec-45f8-8f6a-a848d838bf0a",
                 "control-id": "sys-1.6.a13",
                 "description": "The description for control-id sys-1.6.a13.",
                 "props": [
@@ -6309,7 +6309,7 @@
                 ]
               },
               {
-                "uuid": "17594ddf-fbdb-45db-9c7e-ba81f1aa50ae",
+                "uuid": "680abdd9-abdc-4d4b-a2a7-0b0ecba720eb",
                 "control-id": "sys-1.6.a14",
                 "description": "The description for control-id sys-1.6.a14.",
                 "props": [
@@ -6322,7 +6322,7 @@
                 ]
               },
               {
-                "uuid": "69be9ef0-0695-4791-b0e1-f5fb993988a9",
+                "uuid": "fc508d09-4e97-46b2-8c51-efa4d6ab53aa",
                 "control-id": "sys-1.6.a15",
                 "description": "Section 1: OpenShift supports the configuration of quotas for a project (client). Applications can have their resources appropriately limited using limits/requests. Network bandwidth is limited at the pod level and can be determined separately according to incoming and outgoing network bandwidth. In addition, outgoing traffic (egress) can be marked at the namespace level with differentiated services code point (DSCP) classifications in order to assign quality of service classes to the outgoing packets in the physical network. Section 2: This requirement must be implemented organizationally. Note: The behavior of OpenShift completely replicates the standard behavior of Kubernetes. If CPU limits are exceeded, the process is slowed down. If volatile memory is exceeded, the process is stopped and restarted by the scheduler. The persistent memory management is responsible for exceeding the persistent memory - OpenShift will not enforce or limit anything here. Compliance with the limited network bandwidth is enforced by dropping packets that exceed the limit.",
                 "props": [
@@ -6379,7 +6379,7 @@
                 ]
               },
               {
-                "uuid": "73e425c3-7aa4-475a-b7c8-c0adf09adf88",
+                "uuid": "37665b0e-9976-4944-868b-ef144f544dfa",
                 "control-id": "sys-1.6.a16",
                 "description": "The description for control-id sys-1.6.a16.",
                 "props": [
@@ -6447,7 +6447,7 @@
                 ]
               },
               {
-                "uuid": "eb07490b-e9f8-418d-b6c8-1b4d8da5a3ba",
+                "uuid": "66c961fd-a46a-44ee-b6b9-4d2444e4a338",
                 "control-id": "sys-1.6.a17",
                 "description": "Section 1: With OpenShift, application containers run in the Security Context Constraint (SCC) “restricted” by default. Section 2: OpenShift supports encapsulation by using SELinux. If necessary, entire nodes can also be encapsulated via underlying virtualization. This is always necessary when application containers require extended security context constraints (SCCs). With the sandbox function based on Kata Containers, OpenShift provides a convenient way to isolate containers using virtualization technology. Section 3: OpenShift offers several SCC to restrict access to the network, file system or the host itself. This should only be allowed for administrative applications such as SIEM scanners or other infrastructure services that require access to the host. These SCCs should never be given to application containers. Section 4: These exceptions must be documented in the operational documentation. A list of pods with the corresponding SCC annotation can serve as the basis for the documentation.",
                 "props": [
@@ -6524,7 +6524,7 @@
                 ]
               },
               {
-                "uuid": "216d06c1-9f8e-444f-b9ec-97f69d922a81",
+                "uuid": "de3c3457-60e3-4d4b-92d9-3add23717626",
                 "control-id": "sys-1.6.a18",
                 "description": "Section 1: With OpenShift, accounts within the container are separated from the host system by SELinux. This includes preventing the use of privileged user and group IDs as well as corresponding rights extensions (SET-UID, Set-GID bit). A range of UIDs/GIDs is provided for use in containers.\nSection 2: Security Context Constraints (SCCs) allow accounts in the container to gain controlled access.\nSection 3: The host system Red Hat CoreOS is immutable. The changes to the host operating system should only be made by OpenShift and should be necessary so that hardening by Red Hat is not inadvertently undermined. Since, in contrast to an unprotected container runtime environment, SELinux enforces the separation between the container runtime and the operating system, this mirroring of account names is not necessary.",
                 "props": [
@@ -6591,7 +6591,7 @@
                 ]
               },
               {
-                "uuid": "095528ae-0892-4825-85f8-b1f30944a42c",
+                "uuid": "5997fd59-7f17-465c-a069-e107d1b6826b",
                 "control-id": "sys-1.6.a19",
                 "description": "Section 1: Applications can access persistent volumes (PVs) and temporary (ephemeral) storage in OpenShift. Persisted volumes are connected as network storage, ephemeral storage serves primarily as volatile, short-lived mass storage and is allocated within the container file system. This configures which PV can be reached and the use of the ephemeral storage is separated per pod. This means that each pod has its own volatile mass storage. Volumes can be limited in size.\nSection 2: OpenShift implements the principle of least privileges. The definition is made via an explicit configuration at the deployment level.\nSection 3: By default, no local storage is included. For reasons of reliability, this is explicitly not recommended.\nSection 4: The network storage dictates the permissions. OpenShift supports this with the dynamically assigned UID/GID of the projects (clients).",
                 "props": [
@@ -6613,7 +6613,7 @@
                 ]
               },
               {
-                "uuid": "3b639a53-ae53-48c9-9444-3ab71f2b9045",
+                "uuid": "0e9265aa-e235-4a4a-bc9b-7c7c41ab262f",
                 "control-id": "sys-1.6.a20",
                 "description": "Section 1: OpenShift only maintains the current version of the configuration. It is therefore recommended to use GitOps, in which the configuration is transferred from a git repository to the OpenShift cluster. OpenShift includes OpenShift GitOps (based on the community project ArgoCD), which supports easy implementation of a GitOps-based administration concept.\nSection 2: With a GitOps approach, all changes are documented in git.",
                 "props": [
@@ -6630,7 +6630,7 @@
                 ]
               },
               {
-                "uuid": "0be97a1b-3501-4e8d-861a-c1444707aea2",
+                "uuid": "3b4bbd1d-7290-43d5-ad72-e91fcc70cd14",
                 "control-id": "sys-1.6.a1",
                 "description": "The description for control-id sys-1.6.a1.",
                 "props": [
@@ -6643,7 +6643,7 @@
                 ]
               },
               {
-                "uuid": "ff2154bf-7bc6-4a95-824d-c762e4f60d2c",
+                "uuid": "51cdccbd-d8ee-49c9-9ab9-c99d46a94067",
                 "control-id": "sys-1.6.a2",
                 "description": "The description for control-id sys-1.6.a2.",
                 "props": [
@@ -6656,7 +6656,7 @@
                 ]
               },
               {
-                "uuid": "779f81fd-d2b6-4145-9bfc-10fb949a85b5",
+                "uuid": "dd6eec95-a8be-44a9-b94b-8ae3fa32006a",
                 "control-id": "sys-1.6.a3",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: This requirement is actively supported by OpenShift. For example, OpenShift does not allow applications with fixed UID/GID settings as standard; on the contrary, these IDs are assigned dynamically (security-by-design). The behavior can be adjusted by administrators, for example for system tasks.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift supports the requirements through strict client separation based on a “Project” (an extension to the Kubernetes namespace). The containers are separated from each other and from the host system via cgroups using SELinux. As long as all applications run “restricted” in the Security Context Constraint (SCC), OpenShift maintains strict client separation.\nSection 3: This requirement must be implemented organizationally. OpenShift supports this requirement by leveraging SELinux with its cgroups to create the container sandbox.\nSection 4: This requirement must be implemented organizationally.\nSection 5: This requirement must be implemented organizationally. Note: OpenShift supports different network infrastructures via the CNI plugin interface (e.g. OVN-Kubernetes, OpenShift-SDN, hardware networks etc.) OVN-Kubernetes, hardware networks etc.) The underlying network is abstracted by the network model in Openshift and usage is consistent across containers. This allows OpenShift to uniformly implement network security features such as: Firewall rules over network policies.\nSection 6: This requirement must be implemented organizationally. Note: OpenShift provides fine-grained metrics for external capacity management via monitoring.\nSection 7: OpenShift offers automated checks for the availability and health of an application. If the LivenessProbe (Health) repeatedly receives a negative result or is not reachable, the affected pod with the container is restarted. Using ReadinessProbe, a container can control whether it is ready to accept HTTP(S) based requests or not. Note: Monitoring is considered in APP.4.4.A11.",
                 "props": [
@@ -6703,7 +6703,7 @@
                 ]
               },
               {
-                "uuid": "ea7e9aad-6304-4c0b-9ee7-764966de4af9",
+                "uuid": "eb4f0d9c-dffd-4426-bb58-bab3d06ba9c6",
                 "control-id": "sys-1.6.a4",
                 "description": "The description for control-id sys-1.6.a4.",
                 "props": [
@@ -6716,7 +6716,7 @@
                 ]
               },
               {
-                "uuid": "0e659319-7e2e-4e36-8e7e-a9a929a114ed",
+                "uuid": "b486e021-02d0-4ed2-9cca-3ae7c3320828",
                 "control-id": "sys-1.6.a5",
                 "description": "Section 1: Hosts and containers are controlled via the Kubernetes API. This is addressed via api. The load balancer used for this is located in the administration network. The load balancer for *.apps. is set up separately in the active network. This means that the administration is appropriately separated. The Console (the OpenShift web UI) is used by all users. Authorization takes place at the API level and is secured via RBAC. The control plane is to be located in an administration network.\nSection 2: The web UI can be configured on another router that is terminated on the administration load balancer and is therefore only accessible from the administration network. This means that it can no longer be reached from the active network.\nSection 3: This is a standard OpenShift feature. The OpenShift documentation contains the necessary communication paths between control plane, infrastructure and worker nodes, as well as the necessary firewall activations of the underlying network stack at hardware or IaaS level. The communication between containers or pods within a client (“Project”) is not restricted by default, but can be regulated with micro-segmentation if necessary or as a service mesh with mTLS authentication be implemented (see APP.4.4.A18).\nExternally exposed services can receive their own IP and thus data traffic can also be separated outside the platform. Inter-node communication is carried out via suitable tunnel protocols (VXLAN, GENEVE) and can also be encrypted using IPSec.",
                 "props": [
@@ -6748,7 +6748,7 @@
                 ]
               },
               {
-                "uuid": "6d23d6eb-a01c-4184-858f-0a383bb4f6f1",
+                "uuid": "113488f3-4a38-4c3c-bb3d-9d8d253a4705",
                 "control-id": "sys-1.6.a6",
                 "description": "Section 1: This requirement must be implemented organizationally. Note: OpenShift supports the requirement by allowing only certain sources. This allows the sources from which images come to be restricted and new sources to be added in a controlled process. Quay can also be used to provide your own registry in an open environment as a trustworthy delivery point for external software. Images can also be checked for vulnerabilities here.\nSection 2: This requirement must be implemented organizationally. Note: OpenShift makes it possible to verify the signatures of images before use and thus enforce the identification requirement. Red Hat Advanced Cluster Security for Kubernetes (ACS) can check and optionally enforce signatures as well as certain labels (e.g. MAINTAINER) for images. For images delivered by Red Hat via the official Red Hat Registry, the MAINTAINER label of the container images is always maintained, through which Red Hat can be identified as the creator of the images. Images are also signed with GPG keys.\nSection 3: This requirement must be implemented organizationally. Note: Images from the Red Hat Registry are regularly checked for security vulnerabilities and updated accordingly. The security status of the images is indicated via a health indicator. ACS can perform technical checks through regular scans and report conspicuous containers or containers with identified vulnerabilities, thereby supporting the implementation of the requirement.\nSection 4: This requirement must be implemented organizationally. Note: For discontinued images with appropriate identification (e.g. through labels), policies implemented in ACS can report these violations. ACS also provides policies that report when images have not been scanned for more than 30/60/90 days. However, this means that an image must be built and rolled out at this interval so that the scans during the build process are effective. With a CI/CD pipeline with a high level of automation, this usually does not represent any increased effort.\nSection 5: This requirement must be implemented organizationally. Note: Image-level labels or image tags could be used here.\nSection 6: This requirement must be implemented organizationally for integrated software or self-created software. Note: OpenShift supports Lifecycle Management (OLM) with Operator. Software managed using OLM or Cluster Operator receives updates via the Operator Hub or Cluster Updates. An automated check with automatic or alternatively manual release is possible for this software.",
                 "props": [
@@ -6785,7 +6785,7 @@
                 ]
               },
               {
-                "uuid": "eb585f11-4eb6-4c8c-95e7-a1c4a365ceca",
+                "uuid": "470e6bc7-b8a5-4116-b098-744b28f62f30",
                 "control-id": "sys-1.6.a7",
                 "description": "The description for control-id sys-1.6.a7.",
                 "props": [
@@ -6798,7 +6798,7 @@
                 ]
               },
               {
-                "uuid": "f7449337-e4f7-4ea7-bfe5-eb0abcbebfed",
+                "uuid": "e417ba23-fd12-46da-bf8a-8fffe48ff2c3",
                 "control-id": "sys-1.6.a8",
                 "description": "Section 1: OpenShift offers secrets that are only available to the containers and the people authorized via RBAC in the tenant or project (client). Section 2: This requirement must be enforced as part of application development. OpenShift offers suitable mechanisms (secrets) with encryption of the etcd store if necessary. Section 3: OpenShift offers corresponding mechanisms (secrets). Unless the secrets are dynamically generated, third-party/community tools such as SealedSecrets or HashiCorp Vault can help securely deploy the secrets. Section 4: This requirement must be implemented organizationally. All of this information can and should be managed in Secrets.",
                 "props": [
