@@ -3,8 +3,8 @@
     "uuid": "8dbe9ad3-6f87-4c33-8626-0df8d4eb24b5",
     "metadata": {
       "title": "Component definition for rhel10",
-      "last-modified": "2025-11-05T15:38:56.253788+00:00",
-      "version": "1.3",
+      "last-modified": "2025-12-12T10:53:52.945939+00:00",
+      "version": "1.4",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -1937,91 +1937,103 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "zipl_bls_entries_only",
+            "value": "package_sequoia-sq_installed",
             "remarks": "rule_set_130"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Install sequoia-sq Package",
+            "remarks": "rule_set_130"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "zipl_bls_entries_only",
+            "remarks": "rule_set_131"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Ensure all zIPL boot entries are BLS compliant",
-            "remarks": "rule_set_130"
+            "remarks": "rule_set_131"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "zipl_bootmap_is_up_to_date",
-            "remarks": "rule_set_131"
+            "remarks": "rule_set_132"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Ensure zIPL bootmap is up to date",
-            "remarks": "rule_set_131"
+            "remarks": "rule_set_132"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "sshd_enable_warning_banner",
-            "remarks": "rule_set_132"
+            "remarks": "rule_set_133"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable SSH Warning Banner",
-            "remarks": "rule_set_132"
+            "remarks": "rule_set_133"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "grub2_init_on_alloc_argument",
-            "remarks": "rule_set_133"
+            "remarks": "rule_set_134"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure kernel to zero out memory before allocation",
-            "remarks": "rule_set_133"
+            "remarks": "rule_set_134"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "grub2_page_alloc_shuffle_argument",
-            "remarks": "rule_set_134"
+            "remarks": "rule_set_135"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable randomization of the page allocator",
-            "remarks": "rule_set_134"
+            "remarks": "rule_set_135"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "zipl_init_on_alloc_argument",
-            "remarks": "rule_set_135"
+            "remarks": "rule_set_136"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure kernel to zero out memory before allocation in zIPL",
-            "remarks": "rule_set_135"
+            "remarks": "rule_set_136"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "zipl_page_alloc_shuffle_argument",
-            "remarks": "rule_set_136"
+            "remarks": "rule_set_137"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable randomization of the page allocator in zIPL",
-            "remarks": "rule_set_136"
+            "remarks": "rule_set_137"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "aece421a-b7fd-4c96-9364-0e075e65fa04",
+            "uuid": "3d80845b-8bcf-4653-a2e7-606e43fcfd42",
             "source": "trestle://profiles/rhel10-ospp-base/profile.json",
             "description": "Control implementation for ospp",
             "props": [
@@ -2155,7 +2167,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "fef3e08e-12d2-4a94-895e-e0f9f0fe45c9",
+                "uuid": "27897861-d9f8-46b9-b2e9-30f6ceeb6965",
                 "control-id": "agd_ope-1",
                 "description": "No notes for control-id AGD_OPE.1.",
                 "props": [
@@ -2172,7 +2184,7 @@
                 ]
               },
               {
-                "uuid": "26eda09f-127e-4f18-8527-07699af8b385",
+                "uuid": "746481c3-7cdc-4a1b-b8a3-b01e44fd8626",
                 "control-id": "agd_pre-1",
                 "description": "No notes for control-id AGD_PRE.1.",
                 "props": [
@@ -2189,7 +2201,7 @@
                 ]
               },
               {
-                "uuid": "8296b38b-e635-4c75-bb63-8805b8903749",
+                "uuid": "a0609d6d-3b03-4340-929b-c1d621b9b44c",
                 "control-id": "fau_gen-1",
                 "description": "No notes for control-id FAU_GEN.1.",
                 "props": [
@@ -2241,7 +2253,7 @@
                 ]
               },
               {
-                "uuid": "b7495ecc-9eff-45b6-af4e-209e7a4155b4",
+                "uuid": "b28c4a62-32ce-4b54-b8c9-87b43fc796d1",
                 "control-id": "fau_gen-1.1",
                 "description": "No notes for control-id FAU_GEN.1.1.",
                 "props": [
@@ -2458,7 +2470,7 @@
                 ]
               },
               {
-                "uuid": "522fb2d1-73b5-4393-8850-7f4d3e2f8e16",
+                "uuid": "66cb2f6e-b4f6-4d4f-b18b-72e6831dfb32",
                 "control-id": "fau_gen-1.2",
                 "description": "No notes for control-id FAU_GEN.1.2.",
                 "props": [
@@ -2495,7 +2507,7 @@
                 ]
               },
               {
-                "uuid": "5aacc5e1-c1f0-4ab0-b4bf-cdf7fdfb8b41",
+                "uuid": "f8a6bf64-d93c-4461-94e1-37dee474663f",
                 "control-id": "fau_stg-1",
                 "description": "No notes for control-id FAU_STG.1.",
                 "props": [
@@ -2517,7 +2529,7 @@
                 ]
               },
               {
-                "uuid": "91dcfac8-46cd-4106-9368-5a9770e77689",
+                "uuid": "f89aba63-1d09-4d43-84d4-f57f76ada5fa",
                 "control-id": "fcs_ckm-1",
                 "description": "No notes for control-id FCS_CKM.1.",
                 "props": [
@@ -2549,7 +2561,7 @@
                 ]
               },
               {
-                "uuid": "daaad320-0be9-41a2-b074-19f9c1ec42f6",
+                "uuid": "722b6ae5-4646-4e50-aa37-c9de004f06aa",
                 "control-id": "fcs_ckm-1.1",
                 "description": "No notes for control-id FCS_CKM.1.1.",
                 "props": [
@@ -2581,7 +2593,7 @@
                 ]
               },
               {
-                "uuid": "65f55857-b635-4157-8922-59a3c8d0434f",
+                "uuid": "d9480741-da1c-43ac-a74a-b5ab5fef037d",
                 "control-id": "fcs_ckm-2",
                 "description": "No notes for control-id FCS_CKM.2.",
                 "props": [
@@ -2613,7 +2625,7 @@
                 ]
               },
               {
-                "uuid": "e91d234a-a485-4660-b449-46d9aa9ef98d",
+                "uuid": "a23cc8e9-cc33-4d1e-8b66-8b1d8f344255",
                 "control-id": "fcs_cop-1.encrypt",
                 "description": "No notes for control-id FCS_COP.1/ENCRYPT.",
                 "props": [
@@ -2645,7 +2657,7 @@
                 ]
               },
               {
-                "uuid": "6bfa7625-4ddc-4054-b782-b37bcf56158c",
+                "uuid": "a489c6b3-aaa9-45c4-9df5-8bba7ad1e2a3",
                 "control-id": "fcs_cop-1.hash",
                 "description": "No notes for control-id FCS_COP.1/HASH.",
                 "props": [
@@ -2677,7 +2689,7 @@
                 ]
               },
               {
-                "uuid": "4638efd8-e2d0-4fa8-86ff-d2657c3210e5",
+                "uuid": "8c7c8d6c-ac1e-462d-913b-4aa0c32d88dc",
                 "control-id": "fcs_cop-1.sign",
                 "description": "No notes for control-id FCS_COP.1/SIGN.",
                 "props": [
@@ -2709,7 +2721,7 @@
                 ]
               },
               {
-                "uuid": "1097dfde-b013-4394-81f3-41f1ad50795b",
+                "uuid": "4da58ec6-74fa-47df-b3b2-efa8081db79c",
                 "control-id": "fcs_cop-1.keyhmac",
                 "description": "No notes for control-id FCS_COP.1/KEYHMAC.",
                 "props": [
@@ -2741,7 +2753,7 @@
                 ]
               },
               {
-                "uuid": "0d4814a1-5ae8-4d1b-b807-869b668107da",
+                "uuid": "fcf495cf-683d-4726-aea3-b5f5cd196735",
                 "control-id": "fcs_rbg_ext-1",
                 "description": "No notes for control-id FCS_RBG_EXT.1.",
                 "props": [
@@ -2758,7 +2770,7 @@
                 ]
               },
               {
-                "uuid": "7f7eeb96-c8ad-4259-83e0-46dfa4c2d038",
+                "uuid": "9a8ade0e-34fb-444c-ba18-e1b7b782f482",
                 "control-id": "fcs_rbg_ext-1.1",
                 "description": "No notes for control-id FCS_RBG_EXT.1.1.",
                 "props": [
@@ -2775,7 +2787,7 @@
                 ]
               },
               {
-                "uuid": "7ab6f9ee-74f2-4395-8bd4-45ea35b8449a",
+                "uuid": "2b75f22e-a04d-495e-a491-222667b2af1e",
                 "control-id": "fcs_rbg_ext-1.2",
                 "description": "No notes for control-id FCS_RBG_EXT.1.2.",
                 "props": [
@@ -2792,7 +2804,7 @@
                 ]
               },
               {
-                "uuid": "14290888-22e6-43a7-b302-32dd8b768b0a",
+                "uuid": "100785be-82c2-4f8d-abc3-f14b12dec433",
                 "control-id": "fcs_sshc_ext-1",
                 "description": "No notes for control-id FCS_SSHC_EXT.1.",
                 "props": [
@@ -2814,7 +2826,7 @@
                 ]
               },
               {
-                "uuid": "6bf06cd7-7842-4998-848f-65f6fd5a6ec0",
+                "uuid": "7dcff9af-34dd-408c-a710-ddcbbd5fbc6d",
                 "control-id": "fcs_sshs_ext-1",
                 "description": "No notes for control-id FCS_SSHS_EXT.1.",
                 "props": [
@@ -2836,7 +2848,7 @@
                 ]
               },
               {
-                "uuid": "129e9126-c55e-487d-9105-5c653ea98e13",
+                "uuid": "2655594a-0f00-4791-91b5-e451662fe83d",
                 "control-id": "fcs_ssh_ext-1",
                 "description": "No notes for control-id FCS_SSH_EXT.1.",
                 "props": [
@@ -2868,7 +2880,7 @@
                 ]
               },
               {
-                "uuid": "2adc6f49-b6a4-46f9-937d-29d23f04ec04",
+                "uuid": "ea5cb22b-fc6a-41ed-bcd7-b57149d610e7",
                 "control-id": "fcs_ssh_ext-1.2",
                 "description": "No notes for control-id FCS_SSH_EXT.1.2.",
                 "props": [
@@ -2890,7 +2902,7 @@
                 ]
               },
               {
-                "uuid": "85fa20d7-5912-468f-b312-29c686d8e8c2",
+                "uuid": "d2efc485-5a63-414c-8249-8347448743df",
                 "control-id": "fcs_ssh_ext-1.8",
                 "description": "No notes for control-id FCS_SSH_EXT.1.8.",
                 "props": [
@@ -2912,7 +2924,7 @@
                 ]
               },
               {
-                "uuid": "9a4c8e5f-5a70-4b2f-a3e7-407ea285f275",
+                "uuid": "1b5f8f60-692d-418c-8a16-1603a3594a07",
                 "control-id": "fcs_tlsc_ext-1",
                 "description": "No notes for control-id FCS_TLSC_EXT.1.",
                 "props": [
@@ -2944,7 +2956,7 @@
                 ]
               },
               {
-                "uuid": "67e4837c-b77c-4a1b-adc8-e7894e59cc53",
+                "uuid": "f81a21d9-2441-412c-92d9-825aad775d98",
                 "control-id": "fcs_tlsc_ext-1.1",
                 "description": "No notes for control-id FCS_TLSC_EXT.1.1.",
                 "props": [
@@ -2976,7 +2988,7 @@
                 ]
               },
               {
-                "uuid": "2b1833e0-5a53-452f-a88d-0b063d157ab7",
+                "uuid": "abb5544d-795c-4e23-8cfc-a137b82b2c7f",
                 "control-id": "fia_afl-1",
                 "description": "No notes for control-id FIA_AFL.1.",
                 "props": [
@@ -3003,7 +3015,7 @@
                 ]
               },
               {
-                "uuid": "392c61b6-4395-4eba-baeb-91243b47a262",
+                "uuid": "f4dd96b8-8379-4ca4-9b88-655afe553b4f",
                 "control-id": "fia_uau-1",
                 "description": "No notes for control-id FIA_UAU.1.",
                 "props": [
@@ -3060,7 +3072,7 @@
                 ]
               },
               {
-                "uuid": "6a9d9d43-6327-46f3-a4b1-3078e88f2340",
+                "uuid": "cd83b146-ae94-4f6f-b77a-3cd825e813ae",
                 "control-id": "fia_uau-5",
                 "description": "No notes for control-id FIA_UAU.5.",
                 "props": [
@@ -3082,7 +3094,7 @@
                 ]
               },
               {
-                "uuid": "1825da28-5927-4c00-a5bd-624d738bc77a",
+                "uuid": "030cd075-140d-498a-a150-83075c48233c",
                 "control-id": "fia_x509_ext-1",
                 "description": "No notes for control-id FIA_X509_EXT.1.",
                 "props": [
@@ -3099,7 +3111,7 @@
                 ]
               },
               {
-                "uuid": "ccd2a2d8-8f29-4de4-93d4-fb0a5f10cf31",
+                "uuid": "61197ddd-753f-408d-bae3-644af73d6dc4",
                 "control-id": "fia_x509_ext-1.1",
                 "description": "No notes for control-id FIA_X509_EXT.1.1.",
                 "props": [
@@ -3116,7 +3128,7 @@
                 ]
               },
               {
-                "uuid": "cf5f27a8-2f03-474a-82b5-8bd5d176ee9e",
+                "uuid": "e02476f2-2ad4-47b6-825d-fec41bdd439a",
                 "control-id": "fia_x509_ext-2",
                 "description": "No notes for control-id FIA_X509_EXT.2.",
                 "props": [
@@ -3133,7 +3145,7 @@
                 ]
               },
               {
-                "uuid": "6d2e5033-695b-4880-bf1a-9cb9b40a96e9",
+                "uuid": "64884922-a7fa-4b64-9ccb-905ad4681610",
                 "control-id": "fmt_mof_ext-1",
                 "description": "No notes for control-id FMT_MOF_EXT.1.",
                 "props": [
@@ -3165,7 +3177,7 @@
                 ]
               },
               {
-                "uuid": "92cb3791-6908-483d-bf46-38ba68df3978",
+                "uuid": "258a8af5-4655-44e2-bb53-093ef4649ccd",
                 "control-id": "fmt_smf_ext-1",
                 "description": "No notes for control-id FMT_SMF_EXT.1.",
                 "props": [
@@ -3357,7 +3369,7 @@
                 ]
               },
               {
-                "uuid": "26102031-9a68-4f2f-ac84-49cee9e35ed6",
+                "uuid": "f2a15118-8bfe-4a07-9ee7-c08cd995062d",
                 "control-id": "fmt_smf_ext-1.1",
                 "description": "No notes for control-id FMT_SMF_EXT.1.1.",
                 "props": [
@@ -3384,7 +3396,7 @@
                 ]
               },
               {
-                "uuid": "8c635964-3e43-4a44-8145-50087aa414e2",
+                "uuid": "f347e831-420f-46af-8f4c-ba3a318c54fd",
                 "control-id": "fpt_aslr_ext-1",
                 "description": "No notes for control-id FPT_ASLR_EXT.1.",
                 "props": [
@@ -3401,7 +3413,7 @@
                 ]
               },
               {
-                "uuid": "968b7159-2ba6-4d18-82e5-163cd085e9d1",
+                "uuid": "23263b5a-9827-4242-afac-6b6e7167618d",
                 "control-id": "fpt_tud_ext-1",
                 "description": "No notes for control-id FPT_TUD_EXT.1.",
                 "props": [
@@ -3439,11 +3451,16 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "ensure_redhat_gpgkey_installed"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "package_sequoia-sq_installed"
                   }
                 ]
               },
               {
-                "uuid": "ea1574e0-9f61-4082-9724-f1c9d2f0aaad",
+                "uuid": "fa6a156d-128a-431e-adbd-565ebf2491c5",
                 "control-id": "fpt_tud_ext-2",
                 "description": "No notes for control-id FPT_TUD_EXT.2.",
                 "props": [
@@ -3481,11 +3498,16 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "ensure_redhat_gpgkey_installed"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "package_sequoia-sq_installed"
                   }
                 ]
               },
               {
-                "uuid": "5b03e24c-3fcf-4d29-acb1-180b43ccd6b5",
+                "uuid": "e2d39939-6df5-4fc0-8a7b-b2edbd8c9d38",
                 "control-id": "fpt_tst_ext-1",
                 "description": "No notes for control-id FPT_TST_EXT.1.",
                 "props": [
@@ -3507,7 +3529,7 @@
                 ]
               },
               {
-                "uuid": "43728cc6-4f80-400b-aff5-b9d3e23a4bd3",
+                "uuid": "0517d130-d7c5-42cc-9c3e-46e62fc66c08",
                 "control-id": "fta_ssl-1",
                 "description": "No notes for control-id FTA_SSL.1.",
                 "props": [
@@ -3524,7 +3546,7 @@
                 ]
               },
               {
-                "uuid": "269662bf-6e63-40d7-8cd8-cf7e45869233",
+                "uuid": "870e60dd-14d9-4749-a900-063ef124bdcc",
                 "control-id": "fta_tab-1",
                 "description": "No notes for control-id FTA_TAB.1.",
                 "props": [
@@ -3541,7 +3563,7 @@
                 ]
               },
               {
-                "uuid": "42484881-ad88-4faf-bf0b-83f4781e395b",
+                "uuid": "5006d6b4-fe35-4d77-b94f-e53a3ee7d7b6",
                 "control-id": "ftp_itc_ext-1",
                 "description": "No notes for control-id FTP_ITC_EXT.1.",
                 "props": [
@@ -3573,7 +3595,7 @@
                 ]
               },
               {
-                "uuid": "7f1f3474-7cf0-40cd-a23e-414426d9e846",
+                "uuid": "98823b50-d20a-4a3e-a9b7-860be708e8c1",
                 "control-id": "ftp_itc_ext-1.1",
                 "description": "No notes for control-id FTP_ITC_EXT.1.1.",
                 "props": [
@@ -3605,7 +3627,7 @@
                 ]
               },
               {
-                "uuid": "0224e895-5f93-4bd2-a09c-0835922faeb2",
+                "uuid": "68ddecc5-c2a2-4bf1-8424-729222062f57",
                 "control-id": "ava_van-1",
                 "description": "No notes for control-id AVA_VAN.1.",
                 "props": [
