@@ -3,8 +3,8 @@
     "uuid": "186b75e3-6306-4419-b0a0-4f92c86067ab",
     "metadata": {
       "title": "Component definition for rhel10",
-      "last-modified": "2025-12-11T18:23:51.407319+00:00",
-      "version": "1.3",
+      "last-modified": "2025-12-17T11:11:28.722800+00:00",
+      "version": "1.4",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -167,7 +167,7 @@
           {
             "name": "Parameter_Value_Alternatives_7",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
+            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT', 'cis_rhel10': 'YESCRYPT|SHA512'}",
             "remarks": "rule_set_00"
           },
           {
@@ -185,7 +185,7 @@
           {
             "name": "Parameter_Value_Alternatives_8",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
+            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt', 'cis_rhel10': 'yescrypt|sha512'}",
             "remarks": "rule_set_00"
           },
           {
@@ -617,163 +617,175 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "package_dnf-automatic_installed",
+            "value": "package_sequoia-sq_installed",
             "remarks": "rule_set_23"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Install sequoia-sq Package",
+            "remarks": "rule_set_23"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "package_dnf-automatic_installed",
+            "remarks": "rule_set_24"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Install dnf-automatic Package",
-            "remarks": "rule_set_23"
+            "remarks": "rule_set_24"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "timer_dnf-automatic_enabled",
-            "remarks": "rule_set_24"
+            "remarks": "rule_set_25"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable dnf-automatic Timer",
-            "remarks": "rule_set_24"
+            "remarks": "rule_set_25"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "dnf-automatic_apply_updates",
-            "remarks": "rule_set_25"
+            "remarks": "rule_set_26"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure dnf-automatic to Install Available Updates Automatically",
-            "remarks": "rule_set_25"
+            "remarks": "rule_set_26"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "dnf-automatic_security_updates_only",
-            "remarks": "rule_set_26"
+            "remarks": "rule_set_27"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure dnf-automatic to Install Only Security Updates",
-            "remarks": "rule_set_26"
+            "remarks": "rule_set_27"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_kea_removed",
-            "remarks": "rule_set_27"
+            "remarks": "rule_set_28"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall kea Package",
-            "remarks": "rule_set_27"
+            "remarks": "rule_set_28"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_telnet_removed",
-            "remarks": "rule_set_28"
+            "remarks": "rule_set_29"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Remove telnet Clients",
-            "remarks": "rule_set_28"
+            "remarks": "rule_set_29"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_telnet-server_removed",
-            "remarks": "rule_set_29"
+            "remarks": "rule_set_30"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall telnet-server Package",
-            "remarks": "rule_set_29"
+            "remarks": "rule_set_30"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_tftp_removed",
-            "remarks": "rule_set_30"
+            "remarks": "rule_set_31"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Remove tftp Daemon",
-            "remarks": "rule_set_30"
+            "remarks": "rule_set_31"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_tftp-server_removed",
-            "remarks": "rule_set_31"
+            "remarks": "rule_set_32"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall tftp-server Package",
-            "remarks": "rule_set_31"
+            "remarks": "rule_set_32"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "set_password_hashing_algorithm_systemauth",
-            "remarks": "rule_set_32"
+            "remarks": "rule_set_33"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set PAM Password Hashing Algorithm - system-auth",
-            "remarks": "rule_set_32"
+            "remarks": "rule_set_33"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "accounts_password_pam_unix_rounds_system_auth",
-            "remarks": "rule_set_33"
+            "remarks": "rule_set_34"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set number of Password Hashing Rounds - system-auth",
-            "remarks": "rule_set_33"
+            "remarks": "rule_set_34"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "accounts_password_pam_unix_rounds_password_auth",
-            "remarks": "rule_set_34"
+            "remarks": "rule_set_35"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set number of Password Hashing Rounds - password-auth",
-            "remarks": "rule_set_34"
+            "remarks": "rule_set_35"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "accounts_password_pam_minclass",
-            "remarks": "rule_set_35"
+            "remarks": "rule_set_36"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Ensure PAM Enforces Password Requirements - Minimum Different Categories",
-            "remarks": "rule_set_35"
+            "remarks": "rule_set_36"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "7ba97df9-886a-457a-8370-5491b0e109a6",
+            "uuid": "e6ac02d1-c84b-461d-bd53-cdc625801653",
             "source": "trestle://profiles/rhel10-anssi-minimal/profile.json",
             "description": "Control implementation for anssi_bp28_minimal",
             "props": [
@@ -895,7 +907,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "c83bac61-f9a7-485d-91d8-6c27a1175eae",
+                "uuid": "f6e7977d-2540-4abf-8ab7-6fe337a35130",
                 "control-id": "r30",
                 "description": "The description for control-id r30.",
                 "props": [
@@ -908,7 +920,7 @@
                 ]
               },
               {
-                "uuid": "b2820e09-a043-4d94-a4bf-be286c322176",
+                "uuid": "9de0f6a6-345c-4f03-a835-29ab3b60ceab",
                 "control-id": "r31",
                 "description": "The rules selected below establish a general password strength baseline of 100 bits, based on the recommendations of the technical note \"Recommandations relatives à l'authentification multifacteur et aux mots de passe\" (https://cyber.gouv.fr/publications/recommandations-relatives-lauthentification-multifacteur-et-aux-mots-de-passe)\nThe baseline should be reviewed and tailored to the system's use case and needs.",
                 "props": [
@@ -980,7 +992,7 @@
                 ]
               },
               {
-                "uuid": "e0a62f17-4a01-442f-bb31-60abddfab4a9",
+                "uuid": "571400bf-0af9-4fb9-ad2c-c044ebd1f5dc",
                 "control-id": "r53",
                 "description": "No notes for control-id R53.",
                 "props": [
@@ -1002,7 +1014,7 @@
                 ]
               },
               {
-                "uuid": "289341aa-ddc6-4054-b3ff-14c7939b6698",
+                "uuid": "b8173954-5414-45ac-b7a9-d07179bed1d0",
                 "control-id": "r54",
                 "description": "No notes for control-id R54.",
                 "props": [
@@ -1029,7 +1041,7 @@
                 ]
               },
               {
-                "uuid": "9b4bcb8b-07bb-402d-9fbb-ab6fbfe48765",
+                "uuid": "389b0ef4-6750-4414-ac03-3c78ad5088f5",
                 "control-id": "r56",
                 "description": "Only programs specifically designed to be used with setuid or setgid bits can have these privilege bits set. This requirement considers apropriate for setuid and setgid bits the binaries that are installed from recognized and authorized repositories (covered in R15). The remediation resets the sticky bit to intended value by vendor/developer, any finding after remediation should be reviewed.",
                 "props": [
@@ -1051,7 +1063,7 @@
                 ]
               },
               {
-                "uuid": "3232cafc-16f0-471b-bf55-98fd2a147e86",
+                "uuid": "feb9cdb0-3759-4ff5-9834-e7dc2300055a",
                 "control-id": "r58",
                 "description": "The description for control-id r58.",
                 "props": [
@@ -1064,7 +1076,7 @@
                 ]
               },
               {
-                "uuid": "3eb30ab8-c619-47f7-a56a-18ea15e7795c",
+                "uuid": "fbdecb8b-c291-4324-abdf-5e8cee2a98db",
                 "control-id": "r59",
                 "description": "It is not trivial to distinguish an official repository from an unofficial one. We cannot draw conclusions from the repo name or URL of the repo (as they can be arbitrary or behind a proxy). One approach to check the origin of installed packages is to check the signature of the packages. If the public key of a repository is not installed, the repo is not trusted.",
                 "props": [
@@ -1092,11 +1104,16 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "ensure_redhat_gpgkey_installed"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "package_sequoia-sq_installed"
                   }
                 ]
               },
               {
-                "uuid": "b7c397e2-d614-4f49-9eb2-7fe605fa8694",
+                "uuid": "50f5d604-cef0-4ea7-8a90-0caa322a5428",
                 "control-id": "r61",
                 "description": "Check the vendor CVE feed and configure automatic install of security related updates.",
                 "props": [
@@ -1128,7 +1145,7 @@
                 ]
               },
               {
-                "uuid": "e040b154-fd70-46e8-86ef-0adc7f12f6f0",
+                "uuid": "862b3bb3-3997-4670-bd0a-803766058af5",
                 "control-id": "r62",
                 "description": "The description for control-id r62.",
                 "props": [
@@ -1166,7 +1183,7 @@
                 ]
               },
               {
-                "uuid": "fb5d45e1-414c-44b0-8884-9206c9a78bd0",
+                "uuid": "8e84cdef-d50a-498f-9aa8-7909d325d05c",
                 "control-id": "r68",
                 "description": "The selection of rules doesn't cover the use of hardware devices to protect the passwords.",
                 "props": [
@@ -1203,7 +1220,7 @@
                 ]
               },
               {
-                "uuid": "7b9735bf-30d5-4ee0-a091-c92eb28f7a6e",
+                "uuid": "b8449ee9-a54d-4d87-8734-304fdb38b869",
                 "control-id": "r80",
                 "description": "The description for control-id r80.",
                 "props": [
@@ -1390,7 +1407,7 @@
           {
             "name": "Parameter_Value_Alternatives_7",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT'}",
+            "value": "{'default': 'SHA512', 'SHA512': 'SHA512', 'SHA256': 'SHA256', 'yescrypt': 'YESCRYPT', 'cis_ubuntu2204': 'SHA512|YESCRYPT', 'cis_ubuntu2404': 'SHA512|YESCRYPT', 'cis_rhel10': 'YESCRYPT|SHA512'}",
             "remarks": "rule_set_00"
           },
           {
@@ -1408,7 +1425,7 @@
           {
             "name": "Parameter_Value_Alternatives_8",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt'}",
+            "value": "{'default': 'sha512', 'sha512': 'sha512', 'yescrypt': 'yescrypt', 'cis_rhel10': 'yescrypt|sha512'}",
             "remarks": "rule_set_00"
           },
           {
@@ -2104,319 +2121,343 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "package_dnf-automatic_installed",
+            "value": "package_sequoia-sq_installed",
             "remarks": "rule_set_23"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Install sequoia-sq Package",
+            "remarks": "rule_set_23"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "package_sequoia-sq_installed",
+            "remarks": "rule_set_23"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Install sequoia-sq Package",
+            "remarks": "rule_set_23"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "package_dnf-automatic_installed",
+            "remarks": "rule_set_24"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Install dnf-automatic Package",
-            "remarks": "rule_set_23"
+            "remarks": "rule_set_24"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_dnf-automatic_installed",
-            "remarks": "rule_set_23"
+            "remarks": "rule_set_24"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Install dnf-automatic Package",
-            "remarks": "rule_set_23"
+            "remarks": "rule_set_24"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "timer_dnf-automatic_enabled",
-            "remarks": "rule_set_24"
+            "remarks": "rule_set_25"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable dnf-automatic Timer",
-            "remarks": "rule_set_24"
+            "remarks": "rule_set_25"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "timer_dnf-automatic_enabled",
-            "remarks": "rule_set_24"
+            "remarks": "rule_set_25"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable dnf-automatic Timer",
-            "remarks": "rule_set_24"
+            "remarks": "rule_set_25"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "dnf-automatic_apply_updates",
-            "remarks": "rule_set_25"
+            "remarks": "rule_set_26"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure dnf-automatic to Install Available Updates Automatically",
-            "remarks": "rule_set_25"
+            "remarks": "rule_set_26"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "dnf-automatic_apply_updates",
-            "remarks": "rule_set_25"
+            "remarks": "rule_set_26"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure dnf-automatic to Install Available Updates Automatically",
-            "remarks": "rule_set_25"
+            "remarks": "rule_set_26"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "dnf-automatic_security_updates_only",
-            "remarks": "rule_set_26"
+            "remarks": "rule_set_27"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure dnf-automatic to Install Only Security Updates",
-            "remarks": "rule_set_26"
+            "remarks": "rule_set_27"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "dnf-automatic_security_updates_only",
-            "remarks": "rule_set_26"
+            "remarks": "rule_set_27"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure dnf-automatic to Install Only Security Updates",
-            "remarks": "rule_set_26"
+            "remarks": "rule_set_27"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_kea_removed",
-            "remarks": "rule_set_27"
+            "remarks": "rule_set_28"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall kea Package",
-            "remarks": "rule_set_27"
+            "remarks": "rule_set_28"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_kea_removed",
-            "remarks": "rule_set_27"
+            "remarks": "rule_set_28"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall kea Package",
-            "remarks": "rule_set_27"
+            "remarks": "rule_set_28"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_telnet_removed",
-            "remarks": "rule_set_28"
+            "remarks": "rule_set_29"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Remove telnet Clients",
-            "remarks": "rule_set_28"
+            "remarks": "rule_set_29"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_telnet_removed",
-            "remarks": "rule_set_28"
+            "remarks": "rule_set_29"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Remove telnet Clients",
-            "remarks": "rule_set_28"
+            "remarks": "rule_set_29"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_telnet-server_removed",
-            "remarks": "rule_set_29"
+            "remarks": "rule_set_30"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall telnet-server Package",
-            "remarks": "rule_set_29"
+            "remarks": "rule_set_30"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_telnet-server_removed",
-            "remarks": "rule_set_29"
+            "remarks": "rule_set_30"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall telnet-server Package",
-            "remarks": "rule_set_29"
+            "remarks": "rule_set_30"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_tftp_removed",
-            "remarks": "rule_set_30"
+            "remarks": "rule_set_31"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Remove tftp Daemon",
-            "remarks": "rule_set_30"
+            "remarks": "rule_set_31"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_tftp_removed",
-            "remarks": "rule_set_30"
+            "remarks": "rule_set_31"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Remove tftp Daemon",
-            "remarks": "rule_set_30"
+            "remarks": "rule_set_31"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_tftp-server_removed",
-            "remarks": "rule_set_31"
+            "remarks": "rule_set_32"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall tftp-server Package",
-            "remarks": "rule_set_31"
+            "remarks": "rule_set_32"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_tftp-server_removed",
-            "remarks": "rule_set_31"
+            "remarks": "rule_set_32"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall tftp-server Package",
-            "remarks": "rule_set_31"
+            "remarks": "rule_set_32"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "set_password_hashing_algorithm_systemauth",
-            "remarks": "rule_set_32"
+            "remarks": "rule_set_33"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set PAM Password Hashing Algorithm - system-auth",
-            "remarks": "rule_set_32"
+            "remarks": "rule_set_33"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "set_password_hashing_algorithm_systemauth",
-            "remarks": "rule_set_32"
+            "remarks": "rule_set_33"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set PAM Password Hashing Algorithm - system-auth",
-            "remarks": "rule_set_32"
+            "remarks": "rule_set_33"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "accounts_password_pam_unix_rounds_system_auth",
-            "remarks": "rule_set_33"
+            "remarks": "rule_set_34"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set number of Password Hashing Rounds - system-auth",
-            "remarks": "rule_set_33"
+            "remarks": "rule_set_34"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "accounts_password_pam_unix_rounds_system_auth",
-            "remarks": "rule_set_33"
+            "remarks": "rule_set_34"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Set number of Password Hashing Rounds - system-auth",
-            "remarks": "rule_set_33"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "accounts_password_pam_unix_rounds_password_auth",
-            "remarks": "rule_set_34"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Set number of Password Hashing Rounds - password-auth",
-            "remarks": "rule_set_34"
-          },
-          {
-            "name": "Check_Id",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "accounts_password_pam_unix_rounds_password_auth",
-            "remarks": "rule_set_34"
-          },
-          {
-            "name": "Check_Description",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Set number of Password Hashing Rounds - password-auth",
             "remarks": "rule_set_34"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "accounts_password_pam_minclass",
+            "value": "accounts_password_pam_unix_rounds_password_auth",
             "remarks": "rule_set_35"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Ensure PAM Enforces Password Requirements - Minimum Different Categories",
+            "value": "Set number of Password Hashing Rounds - password-auth",
             "remarks": "rule_set_35"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "accounts_password_pam_minclass",
+            "value": "accounts_password_pam_unix_rounds_password_auth",
             "remarks": "rule_set_35"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Ensure PAM Enforces Password Requirements - Minimum Different Categories",
+            "value": "Set number of Password Hashing Rounds - password-auth",
             "remarks": "rule_set_35"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "accounts_password_pam_minclass",
+            "remarks": "rule_set_36"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Ensure PAM Enforces Password Requirements - Minimum Different Categories",
+            "remarks": "rule_set_36"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "accounts_password_pam_minclass",
+            "remarks": "rule_set_36"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Ensure PAM Enforces Password Requirements - Minimum Different Categories",
+            "remarks": "rule_set_36"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "7b631344-cc71-452e-823b-29671a9eb6c0",
+            "uuid": "984de1f2-43d0-4459-ac94-bc5d37335840",
             "source": "trestle://profiles/rhel10-anssi-minimal/profile.json",
             "description": "Control implementation for anssi_bp28_minimal",
             "props": [
@@ -2538,7 +2579,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "ae60edf9-1062-4151-9e02-0fee9d46a9ad",
+                "uuid": "d3f89f3d-a345-4029-8d5b-da90c1a5e636",
                 "control-id": "r30",
                 "description": "The description for control-id r30.",
                 "props": [
@@ -2551,7 +2592,7 @@
                 ]
               },
               {
-                "uuid": "f1efb6a9-201a-437e-9218-fd9ac006a420",
+                "uuid": "a2461ebf-778d-4d6a-8d5e-bda2d9f0ce35",
                 "control-id": "r31",
                 "description": "The rules selected below establish a general password strength baseline of 100 bits, based on the recommendations of the technical note \"Recommandations relatives à l'authentification multifacteur et aux mots de passe\" (https://cyber.gouv.fr/publications/recommandations-relatives-lauthentification-multifacteur-et-aux-mots-de-passe)\nThe baseline should be reviewed and tailored to the system's use case and needs.",
                 "props": [
@@ -2623,7 +2664,7 @@
                 ]
               },
               {
-                "uuid": "a9566e67-250b-4afa-bc2f-992fd87f9913",
+                "uuid": "70e1da0f-50ba-4bff-96d0-c6233cb7168b",
                 "control-id": "r53",
                 "description": "No notes for control-id R53.",
                 "props": [
@@ -2645,7 +2686,7 @@
                 ]
               },
               {
-                "uuid": "122ff14d-18b8-4f8e-bbfc-cbc7c1c558f8",
+                "uuid": "4376c0a6-8208-42a2-b2cc-a596e8ed76e4",
                 "control-id": "r54",
                 "description": "No notes for control-id R54.",
                 "props": [
@@ -2672,7 +2713,7 @@
                 ]
               },
               {
-                "uuid": "9944b122-7586-4114-b42d-47b79f4b85ff",
+                "uuid": "5cf9872d-ee5e-473b-9513-0a843e3741a0",
                 "control-id": "r56",
                 "description": "Only programs specifically designed to be used with setuid or setgid bits can have these privilege bits set. This requirement considers apropriate for setuid and setgid bits the binaries that are installed from recognized and authorized repositories (covered in R15). The remediation resets the sticky bit to intended value by vendor/developer, any finding after remediation should be reviewed.",
                 "props": [
@@ -2694,7 +2735,7 @@
                 ]
               },
               {
-                "uuid": "4df4a871-87ca-4011-a488-68e2a5decfed",
+                "uuid": "ef59234a-cb8b-4941-947a-f02c6d98caeb",
                 "control-id": "r58",
                 "description": "The description for control-id r58.",
                 "props": [
@@ -2707,7 +2748,7 @@
                 ]
               },
               {
-                "uuid": "d5283c61-e3c8-4f0c-b49f-390f13ee2772",
+                "uuid": "126bb35b-d6de-4d46-a5a2-173f881b3eff",
                 "control-id": "r59",
                 "description": "It is not trivial to distinguish an official repository from an unofficial one. We cannot draw conclusions from the repo name or URL of the repo (as they can be arbitrary or behind a proxy). One approach to check the origin of installed packages is to check the signature of the packages. If the public key of a repository is not installed, the repo is not trusted.",
                 "props": [
@@ -2735,11 +2776,16 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "ensure_redhat_gpgkey_installed"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "package_sequoia-sq_installed"
                   }
                 ]
               },
               {
-                "uuid": "fc381c74-856f-4aaf-9d8b-600b1c512abd",
+                "uuid": "d510de38-ea5f-4380-8c5b-ce742012f7d0",
                 "control-id": "r61",
                 "description": "Check the vendor CVE feed and configure automatic install of security related updates.",
                 "props": [
@@ -2771,7 +2817,7 @@
                 ]
               },
               {
-                "uuid": "0bd39e52-e136-4e30-88ae-7ecb7adb886e",
+                "uuid": "8faab673-80b2-46f2-a7fa-5c6ca11e44dd",
                 "control-id": "r62",
                 "description": "The description for control-id r62.",
                 "props": [
@@ -2809,7 +2855,7 @@
                 ]
               },
               {
-                "uuid": "c3b130d8-87e4-4488-b167-1c9d123e2b2d",
+                "uuid": "fc862e07-1110-4d30-ab92-9cce40ed4f7c",
                 "control-id": "r68",
                 "description": "The selection of rules doesn't cover the use of hardware devices to protect the passwords.",
                 "props": [
@@ -2846,7 +2892,7 @@
                 ]
               },
               {
-                "uuid": "d58265bb-1e9d-44a6-9789-2ba926295907",
+                "uuid": "44a24792-aeb6-4a85-b889-36646c02c4b9",
                 "control-id": "r80",
                 "description": "The description for control-id r80.",
                 "props": [
