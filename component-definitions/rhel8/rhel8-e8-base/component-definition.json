@@ -3,8 +3,8 @@
     "uuid": "13a8f69b-b17f-4dc8-b644-faf62dcc5038",
     "metadata": {
       "title": "Component definition for rhel8",
-      "last-modified": "2025-09-26T11:51:08.609009+08:00",
-      "version": "1.5",
+      "last-modified": "2026-03-17T09:21:52.101378+00:00",
+      "version": "1.6",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -156,13 +156,13 @@
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "service_avahi-daemon_disabled",
-            "remarks": "rule_set_04"
+            "remarks": "rule_set_004"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Disable Avahi Server Software",
-            "remarks": "rule_set_04"
+            "remarks": "rule_set_004"
           },
           {
             "name": "Rule_Id",
@@ -1211,43 +1211,55 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "service_xinetd_disabled",
+            "value": "service_kdump_disabled",
             "remarks": "rule_set_092"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Disable KDump Kernel Crash Analyzer (kdump)",
+            "remarks": "rule_set_092"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "service_xinetd_disabled",
+            "remarks": "rule_set_093"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Disable xinetd Service",
-            "remarks": "rule_set_092"
+            "remarks": "rule_set_093"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_xinetd_removed",
-            "remarks": "rule_set_093"
+            "remarks": "rule_set_094"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Uninstall xinetd Package",
-            "remarks": "rule_set_093"
+            "remarks": "rule_set_094"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "package_rear_installed",
-            "remarks": "rule_set_094"
+            "remarks": "rule_set_095"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Install rear Package",
-            "remarks": "rule_set_094"
+            "remarks": "rule_set_095"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "7262f070-f236-4ce7-a45a-f153e4f3a7a7",
+            "uuid": "7bbc21e7-a5da-4850-b1ac-effec8c331b3",
             "source": "trestle://profiles/rhel8-e8-base/profile.json",
             "description": "Control implementation for e8",
             "props": [
@@ -1291,7 +1303,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "4e077ac2-7228-4a6e-8cbd-358eae4f0b9d",
+                "uuid": "675d45a4-6e3f-42b2-ab72-90be01e421b8",
                 "control-id": "patching",
                 "description": "No notes for control-id patching.",
                 "props": [
@@ -1368,7 +1380,7 @@
                 ]
               },
               {
-                "uuid": "65d408a0-b1a4-45dd-ab26-c9c72859c4c1",
+                "uuid": "684f2304-d5c6-4079-9cf4-263e454d9633",
                 "control-id": "mfa",
                 "description": "The description for control-id mfa.",
                 "props": [
@@ -1381,7 +1393,7 @@
                 ]
               },
               {
-                "uuid": "163b51e6-997a-4f45-b643-3a0e450a7064",
+                "uuid": "7be3804b-c4f1-4a0d-81ef-caf37c7b3c93",
                 "control-id": "restrict_admin",
                 "description": "No notes for control-id restrict_admin.",
                 "props": [
@@ -1413,7 +1425,7 @@
                 ]
               },
               {
-                "uuid": "de2260be-cc82-45a2-afb5-74ca8b4da3df",
+                "uuid": "f8eff104-871f-4275-932a-75590cfaa5ab",
                 "control-id": "app_control",
                 "description": "No notes for control-id app_control.",
                 "props": [
@@ -1435,7 +1447,7 @@
                 ]
               },
               {
-                "uuid": "6375075b-6d09-44e5-b907-92c89ec42b32",
+                "uuid": "f5da487c-3897-4663-9e71-331b8896b8a9",
                 "control-id": "restrict_macros",
                 "description": "The description for control-id restrict_macros.",
                 "props": [
@@ -1448,7 +1460,7 @@
                 ]
               },
               {
-                "uuid": "3ababddd-8983-4366-98f9-69e56d559e65",
+                "uuid": "88ed3380-7fe6-4e20-828a-ab91674a655a",
                 "control-id": "app_hardening",
                 "description": "The description for control-id app_hardening.",
                 "props": [
@@ -1461,7 +1473,7 @@
                 ]
               },
               {
-                "uuid": "d82e86b9-be84-4f5f-a684-27001eb245f5",
+                "uuid": "b6720f95-5b7f-4dc6-9d94-bb79bd91bce2",
                 "control-id": "backups",
                 "description": "The description for control-id backups.",
                 "props": [
@@ -1474,7 +1486,7 @@
                 ]
               },
               {
-                "uuid": "cd23ff8c-a737-47d1-896c-43198fe735fd",
+                "uuid": "2440f303-dfaa-4d4d-821b-4ca545775981",
                 "control-id": "hardening",
                 "description": "No notes for control-id hardening.",
                 "props": [
@@ -1847,6 +1859,11 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "network_sniffer_disabled"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "service_kdump_disabled"
                   }
                 ]
               }
@@ -2050,25 +2067,25 @@
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "service_avahi-daemon_disabled",
-            "remarks": "rule_set_04"
+            "remarks": "rule_set_004"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Disable Avahi Server Software",
-            "remarks": "rule_set_04"
+            "remarks": "rule_set_004"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "service_avahi-daemon_disabled",
-            "remarks": "rule_set_04"
+            "remarks": "rule_set_004"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Disable Avahi Server Software",
-            "remarks": "rule_set_04"
+            "remarks": "rule_set_004"
           },
           {
             "name": "Rule_Id",
@@ -4161,79 +4178,103 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "service_xinetd_disabled",
+            "value": "service_kdump_disabled",
             "remarks": "rule_set_092"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Disable xinetd Service",
+            "value": "Disable KDump Kernel Crash Analyzer (kdump)",
             "remarks": "rule_set_092"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "service_xinetd_disabled",
+            "value": "service_kdump_disabled",
             "remarks": "rule_set_092"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Disable xinetd Service",
+            "value": "Disable KDump Kernel Crash Analyzer (kdump)",
             "remarks": "rule_set_092"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "package_xinetd_removed",
+            "value": "service_xinetd_disabled",
             "remarks": "rule_set_093"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Uninstall xinetd Package",
+            "value": "Disable xinetd Service",
             "remarks": "rule_set_093"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "package_xinetd_removed",
+            "value": "service_xinetd_disabled",
             "remarks": "rule_set_093"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Uninstall xinetd Package",
+            "value": "Disable xinetd Service",
             "remarks": "rule_set_093"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "package_rear_installed",
+            "value": "package_xinetd_removed",
             "remarks": "rule_set_094"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Install rear Package",
+            "value": "Uninstall xinetd Package",
             "remarks": "rule_set_094"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "package_rear_installed",
+            "value": "package_xinetd_removed",
             "remarks": "rule_set_094"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Install rear Package",
+            "value": "Uninstall xinetd Package",
             "remarks": "rule_set_094"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "package_rear_installed",
+            "remarks": "rule_set_095"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Install rear Package",
+            "remarks": "rule_set_095"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "package_rear_installed",
+            "remarks": "rule_set_095"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Install rear Package",
+            "remarks": "rule_set_095"
           }
         ],
         "control-implementations": [
           {
-            "uuid": "55c57a1b-b6dd-4e32-b5b6-741b97560993",
+            "uuid": "f90a5538-08a6-498b-9200-a03959ec96f6",
             "source": "trestle://profiles/rhel8-e8-base/profile.json",
             "description": "Control implementation for e8",
             "props": [
@@ -4277,7 +4318,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "51669b71-ac45-42c4-bc13-b67020f91c8b",
+                "uuid": "ef3b067d-ba4e-4222-8a2e-f34f25f95ea1",
                 "control-id": "patching",
                 "description": "No notes for control-id patching.",
                 "props": [
@@ -4354,7 +4395,7 @@
                 ]
               },
               {
-                "uuid": "2a46e89a-38e6-40e5-870c-19b5e75f8d99",
+                "uuid": "e7594859-0436-4d9d-9815-c92aab82b2f8",
                 "control-id": "mfa",
                 "description": "The description for control-id mfa.",
                 "props": [
@@ -4367,7 +4408,7 @@
                 ]
               },
               {
-                "uuid": "e89a65cf-cd2a-4e54-b64c-eac1b5a89993",
+                "uuid": "c16d8691-832c-4d1c-8bd7-c449a5358ccc",
                 "control-id": "restrict_admin",
                 "description": "No notes for control-id restrict_admin.",
                 "props": [
@@ -4399,7 +4440,7 @@
                 ]
               },
               {
-                "uuid": "d40417a5-cc56-4c0a-b0db-29e5c401fbe5",
+                "uuid": "132dea49-1b68-4584-9c17-1253810b2606",
                 "control-id": "app_control",
                 "description": "No notes for control-id app_control.",
                 "props": [
@@ -4421,7 +4462,7 @@
                 ]
               },
               {
-                "uuid": "7cdb9acc-d538-4fc9-ae1a-a0717f3433bf",
+                "uuid": "82df334f-b400-41d9-b6b3-a812689c5329",
                 "control-id": "restrict_macros",
                 "description": "The description for control-id restrict_macros.",
                 "props": [
@@ -4434,7 +4475,7 @@
                 ]
               },
               {
-                "uuid": "191f2d3c-5113-45a3-bd4c-e3cd0dfd1b07",
+                "uuid": "a3e941c0-71d7-4f18-9066-1500b1d53814",
                 "control-id": "app_hardening",
                 "description": "The description for control-id app_hardening.",
                 "props": [
@@ -4447,7 +4488,7 @@
                 ]
               },
               {
-                "uuid": "800eb403-fb0d-4fe4-950d-5cb7293035aa",
+                "uuid": "0ee7ac50-e282-4cb4-abe5-a2a57831987b",
                 "control-id": "backups",
                 "description": "The description for control-id backups.",
                 "props": [
@@ -4460,7 +4501,7 @@
                 ]
               },
               {
-                "uuid": "c1141a8f-f856-480e-9fb6-46d99a85b6e3",
+                "uuid": "5eae42c9-2cd5-48b8-b0ee-d9f921566252",
                 "control-id": "hardening",
                 "description": "No notes for control-id hardening.",
                 "props": [
@@ -4833,6 +4874,11 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "network_sniffer_disabled"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "service_kdump_disabled"
                   }
                 ]
               }
