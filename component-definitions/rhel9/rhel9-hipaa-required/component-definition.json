@@ -3,8 +3,8 @@
     "uuid": "4064fc7a-c0c8-4e25-8885-112e43231ce0",
     "metadata": {
       "title": "Component definition for rhel9",
-      "last-modified": "2026-04-17T16:14:17.901612+00:00",
-      "version": "1.5",
+      "last-modified": "2026-05-04T15:18:15.117830+00:00",
+      "version": "1.6",
       "oscal-version": "1.1.3"
     },
     "components": [
@@ -29,107 +29,125 @@
           {
             "name": "Parameter_Id_0",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_audit_failure_mode",
+            "value": "var_audit_backlog_limit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_0",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "This variable is the setting for the -f option in Audit configuration which sets the failure mode of audit. This option lets you determine how you want the kernel to handle critical errors. Possible values are: 0=silent, 1=printk, 2=panic. If the value is set to \"2\", the system is configured to panic (shut down) in the event of an auditing failure. If the value is set to \"1\", the system is configured to only send information to the kernel log regarding the failure.",
+            "value": "Value of the audit_backlog_limit argument in GRUB 2 configuration. The audit_backlog_limit parameter determines how auditd records can be held in the auditd backlog.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_0",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 2, 'silent': 0, 'printk': 1, 'panic': 2}",
+            "value": "{'default': 8192, 8192: 8192}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_authselect_profile",
+            "value": "var_audit_failure_mode",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the authselect profile to select",
+            "value": "This variable is the setting for the -f option in Audit configuration which sets the failure mode of audit. This option lets you determine how you want the kernel to handle critical errors. Possible values are: 0=silent, 1=printk, 2=panic. If the value is set to \"2\", the system is configured to panic (shut down) in the event of an auditing failure. If the value is set to \"1\", the system is configured to only send information to the kernel log regarding the failure.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
+            "value": "{'default': 2, 'silent': 0, 'printk': 1, 'panic': 2}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_policy_name",
+            "value": "var_authselect_profile",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
+            "value": "Specify the authselect profile to select",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_state",
+            "value": "var_selinux_policy_name",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
+            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_4",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_keepalive",
+            "value": "var_selinux_state",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_4",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the maximum number of idle message counts before session is terminated.",
+            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_4",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_5",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_system_crypto_policy",
+            "value": "var_sshd_set_keepalive",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_5",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the crypto policy for the system.",
+            "value": "Specify the maximum number of idle message counts before session is terminated.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_5",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Id_6",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_system_crypto_policy",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Description_6",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Specify the crypto policy for the system.",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Value_Alternatives_6",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
             "remarks": "rule_set_000"
@@ -1109,37 +1127,37 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "auditd_audispd_syslog_plugin_activated",
-            "remarks": "rule_set_082"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Configure auditd to use audispd's syslog plugin",
-            "remarks": "rule_set_082"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "auditd_data_retention_flush",
-            "remarks": "rule_set_083"
+            "remarks": "rule_set_082"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure auditd flush priority",
-            "remarks": "rule_set_083"
+            "remarks": "rule_set_082"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "grub2_audit_argument",
-            "remarks": "rule_set_084"
+            "remarks": "rule_set_083"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable Auditing for Processes Which Start Prior to the Audit Daemon",
+            "remarks": "rule_set_083"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "grub2_audit_backlog_limit_argument",
+            "remarks": "rule_set_084"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Extend Audit Backlog Limit for the Audit Daemon",
             "remarks": "rule_set_084"
           },
           {
@@ -1697,7 +1715,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "e5b9016b-b721-4359-82c9-69c866c8d47a",
+            "uuid": "e3319db9-d23a-4462-9f9f-4c53e48f53a9",
             "source": "trestle://profiles/rhel9-hipaa-required/profile.json",
             "description": "Control implementation for hipaa",
             "props": [
@@ -1708,6 +1726,12 @@
               }
             ],
             "set-parameters": [
+              {
+                "param-id": "var_audit_backlog_limit",
+                "values": [
+                  "8192"
+                ]
+              },
               {
                 "param-id": "var_audit_failure_mode",
                 "values": [
@@ -1747,7 +1771,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "007ffaec-2c3c-48dd-b615-44b72f0d18fe",
+                "uuid": "dbc4480b-8e5a-487f-a09f-7e1c7c1dc847",
                 "control-id": "hipaa_164-308.a.1.ii.b",
                 "description": "No notes for control-id 164.308(a)(1)(ii)(B).",
                 "props": [
@@ -1829,7 +1853,7 @@
                 ]
               },
               {
-                "uuid": "830ae202-fee4-4f93-937c-25f2e6528413",
+                "uuid": "ea88296b-d2b2-4217-af55-7a9fa7990e8c",
                 "control-id": "hipaa_164-308.a.1.ii.d",
                 "description": "No notes for control-id 164.308(a)(1)(ii)(D).",
                 "props": [
@@ -2181,17 +2205,17 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "grub2_audit_argument"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "grub2_audit_backlog_limit_argument"
                   },
                   {
                     "name": "Rule_Id",
@@ -2301,7 +2325,7 @@
                 ]
               },
               {
-                "uuid": "e5291e97-204f-412c-adec-e60ade1aa560",
+                "uuid": "3be86023-2c81-459d-ab04-b70167a5e8c2",
                 "control-id": "hipaa_164-308.a.3.ii.a",
                 "description": "No notes for control-id 164.308(a)(3)(ii)(A).",
                 "props": [
@@ -2668,7 +2692,7 @@
                 ]
               },
               {
-                "uuid": "f0143ce1-3256-48ad-b93a-db453eb7ca29",
+                "uuid": "e337294d-b89d-4c1c-b639-b977adc97ab7",
                 "control-id": "hipaa_164-308.a.6.ii",
                 "description": "No notes for control-id 164.308(a)(6)(ii).",
                 "props": [
@@ -2680,17 +2704,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "2ba59d1a-d714-4691-94df-5c3556dbe8bd",
+                "uuid": "7ea2b805-7c38-43d3-9410-7b4fbd340de6",
                 "control-id": "hipaa_164-308.a.7.ii.a",
                 "description": "No notes for control-id 164.308(a)(7)(ii)(A).",
                 "props": [
@@ -2767,7 +2786,7 @@
                 ]
               },
               {
-                "uuid": "1aa7b7c1-90e5-4b2b-8831-e6fe198942ad",
+                "uuid": "bda5248f-9e57-421e-9190-841661960ea3",
                 "control-id": "hipaa_164-308.b.3",
                 "description": "No notes for control-id 164.308(b)(3).",
                 "props": [
@@ -2879,7 +2898,7 @@
                 ]
               },
               {
-                "uuid": "b73f8b0b-68f7-4ab4-9023-3cb6ce1e5d8d",
+                "uuid": "afcf326d-1e27-4eb3-8dfe-fe7d50b77bbe",
                 "control-id": "hipaa_164-312.a.2.i",
                 "description": "No notes for control-id 164.312(a)(2)(i).",
                 "props": [
@@ -3236,7 +3255,7 @@
                 ]
               },
               {
-                "uuid": "522ec57e-55da-4d85-b76a-b636b039e4f2",
+                "uuid": "a596693b-bc12-413d-a1b8-5d00e466e9f5",
                 "control-id": "hipaa_164-312.a.2.ii",
                 "description": "No notes for control-id 164.312(a)(2)(ii).",
                 "props": [
@@ -3253,7 +3272,7 @@
                 ]
               },
               {
-                "uuid": "ccfdc446-bf9a-45ef-a8ec-8caf2553cd84",
+                "uuid": "8307389d-ad73-4a48-abed-8ca3cc50b677",
                 "control-id": "hipaa_164-314.a.2.i.c",
                 "description": "No notes for control-id 164.314(a)(2)(i)(C).",
                 "props": [
@@ -3265,17 +3284,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "cbac3002-804a-4174-86c2-b2f7b6bf18ae",
+                "uuid": "6ed219fe-68db-4184-b615-dfd662469700",
                 "control-id": "hipaa_164-314.a.2.iii",
                 "description": "No notes for control-id 164.314(a)(2)(iii).",
                 "props": [
@@ -3287,17 +3301,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "d4b772f8-7832-49c3-8b8a-ad1e6b33df60",
+                "uuid": "b2a01f62-2bf8-49fd-bf4b-a36b082a611c",
                 "control-id": "hipaa_164-314.b.2.i",
                 "description": "No notes for control-id 164.314(b)(2)(i).",
                 "props": [
@@ -3314,7 +3323,7 @@
                 ]
               },
               {
-                "uuid": "42a6e078-e80e-469a-a2e1-f5ff3b7043f0",
+                "uuid": "13c58021-9266-4876-a38d-15edc277b894",
                 "control-id": "hipaa_164-308.a.3.i",
                 "description": "No notes for control-id 164.308(a)(3)(i).",
                 "props": [
@@ -3336,7 +3345,7 @@
                 ]
               },
               {
-                "uuid": "2da0ddc5-e325-44bc-981a-b5a248c81dda",
+                "uuid": "ccf37575-6e92-4771-9e4f-d0b83d2c4aea",
                 "control-id": "hipaa_164-308.a.5.ii.a",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(A).",
                 "props": [
@@ -3353,7 +3362,7 @@
                 ]
               },
               {
-                "uuid": "40138471-b3dd-4bbb-ac09-3682ac6cf0c1",
+                "uuid": "9d61dd36-a91a-4050-bec0-1df2acc0c8dc",
                 "control-id": "hipaa_164-310.a.2.i",
                 "description": "No notes for control-id 164.310(a)(2)(i).",
                 "props": [
@@ -3430,7 +3439,7 @@
                 ]
               },
               {
-                "uuid": "447a91cd-ed2e-4a2c-89e1-39089efec290",
+                "uuid": "ac8b6503-3e62-42a8-a418-4ca075399e63",
                 "control-id": "hipaa_164-310.a.2.ii",
                 "description": "No notes for control-id 164.310(a)(2)(ii).",
                 "props": [
@@ -3507,7 +3516,7 @@
                 ]
               },
               {
-                "uuid": "a159882a-445e-4415-80fa-458ca41e6d10",
+                "uuid": "17dbcdca-60b9-4cdf-adc3-fbced9144046",
                 "control-id": "hipaa_164-310.a.2.iii",
                 "description": "No notes for control-id 164.310(a)(2)(iii).",
                 "props": [
@@ -3584,7 +3593,7 @@
                 ]
               },
               {
-                "uuid": "5d2c9e71-f557-4aa7-985d-ab977abe8d14",
+                "uuid": "bdbcfa89-140b-4df7-91e5-e327deaf06e1",
                 "control-id": "hipaa_164-310.b",
                 "description": "No notes for control-id 164.310(b).",
                 "props": [
@@ -3816,7 +3825,7 @@
                 ]
               },
               {
-                "uuid": "9be31a17-8cc5-4809-a969-54390d1ba357",
+                "uuid": "0b0c0e24-64c9-490a-a3ae-d7916fc412a9",
                 "control-id": "hipaa_164-310.d.2.iii",
                 "description": "No notes for control-id 164.310(d)(2)(iii).",
                 "props": [
@@ -3829,11 +3838,6 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "audit_rules_immutable"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
                   },
                   {
                     "name": "Rule_Id",
@@ -3918,7 +3922,7 @@
                 ]
               },
               {
-                "uuid": "8c20708a-17c7-4470-9e3f-dcb094d8c7a2",
+                "uuid": "1b86efcb-e054-4be2-98d1-d68790101326",
                 "control-id": "hipaa_164-312.a.2.iii",
                 "description": "No notes for control-id 164.312(a)(2)(iii).",
                 "props": [
@@ -3935,7 +3939,7 @@
                 ]
               },
               {
-                "uuid": "da995c85-a6fc-4623-8148-f208db480bfe",
+                "uuid": "c5f96e56-ae75-4fb2-9541-95313153aa48",
                 "control-id": "hipaa_164-312.a.2.iv",
                 "description": "No notes for control-id 164.312(a)(2)(iv).",
                 "props": [
@@ -3962,7 +3966,7 @@
                 ]
               },
               {
-                "uuid": "ff73d79c-305d-4b04-bca4-0634eea54ed9",
+                "uuid": "3fd0f717-20ff-4fda-b144-2556d6940cd6",
                 "control-id": "hipaa_164-312.c.2",
                 "description": "No notes for control-id 164.312(c)(2).",
                 "props": [
@@ -4004,7 +4008,7 @@
                 ]
               },
               {
-                "uuid": "889f4581-6b48-4acc-b657-e70db6eca9cc",
+                "uuid": "3a05d2f2-6565-406b-884a-5bb7b1776b51",
                 "control-id": "hipaa_164-312.e.2.i",
                 "description": "No notes for control-id 164.312(e)(2)(i).",
                 "props": [
@@ -4046,7 +4050,7 @@
                 ]
               },
               {
-                "uuid": "8b9c8876-ffec-4117-8b98-4c841aaaa5c5",
+                "uuid": "ab680f40-7511-4c7e-908c-a9e120808b71",
                 "control-id": "hipaa_164-312.e.2.ii",
                 "description": "No notes for control-id 164.312(e)(2)(ii).",
                 "props": [
@@ -4158,7 +4162,7 @@
                 ]
               },
               {
-                "uuid": "aeea0126-7338-47d5-aaf7-3cb3039f603b",
+                "uuid": "e3304fc3-a8d5-4b03-9f8e-e39af98be0fb",
                 "control-id": "hipaa_164-308.a.3",
                 "description": "No notes for control-id 164.308(a)(3).",
                 "props": [
@@ -4230,7 +4234,7 @@
                 ]
               },
               {
-                "uuid": "03f8dd58-3d0d-4551-a40c-19c5d9329404",
+                "uuid": "36560c07-af78-4e93-bc1f-8916b0fefb50",
                 "control-id": "hipaa_164-308.a.4",
                 "description": "No notes for control-id 164.308(a)(4).",
                 "props": [
@@ -4302,7 +4306,7 @@
                 ]
               },
               {
-                "uuid": "c926564b-d704-438f-8fe0-2909e272b01a",
+                "uuid": "4018319a-0f44-4e32-974c-281c37a3c70f",
                 "control-id": "hipaa_164-308.a.4.i",
                 "description": "No notes for control-id 164.308(a)(4)(i).",
                 "props": [
@@ -4414,7 +4418,7 @@
                 ]
               },
               {
-                "uuid": "36607790-f015-4a1d-b729-5d61a6561c56",
+                "uuid": "0376ef90-316d-4983-ad3c-24e354186154",
                 "control-id": "hipaa_164-308.a.5.ii.b",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(B).",
                 "props": [
@@ -4426,17 +4430,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "50e115f4-607b-423e-9d66-8f9e5f4d3ceb",
+                "uuid": "ecc347d6-f159-42b5-a5f7-c91bce97e895",
                 "control-id": "hipaa_164-308.a.5.ii.c",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(C).",
                 "props": [
@@ -4788,11 +4787,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -4813,7 +4807,7 @@
                 ]
               },
               {
-                "uuid": "b3411844-a67c-49c9-a292-7e18e77c9d76",
+                "uuid": "f6aeeb2e-e953-4fe6-8172-2402de186528",
                 "control-id": "hipaa_164-308.a.7.i",
                 "description": "No notes for control-id 164.308(a)(7)(i).",
                 "props": [
@@ -4890,7 +4884,7 @@
                 ]
               },
               {
-                "uuid": "085f352f-8c19-49e8-b511-81cc64fbcc25",
+                "uuid": "2578e52a-5834-4d1d-a50c-ae04a177586e",
                 "control-id": "hipaa_164-308.a.8",
                 "description": "No notes for control-id 164.308(a)(8).",
                 "props": [
@@ -4902,17 +4896,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "1aeded7d-4bb0-4d2d-8c91-1dcb35eb3946",
+                "uuid": "0072ceee-2709-47b5-8f1b-b170bcca321b",
                 "control-id": "hipaa_164-308.b.1",
                 "description": "No notes for control-id 164.308(b)(1).",
                 "props": [
@@ -5029,7 +5018,7 @@
                 ]
               },
               {
-                "uuid": "82237ec8-1ffe-4188-a6c1-d16f08fcfc29",
+                "uuid": "ad507f2a-8a4a-4930-aeb1-ce1d960db42d",
                 "control-id": "hipaa_164-308.b.2",
                 "description": "This title was created by analysis, not by the CFR.",
                 "props": [
@@ -5041,7 +5030,7 @@
                 ]
               },
               {
-                "uuid": "56b394c9-ca50-4682-a085-ffcb9cbd5074",
+                "uuid": "c69e5830-69cb-434a-93dc-a791a58fc577",
                 "control-id": "hipaa_164-310.a.1",
                 "description": "No notes for control-id 164.310(a)(1).",
                 "props": [
@@ -5118,7 +5107,7 @@
                 ]
               },
               {
-                "uuid": "c0ecd792-10b2-486e-b944-87ab342ceefc",
+                "uuid": "d6800a60-6c3f-4d13-8402-46ff7513ff8b",
                 "control-id": "hipaa_164-310.a.2.iv",
                 "description": "No notes for control-id 164.310(a)(2)(iv).",
                 "props": [
@@ -5145,7 +5134,7 @@
                 ]
               },
               {
-                "uuid": "a66e6676-04a7-447f-989a-dd5899972c5e",
+                "uuid": "c3b9ba9a-f838-45e3-8e56-ac0e5f813cf6",
                 "control-id": "hipaa_164-310.c",
                 "description": "No notes for control-id 164.310(c).",
                 "props": [
@@ -5282,7 +5271,7 @@
                 ]
               },
               {
-                "uuid": "5d434454-5d83-413f-94be-b4734a4f34c8",
+                "uuid": "826fd099-aeaf-49c7-9866-747853421d06",
                 "control-id": "hipaa_164-310.d",
                 "description": "No notes for control-id 164.310(d).",
                 "props": [
@@ -5299,7 +5288,7 @@
                 ]
               },
               {
-                "uuid": "7c92bfdd-0f80-46da-b3a8-029886fe1dc1",
+                "uuid": "07579577-435e-4470-9799-57c2b3c0d6a2",
                 "control-id": "hipaa_164-310.d.1",
                 "description": "No notes for control-id 164.310(d)(1).",
                 "props": [
@@ -5386,7 +5375,7 @@
                 ]
               },
               {
-                "uuid": "48e93154-eee7-43ab-bf8f-056d836de408",
+                "uuid": "948d33c6-8ded-49e0-9ee7-a3e147978f5c",
                 "control-id": "hipaa_164-310.d.2",
                 "description": "No notes for control-id 164.310(d)(2).",
                 "props": [
@@ -5408,7 +5397,7 @@
                 ]
               },
               {
-                "uuid": "28ed8c2c-2de3-41ca-ad8f-c2abcc3b4344",
+                "uuid": "c8b5fe45-94fc-4f4d-8fb5-f3d176094ef5",
                 "control-id": "hipaa_164-312.a",
                 "description": "No notes for control-id 164.312(a).",
                 "props": [
@@ -5485,7 +5474,7 @@
                 ]
               },
               {
-                "uuid": "d43dc0f6-172c-4483-aacc-65b3b329babb",
+                "uuid": "d5e52815-1d33-4aac-8b51-fb72e4e0c86c",
                 "control-id": "hipaa_164-312.a.1",
                 "description": "No notes for control-id 164.312(a)(1).",
                 "props": [
@@ -5512,7 +5501,7 @@
                 ]
               },
               {
-                "uuid": "79a8620a-b590-4a72-8834-af3a0ad0bbd2",
+                "uuid": "85ac6882-2dbc-4660-8bc0-9399d197e214",
                 "control-id": "hipaa_164-312.b",
                 "description": "No notes for control-id 164.312(b).",
                 "props": [
@@ -5864,11 +5853,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -5934,7 +5918,7 @@
                 ]
               },
               {
-                "uuid": "6399957b-0c0a-424d-a92b-6a3753241012",
+                "uuid": "3523b3a8-5b4e-4d1e-8858-555f15e6aab6",
                 "control-id": "hipaa_164-312.c",
                 "description": "No notes for control-id 164.312(c).",
                 "props": [
@@ -5951,7 +5935,7 @@
                 ]
               },
               {
-                "uuid": "6fdabdb4-9584-44e9-9dfc-70901f042e39",
+                "uuid": "c7cd25d0-26f2-4670-a5e7-71855e09d065",
                 "control-id": "hipaa_164-312.c.1",
                 "description": "No notes for control-id 164.312(c)(1).",
                 "props": [
@@ -5993,7 +5977,7 @@
                 ]
               },
               {
-                "uuid": "b4c9b8e0-1b6c-4cf4-a756-aad8024eef1e",
+                "uuid": "f04b5ab3-59ba-425e-b41d-bcc4a9559b34",
                 "control-id": "hipaa_164-312.d",
                 "description": "No notes for control-id 164.312(d).",
                 "props": [
@@ -6355,7 +6339,7 @@
                 ]
               },
               {
-                "uuid": "b307b10f-fd27-4c0a-b99d-bd8885c881dc",
+                "uuid": "6fa74a2e-85b8-44c4-a3bf-5d8c6e591e42",
                 "control-id": "hipaa_164-312.e",
                 "description": "No notes for control-id 164.312(e).",
                 "props": [
@@ -6772,7 +6756,7 @@
                 ]
               },
               {
-                "uuid": "5d6962a7-e966-4d4b-99df-0c2a0fdcd291",
+                "uuid": "4689a8ba-9c92-49e2-b4e3-d14b99306e08",
                 "control-id": "hipaa_164-312.e.1",
                 "description": "No notes for control-id 164.312(e)(1).",
                 "props": [
@@ -6884,7 +6868,7 @@
                 ]
               },
               {
-                "uuid": "264015b9-3bed-4668-a1d1-506c97ab7434",
+                "uuid": "5cc40776-ae66-439f-87b2-24b4ccb8c576",
                 "control-id": "hipaa_164-308.a.3.i",
                 "description": "No notes for control-id 164.308(a)(3)(i).",
                 "props": [
@@ -6906,7 +6890,7 @@
                 ]
               },
               {
-                "uuid": "77bc843d-972c-41d0-bd02-3bec5ba667dc",
+                "uuid": "d728a41d-8f42-4faa-9d9c-3258711cb7f3",
                 "control-id": "hipaa_164-308.a.5.ii.a",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(A).",
                 "props": [
@@ -6923,7 +6907,7 @@
                 ]
               },
               {
-                "uuid": "b9cd1564-b118-4c04-9139-c4f0a6c2b5dc",
+                "uuid": "9622d253-ed43-41bb-ac4e-220cb6987f25",
                 "control-id": "hipaa_164-310.a.2.i",
                 "description": "No notes for control-id 164.310(a)(2)(i).",
                 "props": [
@@ -7000,7 +6984,7 @@
                 ]
               },
               {
-                "uuid": "ef326983-5f29-4097-a403-3c1da37112eb",
+                "uuid": "8925ff1d-daf7-4b9b-882c-3012e6a3f175",
                 "control-id": "hipaa_164-310.a.2.ii",
                 "description": "No notes for control-id 164.310(a)(2)(ii).",
                 "props": [
@@ -7077,7 +7061,7 @@
                 ]
               },
               {
-                "uuid": "f187d393-faf6-48cc-befd-ba46f384cae8",
+                "uuid": "e1a5316a-dcb1-4266-9a49-53d285eb8acd",
                 "control-id": "hipaa_164-310.a.2.iii",
                 "description": "No notes for control-id 164.310(a)(2)(iii).",
                 "props": [
@@ -7154,7 +7138,7 @@
                 ]
               },
               {
-                "uuid": "3e4e9423-bb0f-41cc-ba5a-08971a19c1e0",
+                "uuid": "9ad1145e-4c0c-45e2-b5ab-aed08cca5286",
                 "control-id": "hipaa_164-310.b",
                 "description": "No notes for control-id 164.310(b).",
                 "props": [
@@ -7386,7 +7370,7 @@
                 ]
               },
               {
-                "uuid": "810192a7-e47d-479c-b363-0818cfb07e02",
+                "uuid": "29b6be03-7551-4782-ace5-39891cd6b0f4",
                 "control-id": "hipaa_164-310.d.2.iii",
                 "description": "No notes for control-id 164.310(d)(2)(iii).",
                 "props": [
@@ -7399,11 +7383,6 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "audit_rules_immutable"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
                   },
                   {
                     "name": "Rule_Id",
@@ -7488,7 +7467,7 @@
                 ]
               },
               {
-                "uuid": "dfcb9bec-ead8-497f-9d5d-ca795f868465",
+                "uuid": "473edf34-7f53-41c7-9d21-57802913f043",
                 "control-id": "hipaa_164-312.a.2.iii",
                 "description": "No notes for control-id 164.312(a)(2)(iii).",
                 "props": [
@@ -7505,7 +7484,7 @@
                 ]
               },
               {
-                "uuid": "17467670-a563-4a62-b53b-4d121b2d5c39",
+                "uuid": "58e99833-6395-4c92-841c-e4c153e25e1d",
                 "control-id": "hipaa_164-312.a.2.iv",
                 "description": "No notes for control-id 164.312(a)(2)(iv).",
                 "props": [
@@ -7532,7 +7511,7 @@
                 ]
               },
               {
-                "uuid": "971d97d0-a9ff-4023-9fa0-817ced877863",
+                "uuid": "bb3103f7-b54d-474c-bdf3-23d608e374db",
                 "control-id": "hipaa_164-312.c.2",
                 "description": "No notes for control-id 164.312(c)(2).",
                 "props": [
@@ -7574,7 +7553,7 @@
                 ]
               },
               {
-                "uuid": "98d15c76-244f-48d0-8823-444c03a4a2fc",
+                "uuid": "4aab6d3e-e6ce-4b51-8c5b-a5dfe18ec1f3",
                 "control-id": "hipaa_164-312.e.2.i",
                 "description": "No notes for control-id 164.312(e)(2)(i).",
                 "props": [
@@ -7616,7 +7595,7 @@
                 ]
               },
               {
-                "uuid": "2088fe66-20a1-4ec2-ae93-2f11e8c8bcef",
+                "uuid": "3bb82aec-bc03-46c5-b4e3-a088075af70f",
                 "control-id": "hipaa_164-312.e.2.ii",
                 "description": "No notes for control-id 164.312(e)(2)(ii).",
                 "props": [
@@ -7728,7 +7707,7 @@
                 ]
               },
               {
-                "uuid": "e8516073-6603-4f1f-8c89-b2e99b64d923",
+                "uuid": "0917ae9f-76af-4dcc-999f-c0da7dd5b7ce",
                 "control-id": "hipaa_164-308.a.3",
                 "description": "No notes for control-id 164.308(a)(3).",
                 "props": [
@@ -7800,7 +7779,7 @@
                 ]
               },
               {
-                "uuid": "2178fee1-1d5a-4f3f-a05b-9a27a53ae2c2",
+                "uuid": "cea0cab5-2cd9-424d-8dc5-47a225fcf6cc",
                 "control-id": "hipaa_164-308.a.4",
                 "description": "No notes for control-id 164.308(a)(4).",
                 "props": [
@@ -7872,7 +7851,7 @@
                 ]
               },
               {
-                "uuid": "22a82eed-2228-4824-ab09-8d9028b97274",
+                "uuid": "f7ba0cd6-1b3f-420f-8802-f1acc43d89df",
                 "control-id": "hipaa_164-308.a.4.i",
                 "description": "No notes for control-id 164.308(a)(4)(i).",
                 "props": [
@@ -7984,7 +7963,7 @@
                 ]
               },
               {
-                "uuid": "5c8de21f-e008-4702-bc94-3e1352d2ce48",
+                "uuid": "726f1947-c9fd-485b-a1a2-832629b26b4a",
                 "control-id": "hipaa_164-308.a.5.ii.b",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(B).",
                 "props": [
@@ -7996,17 +7975,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "7132f13d-e4b3-4314-9049-4e97c03b3ede",
+                "uuid": "1b7e7d52-74b3-4bef-b0a7-1dcce1bb1fb6",
                 "control-id": "hipaa_164-308.a.5.ii.c",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(C).",
                 "props": [
@@ -8358,11 +8332,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -8383,7 +8352,7 @@
                 ]
               },
               {
-                "uuid": "76665d19-9152-4414-ba7e-1fb2e7d818d9",
+                "uuid": "575b6a1e-74e4-4cf3-8d9f-f85c5028a9a2",
                 "control-id": "hipaa_164-308.a.7.i",
                 "description": "No notes for control-id 164.308(a)(7)(i).",
                 "props": [
@@ -8460,7 +8429,7 @@
                 ]
               },
               {
-                "uuid": "db2d6703-ea69-417d-8f62-eea35c069972",
+                "uuid": "96098d34-c13e-4c36-beb9-3369c4d2568e",
                 "control-id": "hipaa_164-308.a.8",
                 "description": "No notes for control-id 164.308(a)(8).",
                 "props": [
@@ -8472,17 +8441,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "99f8b4be-5c14-4994-8fee-915ec2d19123",
+                "uuid": "494e2d17-403f-4658-98d9-d3c7b42249ce",
                 "control-id": "hipaa_164-308.b.1",
                 "description": "No notes for control-id 164.308(b)(1).",
                 "props": [
@@ -8599,7 +8563,7 @@
                 ]
               },
               {
-                "uuid": "4ee014d9-6ed9-448f-9d65-a37002d58e65",
+                "uuid": "fd7e1bcd-6409-4427-b2f9-ebdf41a49f01",
                 "control-id": "hipaa_164-308.b.2",
                 "description": "This title was created by analysis, not by the CFR.",
                 "props": [
@@ -8611,7 +8575,7 @@
                 ]
               },
               {
-                "uuid": "c3ac6d52-bb7c-44eb-91d7-cd1297f60041",
+                "uuid": "99806eda-b360-44b4-93ca-9088458089ba",
                 "control-id": "hipaa_164-310.a.1",
                 "description": "No notes for control-id 164.310(a)(1).",
                 "props": [
@@ -8688,7 +8652,7 @@
                 ]
               },
               {
-                "uuid": "ff0c5e87-11df-45c7-af8e-7d9e375b8c02",
+                "uuid": "3413dacf-0628-40ca-8ee6-a8e6f25fa030",
                 "control-id": "hipaa_164-310.a.2.iv",
                 "description": "No notes for control-id 164.310(a)(2)(iv).",
                 "props": [
@@ -8715,7 +8679,7 @@
                 ]
               },
               {
-                "uuid": "55d535ec-ad13-43ba-a795-2d9bf15be41d",
+                "uuid": "bdc3e714-c935-4554-9de3-6deda736cfb6",
                 "control-id": "hipaa_164-310.c",
                 "description": "No notes for control-id 164.310(c).",
                 "props": [
@@ -8852,7 +8816,7 @@
                 ]
               },
               {
-                "uuid": "2bb955ea-f607-4257-bb52-3acf850aefe1",
+                "uuid": "c0f043b0-5781-47b2-b240-6958f1d4e0e1",
                 "control-id": "hipaa_164-310.d",
                 "description": "No notes for control-id 164.310(d).",
                 "props": [
@@ -8869,7 +8833,7 @@
                 ]
               },
               {
-                "uuid": "bca51d6a-cab7-42f1-b1c9-3f70acd97bd2",
+                "uuid": "9f36de91-dab1-41c2-b213-453b937e0e34",
                 "control-id": "hipaa_164-310.d.1",
                 "description": "No notes for control-id 164.310(d)(1).",
                 "props": [
@@ -8956,7 +8920,7 @@
                 ]
               },
               {
-                "uuid": "071b7dc4-643b-4135-b69f-230fc22c69f9",
+                "uuid": "c6d2487c-d65a-45eb-a985-2e9d2702bd45",
                 "control-id": "hipaa_164-310.d.2",
                 "description": "No notes for control-id 164.310(d)(2).",
                 "props": [
@@ -8978,7 +8942,7 @@
                 ]
               },
               {
-                "uuid": "b79d8eb9-9340-4d00-bdb0-08aace8a8c5a",
+                "uuid": "3dca4d95-af7e-46a4-9703-e2854546ae33",
                 "control-id": "hipaa_164-312.a",
                 "description": "No notes for control-id 164.312(a).",
                 "props": [
@@ -9055,7 +9019,7 @@
                 ]
               },
               {
-                "uuid": "f1d03f64-d46e-4fc2-8f7d-a0e6262bf2d0",
+                "uuid": "2c1922af-dd75-45eb-b14b-4dee7a55117e",
                 "control-id": "hipaa_164-312.a.1",
                 "description": "No notes for control-id 164.312(a)(1).",
                 "props": [
@@ -9082,7 +9046,7 @@
                 ]
               },
               {
-                "uuid": "1d413383-5931-4c4d-8ec2-319eafdb6434",
+                "uuid": "f1b9e90b-655a-4dea-8f29-170a75a894f7",
                 "control-id": "hipaa_164-312.b",
                 "description": "No notes for control-id 164.312(b).",
                 "props": [
@@ -9434,11 +9398,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -9504,7 +9463,7 @@
                 ]
               },
               {
-                "uuid": "4615248b-5852-4fa1-8873-dee307577c92",
+                "uuid": "beb76d44-3e7e-4bbc-920b-48307128a7fd",
                 "control-id": "hipaa_164-312.c",
                 "description": "No notes for control-id 164.312(c).",
                 "props": [
@@ -9521,7 +9480,7 @@
                 ]
               },
               {
-                "uuid": "39e17356-06c6-42d0-aaeb-7a82cea53c54",
+                "uuid": "b97ab66f-234f-4baa-b02c-d5a86fba8331",
                 "control-id": "hipaa_164-312.c.1",
                 "description": "No notes for control-id 164.312(c)(1).",
                 "props": [
@@ -9563,7 +9522,7 @@
                 ]
               },
               {
-                "uuid": "b1be9fe3-281d-489c-9a33-578ff32a5d25",
+                "uuid": "1e1e2439-cef9-4cfd-aa1a-f43a155a4b01",
                 "control-id": "hipaa_164-312.d",
                 "description": "No notes for control-id 164.312(d).",
                 "props": [
@@ -9925,7 +9884,7 @@
                 ]
               },
               {
-                "uuid": "83ab51bc-98d9-41ff-8bdf-802536161c62",
+                "uuid": "144989ab-e697-44c1-8dc8-8e3bffda3158",
                 "control-id": "hipaa_164-312.e",
                 "description": "No notes for control-id 164.312(e).",
                 "props": [
@@ -10342,7 +10301,7 @@
                 ]
               },
               {
-                "uuid": "6d33cd4d-a985-4420-89bb-6f6613410c35",
+                "uuid": "056795a1-4a97-4b77-86c9-f6f552afcf8d",
                 "control-id": "hipaa_164-312.e.1",
                 "description": "No notes for control-id 164.312(e)(1).",
                 "props": [
@@ -10454,7 +10413,7 @@
                 ]
               },
               {
-                "uuid": "70d5bb8a-3b9c-4c2e-9c24-fa70158b40e9",
+                "uuid": "40337f9d-2244-4c30-89d1-a7a1cff2e5d5",
                 "control-id": "hipaa_164-308.a.3",
                 "description": "No notes for control-id 164.308(a)(3).",
                 "props": [
@@ -10526,7 +10485,7 @@
                 ]
               },
               {
-                "uuid": "4da79074-19aa-43cb-9324-fd498a4e597e",
+                "uuid": "48403d92-e412-44e8-8b5b-d5523e8e4c5b",
                 "control-id": "hipaa_164-308.a.4",
                 "description": "No notes for control-id 164.308(a)(4).",
                 "props": [
@@ -10598,7 +10557,7 @@
                 ]
               },
               {
-                "uuid": "ebb24dfd-9b0a-4b24-abe0-664373223277",
+                "uuid": "6e7328ad-6b2f-4f95-900f-3e51655be5c7",
                 "control-id": "hipaa_164-308.a.4.i",
                 "description": "No notes for control-id 164.308(a)(4)(i).",
                 "props": [
@@ -10710,7 +10669,7 @@
                 ]
               },
               {
-                "uuid": "422c0abc-95a4-48db-a609-cfb1354a8bb2",
+                "uuid": "f2b8ce49-c941-4729-8ac6-43ba534d7a1f",
                 "control-id": "hipaa_164-308.a.5.ii.b",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(B).",
                 "props": [
@@ -10722,17 +10681,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "40d9592b-f399-46c8-b640-fa385cae8b24",
+                "uuid": "ff5e6eb2-c740-4a75-b690-7a364ccba363",
                 "control-id": "hipaa_164-308.a.5.ii.c",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(C).",
                 "props": [
@@ -11084,11 +11038,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -11109,7 +11058,7 @@
                 ]
               },
               {
-                "uuid": "8b9a963d-3299-4130-8762-013ddeb0e20d",
+                "uuid": "6c1c2a29-f9af-48fe-8fa9-e580fac54d68",
                 "control-id": "hipaa_164-308.a.7.i",
                 "description": "No notes for control-id 164.308(a)(7)(i).",
                 "props": [
@@ -11186,7 +11135,7 @@
                 ]
               },
               {
-                "uuid": "450e01ad-e71f-47a7-830a-d3f27151efa0",
+                "uuid": "90fc815a-c3dd-4e1a-8831-0ba3e5a681ba",
                 "control-id": "hipaa_164-308.a.8",
                 "description": "No notes for control-id 164.308(a)(8).",
                 "props": [
@@ -11198,17 +11147,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "2d886c44-2348-486c-a49b-525f12e2ae34",
+                "uuid": "32d0d0de-ffbd-4cf3-8a16-7ffa86339e11",
                 "control-id": "hipaa_164-308.b.1",
                 "description": "No notes for control-id 164.308(b)(1).",
                 "props": [
@@ -11325,7 +11269,7 @@
                 ]
               },
               {
-                "uuid": "40f70090-3723-40bd-8d08-1d6387416109",
+                "uuid": "75b04846-8eb3-43c3-aa12-57d076d49762",
                 "control-id": "hipaa_164-308.b.2",
                 "description": "This title was created by analysis, not by the CFR.",
                 "props": [
@@ -11337,7 +11281,7 @@
                 ]
               },
               {
-                "uuid": "11c56e06-e340-4af4-b22c-df7b3b7b84e5",
+                "uuid": "723007fe-b794-4d39-81b8-6dc5ce9c5104",
                 "control-id": "hipaa_164-310.a.1",
                 "description": "No notes for control-id 164.310(a)(1).",
                 "props": [
@@ -11414,7 +11358,7 @@
                 ]
               },
               {
-                "uuid": "936360ce-daca-447b-98fc-df178d116a4c",
+                "uuid": "38817fed-517e-4229-8219-54415bdb93df",
                 "control-id": "hipaa_164-310.a.2.iv",
                 "description": "No notes for control-id 164.310(a)(2)(iv).",
                 "props": [
@@ -11441,7 +11385,7 @@
                 ]
               },
               {
-                "uuid": "a5efdbf7-3d7d-4906-9425-b7098893cb27",
+                "uuid": "78a16337-b5d8-460c-beff-8bb9b60342d5",
                 "control-id": "hipaa_164-310.c",
                 "description": "No notes for control-id 164.310(c).",
                 "props": [
@@ -11578,7 +11522,7 @@
                 ]
               },
               {
-                "uuid": "55e9eaf8-8dd6-4d46-8708-387185a80671",
+                "uuid": "c51c775b-4282-4317-b806-0b87eec91b40",
                 "control-id": "hipaa_164-310.d",
                 "description": "No notes for control-id 164.310(d).",
                 "props": [
@@ -11595,7 +11539,7 @@
                 ]
               },
               {
-                "uuid": "92fe6ae6-faac-4623-9807-0352e3dd1b4f",
+                "uuid": "31b71f5d-5664-4463-81ff-8b1149d1cd8c",
                 "control-id": "hipaa_164-310.d.1",
                 "description": "No notes for control-id 164.310(d)(1).",
                 "props": [
@@ -11682,7 +11626,7 @@
                 ]
               },
               {
-                "uuid": "04cd52f6-3619-48ba-8ad5-d9318d8ac2d4",
+                "uuid": "78f5145e-dbe5-46b3-894d-914c78f36b02",
                 "control-id": "hipaa_164-310.d.2",
                 "description": "No notes for control-id 164.310(d)(2).",
                 "props": [
@@ -11704,7 +11648,7 @@
                 ]
               },
               {
-                "uuid": "659d83d6-daa7-4739-a402-ef40c48b5bf1",
+                "uuid": "8050a7ec-95ab-409a-a5f3-2de82cfb759f",
                 "control-id": "hipaa_164-312.a",
                 "description": "No notes for control-id 164.312(a).",
                 "props": [
@@ -11781,7 +11725,7 @@
                 ]
               },
               {
-                "uuid": "42abf4d7-2ad4-4f12-8f62-02614100de59",
+                "uuid": "57bc3407-d405-4dc9-80ba-3c8768c2046e",
                 "control-id": "hipaa_164-312.a.1",
                 "description": "No notes for control-id 164.312(a)(1).",
                 "props": [
@@ -11808,7 +11752,7 @@
                 ]
               },
               {
-                "uuid": "56708139-f52d-4a16-bd8f-2da4de5c0b63",
+                "uuid": "72023e97-d727-49a9-b382-7341e311077a",
                 "control-id": "hipaa_164-312.b",
                 "description": "No notes for control-id 164.312(b).",
                 "props": [
@@ -12160,11 +12104,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -12230,7 +12169,7 @@
                 ]
               },
               {
-                "uuid": "dd444bf9-abca-4ec4-9b40-34d94b2d9804",
+                "uuid": "a5aa3bc5-1d13-41de-ba99-eb7dc8a0ff88",
                 "control-id": "hipaa_164-312.c",
                 "description": "No notes for control-id 164.312(c).",
                 "props": [
@@ -12247,7 +12186,7 @@
                 ]
               },
               {
-                "uuid": "6cd356a6-3867-455f-be96-050107d64c86",
+                "uuid": "71c67155-145c-4f93-beb8-9ce18fa90475",
                 "control-id": "hipaa_164-312.c.1",
                 "description": "No notes for control-id 164.312(c)(1).",
                 "props": [
@@ -12289,7 +12228,7 @@
                 ]
               },
               {
-                "uuid": "4f6374ad-2e40-4bc0-b5ba-9f6fac1e66e6",
+                "uuid": "c86bf513-12c7-4428-a2be-f3584e8d324e",
                 "control-id": "hipaa_164-312.d",
                 "description": "No notes for control-id 164.312(d).",
                 "props": [
@@ -12651,7 +12590,7 @@
                 ]
               },
               {
-                "uuid": "aa5bc230-77c0-443e-a36e-916d0983c327",
+                "uuid": "2b6cc33b-5b17-4751-96cc-0bda48b61b06",
                 "control-id": "hipaa_164-312.e",
                 "description": "No notes for control-id 164.312(e).",
                 "props": [
@@ -13068,7 +13007,7 @@
                 ]
               },
               {
-                "uuid": "19b4543b-1cf3-42a8-9226-2026fbc9f972",
+                "uuid": "5afbeb9b-590d-4ee6-95bf-d45c634b1e85",
                 "control-id": "hipaa_164-312.e.1",
                 "description": "No notes for control-id 164.312(e)(1).",
                 "props": [
@@ -13216,107 +13155,125 @@
           {
             "name": "Parameter_Id_0",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_audit_failure_mode",
+            "value": "var_audit_backlog_limit",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_0",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "This variable is the setting for the -f option in Audit configuration which sets the failure mode of audit. This option lets you determine how you want the kernel to handle critical errors. Possible values are: 0=silent, 1=printk, 2=panic. If the value is set to \"2\", the system is configured to panic (shut down) in the event of an auditing failure. If the value is set to \"1\", the system is configured to only send information to the kernel log regarding the failure.",
+            "value": "Value of the audit_backlog_limit argument in GRUB 2 configuration. The audit_backlog_limit parameter determines how auditd records can be held in the auditd backlog.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_0",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 2, 'silent': 0, 'printk': 1, 'panic': 2}",
+            "value": "{'default': 8192, 8192: 8192}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_authselect_profile",
+            "value": "var_audit_failure_mode",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the authselect profile to select",
+            "value": "This variable is the setting for the -f option in Audit configuration which sets the failure mode of audit. This option lets you determine how you want the kernel to handle critical errors. Possible values are: 0=silent, 1=printk, 2=panic. If the value is set to \"2\", the system is configured to panic (shut down) in the event of an auditing failure. If the value is set to \"1\", the system is configured to only send information to the kernel log regarding the failure.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_1",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
+            "value": "{'default': 2, 'silent': 0, 'printk': 1, 'panic': 2}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_policy_name",
+            "value": "var_authselect_profile",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
+            "value": "Specify the authselect profile to select",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_2",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
+            "value": "{'local': 'local', 'default': 'minimal', 'minimal': 'minimal', 'sssd': 'sssd'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_selinux_state",
+            "value": "var_selinux_policy_name",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
+            "value": "Type of policy in use. Possible values are: <br />targeted - Only targeted network daemons are protected. <br />strict - Full SELinux protection. <br />mls - Multiple levels of security",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_3",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
+            "value": "{'default': 'targeted', 'mls': 'mls', 'targeted': 'targeted'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_4",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_sshd_set_keepalive",
+            "value": "var_selinux_state",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_4",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the maximum number of idle message counts before session is terminated.",
+            "value": "enforcing - SELinux security policy is enforced. <br />permissive - SELinux prints warnings instead of enforcing. <br />disabled - SELinux is fully disabled.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_4",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "value": "{'default': 'enforcing', 'disabled': 'disabled', 'enforcing': 'enforcing', 'permissive': 'permissive'}",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Id_5",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "var_system_crypto_policy",
+            "value": "var_sshd_set_keepalive",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Description_5",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Specify the crypto policy for the system.",
+            "value": "Specify the maximum number of idle message counts before session is terminated.",
             "remarks": "rule_set_000"
           },
           {
             "name": "Parameter_Value_Alternatives_5",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "{10: 10, 3: 3, 5: 5, 0: 0, 1: 1, 'default': 0}",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Id_6",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "var_system_crypto_policy",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Description_6",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Specify the crypto policy for the system.",
+            "remarks": "rule_set_000"
+          },
+          {
+            "name": "Parameter_Value_Alternatives_6",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "{'default': 'DEFAULT', 'default_policy': 'DEFAULT', 'default_nosha1': 'DEFAULT:NO-SHA1', 'fips': 'FIPS', 'fips_ospp': 'FIPS:OSPP', 'fips_stig': 'FIPS:STIG', 'legacy': 'LEGACY', 'future': 'FUTURE', 'next': 'NEXT'}",
             "remarks": "rule_set_000"
@@ -15268,73 +15225,73 @@
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "auditd_audispd_syslog_plugin_activated",
-            "remarks": "rule_set_082"
-          },
-          {
-            "name": "Rule_Description",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Configure auditd to use audispd's syslog plugin",
-            "remarks": "rule_set_082"
-          },
-          {
-            "name": "Check_Id",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "auditd_audispd_syslog_plugin_activated",
-            "remarks": "rule_set_082"
-          },
-          {
-            "name": "Check_Description",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-            "value": "Configure auditd to use audispd's syslog plugin",
-            "remarks": "rule_set_082"
-          },
-          {
-            "name": "Rule_Id",
-            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "auditd_data_retention_flush",
-            "remarks": "rule_set_083"
+            "remarks": "rule_set_082"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure auditd flush priority",
-            "remarks": "rule_set_083"
+            "remarks": "rule_set_082"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "auditd_data_retention_flush",
-            "remarks": "rule_set_083"
+            "remarks": "rule_set_082"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Configure auditd flush priority",
-            "remarks": "rule_set_083"
+            "remarks": "rule_set_082"
           },
           {
             "name": "Rule_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "grub2_audit_argument",
-            "remarks": "rule_set_084"
+            "remarks": "rule_set_083"
           },
           {
             "name": "Rule_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable Auditing for Processes Which Start Prior to the Audit Daemon",
-            "remarks": "rule_set_084"
+            "remarks": "rule_set_083"
           },
           {
             "name": "Check_Id",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "grub2_audit_argument",
-            "remarks": "rule_set_084"
+            "remarks": "rule_set_083"
           },
           {
             "name": "Check_Description",
             "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
             "value": "Enable Auditing for Processes Which Start Prior to the Audit Daemon",
+            "remarks": "rule_set_083"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "grub2_audit_backlog_limit_argument",
+            "remarks": "rule_set_084"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Extend Audit Backlog Limit for the Audit Daemon",
+            "remarks": "rule_set_084"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "grub2_audit_backlog_limit_argument",
+            "remarks": "rule_set_084"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Extend Audit Backlog Limit for the Audit Daemon",
             "remarks": "rule_set_084"
           },
           {
@@ -16444,7 +16401,7 @@
         ],
         "control-implementations": [
           {
-            "uuid": "8fa387e4-fa1f-4a45-aed6-6b7a70b66d6f",
+            "uuid": "091f6138-0dff-4216-95a8-20dda1a1f397",
             "source": "trestle://profiles/rhel9-hipaa-required/profile.json",
             "description": "Control implementation for hipaa",
             "props": [
@@ -16455,6 +16412,12 @@
               }
             ],
             "set-parameters": [
+              {
+                "param-id": "var_audit_backlog_limit",
+                "values": [
+                  "8192"
+                ]
+              },
               {
                 "param-id": "var_audit_failure_mode",
                 "values": [
@@ -16494,7 +16457,7 @@
             ],
             "implemented-requirements": [
               {
-                "uuid": "cb3b219b-0a0b-4111-8d3b-b78d8a9d851a",
+                "uuid": "da943c89-a736-45c9-81c4-2d6712f675ce",
                 "control-id": "hipaa_164-308.a.1.ii.b",
                 "description": "No notes for control-id 164.308(a)(1)(ii)(B).",
                 "props": [
@@ -16576,7 +16539,7 @@
                 ]
               },
               {
-                "uuid": "83b2b478-c814-4ba3-aae8-a47be7092804",
+                "uuid": "5648e494-a6ec-4aa9-a2d1-fe6770e8d908",
                 "control-id": "hipaa_164-308.a.1.ii.d",
                 "description": "No notes for control-id 164.308(a)(1)(ii)(D).",
                 "props": [
@@ -16928,17 +16891,17 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "grub2_audit_argument"
+                  },
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "grub2_audit_backlog_limit_argument"
                   },
                   {
                     "name": "Rule_Id",
@@ -17048,7 +17011,7 @@
                 ]
               },
               {
-                "uuid": "db5c922f-8456-4fd9-bee8-64d189d0a49c",
+                "uuid": "60bf9f95-1fa6-4050-8f9e-5eb2c90871b8",
                 "control-id": "hipaa_164-308.a.3.ii.a",
                 "description": "No notes for control-id 164.308(a)(3)(ii)(A).",
                 "props": [
@@ -17415,7 +17378,7 @@
                 ]
               },
               {
-                "uuid": "1a2dfd88-f801-4a5c-8087-7dddb6745f01",
+                "uuid": "320ac734-04d0-4cc3-9d97-23fa060783a4",
                 "control-id": "hipaa_164-308.a.6.ii",
                 "description": "No notes for control-id 164.308(a)(6)(ii).",
                 "props": [
@@ -17427,17 +17390,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "e0ea575f-6539-4247-b99d-6bd4531bc6e3",
+                "uuid": "db16fa4e-0634-4437-b681-7aaf102e2d38",
                 "control-id": "hipaa_164-308.a.7.ii.a",
                 "description": "No notes for control-id 164.308(a)(7)(ii)(A).",
                 "props": [
@@ -17514,7 +17472,7 @@
                 ]
               },
               {
-                "uuid": "16439572-8c16-4c7f-aca2-40d70bc96f58",
+                "uuid": "61f55c32-208d-4ba9-a925-74b9da351a19",
                 "control-id": "hipaa_164-308.b.3",
                 "description": "No notes for control-id 164.308(b)(3).",
                 "props": [
@@ -17626,7 +17584,7 @@
                 ]
               },
               {
-                "uuid": "3a5ae6b2-a590-4d99-8a57-f61ac2447c89",
+                "uuid": "7434d940-bf76-4908-9d39-c4641df42bd8",
                 "control-id": "hipaa_164-312.a.2.i",
                 "description": "No notes for control-id 164.312(a)(2)(i).",
                 "props": [
@@ -17983,7 +17941,7 @@
                 ]
               },
               {
-                "uuid": "96745785-e01c-46a6-b8f4-3f33fe63cd15",
+                "uuid": "adf65f52-f79c-4671-ba9b-ec4de59b4fdb",
                 "control-id": "hipaa_164-312.a.2.ii",
                 "description": "No notes for control-id 164.312(a)(2)(ii).",
                 "props": [
@@ -18000,7 +17958,7 @@
                 ]
               },
               {
-                "uuid": "5b7d84b4-0d05-48bf-8fdf-4eeabf3455cb",
+                "uuid": "ab1b6e52-bd08-4fc2-85e8-6efbf0350853",
                 "control-id": "hipaa_164-314.a.2.i.c",
                 "description": "No notes for control-id 164.314(a)(2)(i)(C).",
                 "props": [
@@ -18012,17 +17970,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "ef0b6b68-b609-4060-aa55-4b2f82a9e6ed",
+                "uuid": "0843e13e-850f-4679-9154-4552f5fefaba",
                 "control-id": "hipaa_164-314.a.2.iii",
                 "description": "No notes for control-id 164.314(a)(2)(iii).",
                 "props": [
@@ -18034,17 +17987,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "4d0885ae-5ed5-4459-b4e9-32217eebbf2d",
+                "uuid": "1ffb1346-8d41-42d8-a947-4c95d7507889",
                 "control-id": "hipaa_164-314.b.2.i",
                 "description": "No notes for control-id 164.314(b)(2)(i).",
                 "props": [
@@ -18061,7 +18009,7 @@
                 ]
               },
               {
-                "uuid": "4d8081c5-9034-409b-b977-02dae37c1079",
+                "uuid": "768eae56-efd0-492a-b0f4-6d5c31b57b24",
                 "control-id": "hipaa_164-308.a.3.i",
                 "description": "No notes for control-id 164.308(a)(3)(i).",
                 "props": [
@@ -18083,7 +18031,7 @@
                 ]
               },
               {
-                "uuid": "c7661de5-7525-48ff-9403-a6a8c05166f8",
+                "uuid": "f3bdd95c-04c1-4f67-b8a2-dac88d18baff",
                 "control-id": "hipaa_164-308.a.5.ii.a",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(A).",
                 "props": [
@@ -18100,7 +18048,7 @@
                 ]
               },
               {
-                "uuid": "6f1a6242-a3e2-4abf-80c2-5dfca7f9c331",
+                "uuid": "b290a8f8-ee6b-4cac-b7af-600fb03623ca",
                 "control-id": "hipaa_164-310.a.2.i",
                 "description": "No notes for control-id 164.310(a)(2)(i).",
                 "props": [
@@ -18177,7 +18125,7 @@
                 ]
               },
               {
-                "uuid": "55a8cd2d-ae89-4e26-a812-266ae85a05c7",
+                "uuid": "59ddc694-b7e1-481b-a77b-f69a99443cac",
                 "control-id": "hipaa_164-310.a.2.ii",
                 "description": "No notes for control-id 164.310(a)(2)(ii).",
                 "props": [
@@ -18254,7 +18202,7 @@
                 ]
               },
               {
-                "uuid": "14a41ed3-32a0-4fc0-a955-b51f802699a2",
+                "uuid": "f230dddd-a036-4ace-ab13-d700b9c1b465",
                 "control-id": "hipaa_164-310.a.2.iii",
                 "description": "No notes for control-id 164.310(a)(2)(iii).",
                 "props": [
@@ -18331,7 +18279,7 @@
                 ]
               },
               {
-                "uuid": "aa8e4793-ec3c-4569-bc6d-b058f61499fd",
+                "uuid": "0c3ea485-26f4-42e3-ac3a-25a7e92e8a8f",
                 "control-id": "hipaa_164-310.b",
                 "description": "No notes for control-id 164.310(b).",
                 "props": [
@@ -18563,7 +18511,7 @@
                 ]
               },
               {
-                "uuid": "975e8fe7-d5c0-4eb2-9fff-e4ac5a64461c",
+                "uuid": "9d9dd6b6-86e4-47ce-8fdd-d526bef90091",
                 "control-id": "hipaa_164-310.d.2.iii",
                 "description": "No notes for control-id 164.310(d)(2)(iii).",
                 "props": [
@@ -18576,11 +18524,6 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "audit_rules_immutable"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
                   },
                   {
                     "name": "Rule_Id",
@@ -18665,7 +18608,7 @@
                 ]
               },
               {
-                "uuid": "36bb186a-1715-49c8-8cb7-d51ad1c4ca5f",
+                "uuid": "26c35076-0337-4fa5-bc23-8578f4e891de",
                 "control-id": "hipaa_164-312.a.2.iii",
                 "description": "No notes for control-id 164.312(a)(2)(iii).",
                 "props": [
@@ -18682,7 +18625,7 @@
                 ]
               },
               {
-                "uuid": "2762cd83-adbe-49a6-893c-de4b2ea9a98a",
+                "uuid": "245aaaf0-afa7-4f0a-ab09-e19c03c81697",
                 "control-id": "hipaa_164-312.a.2.iv",
                 "description": "No notes for control-id 164.312(a)(2)(iv).",
                 "props": [
@@ -18709,7 +18652,7 @@
                 ]
               },
               {
-                "uuid": "65b67ff8-236d-4ee7-9051-3a30a66335c9",
+                "uuid": "73d67f52-6247-4f38-920e-64ebe16162af",
                 "control-id": "hipaa_164-312.c.2",
                 "description": "No notes for control-id 164.312(c)(2).",
                 "props": [
@@ -18751,7 +18694,7 @@
                 ]
               },
               {
-                "uuid": "f391eaca-2ed6-42ba-957a-7c956fdb9eec",
+                "uuid": "f3295727-f95b-4b2b-9af6-ba1223e593cd",
                 "control-id": "hipaa_164-312.e.2.i",
                 "description": "No notes for control-id 164.312(e)(2)(i).",
                 "props": [
@@ -18793,7 +18736,7 @@
                 ]
               },
               {
-                "uuid": "5a5f55cd-f4bd-46c5-9fd7-424d2f3f34da",
+                "uuid": "e4aaba2b-f6e9-4dd3-9278-e5dccc116934",
                 "control-id": "hipaa_164-312.e.2.ii",
                 "description": "No notes for control-id 164.312(e)(2)(ii).",
                 "props": [
@@ -18905,7 +18848,7 @@
                 ]
               },
               {
-                "uuid": "0da7013c-387f-4850-ac23-b5c1242c5236",
+                "uuid": "6e492599-ea5e-4316-977a-6ce91cf44851",
                 "control-id": "hipaa_164-308.a.3",
                 "description": "No notes for control-id 164.308(a)(3).",
                 "props": [
@@ -18977,7 +18920,7 @@
                 ]
               },
               {
-                "uuid": "1bf7e857-3839-4e65-bc90-8d5845d3ed48",
+                "uuid": "5d98de7f-952b-4a78-82f9-b0d3ca70a4cf",
                 "control-id": "hipaa_164-308.a.4",
                 "description": "No notes for control-id 164.308(a)(4).",
                 "props": [
@@ -19049,7 +18992,7 @@
                 ]
               },
               {
-                "uuid": "0133707f-c7ad-47d7-af2a-1d3d05db572f",
+                "uuid": "a45f1248-8d06-445e-bbb0-4ee8c3267e77",
                 "control-id": "hipaa_164-308.a.4.i",
                 "description": "No notes for control-id 164.308(a)(4)(i).",
                 "props": [
@@ -19161,7 +19104,7 @@
                 ]
               },
               {
-                "uuid": "d2991dfe-08d8-413b-ba6c-16db9c3a0e2e",
+                "uuid": "aa6ce264-0ca6-4878-8917-5da832263e3b",
                 "control-id": "hipaa_164-308.a.5.ii.b",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(B).",
                 "props": [
@@ -19173,17 +19116,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "9fe16ca5-d356-4879-9be3-0b30a7ced077",
+                "uuid": "9c78674a-0e98-42cb-881e-d23ac50460bd",
                 "control-id": "hipaa_164-308.a.5.ii.c",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(C).",
                 "props": [
@@ -19535,11 +19473,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -19560,7 +19493,7 @@
                 ]
               },
               {
-                "uuid": "73f69763-4bf7-4d41-8f9e-03be050ff7e5",
+                "uuid": "eb520898-88d8-45f6-a527-407af33492f4",
                 "control-id": "hipaa_164-308.a.7.i",
                 "description": "No notes for control-id 164.308(a)(7)(i).",
                 "props": [
@@ -19637,7 +19570,7 @@
                 ]
               },
               {
-                "uuid": "45bb4cca-1fe0-47fa-9373-240c24fbad7c",
+                "uuid": "fc559804-9a9a-4a3e-a7b4-7bd847561133",
                 "control-id": "hipaa_164-308.a.8",
                 "description": "No notes for control-id 164.308(a)(8).",
                 "props": [
@@ -19649,17 +19582,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "d77ca5cd-ec1b-4d16-a4ee-84ee04cd100b",
+                "uuid": "e42cf2de-21d6-4bd6-a15a-e1760f4c3393",
                 "control-id": "hipaa_164-308.b.1",
                 "description": "No notes for control-id 164.308(b)(1).",
                 "props": [
@@ -19776,7 +19704,7 @@
                 ]
               },
               {
-                "uuid": "49c72464-6bef-43eb-b5c4-62abb2f26da8",
+                "uuid": "76120c7d-d8a7-4666-9874-3250c362be05",
                 "control-id": "hipaa_164-308.b.2",
                 "description": "This title was created by analysis, not by the CFR.",
                 "props": [
@@ -19788,7 +19716,7 @@
                 ]
               },
               {
-                "uuid": "658e96f5-408e-4029-bb0a-5ad40093d1d0",
+                "uuid": "3a61a75d-507a-4c17-9e4f-eeca3120548b",
                 "control-id": "hipaa_164-310.a.1",
                 "description": "No notes for control-id 164.310(a)(1).",
                 "props": [
@@ -19865,7 +19793,7 @@
                 ]
               },
               {
-                "uuid": "f46942c5-203f-457e-a9be-001379f2e511",
+                "uuid": "54e5a5cc-d355-44a0-bedb-478f49d934a1",
                 "control-id": "hipaa_164-310.a.2.iv",
                 "description": "No notes for control-id 164.310(a)(2)(iv).",
                 "props": [
@@ -19892,7 +19820,7 @@
                 ]
               },
               {
-                "uuid": "c43081e8-6df7-4d58-9158-748cac49db08",
+                "uuid": "9882f9ab-2360-4a62-8b1d-9fbadeb46a8b",
                 "control-id": "hipaa_164-310.c",
                 "description": "No notes for control-id 164.310(c).",
                 "props": [
@@ -20029,7 +19957,7 @@
                 ]
               },
               {
-                "uuid": "c8625ed9-7f69-43b3-9241-b253cca96756",
+                "uuid": "11bf840b-0c2b-42b8-a779-13f22e7718b8",
                 "control-id": "hipaa_164-310.d",
                 "description": "No notes for control-id 164.310(d).",
                 "props": [
@@ -20046,7 +19974,7 @@
                 ]
               },
               {
-                "uuid": "55561066-1f61-47de-a494-56b17b8b547b",
+                "uuid": "c743aae3-af33-4354-91dc-3e5ec1c5e418",
                 "control-id": "hipaa_164-310.d.1",
                 "description": "No notes for control-id 164.310(d)(1).",
                 "props": [
@@ -20133,7 +20061,7 @@
                 ]
               },
               {
-                "uuid": "3c4cb7e8-9b23-48db-affe-7d8669a6af56",
+                "uuid": "8218757f-451a-49dd-8eaf-fb803c72cad1",
                 "control-id": "hipaa_164-310.d.2",
                 "description": "No notes for control-id 164.310(d)(2).",
                 "props": [
@@ -20155,7 +20083,7 @@
                 ]
               },
               {
-                "uuid": "f39e471c-f8b9-4aae-967f-b782bbe82720",
+                "uuid": "3a3445be-0276-4038-9969-7a56de373b7b",
                 "control-id": "hipaa_164-312.a",
                 "description": "No notes for control-id 164.312(a).",
                 "props": [
@@ -20232,7 +20160,7 @@
                 ]
               },
               {
-                "uuid": "0ce7181d-4a6b-4805-a857-3157f2496b12",
+                "uuid": "919e126f-77e5-4262-bcee-7776f5e90c17",
                 "control-id": "hipaa_164-312.a.1",
                 "description": "No notes for control-id 164.312(a)(1).",
                 "props": [
@@ -20259,7 +20187,7 @@
                 ]
               },
               {
-                "uuid": "dfb91c08-7afb-4f62-a023-1823063f9235",
+                "uuid": "4e7a68ce-0c24-46cd-ac6c-24b0f9bf76f5",
                 "control-id": "hipaa_164-312.b",
                 "description": "No notes for control-id 164.312(b).",
                 "props": [
@@ -20611,11 +20539,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -20681,7 +20604,7 @@
                 ]
               },
               {
-                "uuid": "ff7041a5-2e54-4c36-8a0a-c659b8ee292e",
+                "uuid": "36c0e4fe-6975-4bee-85f0-5824a6e50e7d",
                 "control-id": "hipaa_164-312.c",
                 "description": "No notes for control-id 164.312(c).",
                 "props": [
@@ -20698,7 +20621,7 @@
                 ]
               },
               {
-                "uuid": "18b8b452-bf7a-4054-ad8f-8560ec06c255",
+                "uuid": "49e00dac-7e42-476c-80e1-8451ed04eb0e",
                 "control-id": "hipaa_164-312.c.1",
                 "description": "No notes for control-id 164.312(c)(1).",
                 "props": [
@@ -20740,7 +20663,7 @@
                 ]
               },
               {
-                "uuid": "35e13852-a1d8-4668-9976-7fff56e3b900",
+                "uuid": "1b22274c-efd4-48c2-8bff-8bf9862dfbc3",
                 "control-id": "hipaa_164-312.d",
                 "description": "No notes for control-id 164.312(d).",
                 "props": [
@@ -21102,7 +21025,7 @@
                 ]
               },
               {
-                "uuid": "35c1b09e-f5c6-4351-93f8-c184a8f9682c",
+                "uuid": "7b30e0e0-5ed9-4bba-89ae-55f6fd53567b",
                 "control-id": "hipaa_164-312.e",
                 "description": "No notes for control-id 164.312(e).",
                 "props": [
@@ -21519,7 +21442,7 @@
                 ]
               },
               {
-                "uuid": "ff91b70c-4891-4e46-b954-14f7933a36ab",
+                "uuid": "b120a9f9-4cc5-4f4a-ade9-f34d025df5eb",
                 "control-id": "hipaa_164-312.e.1",
                 "description": "No notes for control-id 164.312(e)(1).",
                 "props": [
@@ -21631,7 +21554,7 @@
                 ]
               },
               {
-                "uuid": "d3eaea5f-8271-40ea-a868-8ab5c4ca96f9",
+                "uuid": "ae21634f-9461-4176-96b2-a6b7ce9e2d8e",
                 "control-id": "hipaa_164-308.a.3.i",
                 "description": "No notes for control-id 164.308(a)(3)(i).",
                 "props": [
@@ -21653,7 +21576,7 @@
                 ]
               },
               {
-                "uuid": "20dd623f-0951-4c63-a226-3d3a22987c13",
+                "uuid": "f1917fbb-04a6-45ad-9af7-a3663c3d4f5f",
                 "control-id": "hipaa_164-308.a.5.ii.a",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(A).",
                 "props": [
@@ -21670,7 +21593,7 @@
                 ]
               },
               {
-                "uuid": "9f837351-d3ff-4b17-90b1-e2f9d1971df9",
+                "uuid": "e20c77fc-4b2b-49b6-871e-a3f84f6bc2b4",
                 "control-id": "hipaa_164-310.a.2.i",
                 "description": "No notes for control-id 164.310(a)(2)(i).",
                 "props": [
@@ -21747,7 +21670,7 @@
                 ]
               },
               {
-                "uuid": "fe004990-73e0-4b95-a6b5-83e785e45363",
+                "uuid": "58e5a7d7-937a-461f-a561-bd207e4f4da3",
                 "control-id": "hipaa_164-310.a.2.ii",
                 "description": "No notes for control-id 164.310(a)(2)(ii).",
                 "props": [
@@ -21824,7 +21747,7 @@
                 ]
               },
               {
-                "uuid": "651d3bcc-5219-45b4-81bc-de6a0468d171",
+                "uuid": "9cfa6deb-e49c-4483-95d7-7959b17978eb",
                 "control-id": "hipaa_164-310.a.2.iii",
                 "description": "No notes for control-id 164.310(a)(2)(iii).",
                 "props": [
@@ -21901,7 +21824,7 @@
                 ]
               },
               {
-                "uuid": "b944ae2d-1c82-4498-bc1c-8ce7ec709cb5",
+                "uuid": "067b4731-7b5b-4fc5-b5a8-1b37e394fa65",
                 "control-id": "hipaa_164-310.b",
                 "description": "No notes for control-id 164.310(b).",
                 "props": [
@@ -22133,7 +22056,7 @@
                 ]
               },
               {
-                "uuid": "d5369349-138b-473e-89b9-fc35558f5643",
+                "uuid": "9aac4224-b314-4b07-9147-05c2d54bbcf7",
                 "control-id": "hipaa_164-310.d.2.iii",
                 "description": "No notes for control-id 164.310(d)(2)(iii).",
                 "props": [
@@ -22146,11 +22069,6 @@
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "audit_rules_immutable"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
                   },
                   {
                     "name": "Rule_Id",
@@ -22235,7 +22153,7 @@
                 ]
               },
               {
-                "uuid": "4608f032-336a-4815-8fd5-8a4506395000",
+                "uuid": "f5c902f3-6968-416a-8183-260aa9c7a1f9",
                 "control-id": "hipaa_164-312.a.2.iii",
                 "description": "No notes for control-id 164.312(a)(2)(iii).",
                 "props": [
@@ -22252,7 +22170,7 @@
                 ]
               },
               {
-                "uuid": "b7be2378-7992-40e6-9d29-53d63f9f5195",
+                "uuid": "426d6e99-2055-40ba-a95a-29b0db6d407b",
                 "control-id": "hipaa_164-312.a.2.iv",
                 "description": "No notes for control-id 164.312(a)(2)(iv).",
                 "props": [
@@ -22279,7 +22197,7 @@
                 ]
               },
               {
-                "uuid": "f2f8d615-0de1-4145-9dc8-866a92016ba7",
+                "uuid": "88f0a783-e285-49f2-bd6a-d5b0a6fe80aa",
                 "control-id": "hipaa_164-312.c.2",
                 "description": "No notes for control-id 164.312(c)(2).",
                 "props": [
@@ -22321,7 +22239,7 @@
                 ]
               },
               {
-                "uuid": "fdbc5f38-c0d0-44f5-b414-0e241c79e2d8",
+                "uuid": "abba9262-4d13-4134-8176-2fb29097dc11",
                 "control-id": "hipaa_164-312.e.2.i",
                 "description": "No notes for control-id 164.312(e)(2)(i).",
                 "props": [
@@ -22363,7 +22281,7 @@
                 ]
               },
               {
-                "uuid": "1a42cc6b-29d4-4990-a867-a778149956eb",
+                "uuid": "1317cf5a-2129-4a03-a424-2b6639a710b7",
                 "control-id": "hipaa_164-312.e.2.ii",
                 "description": "No notes for control-id 164.312(e)(2)(ii).",
                 "props": [
@@ -22475,7 +22393,7 @@
                 ]
               },
               {
-                "uuid": "7e0f294e-4536-4022-9db0-5014abc6dbc3",
+                "uuid": "900741f5-cc2c-44f6-82c4-17654a408da3",
                 "control-id": "hipaa_164-308.a.3",
                 "description": "No notes for control-id 164.308(a)(3).",
                 "props": [
@@ -22547,7 +22465,7 @@
                 ]
               },
               {
-                "uuid": "c70220a0-1be5-4bdd-9a83-f9f6cf8db87e",
+                "uuid": "929d9916-cbd8-4a06-9ade-aa1e7f41ea50",
                 "control-id": "hipaa_164-308.a.4",
                 "description": "No notes for control-id 164.308(a)(4).",
                 "props": [
@@ -22619,7 +22537,7 @@
                 ]
               },
               {
-                "uuid": "97df2970-5a6c-4b1a-b529-a5e90702f2a1",
+                "uuid": "c7a54fd3-ab27-441e-87ce-0d73ce0596fd",
                 "control-id": "hipaa_164-308.a.4.i",
                 "description": "No notes for control-id 164.308(a)(4)(i).",
                 "props": [
@@ -22731,7 +22649,7 @@
                 ]
               },
               {
-                "uuid": "2f1079bb-6a5b-4ae5-b80e-5061d98a8353",
+                "uuid": "dabff23a-e644-4a0c-b178-17619363d844",
                 "control-id": "hipaa_164-308.a.5.ii.b",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(B).",
                 "props": [
@@ -22743,17 +22661,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "ec05a590-4898-40ba-b080-5db4d40d4967",
+                "uuid": "f4ad0f17-3cba-4691-bf9f-8d98255a6fa9",
                 "control-id": "hipaa_164-308.a.5.ii.c",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(C).",
                 "props": [
@@ -23105,11 +23018,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -23130,7 +23038,7 @@
                 ]
               },
               {
-                "uuid": "1b33db8c-e753-463e-a95f-d2a217915c3d",
+                "uuid": "978d88c3-62ff-4c3e-bfeb-6c6edd3f4a79",
                 "control-id": "hipaa_164-308.a.7.i",
                 "description": "No notes for control-id 164.308(a)(7)(i).",
                 "props": [
@@ -23207,7 +23115,7 @@
                 ]
               },
               {
-                "uuid": "be874485-32aa-4d4c-a560-358ee39487aa",
+                "uuid": "1fbcbbf2-99ee-4e7a-bc42-4f635255b705",
                 "control-id": "hipaa_164-308.a.8",
                 "description": "No notes for control-id 164.308(a)(8).",
                 "props": [
@@ -23219,17 +23127,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "63993a81-e762-4c58-9ff2-b19a1de73a52",
+                "uuid": "31a33542-12fa-4e17-a505-3beefa953ce6",
                 "control-id": "hipaa_164-308.b.1",
                 "description": "No notes for control-id 164.308(b)(1).",
                 "props": [
@@ -23346,7 +23249,7 @@
                 ]
               },
               {
-                "uuid": "a37878ee-235d-47c6-84bf-7e0900070aea",
+                "uuid": "0bc9260d-34f6-4f70-ae5c-11b09561f858",
                 "control-id": "hipaa_164-308.b.2",
                 "description": "This title was created by analysis, not by the CFR.",
                 "props": [
@@ -23358,7 +23261,7 @@
                 ]
               },
               {
-                "uuid": "07b3ca32-c7ae-4a2d-b951-e521424c0d1a",
+                "uuid": "958ec862-2a77-4bce-9848-d3780362b309",
                 "control-id": "hipaa_164-310.a.1",
                 "description": "No notes for control-id 164.310(a)(1).",
                 "props": [
@@ -23435,7 +23338,7 @@
                 ]
               },
               {
-                "uuid": "0dcea8d2-5136-4417-89a7-b0630bf48b2a",
+                "uuid": "05a82a9f-d5ea-46f9-afb7-add91a9067f9",
                 "control-id": "hipaa_164-310.a.2.iv",
                 "description": "No notes for control-id 164.310(a)(2)(iv).",
                 "props": [
@@ -23462,7 +23365,7 @@
                 ]
               },
               {
-                "uuid": "ca3054e1-992f-496b-af8d-96ab2aa2846d",
+                "uuid": "76abbbfb-c860-44eb-853f-5c59eaa1449f",
                 "control-id": "hipaa_164-310.c",
                 "description": "No notes for control-id 164.310(c).",
                 "props": [
@@ -23599,7 +23502,7 @@
                 ]
               },
               {
-                "uuid": "a5258775-8df5-40b6-a4b1-2b338bd19e10",
+                "uuid": "89bafd5a-4531-4644-8c96-0aa0df59d5d5",
                 "control-id": "hipaa_164-310.d",
                 "description": "No notes for control-id 164.310(d).",
                 "props": [
@@ -23616,7 +23519,7 @@
                 ]
               },
               {
-                "uuid": "661a31e1-dc22-47c2-8016-8879bd0b4cda",
+                "uuid": "25b19b10-897b-45c5-b833-9f892078a2b3",
                 "control-id": "hipaa_164-310.d.1",
                 "description": "No notes for control-id 164.310(d)(1).",
                 "props": [
@@ -23703,7 +23606,7 @@
                 ]
               },
               {
-                "uuid": "f801bb36-968f-4337-84f3-4c7a461c78ec",
+                "uuid": "33355e38-f894-4270-9d1f-012b51476b3d",
                 "control-id": "hipaa_164-310.d.2",
                 "description": "No notes for control-id 164.310(d)(2).",
                 "props": [
@@ -23725,7 +23628,7 @@
                 ]
               },
               {
-                "uuid": "6ea42013-3b4e-42ca-a6b9-c1bd46643f40",
+                "uuid": "f2817257-3eff-4448-82ec-d729defff010",
                 "control-id": "hipaa_164-312.a",
                 "description": "No notes for control-id 164.312(a).",
                 "props": [
@@ -23802,7 +23705,7 @@
                 ]
               },
               {
-                "uuid": "f4ca92ff-7d15-4057-8ed3-3f2af3315b21",
+                "uuid": "f64a4430-4de7-4832-a720-4046fa3d46af",
                 "control-id": "hipaa_164-312.a.1",
                 "description": "No notes for control-id 164.312(a)(1).",
                 "props": [
@@ -23829,7 +23732,7 @@
                 ]
               },
               {
-                "uuid": "8cec5157-7e79-4cab-b8ad-d21197dbecb8",
+                "uuid": "bb3cd44f-de3e-4139-bf5a-a55abb8df3c9",
                 "control-id": "hipaa_164-312.b",
                 "description": "No notes for control-id 164.312(b).",
                 "props": [
@@ -24181,11 +24084,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -24251,7 +24149,7 @@
                 ]
               },
               {
-                "uuid": "a0999924-4c0e-41b4-b553-a0077cafbe15",
+                "uuid": "03cdea2d-15bd-44f9-98e0-36fddb7eec8a",
                 "control-id": "hipaa_164-312.c",
                 "description": "No notes for control-id 164.312(c).",
                 "props": [
@@ -24268,7 +24166,7 @@
                 ]
               },
               {
-                "uuid": "5f3eb307-a788-47d4-8000-443749180884",
+                "uuid": "6792b623-1b39-47c5-a563-d76304a495d4",
                 "control-id": "hipaa_164-312.c.1",
                 "description": "No notes for control-id 164.312(c)(1).",
                 "props": [
@@ -24310,7 +24208,7 @@
                 ]
               },
               {
-                "uuid": "3ce6ded0-4349-4abe-a9b0-e022cbfd06b5",
+                "uuid": "dcaf23f6-933f-4727-aa65-4ee89e37cf27",
                 "control-id": "hipaa_164-312.d",
                 "description": "No notes for control-id 164.312(d).",
                 "props": [
@@ -24672,7 +24570,7 @@
                 ]
               },
               {
-                "uuid": "e2fbd325-5bbe-48e6-b1ee-961f7ab08982",
+                "uuid": "f1e388a6-d1ab-4a39-935a-28fd135da822",
                 "control-id": "hipaa_164-312.e",
                 "description": "No notes for control-id 164.312(e).",
                 "props": [
@@ -25089,7 +24987,7 @@
                 ]
               },
               {
-                "uuid": "6138cee8-948f-4716-94c0-80a5cc3d10b0",
+                "uuid": "e3ba0798-291d-4c30-8eca-a298051c6026",
                 "control-id": "hipaa_164-312.e.1",
                 "description": "No notes for control-id 164.312(e)(1).",
                 "props": [
@@ -25201,7 +25099,7 @@
                 ]
               },
               {
-                "uuid": "0b9e6cea-6fd7-4818-bd9d-87a44ec67c07",
+                "uuid": "3be6acd8-c080-4e75-92b7-62c9b646bbd7",
                 "control-id": "hipaa_164-308.a.3",
                 "description": "No notes for control-id 164.308(a)(3).",
                 "props": [
@@ -25273,7 +25171,7 @@
                 ]
               },
               {
-                "uuid": "5339a7b0-60d8-44d2-ba80-23c590b0bdfa",
+                "uuid": "5740baaa-bb94-433f-9815-bb13b013fd30",
                 "control-id": "hipaa_164-308.a.4",
                 "description": "No notes for control-id 164.308(a)(4).",
                 "props": [
@@ -25345,7 +25243,7 @@
                 ]
               },
               {
-                "uuid": "62dac467-9dfc-4a64-8cb3-8b908187b109",
+                "uuid": "8f976e62-650b-4db0-a55f-8bdb052d8588",
                 "control-id": "hipaa_164-308.a.4.i",
                 "description": "No notes for control-id 164.308(a)(4)(i).",
                 "props": [
@@ -25457,7 +25355,7 @@
                 ]
               },
               {
-                "uuid": "e228cf28-f93d-4e9f-901c-cc16c117b88c",
+                "uuid": "c2f99782-fd90-4e13-a72c-23fcbc2ca571",
                 "control-id": "hipaa_164-308.a.5.ii.b",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(B).",
                 "props": [
@@ -25469,17 +25367,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "eb975695-124f-4919-8f66-5fb1caca5681",
+                "uuid": "0add748b-2766-41f8-8367-4b3b59ca96d7",
                 "control-id": "hipaa_164-308.a.5.ii.c",
                 "description": "No notes for control-id 164.308(a)(5)(ii)(C).",
                 "props": [
@@ -25831,11 +25724,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -25856,7 +25744,7 @@
                 ]
               },
               {
-                "uuid": "6bb958f0-94b7-4a3a-90d2-6dadb9908089",
+                "uuid": "2c80f916-7773-44f3-a785-89efea6c0a35",
                 "control-id": "hipaa_164-308.a.7.i",
                 "description": "No notes for control-id 164.308(a)(7)(i).",
                 "props": [
@@ -25933,7 +25821,7 @@
                 ]
               },
               {
-                "uuid": "b51acfdd-fd7b-48e9-8845-6444be31e534",
+                "uuid": "fcb2d49f-f774-45d1-96d3-e4685b7f4e8d",
                 "control-id": "hipaa_164-308.a.8",
                 "description": "No notes for control-id 164.308(a)(8).",
                 "props": [
@@ -25945,17 +25833,12 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "rsyslog_remote_loghost"
                   }
                 ]
               },
               {
-                "uuid": "2c1a3ef1-413e-4010-802d-e86c59b0db12",
+                "uuid": "f602c380-9209-42af-a4c8-355eba0c3221",
                 "control-id": "hipaa_164-308.b.1",
                 "description": "No notes for control-id 164.308(b)(1).",
                 "props": [
@@ -26072,7 +25955,7 @@
                 ]
               },
               {
-                "uuid": "16319e69-5d23-4fb1-a5bd-c3173de5ddd6",
+                "uuid": "b3c8bf6a-d065-445d-9f40-c8d6d740594c",
                 "control-id": "hipaa_164-308.b.2",
                 "description": "This title was created by analysis, not by the CFR.",
                 "props": [
@@ -26084,7 +25967,7 @@
                 ]
               },
               {
-                "uuid": "9660aaca-d5aa-4a70-bcb8-5628e90965e1",
+                "uuid": "5192711a-82cc-445f-b5c4-25309b57bfda",
                 "control-id": "hipaa_164-310.a.1",
                 "description": "No notes for control-id 164.310(a)(1).",
                 "props": [
@@ -26161,7 +26044,7 @@
                 ]
               },
               {
-                "uuid": "2cadbbd3-f9e0-4687-8c78-a87c6e29cb1e",
+                "uuid": "4bfdddaf-5272-48c6-ad69-3fef2aba563d",
                 "control-id": "hipaa_164-310.a.2.iv",
                 "description": "No notes for control-id 164.310(a)(2)(iv).",
                 "props": [
@@ -26188,7 +26071,7 @@
                 ]
               },
               {
-                "uuid": "1897b036-9e90-4202-b731-68f075cc1af4",
+                "uuid": "b444aef7-7a40-408d-ac59-5bf3ebdbe33c",
                 "control-id": "hipaa_164-310.c",
                 "description": "No notes for control-id 164.310(c).",
                 "props": [
@@ -26325,7 +26208,7 @@
                 ]
               },
               {
-                "uuid": "60a827ce-423a-4a99-a32e-1b2c27a382c0",
+                "uuid": "a0f947b1-273a-45ae-bea4-aafa99e00526",
                 "control-id": "hipaa_164-310.d",
                 "description": "No notes for control-id 164.310(d).",
                 "props": [
@@ -26342,7 +26225,7 @@
                 ]
               },
               {
-                "uuid": "a0771b50-c0ce-4ef5-be18-4432acdaeef0",
+                "uuid": "d18b6f28-b270-41f6-8075-048ce9143d1f",
                 "control-id": "hipaa_164-310.d.1",
                 "description": "No notes for control-id 164.310(d)(1).",
                 "props": [
@@ -26429,7 +26312,7 @@
                 ]
               },
               {
-                "uuid": "d81edac3-eb3d-47e6-8d4f-da9c36e8a29c",
+                "uuid": "60c94c12-7d4c-4052-9272-61d289674205",
                 "control-id": "hipaa_164-310.d.2",
                 "description": "No notes for control-id 164.310(d)(2).",
                 "props": [
@@ -26451,7 +26334,7 @@
                 ]
               },
               {
-                "uuid": "143949fa-b52e-4f88-bc03-26c71b286de4",
+                "uuid": "1c18f728-5ef3-45f9-b33b-66e2ae07713a",
                 "control-id": "hipaa_164-312.a",
                 "description": "No notes for control-id 164.312(a).",
                 "props": [
@@ -26528,7 +26411,7 @@
                 ]
               },
               {
-                "uuid": "47588978-0858-4e49-bfaa-0d8fe0237506",
+                "uuid": "0f7f5acd-1d31-4b09-968f-73c82eeaf886",
                 "control-id": "hipaa_164-312.a.1",
                 "description": "No notes for control-id 164.312(a)(1).",
                 "props": [
@@ -26555,7 +26438,7 @@
                 ]
               },
               {
-                "uuid": "9260492a-4bdf-480f-a8f6-f3e43ba777a3",
+                "uuid": "dc672f7e-73f3-48f4-9816-ee86d879e52f",
                 "control-id": "hipaa_164-312.b",
                 "description": "No notes for control-id 164.312(b).",
                 "props": [
@@ -26907,11 +26790,6 @@
                   {
                     "name": "Rule_Id",
                     "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
-                    "value": "auditd_audispd_syslog_plugin_activated"
-                  },
-                  {
-                    "name": "Rule_Id",
-                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
                     "value": "auditd_data_retention_flush"
                   },
                   {
@@ -26977,7 +26855,7 @@
                 ]
               },
               {
-                "uuid": "0a4bd5e5-5c35-43a8-a570-6d078ad13405",
+                "uuid": "2f91129a-1640-42bf-8019-4c41e754f1b9",
                 "control-id": "hipaa_164-312.c",
                 "description": "No notes for control-id 164.312(c).",
                 "props": [
@@ -26994,7 +26872,7 @@
                 ]
               },
               {
-                "uuid": "ecaf1a63-72ad-4b02-b828-c9a90a7ff54d",
+                "uuid": "5a531a69-5c1f-4f93-85a8-15366c6e23ec",
                 "control-id": "hipaa_164-312.c.1",
                 "description": "No notes for control-id 164.312(c)(1).",
                 "props": [
@@ -27036,7 +26914,7 @@
                 ]
               },
               {
-                "uuid": "25907513-0338-469f-b145-e4ce08d7892f",
+                "uuid": "b014b0f8-065b-4cd6-99d2-295c0b56ecc7",
                 "control-id": "hipaa_164-312.d",
                 "description": "No notes for control-id 164.312(d).",
                 "props": [
@@ -27398,7 +27276,7 @@
                 ]
               },
               {
-                "uuid": "824f6da2-3135-4b56-b990-7a3138850c4d",
+                "uuid": "0f33ee20-1fa3-4b4b-9039-618513310b7f",
                 "control-id": "hipaa_164-312.e",
                 "description": "No notes for control-id 164.312(e).",
                 "props": [
@@ -27815,7 +27693,7 @@
                 ]
               },
               {
-                "uuid": "58a9fde0-ffb1-41f3-9efe-c9db22afc755",
+                "uuid": "a97b1a93-a1f9-4939-9fd0-54870f4f97e1",
                 "control-id": "hipaa_164-312.e.1",
                 "description": "No notes for control-id 164.312(e)(1).",
                 "props": [
